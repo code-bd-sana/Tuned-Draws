@@ -11,6 +11,7 @@ import type { Draw } from "../../../types/draw.types";
 
 /**
  * Instant Wins draws section with interactive client category filtering.
+ * High-performance dark styling for Tuned Draws.
  */
 export default function InstantWinsSection() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -71,38 +72,38 @@ export default function InstantWinsSection() {
       });
 
   return (
-    <section id="instant-wins" className="py-20 bg-bg border-t border-divider">
+    <section id="instant-wins" className="py-20 bg-[#0B0C0E] border-t border-white/10 relative">
       <div className="container-custom">
 
         {/* Section Header */}
         <SectionHeader
-          badgeText="INSTANT WIN PRIZES NOW LIVE"
+          badgeText="INSTANT WIN PRIZES LIVE NOW"
           headingText="Win Big. Every Day."
-          paragraphText="All draws are conducted live on stream using a lottery ball machine, ensuring a fair and transparent draw process."
+          paragraphText="Match pre-allocated winning ticket numbers immediately at checkout for instant delivery prizes."
         />
 
         {/* Filter Tabs Row */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10 max-w-xl mx-auto">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-10 max-w-xl mx-auto">
           <button
             onClick={() => setActiveCategory("all")}
             className={cn(
-              "font-sans font-semibold text-xs px-5 py-2.5 rounded-button border transition-all duration-200 cursor-pointer select-none",
+              "font-heading font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl border transition-all duration-200 cursor-pointer select-none",
               activeCategory === "all"
-                ? "bg-primary border-primary text-primary-text hover:bg-primary-hover"
-                : "bg-surface border-border text-text-muted hover:text-text-primary hover:border-border-medium"
+                ? "btn-racing-red text-white shadow-[0_0_15px_rgba(255,30,39,0.35)]"
+                : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#FF1E27]/40"
             )}
           >
-            All
+            All Draws
           </button>
           {categories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.slug)}
               className={cn(
-                "font-sans font-semibold text-xs px-5 py-2.5 rounded-button border transition-all duration-200 cursor-pointer select-none capitalize",
+                "font-heading font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl border transition-all duration-200 cursor-pointer select-none",
                 activeCategory === category.slug
-                  ? "bg-primary border-primary text-primary-text hover:bg-primary-hover"
-                  : "bg-surface border-border text-text-muted hover:text-text-primary hover:border-border-medium"
+                  ? "btn-racing-red text-white shadow-[0_0_15px_rgba(255,30,39,0.35)]"
+                  : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#FF1E27]/40"
               )}
             >
               {category.name}
@@ -110,33 +111,26 @@ export default function InstantWinsSection() {
           ))}
         </div>
 
-        {/* Competitions Grid */}
+        {/* Draws Grid */}
         {loading ? (
-          <div className="flex flex-col items-center justify-center py-20 text-text-muted gap-4">
-            <div className="animate-spin h-10 w-10 border-4 border-primary border-t-transparent rounded-full"></div>
-            <p className="font-sans font-medium text-sm">Loading Instant Wins...</p>
+          <div className="flex flex-col items-center justify-center py-20 gap-4 text-[#8A92A0]">
+            <div className="animate-spin h-10 w-10 border-4 border-[#FF1E27] border-t-transparent rounded-full shadow-[0_0_15px_rgba(255,30,39,0.5)]" />
+            <p className="font-heading text-xs tracking-wider uppercase">Loading instant win draws…</p>
           </div>
         ) : filteredDraws.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredDraws.map((draw) => (
               <DrawCard key={draw.id} draw={draw} variant="instant" />
             ))}
           </div>
         ) : (
-          <div className="text-center text-text-muted py-10">
-            No instant win competitions found.
+          <div className="text-center py-16 bg-[#12141C] border border-dashed border-white/10 rounded-2xl max-w-md mx-auto">
+            <div className="text-4xl mb-4">⚡</div>
+            <h3 className="font-heading font-black text-lg text-white mb-2 uppercase">No Instant Wins in This Category</h3>
+            <p className="font-sans text-xs text-[#8A92A0]">Check back soon as hosts add daily instant-win cash and automotive gear.</p>
           </div>
         )}
 
-        {/* View All Button */}
-        <div className="mt-12 text-center">
-          <a
-            href="/live-raffles"
-            className="inline-flex items-center justify-center font-sans font-bold text-sm px-8 py-3.5 rounded-button bg-surface border border-border text-text-primary transition-all duration-300 hover:border-border-medium hover:text-text-brand hover:shadow-glow focus:outline-none focus:ring-2 focus:ring-brand/50"
-          >
-            View All Competitions
-          </a>
-        </div>
       </div>
     </section>
   );

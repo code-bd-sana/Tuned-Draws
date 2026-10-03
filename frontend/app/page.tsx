@@ -15,8 +15,8 @@ import NewsletterSection from '../components/website/home/NewsletterSection';
 import HomepagePaymentAndInstantWinModal from '../components/website/home/HomepagePaymentAndInstantWinModal';
 
 /**
- * Public Homepage for the Fairway Draws application.
- * Composes layout and modular sections for future scalability.
+ * Public Homepage for the Tuned Draws automotive sweepstakes application.
+ * Composes layout and modular sections for high performance and responsiveness.
  */
 export default function Home() {
   return (

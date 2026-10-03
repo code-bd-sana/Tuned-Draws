@@ -1,6 +1,6 @@
 import { NavLink, SocialLink } from "../types/common.types";
 
-export const BRAND_NAME = "Fairway Draws";
+export const BRAND_NAME = "Tuned Draws";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
@@ -13,8 +13,8 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { platform: "Facebook", href: "https://www.facebook.com/share/p/1CgGzyPthk/", iconName: "facebook" },
-  { platform: "Instagram", href: "https://www.instagram.com/fairwaydrawsltd?stkn=N3dwcTA5a3AycHJq&utm_source=qr", iconName: "instagram" },
+  { platform: "Facebook", href: "https://facebook.com", iconName: "facebook" },
+  { platform: "Instagram", href: "https://instagram.com", iconName: "instagram" },
 ];
 
 export const FOOTER_SECTIONS = [
@@ -22,10 +22,10 @@ export const FOOTER_SECTIONS = [
     title: "Competitions",
     links: [
       { label: "All Live Draws", href: "/live-raffles" },
-      { label: "Drivers & Woods", href: "/live-raffles?category=drivers" },
-      { label: "Iron Sets & Wedges", href: "/live-raffles?category=irons" },
-      { label: "Putters & Accessories", href: "/live-raffles?category=putters" },
-      { label: "VIP Golf Experiences", href: "/live-raffles?category=experiences" },
+      { label: "Tuned Supercars & Builds", href: "/live-raffles?category=supercars" },
+      { label: "Performance Engines & Turbos", href: "/live-raffles?category=performance" },
+      { label: "Wheels, Brakes & Suspension", href: "/live-raffles?category=parts" },
+      { label: "Track Days & VIP Experiences", href: "/live-raffles?category=experiences" },
     ],
   },
   {

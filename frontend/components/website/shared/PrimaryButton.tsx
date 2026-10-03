@@ -13,7 +13,7 @@ interface PrimaryButtonProps {
 }
 
 /**
- * Reusable Primary Button matching the brand lime colors.
+ * Reusable Primary Button matching Tuned Draws Electric Racing Red brand palette.
  * Automatically wraps in a Next Link if 'href' is supplied.
  */
 export default function PrimaryButton({
@@ -26,14 +26,14 @@ export default function PrimaryButton({
   type = "button",
 }: PrimaryButtonProps) {
   const baseClasses = cn(
-    "inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-primary-text font-sans font-semibold text-sm px-6 py-3 rounded-button transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none active:scale-95",
+    "inline-flex items-center justify-center btn-racing-red text-white font-heading font-black tracking-wider text-xs sm:text-sm px-6 py-3 rounded-xl shadow-[0_0_15px_rgba(255,30,39,0.3)] hover:shadow-[0_0_25px_rgba(255,30,39,0.6)] transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none active:scale-95 uppercase",
     className
   );
 
   const content = (
     <>
       <span>{children}</span>
-      {icon && <span className="ml-2 inline-flex">{icon}</span>}
+      {icon && <span className="ml-2 inline-flex items-center">{icon}</span>}
     </>
   );
 

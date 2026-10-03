@@ -31,7 +31,6 @@ function checkIsEndPassed(rawEnd?: string, endDate?: string): boolean {
         return parsedTime <= Date.now();
       }
     } else {
-      // Date-only string like "25 Sep 2026": do not expire until end of day (23:59:59.999)
       const parsedDate = new Date(endDate);
       if (!isNaN(parsedDate.getTime())) {
         const endOfDay = new Date(parsedDate);
@@ -46,6 +45,7 @@ function checkIsEndPassed(rawEnd?: string, endDate?: string): boolean {
 
 /**
  * Reusable Card component for Competitions, Live Draws, and Instant Wins.
+ * Formatted with Tuned Draws dark carbon glass and electric racing red design system.
  */
 export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
   const {
@@ -82,10 +82,8 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
       : (rawWorthPrice ? Number(rawWorthPrice) : undefined);
 
   const worthPrice = declaredValue && declaredValue > 0 ? declaredValue : undefined;
-
   const soldPercent = totalTickets > 0 ? Math.min(Math.round((soldTickets / totalTickets) * 100), 100) : 0;
 
-  // Render a clock SVG icon
   const clockIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +91,7 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
       viewBox="0 0 24 24"
       strokeWidth={2}
       stroke="currentColor"
-      className="w-4 h-4 text-text-secondary"
+      className="w-3.5 h-3.5 text-[#8A92A0]"
     >
       <path
         strokeLinecap="round"
@@ -103,7 +101,6 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
     </svg>
   );
 
-  // Render a check/arrow SVG icon
   const arrowIcon = (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -111,7 +108,7 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
       viewBox="0 0 24 24"
       strokeWidth={2.5}
       stroke="currentColor"
-      className="w-4 h-4"
+      className="w-4 h-4 text-white"
     >
       <path
         strokeLinecap="round"
@@ -123,24 +120,26 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
 
   if (variant === "featured") {
     return (
-      <div className="flex flex-col bg-surface border border-border rounded-card overflow-hidden shadow-card transition-all duration-300 hover:border-border-medium hover:shadow-glow w-full max-w-[750px]">
+      <div className="flex flex-col bg-[#12141C] border border-white/10 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 hover:border-[#FF1E27]/40 hover:shadow-[0_0_30px_rgba(255,30,39,0.25)] w-full max-w-[750px] group">
         {/* Card Image */}
-        <div className="relative w-full h-[280px] md:h-[340px] bg-bg">
+        <div className="relative w-full h-[280px] md:h-[340px] bg-[#1A1D27] overflow-hidden">
           <Image
             src={image}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 750px"
-            className="object-cover opacity-80"
+            className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
             unoptimized
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#12141C] via-transparent to-transparent" />
+          
           {worthPrice && (
-            <div className="absolute top-4 left-4 bg-bg/80 backdrop-blur-sm border border-border-medium px-3.5 py-1.5 rounded-badge text-[11px] font-semibold text-text-brand tracking-wide">
-              WORTH {formatCurrency(worthPrice, 0)}
+            <div className="absolute top-4 left-4 bg-[#0B0C0E]/85 backdrop-blur-md border border-white/15 px-3.5 py-1.5 rounded-full text-[11px] font-heading font-black text-white tracking-wider uppercase shadow-md">
+              WORTH <span className="text-[#FF1E27]">{formatCurrency(worthPrice, 0)}</span>
             </div>
           )}
           {isEnded && (
-            <div className="absolute top-4 right-4 bg-[#FEE2E2] border border-[#FECACA] text-[#DC2626] px-3 py-1 rounded-badge text-[11px] font-bold tracking-wider uppercase shadow-xs">
+            <div className="absolute top-4 right-4 bg-red-950/80 border border-red-700/60 text-red-400 px-3 py-1 rounded-full text-[11px] font-black tracking-wider uppercase shadow-md backdrop-blur-sm">
               Draw Closed
             </div>
           )}
@@ -149,50 +148,50 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
         {/* Card Content */}
         <div className="p-6 md:p-8 flex flex-col flex-1">
           <div className="flex items-start justify-between gap-4 mb-3">
-            <h3 className="font-heading font-bold text-xl md:text-2xl text-text-primary">
+            <h3 className="font-heading font-black text-xl md:text-2xl text-white group-hover:text-[#FF1E27] transition-colors">
               {title}
             </h3>
             {worthPrice && (
-              <span className="text-sm font-semibold text-text-secondary whitespace-nowrap hidden sm:inline">
-                Worth {formatCurrency(worthPrice, 0)}
+              <span className="text-xs font-bold font-heading text-[#8A92A0] whitespace-nowrap hidden sm:inline uppercase">
+                Est. {formatCurrency(worthPrice, 0)}
               </span>
             )}
           </div>
 
           {description && (
-            <p className="font-sans text-xs md:text-sm text-text-muted leading-relaxed mb-6">
+            <p className="font-sans text-xs md:text-sm text-[#8A92A0] leading-relaxed mb-6 line-clamp-2">
               {description}
             </p>
           )}
 
           {/* Ticket Progress Bar */}
           <div className="mb-6">
-            <div className="flex justify-between items-center text-xs text-text-muted mb-2 font-medium">
-              <span>{soldTickets} / {totalTickets} tickets sold</span>
-              <span className="text-text-brand font-semibold">{soldPercent}%</span>
+            <div className="flex justify-between items-center text-xs text-[#8A92A0] mb-2 font-medium">
+              <span>{soldTickets} / {totalTickets} tickets taken</span>
+              <span className="text-[#FF1E27] font-bold">{soldPercent}%</span>
             </div>
-            <div className="w-full h-2.5 bg-bg rounded-badge overflow-hidden border border-divider">
+            <div className="w-full h-2.5 bg-[#1A1D27] rounded-full overflow-hidden border border-white/5">
               <div
-                className="h-full bg-primary rounded-badge transition-all duration-500 ease-out"
+                className="h-full bg-gradient-to-r from-[#FF1E27] to-[#B3000C] rounded-full transition-all duration-500 ease-out shadow-[0_0_12px_rgba(255,30,39,0.5)]"
                 style={{ width: `${soldPercent}%` }}
               />
             </div>
           </div>
 
           {/* Pricing & CTA Row */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-4 border-t border-divider mt-auto">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 pt-4 border-t border-white/10 mt-auto">
             <div className="flex flex-col">
-              <span className="text-[10px] text-text-muted uppercase tracking-wider font-semibold">
+              <span className="text-[10px] text-[#8A92A0] uppercase tracking-wider font-bold">
                 Ticket Price
               </span>
-              <span className="text-2xl font-bold font-heading text-text-brand">
+              <span className="text-2xl font-black font-heading text-[#FF1E27]">
                 {formatCurrency(ticketPrice)}
               </span>
             </div>
             {isEnded ? (
               <Link
                 href={`/live-raffles/${draw.slug || draw.id}`}
-                className="px-8 py-3.5 text-sm font-sans font-bold uppercase rounded-button bg-elevated border border-border text-text-muted hover:text-text-primary text-center transition-all"
+                className="px-8 py-3.5 text-xs font-heading font-black uppercase rounded-xl bg-[#1A1D27] border border-white/10 text-[#8A92A0] hover:text-white text-center transition-all"
               >
                 Draw Closed
               </Link>
@@ -200,7 +199,7 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
               <PrimaryButton
                 href={`/live-raffles/${draw.slug || draw.id}`}
                 icon={arrowIcon}
-                className="px-8 py-3.5 text-sm"
+                className="px-8 py-3.5 text-xs"
               >
                 Enter Now
               </PrimaryButton>
@@ -214,19 +213,25 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
   // Instant wins variant
   if (variant === "instant" || isInstantWin) {
     return (
-      <div className="flex flex-col bg-surface border border-border rounded-card overflow-hidden shadow-card transition-all duration-300 hover:border-border-medium hover:shadow-glow">
+      <div className="flex flex-col bg-[#12141C] border border-white/10 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:border-[#FF1E27]/40 hover:shadow-[0_0_25px_rgba(255,30,39,0.25)] group">
         {/* Card Image */}
-        <div className="relative w-full h-[180px] bg-bg">
+        <div className="relative w-full h-[180px] bg-[#1A1D27] overflow-hidden">
           <Image
             src={image}
             alt={title}
             fill
             sizes="(max-width: 768px) 100vw, 380px"
-            className="object-cover opacity-75"
+            className="object-cover opacity-85 group-hover:scale-105 transition-transform duration-500"
             unoptimized
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#12141C] via-transparent to-transparent" />
+          
+          <div className="absolute top-3 left-3 bg-[#FF1E27] text-white px-2.5 py-1 rounded-full text-[9px] font-heading font-black uppercase tracking-wider shadow-[0_0_10px_rgba(255,30,39,0.6)]">
+            ⚡ INSTANT WIN
+          </div>
+
           {isEnded && (
-            <div className="absolute top-3 right-3 bg-[#FEE2E2] border border-[#FECACA] text-[#DC2626] px-2.5 py-0.5 rounded-badge text-[10px] font-bold tracking-wider uppercase shadow-xs">
+            <div className="absolute top-3 right-3 bg-red-950/80 border border-red-700/60 text-red-400 px-2.5 py-0.5 rounded-full text-[10px] font-black tracking-wider uppercase shadow-xs">
               Draw Closed
             </div>
           )}
@@ -234,41 +239,41 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
 
         {/* Card Content */}
         <div className="p-5 flex flex-col flex-1">
-          <h3 className="font-heading font-bold text-lg text-text-primary mb-2 line-clamp-1">
+          <h3 className="font-heading font-black text-base text-white mb-2 line-clamp-1 group-hover:text-[#FF1E27] transition-colors">
             {title}
           </h3>
 
-          <div className="text-xl font-bold text-text-brand font-heading mb-4">
+          <div className="text-lg font-black text-[#FF1E27] font-heading mb-4">
             Worth {formatCurrency(worthPrice || 0, 0)}
           </div>
 
           {/* Ticket Progress Bar */}
           <div className="mb-4">
-            <div className="w-full h-1 bg-bg rounded-badge overflow-hidden border border-divider">
+            <div className="w-full h-1.5 bg-[#1A1D27] rounded-full overflow-hidden border border-white/5">
               <div
-                className="h-full bg-primary rounded-badge transition-all duration-500 ease-out"
+                className="h-full bg-gradient-to-r from-[#FF1E27] to-[#B3000C] rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${soldPercent}%` }}
               />
             </div>
-            <div className="flex justify-between items-center text-[10px] text-text-muted mt-2">
-              <span>{soldTickets} / {totalTickets} tickets</span>
+            <div className="flex justify-between items-center text-[10px] text-[#8A92A0] mt-1.5 font-medium">
+              <span>{soldTickets} / {totalTickets}</span>
               <span>{soldPercent}% sold</span>
             </div>
           </div>
 
           {/* Countdown timer */}
-          <div className="flex items-center gap-1.5 text-xs text-text-muted mb-5 bg-bg/50 px-2.5 py-1.5 rounded-button border border-divider w-fit">
+          <div className="flex items-center gap-1.5 text-[11px] text-[#8A92A0] mb-5 bg-[#1A1D27] px-2.5 py-1.5 rounded-lg border border-white/5 w-fit">
             {clockIcon}
             <span>{isEnded ? "Draw Closed" : endDate}</span>
           </div>
 
           {/* Pricing & CTA Row */}
-          <div className="flex items-center justify-between pt-4 border-t border-divider mt-auto gap-4">
+          <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-auto gap-4">
             <div className="flex flex-col">
-              <span className="text-[9px] text-text-muted uppercase tracking-wider font-semibold">
+              <span className="text-[9px] text-[#8A92A0] uppercase tracking-wider font-bold">
                 Entry from
               </span>
-              <span className="text-base font-bold text-text-brand">
+              <span className="text-base font-black text-white">
                 {formatCurrency(ticketPrice)}
               </span>
             </div>
@@ -276,9 +281,9 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
             {isEnded ? (
               <Link
                 href={`/live-raffles/${draw.slug || draw.id}`}
-                className="px-4 py-2 text-xs font-sans font-bold uppercase rounded-button bg-elevated border border-border text-text-muted hover:text-text-primary text-center transition-all"
+                className="px-4 py-2 text-xs font-heading font-black uppercase rounded-xl bg-[#1A1D27] border border-white/10 text-[#8A92A0] hover:text-white text-center transition-all"
               >
-                Draw Closed
+                Closed
               </Link>
             ) : (
               <PrimaryButton
@@ -286,7 +291,7 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
                 className="px-4 py-2 text-xs"
                 icon={arrowIcon}
               >
-                Enter Draw
+                Enter
               </PrimaryButton>
             )}
           </div>
@@ -297,24 +302,26 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
 
   // Standard Grid draw card
   return (
-    <div className="flex flex-col bg-surface border border-border rounded-card overflow-hidden shadow-card transition-all duration-300 hover:border-border-medium hover:shadow-glow">
+    <div className="flex flex-col bg-[#12141C] border border-white/10 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:border-[#FF1E27]/40 hover:shadow-[0_0_25px_rgba(255,30,39,0.25)] group">
       {/* Card Image */}
-      <div className="relative w-full h-[180px] bg-bg">
+      <div className="relative w-full h-[180px] bg-[#1A1D27] overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
           sizes="(max-width: 768px) 100vw, 380px"
-          className="object-cover opacity-75"
+          className="object-cover opacity-85 group-hover:scale-105 transition-transform duration-500"
           unoptimized
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#12141C] via-transparent to-transparent" />
+
         {worthPrice && (
-          <div className="absolute top-4 left-4 bg-bg/80 backdrop-blur-sm border border-border px-2.5 py-1 rounded-badge text-[10px] font-semibold text-text-brand tracking-wide">
-            WORTH {formatCurrency(worthPrice, 0)}
+          <div className="absolute top-3 left-3 bg-[#0B0C0E]/85 backdrop-blur-md border border-white/15 px-2.5 py-1 rounded-full text-[10px] font-heading font-black text-white tracking-wider uppercase shadow-md">
+            WORTH <span className="text-[#FF1E27]">{formatCurrency(worthPrice, 0)}</span>
           </div>
         )}
         {isEnded && (
-          <div className="absolute top-4 right-4 bg-[#FEE2E2] border border-[#FECACA] text-[#DC2626] px-2.5 py-1 rounded-badge text-[10px] font-bold tracking-wider uppercase shadow-xs">
+          <div className="absolute top-3 right-3 bg-red-950/80 border border-red-700/60 text-red-400 px-2.5 py-0.5 rounded-full text-[10px] font-black tracking-wider uppercase shadow-xs">
             Draw Closed
           </div>
         )}
@@ -322,43 +329,43 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
 
       {/* Card Content */}
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-heading font-bold text-lg text-text-primary mb-2 line-clamp-1">
+        <h3 className="font-heading font-black text-base text-white mb-2 line-clamp-1 group-hover:text-[#FF1E27] transition-colors">
           {title}
         </h3>
         
         {description && (
-          <p className="font-sans text-[11px] text-text-muted leading-relaxed mb-4 line-clamp-2 h-8">
+          <p className="font-sans text-[11px] text-[#8A92A0] leading-relaxed mb-4 line-clamp-2 h-8">
             {description}
           </p>
         )}
 
         {/* Ticket Progress Bar */}
         <div className="mb-4">
-          <div className="w-full h-1 bg-bg rounded-badge overflow-hidden border border-divider">
+          <div className="w-full h-1.5 bg-[#1A1D27] rounded-full overflow-hidden border border-white/5">
             <div
-              className="h-full bg-primary rounded-badge transition-all duration-500 ease-out"
+              className="h-full bg-gradient-to-r from-[#FF1E27] to-[#B3000C] rounded-full transition-all duration-500 ease-out"
               style={{ width: `${soldPercent}%` }}
             />
           </div>
-          <div className="flex justify-between items-center text-[10px] text-text-muted mt-2">
+          <div className="flex justify-between items-center text-[10px] text-[#8A92A0] mt-1.5 font-medium">
             <span>{soldTickets} / {totalTickets} tickets</span>
-            <span>{soldPercent}% sold</span>
+            <span className="text-[#FF1E27] font-bold">{soldPercent}% sold</span>
           </div>
         </div>
 
         {/* Countdown timer */}
-        <div className="flex items-center gap-1.5 text-xs text-text-muted mb-5 bg-bg/50 px-2.5 py-1.5 rounded-button border border-divider w-fit">
+        <div className="flex items-center gap-1.5 text-[11px] text-[#8A92A0] mb-5 bg-[#1A1D27] px-2.5 py-1.5 rounded-lg border border-white/5 w-fit">
           {clockIcon}
           <span>{isEnded ? "Draw Closed" : endDate}</span>
         </div>
 
         {/* Pricing & CTA Row */}
-        <div className="flex items-center justify-between pt-4 border-t border-divider mt-auto gap-4">
+        <div className="flex items-center justify-between pt-4 border-t border-white/10 mt-auto gap-4">
           <div className="flex flex-col">
-            <span className="text-[9px] text-text-muted uppercase tracking-wider font-semibold">
+            <span className="text-[9px] text-[#8A92A0] uppercase tracking-wider font-bold">
               Ticket
             </span>
-            <span className="text-base font-bold text-text-brand">
+            <span className="text-base font-black font-heading text-[#FF1E27]">
               {formatCurrency(ticketPrice)}
             </span>
           </div>
@@ -366,9 +373,9 @@ export default function DrawCard({ draw, variant = "grid" }: DrawCardProps) {
           {isEnded ? (
             <Link
               href={`/live-raffles/${draw.slug || draw.id}`}
-              className="px-4 py-2 text-xs font-sans font-bold uppercase rounded-button bg-elevated border border-border text-text-muted hover:text-text-primary text-center transition-all"
+              className="px-4 py-2 text-xs font-heading font-black uppercase rounded-xl bg-[#1A1D27] border border-white/10 text-[#8A92A0] hover:text-white text-center transition-all"
             >
-              Draw Closed
+              Closed
             </Link>
           ) : (
             <PrimaryButton

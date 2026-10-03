@@ -9,7 +9,7 @@ interface SectionHeaderProps {
 }
 
 /**
- * Reusable section title component matching Figma design layout.
+ * Reusable section title component matching Tuned Draws automotive design layout.
  */
 export default function SectionHeader({
   badgeText,
@@ -25,17 +25,18 @@ export default function SectionHeader({
       )}
     >
       {badgeText && (
-        <div className="inline-flex items-center bg-accent-bg border border-border px-3 py-1.5 rounded-badge text-[10px] font-semibold uppercase tracking-wider text-text-brand mb-4">
+        <div className="inline-flex items-center gap-2 bg-[#12141C] border border-[#FF1E27]/30 px-3.5 py-1.5 rounded-full text-[10px] font-heading font-black uppercase tracking-widest text-[#FF1E27] mb-4 shadow-[0_0_12px_rgba(255,30,39,0.15)]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27] animate-pulse" />
           {badgeText}
         </div>
       )}
       
-      <h2 className="font-heading font-bold text-3xl md:text-4xl text-text-primary leading-tight mb-4">
+      <h2 className="font-heading font-black text-2xl sm:text-3xl md:text-4xl text-white tracking-tight leading-tight mb-3">
         {headingText}
       </h2>
       
       {paragraphText && (
-        <p className="font-sans text-sm md:text-base text-text-muted leading-relaxed">
+        <p className="font-sans text-xs sm:text-sm text-[#8A92A0] leading-relaxed">
           {paragraphText}
         </p>
       )}

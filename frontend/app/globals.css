@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  /* Semantic Colors - Fairway Draws Theme */
-  --color-bg: #F8FAF6;
-  --color-surface: #FFFFFF;
-  --color-elevated: #F1F5EE;
-  --color-accent-bg: #ECF5EE;
+  /* Semantic Colors - Tuned Draws Automotive Theme */
+  --color-bg: #0B0C0E;
+  --color-surface: #12141C;
+  --color-elevated: #1A1D27;
+  --color-accent-bg: rgba(255, 30, 39, 0.08);
   
-  --color-primary: #0b4d35;
-  --color-primary-rgb: 11,77,53;
-  --color-primary-hover: #073826;
+  --color-primary: #FF1E27;
+  --color-primary-rgb: 255, 30, 39;
+  --color-primary-hover: #B3000C;
   --color-primary-text: #ffffff;
   
-  --color-text-primary: #0e1e17;
-  --color-text-secondary: #334e43;
-  --color-text-muted: #5e766c;
-  --color-text-brand: #0b4d35;
-  --color-text-accent: #dc2626;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #D1D5DB;
+  --color-text-muted: #8A92A0;
+  --color-text-brand: #FF1E27;
+  --color-text-accent: #FF1E27;
   
-  --color-border: #E2EADF;
-  --color-border-medium: #CBD8C8;
-  --color-divider: #EFF4ED;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-medium: rgba(255, 30, 39, 0.25);
+  --color-divider: rgba(255, 255, 255, 0.06);
   
   --color-success: #16A34A;
-  --color-success-text: #15803D;
-  --color-success-bg: #DCFCE7;
+  --color-success-text: #22C55E;
+  --color-success-bg: rgba(34, 197, 94, 0.12);
   
   /* Radii */
   --radius-card: 16px;
-  --radius-button: 8px;
+  --radius-button: 10px;
   --radius-badge: 9999px;
   
   /* Shadows */
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
-  --shadow-glow: 0 0 25px rgba(11, 77, 53, 0.22);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 25px rgba(255, 30, 39, 0.35);
   
   /* Tuned Draws Automotive Brand Palette */
   --color-brand-dark: #0B0C0E;
@@ -144,35 +144,38 @@ body {
 
 /* 3D Hero Heading Text Shadows */
 .text-shadow-hero-green {
-  text-shadow: 0 4px 12px rgba(11, 77, 53, 0.4), 0 2px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 4px 16px rgba(255, 30, 39, 0.4), 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .text-shadow-hero-red {
-  text-shadow: 0 4px 12px rgba(185, 28, 28, 0.5), 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 16px rgba(255, 30, 39, 0.6), 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* Glossy Red 3D Button */
+/* Electric Racing Red 3D Button */
 .btn-glossy-red {
-  background: linear-gradient(180deg, #dc2626 0%, #b91c1c 45%, #991b1b 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 8px 20px -4px rgba(185, 28, 28, 0.45);
-  border: 1px solid #7f1d1d;
+  background: linear-gradient(180deg, #FF1E27 0%, #D8141D 50%, #B3000C 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 8px 24px -4px rgba(255, 30, 39, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-glossy-red:hover {
-  background: linear-gradient(180deg, #ef4444 0%, #dc2626 45%, #b91c1c 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 12px 25px -4px rgba(185, 28, 28, 0.6);
+  background: linear-gradient(180deg, #FF3840 0%, #FF1E27 50%, #D8141D 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 12px 28px -4px rgba(255, 30, 39, 0.7);
 }
 
-/* Glossy White Pill Button */
+/* Dark Carbon Glass / Metallic Button */
 .btn-glossy-white {
-  background: linear-gradient(180deg, #ffffff 0%, #f8faf6 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 4px 14px rgba(11, 77, 53, 0.12);
-  border: 1.5px solid #cbd8c8;
+  background: #12141C;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 14px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FFFFFF !important;
 }
 
 .btn-glossy-white:hover {
-  background: linear-gradient(180deg, #ffffff 0%, #ecf5ee 100%);
-  border-color: #0b4d35;
+  background: #1A1D27;
+  border-color: rgba(255, 30, 39, 0.5);
+  box-shadow: 0 0 20px rgba(255, 30, 39, 0.25);
+  color: #FFFFFF !important;
 }
 
 /* Shared public legal-document treatment. Keeps long-form content readable while

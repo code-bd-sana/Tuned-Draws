@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Fairway Draws | Premium Golf Gear Competitions',
+  title: 'Tuned Draws | Premium Automotive Sweepstakes & Builds',
   description:
-    'Win premium golf gear for less. Enter draws from just £1 per ticket. Transparent, fair, and secure prize draws.',
+    'Win track-ready supercars, custom high-horsepower builds, crate engines, and performance motorsport gear for less. Transparent, fair, and certified prize draws.',
 };
 
 export default function RootLayout({
@@ -26,16 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}>
-      <body suppressHydrationWarning className='min-h-full flex flex-col'>
+    <html lang="en" suppressHydrationWarning className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}>
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-[#0B0C0E] text-[#F3F4F6]">
         <Providers>{children}</Providers>
         <Toaster 
           position="bottom-right"
           toastOptions={{
             style: {
-              background: '#161810',
-              border: '1px solid #2d3c13',
-              color: '#e8edd4',
+              background: '#12141C',
+              border: '1px solid rgba(255, 30, 39, 0.25)',
+              color: '#F3F4F6',
             },
             className: 'font-sans text-[14px]',
           }}
