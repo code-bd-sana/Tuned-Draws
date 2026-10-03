@@ -15,15 +15,19 @@ export default function HostAuthLayout({
   currentStep = 1,
 }: HostAuthLayoutProps) {
   return (
-    <div className="min-h-screen w-full flex flex-col bg-[#cfdfcb] bg-[radial-gradient(#0b4d3520_1px,transparent_1px)] bg-[size:28px_28px] lg:grid lg:grid-cols-[38%_62%]">
+    <div className="min-h-screen w-full flex flex-col bg-[#0B0C0E] bg-tachometer-grid lg:grid lg:grid-cols-[38%_62%] text-white selection:bg-[#FF1E27] selection:text-white">
+      {/* Ambient Crimson Red Glow Highlights */}
+      <div className="pointer-events-none fixed top-0 left-1/3 w-[600px] h-[350px] bg-[#FF1E27] opacity-[0.06] blur-[150px] rounded-full z-0" />
+      <div className="pointer-events-none fixed bottom-0 right-0 w-[500px] h-[400px] bg-[#B3000C] opacity-[0.05] blur-[140px] rounded-full z-0" />
+
       {/* Left panel - brand and status */}
-      <div className="w-full lg:h-screen lg:sticky lg:top-0">
+      <div className="relative z-10 w-full lg:h-screen lg:sticky lg:top-0">
         <HostAuthBrandPanel mode={mode} currentStep={currentStep} />
       </div>
 
       {/* Right panel - form content card */}
-      <main className="flex w-full items-center justify-center overflow-y-auto px-4 pt-4 pb-[calc(7rem+env(safe-area-inset-bottom,0px))] sm:px-6 sm:pt-6 sm:pb-[calc(7.5rem+env(safe-area-inset-bottom,0px))] md:px-10 md:pt-10 md:pb-[calc(8rem+env(safe-area-inset-bottom,0px))] lg:p-16 xl:p-24 [&_.bg-surface]:bg-[#edf5e9] [&_.bg-bg]:bg-[#f8fbf6] [&_.border-divider]:border-[#bdd3ba] [&_input]:border-[#bdd3ba] [&_textarea]:border-[#bdd3ba]">
-        <div className="w-full max-w-3xl flex flex-col justify-center">
+      <main className="relative z-10 flex w-full items-center justify-center overflow-y-auto p-4 sm:p-6 md:p-10 lg:p-14 xl:p-20">
+        <div className="w-full max-w-2xl flex flex-col justify-center">
           {children}
         </div>
       </main>

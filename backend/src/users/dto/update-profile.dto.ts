@@ -30,7 +30,7 @@ export class UpdateProfileDto {
   location?: string;
 
   @ApiProperty({
-    example: 'Fairway Events Ltd',
+    example: 'Turned Events Ltd',
     description: 'Business name (Hosts only)',
     required: false,
   })
@@ -39,7 +39,7 @@ export class UpdateProfileDto {
   businessName?: string;
 
   @ApiProperty({
-    example: 'Official host for premium golf competitions.',
+    example: 'Official host for premium competitions and draws.',
     description: 'Host Bio',
     required: false,
   })
@@ -66,7 +66,7 @@ export class UpdateProfileDto {
   dateOfBirth?: string;
 
   @ApiProperty({
-    example: '123 Fairway Green, London, UK',
+    example: '123 High Street, London, UK',
     description: 'Business Address',
     required: false,
   })

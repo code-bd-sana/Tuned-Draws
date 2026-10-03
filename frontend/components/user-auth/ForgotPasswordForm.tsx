@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ForgotPasswordFormValues, UserAuthFormState } from "../../types/user-auth.types";
 import { validateForgotPasswordForm } from "../../lib/validations/user-auth.validation";
-import PrimaryButton from "../website/shared/PrimaryButton";
 import { cn } from "../../lib/utils";
 import { useForgotPasswordMutation } from "../../hooks/useUserHooks";
+import { Mail, ArrowLeft, ArrowRight, AlertCircle, CheckCircle2 } from "lucide-react";
 
 export default function ForgotPasswordForm() {
   const [formData, setFormData] = useState<ForgotPasswordFormValues>({
@@ -61,51 +61,54 @@ export default function ForgotPasswordForm() {
 
   if (formState.submitStatus === "success") {
     return (
-      <div className="bg-surface border border-divider p-6 md:p-10 rounded-card shadow-card w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none">
-        <div className="w-12 h-12 rounded-full bg-accent-bg border border-primary flex items-center justify-center mb-6">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-6 h-6 text-text-brand"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-          </svg>
+      <div className="carbon-glass border border-[#FF1E27]/25 p-8 sm:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none backdrop-blur-xl relative overflow-hidden text-white">
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent opacity-80" />
+
+        <div className="w-16 h-16 rounded-2xl bg-[#12141C] border border-[#FF1E27]/40 flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(255,30,39,0.3)]">
+          <Mail className="w-8 h-8 text-[#FF1E27] animate-scaleIn" />
         </div>
-        <h2 className="font-heading font-normal text-2xl md:text-3xl text-text-primary mb-3">
+
+        <h2 className="font-heading font-black text-2xl sm:text-3xl metallic-text uppercase tracking-wide mb-3">
           Check Your Email
         </h2>
-        <p className="font-sans text-xs md:text-sm text-text-secondary leading-relaxed mb-8 max-w-sm">
-          We&apos;ve sent a password recovery link to <span className="text-text-primary font-medium">{formState.values.email}</span>. Please check your inbox and follow the instructions to reset your password.
+        <p className="font-sans text-xs sm:text-sm text-[#9CA3AF] leading-relaxed mb-8 max-w-sm">
+          We&apos;ve sent a password recovery link to{" "}
+          <span className="text-white font-bold">{formState.values.email}</span>. Follow the link to securely reset your credentials.
         </p>
+
         <Link
           href="/login"
-          className="font-sans font-semibold text-xs text-text-brand hover:text-primary-hover uppercase tracking-wider transition-colors duration-200"
+          className="btn-racing-red py-3.5 px-8 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
         >
-          &larr; Back to Login
+          <ArrowLeft className="w-4 h-4" />
+          <span>Back to Sign In</span>
         </Link>
       </div>
     );
   }
 
   return (
-    <div className="bg-surface border border-divider p-6 md:p-10 rounded-card shadow-card w-full max-w-xl mx-auto flex flex-col gap-6 animate-fadeIn">
+    <div className="carbon-glass border border-[#FF1E27]/25 p-6 sm:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col gap-6 animate-fadeIn backdrop-blur-xl relative overflow-hidden text-white">
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent opacity-80" />
+      <div className="pointer-events-none absolute -top-24 -right-24 w-60 h-60 bg-[#FF1E27] opacity-[0.06] blur-[90px] rounded-full" />
+
       {/* Header section */}
       <div className="flex flex-col gap-2 mb-2">
-        <h2 className="font-heading font-normal text-3xl md:text-[36px] text-text-primary">
+        <h2 className="font-heading font-black text-3xl sm:text-4xl metallic-text tracking-wide uppercase">
           Forgot Password
         </h2>
-        <p className="font-sans text-xs md:text-sm text-text-secondary leading-relaxed">
-          Enter your email address below, and we&apos;ll send you a link to reset your password.
+        <p className="font-sans text-xs sm:text-sm text-[#9CA3AF] leading-relaxed">
+          Enter your registered email address below and we&apos;ll send you a secure link to reset your password.
         </p>
       </div>
 
       {/* Form */}
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <div className="flex flex-col w-full gap-1.5">
-          <label htmlFor="email" className="font-sans font-medium text-xs md:text-sm text-text-primary">
+          <label
+            htmlFor="email"
+            className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+          >
             Email Address
           </label>
           <input
@@ -118,34 +121,34 @@ export default function ForgotPasswordForm() {
             onChange={handleInputChange}
             disabled={formState.isSubmitting}
             className={cn(
-              "w-full bg-bg border border-border rounded-button px-4 py-2.5 font-sans text-xs md:text-sm text-text-primary placeholder:text-text-muted/40 transition-all duration-200 outline-none",
-              errors.email
-                ? "border-red-500/80 focus:border-red-500 focus:ring-1 focus:ring-red-500/30"
-                : "focus:border-primary focus:ring-1 focus:ring-primary/20",
-              formState.isSubmitting && "opacity-50 cursor-not-allowed"
+              "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
+              errors.email && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
             )}
           />
           {errors.email && (
-            <span className="font-sans text-[11px] text-red-500 mt-1 self-start animate-fadeIn">
-              {errors.email}
+            <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+              <AlertCircle className="w-3 h-3 shrink-0" />
+              <span>{errors.email}</span>
             </span>
           )}
         </div>
 
-        <PrimaryButton
+        <button
           type="submit"
           disabled={formState.isSubmitting}
-          className="w-full py-3.5 mt-2 font-heading font-semibold text-sm tracking-wide uppercase"
+          className="w-full btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none active:scale-[0.99] mt-2"
         >
-          {formState.isSubmitting ? "Sending..." : "Send Reset Link →"}
-        </PrimaryButton>
+          <span>{formState.isSubmitting ? "Sending Link..." : "Send Reset Link"}</span>
+          {!formState.isSubmitting && <ArrowRight className="w-4 h-4" />}
+        </button>
 
         <div className="text-center mt-2">
           <Link
             href="/login"
-            className="font-sans font-semibold text-xs text-text-secondary hover:text-text-primary transition-colors duration-200"
+            className="inline-flex items-center gap-1.5 font-sans font-bold text-xs text-[#8A92A0] hover:text-[#FF1E27] uppercase tracking-wider transition-colors duration-200"
           >
-            &larr; Back to Login
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Back to Sign In</span>
           </Link>
         </div>
       </form>

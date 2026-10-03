@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import FairwayDrawsLogo from '../website/shared/FairwayDrawsLogo';
+import { ShieldCheck, Zap, BarChart3, Check } from "lucide-react";
 import { cn } from "../../lib/utils";
+import TunedDrawsBrandLogo from "../shared/TunedDrawsBrandLogo";
 
 interface HostAuthBrandPanelProps {
   mode: "login" | "register";
@@ -18,172 +18,157 @@ export default function HostAuthBrandPanel({
   // Trust stats for Login screen
   const trustStats = [
     {
-      label: "2,400 Draws Completed",
-      icon: (
-        <svg
-          className="w-[18px] h-[18px]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-        </svg>
-      ),
+      label: "2,400+ Verified Draws Completed",
+      description: "Proven automotive raffle platform with full compliance",
+      icon: <ShieldCheck className="w-5 h-5 text-[#FF1E27]" />,
     },
     {
-      label: "£284,600 Paid to Hosts",
-      icon: (
-        <svg
-          className="w-[18px] h-[18px]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 6v12m-3-2.818l.268-.118a5.5 5.5 0 007.702-6.183L16.2 6.642m-7.2 9.358a5.5 5.5 0 01-3.66-4.996l.006-.05a5.5 5.5 0 018.66-4.332"
-          />
-        </svg>
-      ),
+      label: "£500K+ Fast Host Payouts",
+      description: "Direct settlements to verified UK business bank accounts",
+      icon: <Zap className="w-5 h-5 text-[#FF1E27]" />,
     },
     {
-      label: "Real-Time Sales Dashboard",
-      icon: (
-        <svg
-          className="w-[18px] h-[18px]"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"
-          />
-        </svg>
-      ),
+      label: "Real-Time Telemetry & Sales Analytics",
+      description: "Live conversion tracking, ticket heatmaps, and entrant data",
+      icon: <BarChart3 className="w-5 h-5 text-[#FF1E27]" />,
     },
   ];
 
-  // Stepper tracker steps for Registration flow
+  // 5 Synchronized Steps matching HostRegistrationForm 1:1
   const registrationSteps = [
-    { number: 1, label: "Account Details", stepIds: [1, 2] },
-    { number: 2, label: "Business Information", stepIds: [3] },
-    { number: 3, label: "Logo & Branding", stepIds: [4] },
-    { number: 4, label: "Payout Details", stepIds: [5, 8] },
+    { order: 1, stepId: 1, label: "Account Credentials" },
+    { order: 2, stepId: 2, label: "Host Profile" },
+    { order: 3, stepId: 3, label: "Business Information" },
+    { order: 4, stepId: 4, label: "Logo & Workshop Bio" },
+    { order: 5, stepId: 8, label: "Review & Go Live" },
   ];
 
-  const getStepStatus = (stepIds: number[]) => {
-    // If the active step matches any of the step's component parts
-    const isActive = stepIds.includes(currentStep);
-    // Find the highest step ID represented in this group
-    const maxStepId = Math.max(...stepIds);
-    const isCompleted = currentStep > maxStepId;
+  const stepOrderMap: Record<number, number> = {
+    1: 1,
+    2: 2,
+    3: 3,
+    4: 4,
+    8: 5,
+  };
 
-    if (isActive) return "active";
-    if (isCompleted) return "completed";
+  const currentStepOrder = stepOrderMap[currentStep] || 1;
+
+  const getStepStatus = (order: number) => {
+    if (currentStepOrder === order) return "active";
+    if (currentStepOrder > order) return "completed";
     return "inactive";
   };
 
   return (
-    <div className="relative isolate flex h-full flex-col justify-between overflow-hidden border-b border-[#bdd3ba] bg-[#e5f0e2] bg-[url('/hero-banner.jpg')] bg-cover bg-[position:left_center] px-6 py-8 before:absolute before:inset-0 before:z-0 before:bg-gradient-to-b before:from-[#f4faf1]/96 before:via-[#e5f0e2]/92 before:to-[#c9dec4]/96 [&>*]:relative [&>*]:z-10 md:px-[60px] lg:px-[80px] md:py-[50px] lg:py-[64px] lg:min-h-screen lg:w-[795px] lg:border-r-0 lg:border-b-0">
+    <div className="relative isolate flex h-full flex-col justify-between overflow-hidden border-b border-white/10 bg-[#0B0C0E] bg-tachometer-grid px-6 py-8 md:px-[60px] lg:px-[70px] md:py-[50px] lg:py-[64px] lg:min-h-screen lg:border-r lg:border-b-0 text-white">
+      {/* Ambient Crimson Glow */}
+      <div className="pointer-events-none absolute top-0 left-0 w-80 h-80 bg-[#FF1E27] opacity-[0.09] blur-[130px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-1/4 right-0 w-64 h-64 bg-[#B3000C] opacity-[0.06] blur-[110px] rounded-full" />
+
       {/* Top Branding Logo */}
-      <div>
-        <FairwayDrawsLogo variant="light" size="lg" priority />
+      <div className="relative z-10">
+        <TunedDrawsBrandLogo subtitle="HOST PARTNER NETWORK" />
       </div>
 
       {/* Center Body Panel */}
-      <div className="my-10 lg:my-auto flex flex-col gap-8 w-full max-w-[635px]">
+      <div className="relative z-10 my-10 lg:my-auto flex flex-col gap-8 w-full max-w-[560px]">
         {/* Header Text Group */}
-        <div className="flex flex-col gap-5 items-start">
-          {/* Community Pill Badge */}
-          <div className="bg-accent-bg border border-border px-[11px] py-[4px] rounded-[99px]">
-            <p className="font-sans font-medium text-[10px] md:text-[12px] text-primary tracking-[0.6px] uppercase whitespace-nowrap">
-              JOIN THE COMMUNITY
+        <div className="flex flex-col gap-4 items-start">
+          {/* Badge */}
+          <div className="self-start bg-[#12141C] border border-[#FF1E27]/30 px-3.5 py-1.5 rounded-full shadow-[0_0_12px_rgba(255,30,39,0.15)] flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#FF1E27] animate-pulse" />
+            <p className="font-sans font-bold text-[10px] md:text-xs text-[#FF1E27] tracking-widest uppercase">
+              {mode === "login" ? "HOST COMMAND CENTER" : "VERIFIED HOST NETWORK"}
             </p>
           </div>
 
           {/* Hero Headlines */}
-          <div className="flex flex-col items-start w-full">
-            <h1 className="font-heading font-bold text-[36px] md:text-[48px] text-text-primary leading-[1.1] md:leading-[80px] tracking-[0.24px] select-none">
-              {mode === "login"
-                ? "Run Your Own Golf Competitions"
-                : "Become a Verified Host"}
+          <div className="flex flex-col gap-2">
+            <h1 className="font-heading font-black text-3xl md:text-[42px] text-white leading-[1.15] tracking-tight select-none">
+              {mode === "login" ? (
+                <>
+                  <span className="metallic-text block">MANAGE YOUR DRAWS.</span>
+                  <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]">
+                    HOST PORTAL LOGIN.
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="metallic-text block">RUN YOUR OWN RAFFLES.</span>
+                  <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]">
+                    BECOME A VERIFIED HOST.
+                  </span>
+                </>
+              )}
             </h1>
-          </div>
-          <div className="max-w-[380px] w-full">
-            <p className="font-sans font-normal text-[16px] md:text-[20px] text-text-secondary leading-normal w-[593px] max-w-full">
+            <p className="font-sans font-normal text-sm md:text-base text-[#9CA3AF] leading-relaxed max-w-md">
               {mode === "login"
-                ? "Log in to manage your raffles, track sales, and view your earnings."
-                : "Apply in minutes. Our team typically reviews applications within 24 hours."}
+                ? "Log in to manage your vehicle raffles, monitor live ticket sales, and track your host earnings."
+                : "Apply in minutes. Our automotive verification team reviews and approves host applications within 24 hours."}
             </p>
           </div>
         </div>
 
-        {/* Bottom Feature Details / Tracker */}
-        <div className="mt-3">
+        {/* Feature Details / Tracker */}
+        <div className="mt-2">
           {mode === "login" ? (
             /* Login Trust Stats list */
-            <div className="flex flex-col gap-[16px]">
+            <div className="flex flex-col gap-3">
               {trustStats.map((stat, i) => (
-                <div key={i} className="flex items-center gap-[12px]">
-                  <div className="flex items-center justify-center w-[18px] h-[18px] text-text-secondary">
+                <div
+                  key={i}
+                  className="flex items-start gap-3.5 p-3.5 rounded-xl bg-[#12141C]/80 border border-white/5 hover:border-[#FF1E27]/30 transition-all duration-200 group"
+                >
+                  <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#1A1D27] border border-[#FF1E27]/25 shrink-0 group-hover:scale-105 transition-transform shadow-[0_0_10px_rgba(255,30,39,0.15)]">
                     {stat.icon}
                   </div>
-                  <span className="font-sans font-normal text-[14px] text-text-secondary leading-[21px] whitespace-nowrap">
-                    {stat.label}
-                  </span>
+                  <div className="flex flex-col gap-0.5">
+                    <span className="font-sans font-bold text-xs md:text-sm text-white group-hover:text-[#FF1E27] transition-colors">
+                      {stat.label}
+                    </span>
+                    <span className="font-sans text-[11px] text-[#8A92A0] leading-snug">
+                      {stat.description}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
           ) : (
             /* Registration stepper */
             <div className="flex flex-col gap-0 select-none">
-              {registrationSteps.map((step, index) => {
-                const status = getStepStatus(step.stepIds);
+              {registrationSteps.map((stepItem, index) => {
+                const status = getStepStatus(stepItem.order);
                 const isLast = index === registrationSteps.length - 1;
 
                 return (
-                  <div key={step.number} className="flex gap-[12px] items-start">
+                  <div key={stepItem.order} className="flex gap-3.5 items-start">
                     {/* Visual Connector Column */}
                     <div className="flex flex-col items-center">
                       <div
                         className={cn(
-                          "flex items-center justify-center w-[34px] h-[34px] rounded-full border transition-all duration-300 font-heading text-[13px] shadow-sm",
-                          status === "active" && "bg-primary border-primary text-white font-bold ring-4 ring-primary/20",
-                          status === "completed" && "bg-primary border-primary text-white font-bold",
-                          status === "inactive" && "bg-white border-primary/50 text-primary font-bold shadow-xs"
+                          "flex items-center justify-center w-8 h-8 rounded-xl border transition-all duration-300 font-heading text-xs font-bold",
+                          status === "active" &&
+                            "bg-gradient-to-r from-[#FF1E27] to-[#B3000C] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.5)] ring-4 ring-[#FF1E27]/20",
+                          status === "completed" &&
+                            "bg-[#FF1E27]/20 border-[#FF1E27]/60 text-[#FF1E27]",
+                          status === "inactive" &&
+                            "bg-[#12141C] border-white/10 text-[#6B7280]"
                         )}
                       >
                         {status === "completed" ? (
-                          <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="3"
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                          </svg>
+                          <Check className="w-4 h-4 stroke-[3]" />
                         ) : (
-                          step.number
+                          stepItem.order
                         )}
                       </div>
                       {!isLast && (
-                        <div className="py-[2px]">
+                        <div className="py-1">
                           <div
                             className={cn(
-                              "w-px h-[36px] transition-colors duration-300",
-                              status === "completed" || status === "active" ? "bg-primary" : "bg-primary/30"
+                              "w-0.5 h-7 transition-colors duration-300",
+                              status === "completed" || status === "active"
+                                ? "bg-[#FF1E27]/60"
+                                : "bg-white/10"
                             )}
                           />
                         </div>
@@ -191,16 +176,16 @@ export default function HostAuthBrandPanel({
                     </div>
 
                     {/* Step Label Column */}
-                    <div className="pt-[6px] pb-[36px]">
+                    <div className="pt-1 pb-6">
                       <p
                         className={cn(
-                          "font-sans text-[14px] leading-[19.5px] transition-colors duration-300 whitespace-nowrap",
-                          status === "active" && "text-text-primary font-bold tracking-tight",
-                          status === "completed" && "text-text-primary font-semibold",
-                          status === "inactive" && "text-text-secondary font-semibold"
+                          "font-sans text-sm transition-colors duration-300 whitespace-nowrap",
+                          status === "active" && "text-white font-bold tracking-tight",
+                          status === "completed" && "text-[#D1D5DB] font-semibold",
+                          status === "inactive" && "text-[#6B7280] font-medium"
                         )}
                       >
-                        {step.label}
+                        {stepItem.label}
                       </p>
                     </div>
                   </div>
@@ -212,10 +197,20 @@ export default function HostAuthBrandPanel({
       </div>
 
       {/* Bottom Footer Copy */}
-      <div className="mt-8 lg:mt-0">
-        <p className="font-sans font-medium text-[11px] leading-[16.5px] text-text-secondary whitespace-nowrap">
-          © {new Date().getFullYear()} Fairway Draws · Privacy Policy · Terms
-        </p>
+      <div className="relative z-10 mt-8 lg:mt-0 pt-6 border-t border-white/10 lg:border-t-0 flex flex-wrap items-center gap-3 text-[11px] text-[#8A92A0]">
+        <span>© {new Date().getFullYear()} Tuned Draws Ltd</span>
+        <span>•</span>
+        <Link href="/privacy-policy" className="hover:text-white transition-colors">
+          Privacy Policy
+        </Link>
+        <span>•</span>
+        <Link href="/terms-and-conditions" className="hover:text-white transition-colors">
+          Terms & Conditions
+        </Link>
+        <span>•</span>
+        <Link href="/login" className="text-[#FF1E27] hover:underline font-semibold ml-auto">
+          Player Login →
+        </Link>
       </div>
     </div>
   );

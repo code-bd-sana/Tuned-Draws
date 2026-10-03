@@ -19,45 +19,57 @@ interface AdminAccountConfig {
 
 const adminAccounts: AdminAccountConfig[] = [
   {
-    email: 'jon.roberts@fairwaydraws.com',
+    email: 'admin@tuneddraws.com',
+    firstName: 'Tuned',
+    lastName: 'Admin',
+    password: process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
+  },
+  {
+    email: 'admin@turneddraws.com',
+    firstName: 'Turned',
+    lastName: 'Admin',
+    password: process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
+  },
+  {
+    email: 'jon.roberts@turneddraws.com',
     firstName: 'Jon',
     lastName: 'Roberts',
-    password: process.env.JON_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'FairwayAdmin2026!',
+    password: process.env.JON_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
   },
   {
-    email: 'kara.clegg@fairwaydraws.com',
+    email: 'kara.clegg@turneddraws.com',
     firstName: 'Kara',
     lastName: 'Clegg',
-    password: process.env.KARA_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'FairwayAdmin2026!',
+    password: process.env.KARA_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
   },
   {
-    email: 'lewis.mcmanus@fairwaydraws.com',
+    email: 'lewis.mcmanus@turneddraws.com',
     firstName: 'Lewis',
     lastName: 'McManus',
-    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'FairwayAdmin2026!',
+    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
   },
   {
-    email: 'lewis@fairwaydraws.com',
+    email: 'lewis@turneddraws.com',
     firstName: 'Lewis',
     lastName: 'McManus',
-    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'FairwayAdmin2026!',
+    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
   },
   {
     email: 'lewismcmanus@gmail.com',
     firstName: 'Lewis',
     lastName: 'McManus',
-    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'FairwayAdmin2026!',
+    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
   },
   {
     email: 'lewismcmanus@googlemail.com',
     firstName: 'Lewis',
     lastName: 'McManus',
-    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'FairwayAdmin2026!',
+    password: process.env.LEWIS_ADMIN_PASSWORD || process.env.ADMIN_DEFAULT_PASSWORD || 'TurnedAdmin2026!',
   },
 ];
 
 async function main() {
-  console.log('🚀 Creating / Updating Fairway Draws Admin Accounts...\n');
+  console.log('🚀 Creating / Updating Turned Draws Admin Accounts...\n');
 
   const salt = await bcrypt.genSalt(10);
 

@@ -56,11 +56,11 @@ async function main() {
   // 2. Seed Categories
   console.log('Seeding Categories...');
   const categories = [
-    { name: 'Drivers & Woods', slug: 'drivers' },
-    { name: 'Iron Sets & Wedges', slug: 'irons' },
-    { name: 'Putters', slug: 'putters' },
-    { name: 'Golf Experiences', slug: 'experiences' },
-    { name: 'Golf Bags & Apparel', slug: 'apparel' },
+    { name: 'Woodturning & Turned Crafts', slug: 'turned-crafts' },
+    { name: 'Artisan Bowls & Hollow Forms', slug: 'artisan-bowls' },
+    { name: 'Turned Pens & Luxury Writing', slug: 'luxury-pens' },
+    { name: 'Woodworking Machinery & Tools', slug: 'tools-machinery' },
+    { name: 'Rare Timber & Exotic Blanks', slug: 'rare-timber' },
   ];
 
   for (const cat of categories) {
@@ -108,7 +108,7 @@ async function main() {
       passwordHash: hostPassword,
       role: 'HOST',
       isEmailVerified: true,
-      firstName: 'Fairway',
+      firstName: 'Turned',
       lastName: 'Host',
       avatarUrl: `${baseUrl}/uploads/avatars/ef6734d3d6c19d4ab982e5aa1b5bb10f6.webp`,
     },
@@ -117,7 +117,7 @@ async function main() {
       passwordHash: hostPassword,
       role: 'HOST',
       isEmailVerified: true,
-      firstName: 'Fairway',
+      firstName: 'Turned',
       lastName: 'Host',
       avatarUrl: `${baseUrl}/uploads/avatars/ef6734d3d6c19d4ab982e5aa1b5bb10f6.webp`,
     },
@@ -127,21 +127,21 @@ async function main() {
   const hostProfile = await prisma.hostProfile.upsert({
     where: { userId: hostUser.id },
     update: {
-      businessName: 'Fairway Golf Pro Shop',
-      slug: 'fairway-golf-pro-shop',
-      bio: 'Official verified supplier of custom golf clubs, tour fittings, and premium golf gear in the UK.',
+      businessName: 'Turned Draws Studio',
+      slug: 'turned-draws-studio',
+      bio: 'Official verified supplier of mastercrafted turned wood art, fine crafts, and precision workshop gear in the UK.',
       isVerified: true,
     },
     create: {
       userId: hostUser.id,
-      businessName: 'Fairway Golf Pro Shop',
-      slug: 'fairway-golf-pro-shop',
-      bio: 'Official verified supplier of custom golf clubs, tour fittings, and premium golf gear in the UK.',
+      businessName: 'Turned Draws Studio',
+      slug: 'turned-draws-studio',
+      bio: 'Official verified supplier of mastercrafted turned wood art, fine crafts, and precision workshop gear in the UK.',
       isVerified: true,
       walletBalance: 150.00,
     },
   });
-  console.log('✅ Host Profile ready (fairway-golf-pro-shop)');
+  console.log('✅ Host Profile ready (turned-draws-studio)');
 
   // Active Host Subscription
   const proPlan = createdPlans.find((p) => p.name === 'Pro') || createdPlans[0];

@@ -1,107 +1,118 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import FairwayDrawsLogo from "../website/shared/FairwayDrawsLogo";
+import { ShieldCheck, Zap, Car } from "lucide-react";
+import TunedDrawsBrandLogo from "../shared/TunedDrawsBrandLogo";
 
 interface UserAuthBrandPanelProps {
   mode: "login" | "register" | "forgot" | "reset" | "verify";
 }
 
 export default function UserAuthBrandPanel({ mode }: UserAuthBrandPanelProps) {
-  // Trust stats for Customer screens
   const trustStats = [
     {
-      label: "100% Secure & Compliant Draws",
-      icon: (
-        <svg
-          className="w-[18px] h-[18px] text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-        </svg>
-      ),
+      label: "100% Secure & Verified Live Draws",
+      description: "UK-regulated sweepstakes with provably fair winner selection",
+      icon: <ShieldCheck className="w-5 h-5 text-[#FF1E27]" />,
     },
     {
-      label: "Instant Winner Notifications",
-      icon: (
-        <svg
-          className="w-[18px] h-[18px] text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      label: "Instant Cash & Performance Upgrades",
+      description: "Direct bank payouts or pro-installed turbo, suspension & exhaust setups",
+      icon: <Zap className="w-5 h-5 text-[#FF1E27]" />,
     },
     {
-      label: "Verified Hosts & Premium Prizes",
-      icon: (
-        <svg
-          className="w-[18px] h-[18px] text-primary"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499c.172-.468.83-.468 1.002 0l1.968 5.378 5.674.526c.499.046.7.66.321 1.002l-4.27 3.863 1.34 5.578c.118.49-.413.876-.843.614L12 18.064l-4.832 2.923c-.43.262-.961-.124-.843-.614l1.34-5.578-4.27-3.863c-.379-.342-.178-.956.321-1.002l5.674-.526 1.968-5.378z" />
-        </svg>
-      ),
+      label: "Built Beasts, Track Weapons & Supercars",
+      description: "High-horsepower Japanese imports, European exotics and custom monsters",
+      icon: <Car className="w-5 h-5 text-[#FF1E27]" />,
     },
   ];
 
   return (
-    <div className="relative isolate flex h-full flex-col justify-between overflow-hidden border-b border-[#bdd3ba] bg-[#e5f0e2] bg-[url('/hero-banner.jpg')] bg-cover bg-[position:left_center] px-6 py-8 before:absolute before:inset-0 before:z-0 before:bg-gradient-to-b before:from-[#f4faf1]/96 before:via-[#e5f0e2]/92 before:to-[#c9dec4]/96 [&>*]:relative [&>*]:z-10 md:px-[60px] lg:px-[80px] md:py-[50px] lg:py-[64px] lg:min-h-screen lg:border-r lg:border-b-0">
+    <div className="relative isolate flex h-full flex-col justify-between overflow-hidden border-b border-white/10 bg-[#0B0C0E] bg-tachometer-grid px-6 py-8 md:px-[60px] lg:px-[70px] md:py-[50px] lg:py-[64px] lg:min-h-screen lg:border-r lg:border-b-0 text-white">
+      {/* Ambient Crimson Red Lighting */}
+      <div className="pointer-events-none absolute top-0 left-0 w-80 h-80 bg-[#FF1E27] opacity-[0.09] blur-[130px] rounded-full" />
+      <div className="pointer-events-none absolute bottom-1/4 right-0 w-64 h-64 bg-[#B3000C] opacity-[0.06] blur-[110px] rounded-full" />
+
       {/* Top Branding Logo */}
-      <div>
-        <FairwayDrawsLogo variant="light" size="lg" priority />
+      <div className="relative z-10">
+        <TunedDrawsBrandLogo subtitle="AUTOMOTIVE SWEEPSTAKES" />
       </div>
 
       {/* Center Body Panel */}
-      <div className="my-10 lg:my-auto flex flex-col gap-8 w-full max-w-lg">
+      <div className="relative z-10 my-10 lg:my-auto flex flex-col gap-7 w-full max-w-lg">
         {/* Community Pill Badge */}
-        <div className="self-start bg-accent-bg border border-border px-3 py-1.5 rounded-badge">
-          <p className="font-sans font-medium text-[10px] md:text-xs text-text-brand tracking-wider uppercase">
-            JOIN THE COMMUNITY
+        <div className="self-start bg-[#12141C] border border-[#FF1E27]/30 px-3.5 py-1.5 rounded-full shadow-[0_0_12px_rgba(255,30,39,0.15)] flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-[#FF1E27] animate-pulse" />
+          <p className="font-sans font-bold text-[10px] md:text-xs text-[#FF1E27] tracking-widest uppercase">
+            UK PERFORMANCE SWEEPSTAKES
           </p>
         </div>
 
         {/* Hero Headlines */}
-        <div className="flex flex-col gap-4">
-          <h1 className="font-heading font-bold text-3xl md:text-[48px] text-text-primary leading-[1.1] md:leading-[1.2] tracking-wide select-none">
-            Win Premium Golf Gear
+        <div className="flex flex-col gap-3">
+          <h1 className="font-heading font-black text-3xl md:text-[44px] text-white leading-[1.1] tracking-tight select-none">
+            {mode === "login" ? (
+              <>
+                <span className="metallic-text block">WELCOME BACK.</span>
+                <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]">
+                  READY TO RACE?
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="metallic-text block">ENTER THE RACE.</span>
+                <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]">
+                  WIN BUILT BEASTS.
+                </span>
+              </>
+            )}
           </h1>
-          <p className="font-sans font-normal text-sm md:text-xl text-text-secondary leading-relaxed">
-            Create your free account to enter draws, track ticket purchases, and view winners.
+          <p className="font-sans font-normal text-sm md:text-base text-[#9CA3AF] leading-relaxed">
+            {mode === "login"
+              ? "Access your dashboard, manage active ticket entries, and monitor upcoming live draws in real time."
+              : "Create your official account to enter draws, track ticket purchases, and view live verifiable winners."}
           </p>
         </div>
 
-        {/* Bottom Feature Details / Tracker */}
-        <div className="flex flex-col gap-4">
+        {/* Feature Details / Trust Highlights */}
+        <div className="flex flex-col gap-3">
           {trustStats.map((stat, i) => (
-            <div key={i} className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-accent-bg border border-divider">
+            <div
+              key={i}
+              className="flex items-start gap-3.5 p-3.5 rounded-xl bg-[#12141C]/80 border border-white/5 hover:border-[#FF1E27]/30 transition-all duration-200 group"
+            >
+              <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#1A1D27] border border-[#FF1E27]/25 shrink-0 group-hover:scale-105 transition-transform shadow-[0_0_10px_rgba(255,30,39,0.15)]">
                 {stat.icon}
               </div>
-              <span className="font-sans font-normal text-sm md:text-base text-text-primary">
-                {stat.label}
-              </span>
+              <div className="flex flex-col gap-0.5">
+                <span className="font-sans font-bold text-xs md:text-sm text-white group-hover:text-[#FF1E27] transition-colors">
+                  {stat.label}
+                </span>
+                <span className="font-sans text-[11px] text-[#8A92A0] leading-snug">
+                  {stat.description}
+                </span>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Bottom Footer Copy */}
-      <div className="mt-8 lg:mt-0 pt-6 border-t border-divider/40 lg:border-t-0">
-        <p className="font-sans font-medium text-[10px] md:text-[11px] text-text-secondary">
-          © {new Date().getFullYear()} Fairway Draws · Privacy Policy · Terms
-        </p>
+      <div className="relative z-10 mt-8 lg:mt-0 pt-6 border-t border-white/10 lg:border-t-0 flex flex-wrap items-center gap-3 text-[11px] text-[#8A92A0]">
+        <span>© {new Date().getFullYear()} Tuned Draws Ltd</span>
+        <span>•</span>
+        <Link href="/privacy-policy" className="hover:text-white transition-colors">
+          Privacy Policy
+        </Link>
+        <span>•</span>
+        <Link href="/terms-and-conditions" className="hover:text-white transition-colors">
+          Terms & Conditions
+        </Link>
+        <span>•</span>
+        <Link href="/host/register" className="text-[#FF1E27] hover:underline font-semibold ml-auto">
+          Host Portal →
+        </Link>
       </div>
     </div>
   );

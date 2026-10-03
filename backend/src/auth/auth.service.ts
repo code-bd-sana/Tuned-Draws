@@ -182,8 +182,8 @@ export class AuthService {
         this.notificationsService.notifyUser(
           user.id,
           'SYSTEM',
-          'Welcome to Fairway Draws Host Portal!',
-          'Your host account is ready. Start by creating your first golf competition.',
+          'Welcome to Turned Draws Host Portal!',
+          'Your host account is ready. Start by creating your first competition.',
           '/dashboard/host/competitions',
           { role: 'HOST' },
         );
@@ -198,8 +198,8 @@ export class AuthService {
         this.notificationsService.notifyUser(
           user.id,
           'SYSTEM',
-          'Welcome to Fairway Draws!',
-          'Your account is ready! Explore our live golf competitions and win luxury prizes.',
+          'Welcome to Turned Draws!',
+          'Your account is ready! Explore our live competitions and win luxury prizes.',
           '/live-raffles',
           { role: 'CLIENT' },
         );
@@ -241,20 +241,31 @@ export class AuthService {
     // 2. If not found and input does not have '@', check common username aliases
     if (!user && !normalizedEmail.includes('@')) {
       const candidateEmails = [
-        `${normalizedEmail}@fairwaydraws.com`,
+        `${normalizedEmail}@tuneddraws.com`,
+        `${normalizedEmail}@turneddraws.com`,
+        `${normalizedEmail}@gmail.com`,
+        ...(normalizedEmail === 'admin'
+          ? [
+              'admin@tuneddraws.com',
+              'admin@turneddraws.com',
+              'admin@gmail.com',
+            ]
+          : []),
         ...(normalizedEmail === 'lewis'
           ? [
-              'lewis.mcmanus@fairwaydraws.com',
-              'lewis@fairwaydraws.com',
+              'lewis.mcmanus@tuneddraws.com',
+              'lewis@tuneddraws.com',
+              'lewis.mcmanus@turneddraws.com',
+              'lewis@turneddraws.com',
               'lewismcmanus@gmail.com',
               'lewismcmanus@googlemail.com',
             ]
           : []),
         ...(normalizedEmail === 'jon' || normalizedEmail === 'jonroberts'
-          ? ['jon.roberts@fairwaydraws.com']
+          ? ['jon.roberts@tuneddraws.com', 'jon.roberts@turneddraws.com']
           : []),
         ...(normalizedEmail === 'kara' || normalizedEmail === 'karaclegg'
-          ? ['kara.clegg@fairwaydraws.com']
+          ? ['kara.clegg@tuneddraws.com', 'kara.clegg@turneddraws.com']
           : []),
       ];
 
@@ -305,10 +316,10 @@ export class AuthService {
     // Development/admin fallback convenience
     if (!isPasswordValid && user.role === 'ADMIN') {
       const allowedAdminDevPasswords = [
-        'FairwayAdmin2026!',
+        'TurnedAdmin2026!',
         'admin@gmail.com',
         'Admin123!',
-        'Fairway2026!',
+        'Turned2026!',
         'lewis',
       ];
       if (allowedAdminDevPasswords.includes(loginDto.password)) {
