@@ -10,7 +10,7 @@ interface LiveRafflesPaginationProps {
 }
 
 /**
- * Pagination component for live draws grid navigation matching brand design scheme.
+ * Pagination component for live draws grid navigation matching Tuned Draws automotive design.
  */
 export default function LiveRafflesPagination({
   currentPage = 1,
@@ -20,16 +20,16 @@ export default function LiveRafflesPagination({
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <div className="flex items-center justify-center gap-2 py-8 mt-12 border-t border-divider/50 font-sans">
+    <div className="flex items-center justify-center gap-2 py-8 mt-12 border-t border-white/10 font-sans">
       {/* Prev Button */}
       <button
         onClick={() => currentPage > 1 && onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
         className={cn(
-          "px-4 py-2 text-xs font-bold rounded-full border select-none transition-all duration-200 cursor-pointer shadow-xs",
+          "px-4 py-2 text-xs font-heading font-bold uppercase tracking-wider rounded-xl border select-none transition-all duration-200",
           currentPage === 1
-            ? "border-[#bdd3ba]/40 text-text-muted/40 bg-surface/50 cursor-not-allowed"
-            : "border-[#bdd3ba] text-[#0b4d35] hover:bg-[#0b4d35] hover:text-white hover:border-[#0b4d35] bg-surface"
+            ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
+            : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C] cursor-pointer"
         )}
       >
         ← Prev
@@ -42,10 +42,10 @@ export default function LiveRafflesPagination({
             key={p}
             onClick={() => onPageChange(p)}
             className={cn(
-              "w-9 h-9 text-xs font-bold rounded-full border flex items-center justify-center transition-all duration-200 cursor-pointer select-none",
+              "w-9 h-9 text-xs font-heading font-black rounded-xl border flex items-center justify-center transition-all duration-200 cursor-pointer select-none",
               currentPage === p
-                ? "bg-[#0b4d35] border-[#0b4d35] text-white shadow-sm"
-                : "bg-surface border-[#bdd3ba] text-[#0b4d35] hover:bg-[#0b4d35] hover:text-white hover:border-[#0b4d35]"
+                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
+                : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#FF1E27]/40"
             )}
           >
             {p}
@@ -58,10 +58,10 @@ export default function LiveRafflesPagination({
         onClick={() => currentPage < totalPages && onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
         className={cn(
-          "px-4 py-2 text-xs font-bold rounded-full border select-none transition-all duration-200 cursor-pointer shadow-xs",
+          "px-4 py-2 text-xs font-heading font-bold uppercase tracking-wider rounded-xl border select-none transition-all duration-200",
           currentPage === totalPages
-            ? "border-[#bdd3ba]/40 text-text-muted/40 bg-surface/50 cursor-not-allowed"
-            : "border-[#bdd3ba] text-[#0b4d35] hover:bg-[#0b4d35] hover:text-white hover:border-[#0b4d35] bg-surface"
+            ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
+            : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C] cursor-pointer"
         )}
       >
         Next →

@@ -132,8 +132,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const raffle = await getRaffle(slug);
   return {
-    title: raffle ? `${raffle.title} | Fairway Draws` : "Competition Not Found | Fairway Draws",
-    description: raffle?.description || "Browse and enter active premium golf draws.",
+    title: raffle ? `${raffle.title} | Tuned Draws` : "Competition Not Found | Tuned Draws",
+    description: raffle?.description || "Browse and enter active high-performance automotive draws.",
   };
 }
 
@@ -164,16 +164,16 @@ export default async function LiveRaffleDetailPage({ params }: PageProps) {
   const getBadgeStyle = (text: string) => {
     switch (text.toUpperCase()) {
       case "ALMOST GONE":
-        return "bg-[#FEF3C7] border-[#FDE68A] text-[#D97706]";
+        return "bg-[#FF1E27]/15 border-[#FF1E27]/40 text-[#FF1E27]";
       case "HOT":
-        return "bg-[#FEE2E2] border-[#FECACA] text-[#DC2626]";
+        return "bg-[#FF1E27]/15 border-[#FF1E27]/40 text-[#FF1E27]";
       default:
-        return "bg-elevated border-border-medium text-text-muted";
+        return "bg-[#1A1D27] border-white/10 text-[#8A92A0]";
     }
   };
 
   const fireIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#D97706]">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#FF1E27]">
       <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-3.66-2.61-6.72-6.07-7.39.37.76.57 1.62.57 2.53 0 1.95-1.07 3.65-2.67 4.54l-.06.03c.53-2.14-.17-4.47-1.78-6.1l-.32-.33c-.09.33-.14.67-.14 1.02 0 2.27 1.34 4.22 3.28 5.11l.08.04c-1.61-.31-3.23.36-4.13 1.73A7.514 7.514 0 0 0 7 17.5c0 4.14 3.36 7.5 7.5 7.5s7.5-3.36 7.5-7.5c0-1.65-.54-3.18-1.57-4.52z" />
     </svg>
   );
@@ -183,7 +183,7 @@ export default async function LiveRaffleDetailPage({ params }: PageProps) {
       {/* Sticky top navbar */}
       <WebsiteNavbar />
 
-      <main className="min-h-screen flex flex-col bg-[#cfdfcb] pt-20 md:pt-[68px]">
+      <main className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white pt-20 md:pt-[68px] selection:bg-[#FF1E27] selection:text-white">
         {/* Main Details Section */}
         <section className="py-10 md:py-14 flex-grow">
           <div className="container-custom">
@@ -205,40 +205,40 @@ export default async function LiveRaffleDetailPage({ params }: PageProps) {
 
                 {/* Title & Badges */}
                 <div className="flex flex-col gap-3 mt-2">
-                  <h1 className="font-heading font-black text-3xl md:text-4xl text-text-primary tracking-tight">
+                  <h1 className="font-heading font-black text-3xl md:text-4xl text-white tracking-tight">
                     {raffle.title}
                   </h1>
 
                   <div className="flex flex-wrap items-center gap-2.5">
                     {raffle.status === 'ended' ? (
-                      <span className="bg-[#FEE2E2] border border-[#FECACA] text-[#DC2626] px-3 py-1 rounded-full text-xs font-sans font-bold uppercase tracking-wider shadow-xs">
+                      <span className="bg-red-950/80 border border-red-700/60 text-red-400 px-3 py-1 rounded-full text-xs font-heading font-black uppercase tracking-wider shadow-xs">
                         DRAW CLOSED
                       </span>
                     ) : raffle.status === 'live' ? (
-                      <span className="bg-[#DCFCE7] border border-[#BBF7D0] text-[#15803D] px-3 py-1 rounded-full text-xs font-sans font-bold uppercase tracking-wider shadow-xs">
+                      <span className="bg-[#16A34A]/20 border border-[#16A34A]/40 text-[#22C55E] px-3 py-1 rounded-full text-xs font-heading font-black uppercase tracking-wider shadow-xs">
                         LIVE
                       </span>
                     ) : (
-                      <span className="bg-[#FEF3C7] border border-[#FDE68A] text-[#D97706] px-3 py-1 rounded-full text-xs font-sans font-bold uppercase tracking-wider shadow-xs">
+                      <span className="bg-[#FF1E27]/15 border border-[#FF1E27]/40 text-[#FF1E27] px-3 py-1 rounded-full text-xs font-heading font-black uppercase tracking-wider shadow-xs">
                         ENDING SOON
                       </span>
                     )}
 
                     {badgeText && (
-                      <span className={cn("inline-flex items-center gap-1 border px-3 py-1 rounded-full text-xs font-sans font-bold tracking-wider uppercase shadow-xs", getBadgeStyle(badgeText))}>
+                      <span className={cn("inline-flex items-center gap-1 border px-3 py-1 rounded-full text-xs font-heading font-bold tracking-wider uppercase shadow-xs", getBadgeStyle(badgeText))}>
                         {badgeText === "ALMOST GONE" && fireIcon}
                         <span>{badgeText}</span>
                       </span>
                     )}
                     
                     {raffle.isAutoDraw && (
-                      <span className="bg-accent-bg border border-primary/30 text-text-brand px-3 py-1 rounded-full text-xs font-sans font-bold uppercase tracking-wider shadow-xs">
+                      <span className="bg-[#1A1D27] border border-white/10 text-[#D1D5DB] px-3 py-1 rounded-full text-xs font-heading font-bold uppercase tracking-wider shadow-xs">
                         AUTO DRAW
                       </span>
                     )}
 
                     {raffle.instantWinPrizes.length > 0 && (
-                      <span className="text-xs font-sans text-text-muted select-none font-medium">
+                      <span className="text-xs font-sans text-[#8A92A0] select-none font-medium">
                         • {raffle.instantWinPrizes.length} instant wins
                       </span>
                     )}

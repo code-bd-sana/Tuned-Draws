@@ -6,14 +6,14 @@ import LiveRafflesHero from "../../components/website/live-raffles/LiveRafflesHe
 import LiveRaffleGrid from "../../components/website/live-raffles/LiveRaffleGrid";
 
 export const metadata: Metadata = {
-  title: "Live Competitions | Fairway Draws",
+  title: "Live Competitions | Tuned Draws",
   description:
-    "Browse and enter active premium golf competitions. Tickets from £1, transparent draws, and prizes worth winning.",
+    "Browse and enter active high-performance automotive draws. Built supercars, track weapons, and instant key releases.",
 };
 
 /**
  * Public Live Raffles Page.
- * Renders all active gear draws with category, sorting, search, and layout controls.
+ * Renders all active automotive draws with category, sorting, search, and layout controls.
  */
 export default function LiveRafflesPage() {
   return (
@@ -21,15 +21,18 @@ export default function LiveRafflesPage() {
       {/* Global Header Navigation */}
       <WebsiteNavbar />
 
-      <main className="min-h-screen flex flex-col bg-bg">
+      <main className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
         {/* Page Hero Section */}
         <LiveRafflesHero />
 
         {/* Suspense Boundary for Client Search Params Filtering Grid */}
         <Suspense
           fallback={
-            <div className="container-custom py-20 text-center text-text-muted font-sans animate-pulse">
-              Loading active competitions...
+            <div className="container-custom py-24 text-center text-[#8A92A0] font-sans flex flex-col items-center justify-center gap-4">
+              <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
+              <p className="font-heading text-xs font-bold uppercase tracking-wider text-[#D1D5DB]">
+                Loading live competitions...
+              </p>
             </div>
           }
         >

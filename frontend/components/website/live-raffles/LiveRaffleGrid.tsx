@@ -131,8 +131,12 @@ export default function LiveRaffleGrid() {
   };
 
   return (
-    <section className="relative flex-grow bg-[#cfdfcb] py-12 before:absolute before:inset-0 before:bg-[radial-gradient(#0b4d3520_1px,transparent_1px)] before:bg-[size:28px_28px]">
-      <div className="container-custom relative">
+    <section className="relative flex-grow bg-[#0B0C0E] bg-tachometer-grid py-12 text-white">
+      {/* Ambient background glows */}
+      <div className="pointer-events-none absolute top-10 left-10 w-[500px] h-[400px] bg-[#FF1E27]/5 rounded-full blur-[150px] -z-0" />
+      <div className="pointer-events-none absolute bottom-20 right-10 w-[450px] h-[350px] bg-[#B3000C]/5 rounded-full blur-[140px] -z-0" />
+
+      <div className="container-custom relative z-10">
         {/* Filter controls bar */}
         <LiveRafflesFilterBar
           activeCategory={activeCategory}
@@ -148,7 +152,12 @@ export default function LiveRaffleGrid() {
         {/* Content Area */}
         <div className="mt-10 min-h-[400px]">
           {isLoading ? (
-            <div className="flex justify-center items-center h-[400px] text-primary">Loading live competitions...</div>
+            <div className="flex flex-col justify-center items-center h-[400px] gap-4">
+              <div className="w-10 h-10 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
+              <span className="font-heading text-xs font-bold uppercase tracking-wider text-[#D1D5DB]">
+                Calibrating Live Draws...
+              </span>
+            </div>
           ) : filteredRaffles.length > 0 ? (
             <div
               className={
