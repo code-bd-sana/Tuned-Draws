@@ -6,8 +6,8 @@ import WebsiteNavbar from "../../components/website/layout/WebsiteNavbar";
 import WebsiteFooter from "../../components/website/layout/WebsiteFooter";
 
 export const metadata: Metadata = {
-  title: "Verified Hosts | Fairway Draws",
-  description: "Browse verified hosts running premium golf competitions.",
+  title: "Verified Hosts | Tuned Draws",
+  description: "Browse verified tuning shops, garages, and performance builders hosting authentic automotive sweepstakes.",
 };
 
 export default async function VerifiedHostsPage() {

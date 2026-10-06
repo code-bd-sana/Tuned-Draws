@@ -52,12 +52,12 @@ export default async function HostProfilePage({ params }: PageProps) {
     return (
       <>
         <WebsiteNavbar />
-        <main className="flex min-h-screen items-center justify-center bg-[#F8FAF6] pt-[80px]">
-          <div className="mx-auto flex w-full max-w-[500px] flex-col items-center justify-center gap-3 rounded-[20px] border border-[#CBD8C8] bg-white px-8 py-16 text-center shadow-lg">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full border border-[#0b4d35]/20 bg-[#dcebd8] text-[26px]">🔒</span>
-            <span className="font-sans text-[10px] font-black tracking-[.16em] text-[#dc2626] uppercase">Host Profile</span>
-            <h1 className="font-heading text-2xl font-black text-[#073826] uppercase">Host Unavailable</h1>
-            <p className="max-w-[340px] font-sans text-xs leading-relaxed text-[#5e766c]">
+        <main className="flex min-h-screen items-center justify-center bg-[#0B0C0E] bg-tachometer-grid pt-[80px] text-white">
+          <div className="mx-auto flex w-full max-w-[500px] flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-[#12141C]/90 px-8 py-16 text-center shadow-2xl backdrop-blur-md">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl">🔒</span>
+            <span className="font-heading text-[10px] font-black tracking-[.2em] text-[#FF1E27] uppercase">Host Profile</span>
+            <h1 className="font-heading text-2xl font-black text-white uppercase tracking-tight">Host Unavailable</h1>
+            <p className="max-w-[340px] font-sans text-xs leading-relaxed text-[#8A92A0]">
               This host profile is currently unverified, pending admin review, or has been deactivated.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default async function HostProfilePage({ params }: PageProps) {
     <>
       <WebsiteNavbar />
       
-      <main className="min-h-screen bg-[#F8FAF6] pt-[80px] md:pt-[90px]">
+      <main className="min-h-screen bg-[#0B0C0E] bg-tachometer-grid pt-[80px] md:pt-[90px] text-white">
         <section className="py-8 md:py-12">
           <div className="container-custom">
             
@@ -82,7 +82,7 @@ export default async function HostProfilePage({ params }: PageProps) {
               <HostProfileHeader 
                 name={name}
                 logo={host.logo || initials}
-                bio={host.bio || "Fairway Draws verified host"}
+                bio={host.bio || "Tuned Draws verified host"}
                 isVerified={host.isVerified}
                 drawsHosted={host.drawsHosted || 0}
                 rating={host.rating || 5.0}
