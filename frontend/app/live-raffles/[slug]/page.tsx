@@ -103,7 +103,7 @@ async function getRaffle(slug: string): Promise<RaffleDetail | undefined> {
         "All winners will be contacted by email within 48 hours of the draw.",
         "Prizes are non-transferable and no cash alternative is offered.",
         "By entering you agree to be bound by these terms and conditions.",
-        "Free postal entry: send your name and address on a postcard to: Fairway Draws, PO Box 99, Manchester, M1 1AA."
+        "Free postal entry: send your name and address on a postcard to: Tuned Draws, PO Box 99, Manchester, M1 1AA."
       ],
       instantWinPrizes: Array.isArray(draw.instantWins) ? draw.instantWins.map((iw: any) => ({
         id: iw.id,
@@ -115,8 +115,8 @@ async function getRaffle(slug: string): Promise<RaffleDetail | undefined> {
       isFeatured: false,
       hostId: draw.hostId || draw.host?.id,
       hostUserId: draw.host?.userId || draw.host?.user?.id,
-      hostName: draw.host?.businessName?.trim() || (draw.host?.user ? `${draw.host.user.firstName || ''} ${draw.host.user.lastName || ''}`.trim() : "Fairway Draws Host"),
-      hostLogo: draw.host?.user?.avatarUrl || draw.host?.businessName?.trim()?.[0] || draw.host?.user?.firstName?.[0] || "FD",
+      hostName: draw.host?.businessName?.trim() || (draw.host?.user ? `${draw.host.user.firstName || ''} ${draw.host.user.lastName || ''}`.trim() : "Tuned Draws Host"),
+      hostLogo: draw.host?.user?.avatarUrl || draw.host?.businessName?.trim()?.[0] || draw.host?.user?.firstName?.[0] || "TD",
       hostSlug: draw.host?.slug || draw.host?.id,
       hostDrawsCount: 1,
       hostVerified: true,

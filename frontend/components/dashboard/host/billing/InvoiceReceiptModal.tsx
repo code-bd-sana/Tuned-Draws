@@ -90,19 +90,19 @@ export default function InvoiceReceiptModal({
 
         {/* Printable Receipt Container */}
         <div id="invoice-receipt-content" className="p-8 space-y-6 overflow-y-auto bg-surface text-text-primary">
-          {/* Header & Fairway Draws Branding */}
+          {/* Header & Tuned Draws Branding */}
           <div className="flex items-start justify-between border-b border-divider pb-6">
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-heading font-black text-2xl text-text-primary uppercase tracking-tight">
-                  Fairway<span className="text-primary">Draws</span>
+                  Tuned<span className="text-primary">Draws</span>
                 </span>
               </div>
               <p className="font-sans text-xs text-text-muted mt-1">
-                Official Golf Competitions &amp; Host Management
+                Official Automotive Sweepstakes &amp; Host Management
               </p>
               <p className="font-sans text-[11px] text-text-muted mt-0.5">
-                Fairway Draws Ltd &bull; 124 Golf Links Way &bull; info@fairwaydraws.com
+                Tuned Draws Ltd &bull; Suite 104, Dyno House, London EC1A 1BB &bull; support@tuneddraws.com
               </p>
             </div>
 
@@ -190,7 +190,7 @@ export default function InvoiceReceiptModal({
 
           {/* Receipt Footer Note */}
           <div className="border-t border-divider pt-4 text-center text-[11px] font-sans text-text-muted">
-            <p>Thank you for partnering with Fairway Draws. This document acts as an official payment receipt.</p>
+            <p>Thank you for partnering with Tuned Draws. This document acts as an official payment receipt.</p>
           </div>
         </div>
       </div>

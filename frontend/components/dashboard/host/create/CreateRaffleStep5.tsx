@@ -103,7 +103,7 @@ export default function CreateRaffleStep5({ formData, updateForm, onNext, onPrev
                   name="drawType"
                   checked={!formData.isAutoDraw}
                   onChange={() => updateForm({ isAutoDraw: false, autoDrawDate: false, autoDrawSoldOut: false })}
-                  className="mt-0.5 w-4 h-4 text-primary focus:ring-primary accent-[#0b4d35] cursor-pointer"
+                  className="mt-0.5 w-4 h-4 text-primary focus:ring-primary accent-[#FF1E27] cursor-pointer"
                 />
                 <div className="flex flex-col gap-0.5">
                   <div className="flex items-center gap-2">
@@ -126,7 +126,7 @@ export default function CreateRaffleStep5({ formData, updateForm, onNext, onPrev
                   name="drawType"
                   checked={formData.isAutoDraw}
                   onChange={() => updateForm({ isAutoDraw: true, autoDrawDate: true, autoDrawSoldOut: true })}
-                  className="mt-0.5 w-4 h-4 text-primary focus:ring-primary accent-[#0b4d35] cursor-pointer"
+                  className="mt-0.5 w-4 h-4 text-primary focus:ring-primary accent-[#FF1E27] cursor-pointer"
                 />
                 <div className="flex flex-col gap-0.5">
                   <span className="font-heading font-bold text-sm text-text-primary uppercase">

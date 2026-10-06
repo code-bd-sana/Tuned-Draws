@@ -445,7 +445,7 @@ export default function EditRaffleForm({ raffleId }: Props) {
                   name="drawType"
                   checked={!formData.isAutoDraw}
                   onChange={() => {}}
-                  className="mt-1 w-4 h-4 text-primary focus:ring-primary accent-[#0b4d35] cursor-pointer"
+                  className="mt-1 w-4 h-4 text-primary focus:ring-primary accent-[#FF1E27] cursor-pointer"
                 />
                 <div className="flex flex-col gap-0.5">
                   <div className="flex items-center gap-2">
@@ -478,7 +478,7 @@ export default function EditRaffleForm({ raffleId }: Props) {
                   name="drawType"
                   checked={formData.isAutoDraw}
                   onChange={() => {}}
-                  className="mt-1 w-4 h-4 text-primary focus:ring-primary accent-[#0b4d35] cursor-pointer"
+                  className="mt-1 w-4 h-4 text-primary focus:ring-primary accent-[#FF1E27] cursor-pointer"
                 />
                 <div className="flex flex-col gap-0.5">
                   <span className="font-heading font-bold text-xs md:text-sm text-text-primary uppercase tracking-wide">

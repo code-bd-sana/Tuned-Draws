@@ -291,7 +291,7 @@ export default function CheckoutPage() {
                   />
                 </svg>
                 <span>
-                  Already have a Fairway Draws account? Log in to auto-fill your saved address details.
+                  Already have a Tuned Draws account? Log in to auto-fill your saved address details.
                 </span>
               </div>
               <Link

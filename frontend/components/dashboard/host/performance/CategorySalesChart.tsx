@@ -9,10 +9,11 @@ interface Props {
 }
 
 export default function CategorySalesChart({ data = [] }: Props) {
-  // Use forest green & warm sage harmonious colors for pie chart
+  // Use Tuned Draws luxury supercar color palette
+  const automotiveColors = ["#FF1E27", "#EF4444", "#F59E0B", "#3B82F6", "#8B5CF6"];
   const updatedData = data.map((d, i) => ({
     ...d,
-    color: d.color || (i === 0 ? "#0b4d35" : i === 1 ? "#15803d" : i === 2 ? "#8cb34a" : "#dc2626")
+    color: d.color || automotiveColors[i % automotiveColors.length]
   }));
 
   return (
@@ -43,14 +44,14 @@ export default function CategorySalesChart({ data = [] }: Props) {
               </Pie>
               <Tooltip 
                 contentStyle={{ 
-                  backgroundColor: "#FFFFFF", 
-                  borderColor: "#E2EADF", 
+                  backgroundColor: "#12141C", 
+                  borderColor: "rgba(255,255,255,0.1)", 
                   borderRadius: "12px",
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
-                  color: "#0e1e17",
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
+                  color: "#FFFFFF",
                   fontFamily: "Inter"
                 }}
-                itemStyle={{ color: "#0b4d35", fontWeight: "bold" }}
+                itemStyle={{ color: "#FF1E27", fontWeight: "bold" }}
               />
             </PieChart>
           </ResponsiveContainer>

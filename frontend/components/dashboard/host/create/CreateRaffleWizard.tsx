@@ -208,7 +208,7 @@ export default function CreateRaffleWizard() {
           </svg>
         </div>
         <h2 className="text-text-primary font-heading font-black text-xl mb-2 uppercase tracking-tight">Active Subscription Required</h2>
-        <p className="text-text-muted text-xs leading-relaxed mb-6 max-w-md">You must have an active host plan to create competitions on Fairway Draws.</p>
+        <p className="text-text-muted text-xs leading-relaxed mb-6 max-w-md">You must have an active host plan to create competitions on Tuned Draws.</p>
         <button 
           onClick={() => router.push('/dashboard/host/billing')} 
           className="btn-glossy-red px-6 h-11 text-white font-heading font-bold text-xs uppercase tracking-wider rounded-xl shadow-md cursor-pointer transition-all active:scale-98"

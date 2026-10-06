@@ -62,13 +62,13 @@ export default function TermsContent() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#1A230A] border border-[#43581E] text-[#8CB34A] text-xs font-semibold w-fit">
               <span>📜 Official Legal Documentation</span>
             </div>
-            <h1 className="font-heading font-extrabold text-3xl sm:text-5xl text-[#E8EDD4] tracking-tight">
+            <h1 className="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
               Terms & Conditions
             </h1>
-            <p className="font-sans text-sm sm:text-base text-[#72943A] max-w-2xl">
-              Official rules governing all prize competitions, free postal entries, eligibility, anti-money laundering policies, and fair play on Fairway Draws.
+            <p className="font-sans text-sm sm:text-base text-[#8A92A0] max-w-2xl">
+              Official rules governing all prize competitions, free postal entries, eligibility, anti-money laundering policies, and fair play on Tuned Draws.
             </p>
-            <div className="flex items-center gap-4 text-xs font-sans text-[#5A752A] pt-2">
+            <div className="flex items-center gap-4 text-xs font-sans text-[#8A92A0]/80 pt-2">
               <span>Last Updated: July 2026</span>
               <span>•</span>
               <span>Effective Version: 2.4</span>
@@ -83,8 +83,8 @@ export default function TermsContent() {
           
           {/* Left Table of Contents */}
           <aside className="lg:col-span-4 hidden lg:block">
-            <div className="sticky top-28 bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-5 space-y-2 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h3 className="font-heading font-bold text-xs text-[#073826] uppercase tracking-wider mb-3 px-2">
+            <div className="sticky top-28 bg-[#12141C] border border-white/10 rounded-2xl p-5 space-y-2 shadow-xl">
+              <h3 className="font-heading font-bold text-xs text-white uppercase tracking-wider mb-3 px-2">
                 Table of Contents
               </h3>
               <nav className="flex flex-col space-y-1">
@@ -95,8 +95,8 @@ export default function TermsContent() {
                     className={cn(
                       "text-left px-3 py-2 rounded-xl text-xs font-sans transition-all duration-200 truncate cursor-pointer",
                       activeSection === sec.id
-                        ? "bg-[#0b4d35] text-white font-semibold border-l-2 border-[#147a54] pl-3 shadow-sm"
-                        : "text-[#426256] hover:bg-[#dcebd8] hover:text-[#073826]"
+                        ? "bg-[#FF1E27] text-white font-semibold border-l-2 border-white pl-3 shadow-md"
+                        : "text-[#8A92A0] hover:bg-[#1A1D27] hover:text-white"
                     )}
                   >
                     {sec.title}
@@ -104,10 +104,10 @@ export default function TermsContent() {
                 ))}
               </nav>
               
-              <div className="pt-4 border-t border-[#bdd3ba] mt-4">
+              <div className="pt-4 border-t border-white/10 mt-4">
                 <Link
                   href="/contact"
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#0b4d35] hover:bg-[#073826] border border-[#0b4d35] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-sm"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#FF1E27] hover:bg-[#B3000C] border border-[#FF1E27] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md"
                 >
                   ✉️ Need Legal Help? Contact Us
                 </Link>
@@ -116,44 +116,44 @@ export default function TermsContent() {
           </aside>
 
           {/* Right Main Text Content */}
-          <main className="lg:col-span-8 space-y-12 text-sm leading-relaxed text-[#426256]">
+          <main className="lg:col-span-8 space-y-12 text-sm leading-relaxed text-[#D1D5DB]">
             
             {/* 1. The Promoter */}
-            <section id="promoter" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="promoter" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 1. The Promoter
               </h2>
               <p>
-                1.1. The Promoter is: <strong className="text-[#073826]">Fairway Draws Ltd — Company No. 17396815</strong> ("Fairway Draws") whose registered office is at Synergy House, Lawson Street, North Shields NE29 6TG.
+                1.1. The Promoter is: <strong className="text-white">Tuned Draws Ltd — Company No. 17396815</strong> ("Tuned Draws") whose registered office is at Suite 104, Dyno House, London EC1A 1BB.
               </p>
               <p>
-                1.2. Our correspondence address is: <span className="text-[#073826] font-medium">Synergy House, Lawson Street, North Shields NE29 6TG</span>.
+                1.2. Our correspondence address is: <span className="text-white font-medium">Suite 104, Dyno House, London EC1A 1BB</span>.
               </p>
               <p>
                 1.3. If you wish to contact us for any reason, please email us at{" "}
                 <a
-                  href="mailto:info@fairwaydraws.com"
-                  className="text-[#0b4d35] font-semibold underline underline-offset-4 decoration-[#0b4d35]/60 hover:text-[#073826] hover:decoration-[#073826] transition-colors"
+                  href="mailto:support@tuneddraws.com"
+                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  info@fairwaydraws.com
+                  support@tuneddraws.com
                 </a>.
               </p>
             </section>
 
             {/* 2. The Competition */}
-            <section id="competition" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="competition" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 2. The Competition
               </h2>
               <p>
                 2.1. These terms and conditions apply to all competitions listed on the Promoter’s website at{" "}
                 <a
-                  href="https://fairwaydraws.com"
+                  href="https://tuneddraws.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#0b4d35] font-semibold underline underline-offset-4 decoration-[#0b4d35]/60 hover:text-[#073826] hover:decoration-[#073826] transition-colors"
+                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  https://fairwaydraws.com
+                  https://tuneddraws.com
                 </a>{" "}
                 (the “Website”).
               </p>
@@ -166,8 +166,8 @@ export default function TermsContent() {
             </section>
 
             {/* 3. How to Enter */}
-            <section id="how-to-enter" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="how-to-enter" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 3. How to Enter
               </h2>
               <p>
@@ -190,17 +190,17 @@ export default function TermsContent() {
               </p>
 
               {/* Free Postal Entry Box */}
-              <div id="free-entry" className="mt-6 bg-[#e2efde] border border-[#c4d9c1] rounded-xl p-5 space-y-3">
-                <h3 className="font-heading font-bold text-base text-[#073826] flex items-center gap-2">
+              <div id="free-entry" className="mt-6 bg-[#1A1D27] border border-white/10 rounded-xl p-5 space-y-3">
+                <h3 className="font-heading font-bold text-base text-white flex items-center gap-2">
                   <span>✉️ 3.11. Free Postal Entry Route Method</span>
                 </h3>
-                <p className="text-xs leading-relaxed text-[#426256]">
+                <p className="text-xs leading-relaxed text-[#8A92A0]">
                   You may enter any competition for free by post by complying with the following conditions:
                 </p>
-                <ul className="list-disc list-inside space-y-1.5 text-xs text-[#233830] pl-2">
-                  <li>Send your entry on an unenclosed postcard by 1st or 2nd class post to: <strong className="text-[#073826]">Fairway Draws Ltd, Synergy House, Lawson Street, North Shields NE29 6TG</strong>.</li>
+                <ul className="list-disc list-inside space-y-1.5 text-xs text-[#D1D5DB] pl-2">
+                  <li>Send your entry on an unenclosed postcard by 1st or 2nd class post to: <strong className="text-white">Tuned Draws Ltd, Suite 104, Dyno House, London EC1A 1BB</strong>.</li>
                   <li>Include your full name, postal address, contact phone number, email address, and the exact Competition Name.</li>
-                  <li><strong className="text-[#073826]">Mandatory Requirement:</strong> You MUST have created a free registered account on the Website for the free entry to be processed. Details on the postcard MUST correspond exactly to your registered account.</li>
+                  <li><strong className="text-white">Mandatory Requirement:</strong> You MUST have created a free registered account on the Website for the free entry to be processed. Details on the postcard MUST correspond exactly to your registered account.</li>
                   <li>Each free entry must be posted separately on an individual postcard. Bulk entries in an envelope will count as only one single entry.</li>
                   <li>Entries must be received prior to the Closing Date.</li>
                 </ul>
@@ -208,8 +208,8 @@ export default function TermsContent() {
             </section>
 
             {/* 4. Choosing a Winner */}
-            <section id="choosing-winner" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="choosing-winner" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 4. Choosing a Winner
               </h2>
               <p>
@@ -218,25 +218,25 @@ export default function TermsContent() {
               <p>
                 4.2. All Entrants will have their names and entry numbers included in an entry spreadsheet published on the Website during the live draw. If you wish to censor your name on the live spreadsheet, notify us at{" "}
                 <a
-                  href="mailto:info@fairwaydraws.com"
-                  className="text-[#0b4d35] font-semibold underline underline-offset-4 decoration-[#0b4d35]/60 hover:text-[#073826] hover:decoration-[#073826] transition-colors"
+                  href="mailto:support@tuneddraws.com"
+                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  info@fairwaydraws.com
+                  support@tuneddraws.com
                 </a>{" "}
                 at least 48 hours prior to the draw.
               </p>
               <p>
-                4.3. <strong className="text-[#073826]">Instant Win Draws:</strong> Where a competition includes Instant Win prizes, ticket numbers are randomly allocated upon completed ticket purchase. If an allocated ticket number matches a pre-determined Instant Win prize number, the Entrant is automatically notified and wins the corresponding Instant Win prize immediately.
+                4.3. <strong className="text-white">Instant Win Draws:</strong> Where a competition includes Instant Win prizes, ticket numbers are randomly allocated upon completed ticket purchase. If an allocated ticket number matches a pre-determined Instant Win prize number, the Entrant is automatically notified and wins the corresponding Instant Win prize immediately.
               </p>
             </section>
 
             {/* 5. Eligibility */}
-            <section id="eligibility" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="eligibility" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 5. Eligibility
               </h2>
               <p>
-                5.1. Competitions are open to residents in the United Kingdom aged <strong className="text-[#073826]">18 years or over</strong>, except employees of Fairway Draws, their immediate families, or agents directly connected with competition administration.
+                5.1. Competitions are open to residents in the United Kingdom aged <strong className="text-white">18 years or over</strong>, except employees of Tuned Draws, their immediate families, or agents directly connected with competition administration.
               </p>
               <p>
                 5.2. Proof of age and UK residency will be required prior to releasing any major prize.
@@ -247,8 +247,8 @@ export default function TermsContent() {
             </section>
 
             {/* 6. The Prize */}
-            <section id="prize" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="prize" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 6. The Prize
               </h2>
               <p>
@@ -258,13 +258,13 @@ export default function TermsContent() {
                 6.2. Physical, Vehicle & Experience Prizes: Winners are solely responsible for ensuring appropriate safety precautions, valid insurance (where applicable for vehicle or equipment prizes), and lawful usage on public or private property. For experience prizes, winners are responsible for their own travel arrangements and adhering to venue regulations.
               </p>
               <p>
-                6.3. Fairway Draws reserves the right to substitute a prize with an equivalent cash alternative if circumstances beyond reasonable control make it necessary.
+                6.3. Tuned Draws reserves the right to substitute a prize with an equivalent cash alternative if circumstances beyond reasonable control make it necessary.
               </p>
             </section>
 
             {/* 7. Winners */}
-            <section id="winners" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="winners" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 7. Winners
               </h2>
               <p>
@@ -276,12 +276,12 @@ export default function TermsContent() {
             </section>
 
             {/* 8. Claiming the Prize */}
-            <section id="claiming-prize" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="claiming-prize" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 8. Claiming the Prize
               </h2>
               <p>
-                8.1. <strong className="text-[#073826]">21-Day Claim Limit:</strong> Winners have 21 days from notification to claim their prize. If uncontactable after 21 days or if a winner fails to provide required verification details, an alternate winner will be selected via random redraw.
+                8.1. <strong className="text-white">21-Day Claim Limit:</strong> Winners have 21 days from notification to claim their prize. If uncontactable after 21 days or if a winner fails to provide required verification details, an alternate winner will be selected via random redraw.
               </p>
               <p>
                 8.2. Cash prizes will be transferred directly to the winner's verified UK bank account. The winner must prove sole or joint beneficiary ownership of the account.
@@ -292,28 +292,28 @@ export default function TermsContent() {
             </section>
 
             {/* 9. Limitation of Liability */}
-            <section id="liability" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="liability" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 9. Limitation of Liability
               </h2>
               <p>
-                9.1. Fairway Draws accepts no liability for technical failures, network outages, payment gateway delays, or lost postal entries.
+                9.1. Tuned Draws accepts no liability for technical failures, network outages, payment gateway delays, or lost postal entries.
               </p>
               <p>
-                9.2. To the fullest extent permitted by law, Fairway Draws and its registered hosts shall not be liable for any loss, damage, personal injury, or death resulting from participation in any draw or the use of any prize, except where caused by negligence.
+                9.2. To the fullest extent permitted by law, Tuned Draws and its registered hosts shall not be liable for any loss, damage, personal injury, or death resulting from participation in any draw or the use of any prize, except where caused by negligence.
               </p>
             </section>
 
             {/* 10. Data Protection & Publicity */}
-            <section id="data-protection" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="data-protection" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 10. Data Protection & Publicity
               </h2>
               <p>
                 10.1. Personal information provided will be processed strictly in accordance with our{" "}
                 <Link
                   href="/privacy"
-                  className="text-[#0b4d35] font-semibold underline underline-offset-4 decoration-[#0b4d35]/60 hover:text-[#073826] hover:decoration-[#073826] transition-colors"
+                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
                 >
                   Privacy Policy
                 </Link>{" "}
@@ -325,25 +325,25 @@ export default function TermsContent() {
             </section>
 
             {/* 11. General Terms */}
-            <section id="general" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="general" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 11. General Terms & Governing Law
               </h2>
               <p>
                 11.1. Competitions are governed by English Law and the exclusive jurisdiction of the courts of England & Wales.
               </p>
               <p>
-                11.2. Competitions on Fairway Draws are in no way sponsored, endorsed, or administered by Meta (Facebook/Instagram) or any golf equipment manufacturer or venue unless explicitly stated.
+                11.2. Competitions on Tuned Draws are in no way sponsored, endorsed, or administered by Meta (Facebook/Instagram) or any automotive manufacturer or venue unless explicitly stated.
               </p>
             </section>
 
             {/* 12. AML Policy */}
-            <section id="aml-policy" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="aml-policy" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 12. Anti-Money Laundering (AML) Policy
               </h2>
               <p>
-                12.1. Fairway Draws enforces strict anti-money laundering measures under UK regulations and the Gambling Act 2005.
+                12.1. Tuned Draws enforces strict anti-money laundering measures under UK regulations and the Gambling Act 2005.
               </p>
               <p>
                 12.2. A designated Money Laundering Reporting Officer (MLRO) oversees platform compliance.
@@ -354,12 +354,12 @@ export default function TermsContent() {
             </section>
 
             {/* 13. Fair Play */}
-            <section id="fair-play" className="bg-[#edf5e9] border border-[#bdd3ba] rounded-2xl p-6 sm:p-8 space-y-4 shadow-[0_10px_25px_rgba(11,77,53,0.09)]">
-              <h2 className="font-heading font-bold text-xl text-[#073826] border-b border-[#bdd3ba] pb-3">
+            <section id="fair-play" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+              <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 13. Fair Play & Strict One Account Policy
               </h2>
               <p>
-                13.1. <strong className="text-[#073826]">One Account Per Person:</strong> Each participant is strictly limited to one user account on Fairway Draws.
+                13.1. <strong className="text-white">One Account Per Person:</strong> Each participant is strictly limited to one user account on Tuned Draws.
               </p>
               <p>
                 13.2. Creating duplicate accounts to gain an unfair advantage in free giveaways or bypass ticket limits is strictly forbidden.

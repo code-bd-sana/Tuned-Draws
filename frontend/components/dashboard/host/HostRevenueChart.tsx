@@ -80,33 +80,34 @@ export default function HostRevenueChart({ totalRevenue }: HostRevenueChartProps
             <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorHostRevenue" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#0b4d35" stopOpacity={0.25} />
-                  <stop offset="95%" stopColor="#0b4d35" stopOpacity={0} />
+                  <stop offset="5%" stopColor="#FF1E27" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#FF1E27" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
               <XAxis 
                 dataKey="month" 
                 axisLine={false} 
                 tickLine={false} 
-                tick={{ fill: "#5e766c", fontSize: 11, fontFamily: "sans-serif" }} 
+                tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }} 
                 dy={10}
               />
               <YAxis 
                 axisLine={false} 
                 tickLine={false} 
-                tick={{ fill: "#5e766c", fontSize: 11, fontFamily: "sans-serif" }}
+                tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
                 tickFormatter={(val) => `£${val >= 1000 ? `${(val / 1000).toFixed(1)}k` : val}`}
               />
               <Tooltip
-                cursor={{ stroke: "#E2EADF", strokeWidth: 1, strokeDasharray: "4 4" }}
+                cursor={{ stroke: "rgba(255,255,255,0.1)", strokeWidth: 1, strokeDasharray: "4 4" }}
                 contentStyle={{ 
-                  backgroundColor: "#FFFFFF", 
-                  borderColor: "#E2EADF", 
+                  backgroundColor: "#1A1D27", 
+                  borderColor: "rgba(255,255,255,0.15)", 
                   borderRadius: "12px",
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
-                  fontFamily: "sans-serif"
+                  boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
+                  color: "#FFFFFF",
+                  fontFamily: "inherit"
                 }}
-                itemStyle={{ color: "#0b4d35", fontWeight: "bold" }}
+                itemStyle={{ color: "#FFFFFF", fontWeight: "bold" }}
                 formatter={(value: any) => [
                   `£${Number(value || 0).toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 
                   "Earnings"
@@ -115,7 +116,7 @@ export default function HostRevenueChart({ totalRevenue }: HostRevenueChartProps
               <Area 
                 type="monotone" 
                 dataKey="revenue" 
-                stroke="#0b4d35" 
+                stroke="#FF1E27" 
                 strokeWidth={2.5}
                 fillOpacity={1} 
                 fill="url(#colorHostRevenue)" 

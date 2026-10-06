@@ -2,41 +2,45 @@ import React from "react";
 import { Metadata } from "next";
 import Link from "next/link";
 import UserAuthLayout from "../../../components/user-auth/UserAuthLayout";
-import PrimaryButton from "../../../components/website/shared/PrimaryButton";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Registration Successful | Fairway Draws",
-  description: "Your account has been created successfully.",
+  title: "Registration Successful | Tuned Draws",
+  description: "Your Tuned Draws account has been created successfully.",
 };
 
 export default function RegisterSuccessPage() {
   return (
     <UserAuthLayout mode="register">
-      <div className="flex flex-col items-center justify-center space-y-6 rounded-[20px] border border-[#bdd3ba] bg-[#edf5e9] p-8 text-center shadow-[0_12px_28px_rgba(11,77,53,.12)] md:p-12">
-        <div className="w-16 h-16 bg-[#4ade80]/10 rounded-full flex items-center justify-center mb-4">
-          <svg
-            className="w-8 h-8 text-[#4ade80]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 13l4 4L19 7"
-            />
-          </svg>
+      <div className="flex flex-col items-center justify-center space-y-6 rounded-2xl border border-white/10 bg-[#12141C] p-8 sm:p-12 text-center shadow-2xl text-white max-w-md mx-auto">
+        <div className="w-16 h-16 bg-emerald-500/10 border border-emerald-500/25 rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.25)]">
+          <CheckCircle2 className="w-8 h-8 text-emerald-400" />
         </div>
-        <h2 className="font-heading text-3xl font-bold text-text-primary">
-          Account Created!
-        </h2>
-        <p className="max-w-sm text-text-secondary">
-          Welcome to Fairway Draws. Your account is fully set up. You can now browse live competitions and purchase tickets.
-        </p>
-        <Link href="/login" className="w-full">
-          <PrimaryButton className="w-full">Go to Login</PrimaryButton>
-        </Link>
+
+        <div className="space-y-2">
+          <h2 className="font-heading text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
+            Account Created!
+          </h2>
+          <p className="text-xs sm:text-sm text-[#8A92A0] leading-relaxed max-w-sm">
+            Welcome to <strong className="text-white">Tuned Draws</strong>. Your player session is configured and ready. You can now enter live competitions and unlock instant-win allocations.
+          </p>
+        </div>
+
+        <div className="w-full flex flex-col gap-3 pt-2">
+          <Link
+            href="/login"
+            className="btn-racing-red w-full py-3.5 rounded-xl text-white font-heading font-black text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,30,39,0.35)]"
+          >
+            <span>Proceed to Login</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/live-raffles"
+            className="w-full py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-[#D1D5DB] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all"
+          >
+            Explore Competitions
+          </Link>
+        </div>
       </div>
     </UserAuthLayout>
   );

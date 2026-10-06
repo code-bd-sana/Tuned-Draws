@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   } catch (e) {}
 
   return {
-    title: `${name} | Fairway Draws Verified Host`,
+    title: `${name} | Tuned Draws Verified Host`,
     description: `View live and past competitions hosted by ${name}.`,
   };
 }

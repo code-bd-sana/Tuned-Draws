@@ -126,7 +126,7 @@ export default function CreateRaffleStep4({ formData, updateForm, onNext, onPrev
           <input 
             type="checkbox" 
             disabled={isFreePlan}
-            className="w-5 h-5 rounded border-border-medium text-primary focus:ring-primary accent-[#0b4d35] disabled:cursor-not-allowed cursor-pointer"
+            className="w-5 h-5 rounded border-border-medium text-primary focus:ring-primary accent-[#FF1E27] disabled:cursor-not-allowed cursor-pointer"
             checked={isFreePlan ? false : formData.hasInstantWins}
             onChange={handleToggle}
           />
