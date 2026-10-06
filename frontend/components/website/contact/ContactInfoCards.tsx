@@ -58,17 +58,17 @@ export default function ContactInfoCards() {
       {CONTACT_INFO_ITEMS.map((item) => (
         <div
           key={item.id}
-          className="group flex items-center justify-between gap-4 rounded-[16px] border border-[#bdd3ba] bg-[#edf5e9] p-5 shadow-[0_8px_20px_rgba(11,77,53,.08)] transition-all duration-200 hover:border-[#0b4d35]/45"
+          className="group flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[#12141C]/80 p-5 shadow-xl backdrop-blur-md transition-all duration-200 hover:border-[#FF1E27]/40 hover:shadow-[0_8px_25px_rgba(255,30,39,0.15)]"
         >
           <div className="flex items-center gap-4 min-w-0">
             {/* Rounded Icon Circle */}
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#0b4d35]/20 bg-[#dcebd8]">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/5 group-hover:border-[#FF1E27]/40 transition-colors">
               {renderIcon(item.type)}
             </div>
             
             {/* Card Body */}
             <div className="flex flex-col min-w-0">
-              <span className="font-sans font-medium text-sm text-text-primary">
+              <span className="font-heading font-black text-xs uppercase tracking-wider text-white">
                 {item.title}
               </span>
               {item.href ? (
@@ -76,12 +76,12 @@ export default function ContactInfoCards() {
                   href={item.href}
                   target={item.type === "whatsapp" ? "_blank" : undefined}
                   rel={item.type === "whatsapp" ? "noopener noreferrer" : undefined}
-                  className="font-sans text-xs text-text-secondary hover:text-text-brand truncate mt-0.5"
+                  className="font-sans text-xs text-[#8A92A0] hover:text-[#FF1E27] truncate mt-0.5 transition-colors"
                 >
                   {item.value}
                 </a>
               ) : (
-                <span className="font-sans text-xs text-text-secondary truncate mt-0.5">
+                <span className="font-sans text-xs text-[#8A92A0] truncate mt-0.5">
                   {item.value}
                 </span>
               )}
@@ -94,7 +94,7 @@ export default function ContactInfoCards() {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3.5 py-1.5 rounded-lg bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] font-sans text-xs font-bold hover:bg-[#25D366] hover:text-black transition-all shrink-0 flex items-center gap-1.5 shadow-sm"
+              className="px-3.5 py-1.5 rounded-lg bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] font-heading text-xs font-black uppercase hover:bg-[#25D366] hover:text-black transition-all shrink-0 flex items-center gap-1.5 shadow-[0_0_10px_rgba(37,211,102,0.2)]"
             >
               <span>Chat</span>
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -107,77 +107,77 @@ export default function ContactInfoCards() {
 
       {/* Direct WhatsApp Callout Banner */}
       <a
-        href="https://wa.me/447466347548?text=Hello%20Fairway%20Draws%20Customer%20Service%2C%20I%20have%20an%20inquiry"
+        href="https://wa.me/447466347548?text=Hello%20Tuned%20Draws%20Customer%20Service%2C%20I%20have%20an%20inquiry"
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-gradient-to-r from-[#0d2818] via-[#163820] to-[#0d2818] border border-[#25D366]/50 rounded-[14px] p-5 flex items-center justify-between group hover:shadow-[0_0_20px_rgba(37,211,102,0.2)] transition-all duration-300"
+        className="bg-gradient-to-r from-[#0d2818]/90 via-[#12141C] to-[#0d2818]/90 border border-[#25D366]/40 rounded-2xl p-5 flex items-center justify-between group hover:shadow-[0_0_25px_rgba(37,211,102,0.25)] transition-all duration-300"
       >
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#25D366] text-black flex items-center justify-center font-bold shrink-0 shadow-md">
+          <div className="w-10 h-10 rounded-xl bg-[#25D366]/20 border border-[#25D366]/50 text-[#25D366] flex items-center justify-center font-bold shrink-0 shadow-md">
             💬
           </div>
           <div>
-            <h4 className="font-sans font-bold text-sm text-[#E8EDD4] group-hover:text-[#25D366] transition-colors">
+            <h4 className="font-heading font-black text-xs uppercase tracking-wider text-white group-hover:text-[#25D366] transition-colors">
               Chat on WhatsApp
             </h4>
-            <p className="font-sans text-xs text-[#72943A]">
-              Connect directly with Customer Service (07466 347548)
+            <p className="font-sans text-xs text-[#8A92A0]">
+              Instant access to Tuned Draws crew (07466 347548)
             </p>
           </div>
         </div>
-        <span className="text-xs font-bold text-[#25D366] group-hover:translate-x-1 transition-transform">
+        <span className="font-heading text-xs font-black uppercase text-[#25D366] group-hover:translate-x-1 transition-transform">
           Open &rarr;
         </span>
       </a>
 
       {/* FAQ Promo Card */}
-      <div className="flex flex-col items-start rounded-[16px] border border-[#bdd3ba] bg-[#e5f0e2] p-5.5 shadow-[0_8px_20px_rgba(11,77,53,.08)] transition-all duration-300">
-        <h4 className="font-sans font-medium text-sm text-text-primary mb-2">
+      <div className="flex flex-col items-start rounded-2xl border border-white/10 bg-[#12141C]/80 p-6 shadow-xl transition-all duration-300 hover:border-[#FF1E27]/40">
+        <h4 className="font-heading font-black text-xs uppercase tracking-wider text-white mb-2">
           Looking for quick answers?
         </h4>
-        <p className="font-sans text-[13px] text-text-secondary leading-relaxed mb-4">
-          Our FAQ covers the most common questions about entries, payments, and hosting.
+        <p className="font-sans text-xs sm:text-[13px] text-[#8A92A0] leading-relaxed mb-4">
+          Our FAQ covers ticket draws, random number generation, vehicle handover, and host subscriptions.
         </p>
         <Link
           href="/pricing#faq"
-          className="font-sans font-medium text-[13px] text-text-brand hover:underline flex items-center gap-1 group"
+          className="font-heading text-xs font-black uppercase tracking-wider text-[#FF1E27] hover:underline flex items-center gap-1.5 group"
         >
-          Visit our FAQ
+          <span>Visit our Knowledge Base</span>
           <span className="transition-transform duration-200 group-hover:translate-x-1">&#8594;</span>
         </Link>
       </div>
 
       {/* Support Hours Card */}
-      <div className="flex flex-col rounded-[16px] border border-[#bdd3ba] bg-[#edf5e9] p-5.5 shadow-[0_8px_20px_rgba(11,77,53,.08)]">
-        <h4 className="font-sans font-medium text-sm text-text-primary mb-4">
-          Support Hours
+      <div className="flex flex-col rounded-2xl border border-white/10 bg-[#12141C]/80 p-6 shadow-xl">
+        <h4 className="font-heading font-black text-xs uppercase tracking-wider text-white mb-4">
+          Pit Crew Support Hours
         </h4>
         <div className="flex flex-col font-sans text-xs md:text-sm">
           {/* Mon-Fri */}
-          <div className="flex justify-between py-2 border-b border-divider">
-            <span className="text-text-secondary">Monday – Friday</span>
-            <span className="text-text-primary">9:00am – 6:00pm GMT</span>
+          <div className="flex justify-between py-2 border-b border-white/5">
+            <span className="text-[#8A92A0]">Monday – Friday</span>
+            <span className="font-heading font-bold text-xs uppercase text-white">9:00am – 6:00pm GMT</span>
           </div>
           {/* Sat */}
-          <div className="flex justify-between py-2 border-b border-divider">
-            <span className="text-text-secondary">Saturday</span>
-            <span className="text-text-primary">10:00am – 2:00pm GMT</span>
+          <div className="flex justify-between py-2 border-b border-white/5">
+            <span className="text-[#8A92A0]">Saturday</span>
+            <span className="font-heading font-bold text-xs uppercase text-white">10:00am – 2:00pm GMT</span>
           </div>
           {/* Sun */}
-          <div className="flex justify-between py-2 border-b border-divider">
-            <span className="text-text-secondary">Sunday</span>
-            <span className="text-text-muted/40">Closed</span>
+          <div className="flex justify-between py-2">
+            <span className="text-[#8A92A0]">Sunday</span>
+            <span className="font-heading font-bold text-xs uppercase text-[#FF1E27]">Paddock Closed</span>
           </div>
         </div>
       </div>
 
       {/* Official Social Channels Card */}
-      <div className="flex flex-col rounded-[16px] border border-[#bdd3ba] bg-[#edf5e9] p-5.5 shadow-[0_8px_20px_rgba(11,77,53,.08)]">
-        <h4 className="font-sans font-medium text-sm text-text-primary mb-2">
+      <div className="flex flex-col rounded-2xl border border-white/10 bg-[#12141C]/80 p-6 shadow-xl">
+        <h4 className="font-heading font-black text-xs uppercase tracking-wider text-white mb-2">
           Connect With Us
         </h4>
-        <p className="font-sans text-[13px] text-text-secondary leading-relaxed mb-4">
-          Follow our official social accounts for live draw announcements, winners, and prize reveals.
+        <p className="font-sans text-xs sm:text-[13px] text-[#8A92A0] leading-relaxed mb-4">
+          Follow official channels for live draw streams, build walk-arounds, and winner reveals.
         </p>
         <div className="flex items-center gap-3">
           {SOCIAL_LINKS.map((link) => (
@@ -186,7 +186,7 @@ export default function ContactInfoCards() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-[#0b4d35]/15 text-[#0b4d35] font-sans text-xs font-bold hover:border-[#0b4d35]/40 hover:shadow-sm transition-all"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white font-heading text-xs font-black uppercase hover:border-[#FF1E27]/40 hover:bg-[#FF1E27]/10 hover:shadow-[0_0_15px_rgba(255,30,39,0.2)] transition-all"
             >
               {link.platform.toLowerCase() === 'facebook' ? (
                 <svg className="w-4 h-4 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
