@@ -31,18 +31,18 @@ export default function LiveRafflesHero({
     <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0B0C0E] pt-24 sm:pt-28">
       {/* Background competition hero image with dark cinematic gradient overlays */}
       <Image
-        src="/images/competition-hero.jpg"
-        alt="High performance supercar sweepstakes"
+        src="/images/tuned-hero-bg.jpg"
+        alt="Tuned Draws high performance custom supercar"
         fill
         priority
-        className="-z-20 object-cover object-center opacity-30 brightness-75 contrast-125"
+        className="-z-20 object-cover object-[75%_center] lg:object-center opacity-70 contrast-115"
       />
 
       {/* Atmospheric lighting falloff & speed-line gradients */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/80 to-[#0B0C0E]/60" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#0B0C0E]/90 via-transparent to-[#0B0C0E]" />
-      <div className="absolute -top-32 left-1/3 w-[650px] h-[450px] bg-[#FF1E27]/12 rounded-full blur-[160px] pointer-events-none -z-10" />
-      <div className="absolute bottom-0 right-10 w-[450px] h-[350px] bg-[#B3000C]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/85 to-[#0B0C0E]/40" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B0C0E] via-[#0B0C0E]/30 to-[#0B0C0E]/80" />
+      <div className="absolute -top-32 left-1/3 w-[650px] h-[450px] bg-[#FF1E27]/15 rounded-full blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 right-10 w-[450px] h-[350px] bg-[#B3000C]/12 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       {/* Subtle tachometer dot-grid */}
       <div 

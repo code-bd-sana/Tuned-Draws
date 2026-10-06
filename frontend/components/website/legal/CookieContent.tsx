@@ -48,12 +48,12 @@ export default function CookieContent() {
     <div className="cookie-policy w-full overflow-hidden bg-[#cfdfcb] pt-20 pb-20">
       
       {/* Top Banner */}
-      <div className="relative isolate overflow-hidden border-b border-[#0b4d35]/30 py-16 sm:py-20 mb-12">
-        <Image src="/hero-banner.jpg" alt="Golf course" fill priority className="z-0 object-cover object-center" />
-        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#032b1d]/95 via-[#075236]/85 to-[#073826]/50" />
+      <div className="relative isolate overflow-hidden border-b border-white/10 py-16 sm:py-20 mb-12 bg-[#0B0C0E]">
+        <Image src="/images/tuned-hero-bg.jpg" alt="Tuned Draws Supercar" fill priority className="z-0 object-cover object-center opacity-65" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/85 to-[#0B0C0E]/50" />
         <div className="container-custom relative z-10 max-w-6xl mx-auto px-4">
           <div className="flex max-w-2xl flex-col gap-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-[#0b4d35]/70 px-4 py-2 text-xs font-semibold tracking-[0.12em] text-white w-fit">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#FF1E27]/30 bg-[#12141C]/90 px-4 py-2 text-xs font-semibold tracking-[0.12em] text-[#D1D5DB] w-fit">
               <span>🍪 Cookie Transparency</span>
             </div>
             <h1 className="font-heading font-extrabold text-4xl sm:text-6xl text-white tracking-tight">

@@ -170,7 +170,7 @@ export default function UserRafflesPage() {
                 >
                   <div className="relative w-full aspect-square bg-elevated flex items-center justify-center overflow-hidden">
                     <Image
-                      src={raffle.mainImage || "/coming-soon-hero.jpg"}
+                      src={raffle.mainImage || "/images/tuned-hero-bg.jpg"}
                       alt={raffle.title}
                       fill
                       className="object-cover transition-opacity hover:opacity-90"

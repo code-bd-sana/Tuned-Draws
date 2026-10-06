@@ -102,7 +102,7 @@ export default function ComingSoonHero() {
           {/* Card */}
           <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden border border-white/15 shadow-2xl group bg-[#12141C]">
             <Image
-              src="/images/competition-hero.jpg"
+              src="/images/tuned-hero-bg.jpg"
               alt="Tuned Draws Supercar Sweepstakes"
               fill
               sizes="(max-width: 768px) 100vw, 480px"

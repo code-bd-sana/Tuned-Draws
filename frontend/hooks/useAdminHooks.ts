@@ -33,7 +33,7 @@ export const useAdminOrdersStats = () => {
 export const useProcessRefundMutation = () => {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: ({ transactionId, reason }: { transactionId: string; reason?: string }) => 
+    mutationFn: ({ transactionId, reason }: { transactionId: string; reason?: string }) =>
       adminService.processRefund(transactionId, reason),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['adminOrders'] });

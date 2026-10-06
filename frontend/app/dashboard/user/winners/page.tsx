@@ -211,7 +211,7 @@ export default function UserWinnersPage() {
             const displayImage =
               win.prizeImage ||
               win.raffle?.mainImage ||
-              "/coming-soon-hero.jpg";
+              "/images/tuned-hero-bg.jpg";
 
             const wonDateFormatted = win.createdAt
               ? format(new Date(win.createdAt), "dd MMM yyyy")
