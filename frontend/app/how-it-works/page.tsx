@@ -8,9 +8,9 @@ import HowItWorksVideoSection from '../../components/website/how-it-works/HowItW
 import HowItWorksFinalCta from '../../components/website/how-it-works/HowItWorksFinalCta';
 
 export const metadata: Metadata = {
-  title: 'How It Works | Fairway Draws',
+  title: 'How It Works | Tuned Draws',
   description:
-    'Learn how to enter premium golf gear draws or host your own competitions with transparent random draws and instant payouts.',
+    'Learn how to enter premium tuned supercar and performance parts draws or host your own verified automotive competitions.',
 };
 
 /**
@@ -23,7 +23,7 @@ export default function HowItWorksPage() {
       {/* Sticky top navbar */}
       <WebsiteNavbar />
 
-      <main className='min-h-screen flex flex-col bg-bg'>
+      <main className='min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white'>
         {/* Hero Section */}
         <HowItWorksHero />
 
