@@ -5,9 +5,11 @@ import { usePublicWinnersList } from "../../../hooks/useRaffleHooks";
 import WinnersFilterBar from "./WinnersFilterBar";
 import WinnerCard from "./WinnerCard";
 import { cn } from "../../../lib/utils";
+import { Trophy } from "lucide-react";
 
 /**
  * Grid layout and controller managing state for pagination, sorting, and time range filters.
+ * Styled in Tuned Draws dark carbon and Electric Racing Red design.
  */
 export default function WinnersGrid() {
   const [activeTab, setActiveTab] = useState<"all" | "month" | "week">("all");
@@ -47,8 +49,11 @@ export default function WinnersGrid() {
   };
 
   return (
-    <section id="winners-listing-grid" className="relative flex-grow scroll-mt-20 bg-[#cfdfcb] py-12 before:absolute before:inset-0 before:bg-[radial-gradient(#0b4d3520_1px,transparent_1px)] before:bg-[size:28px_28px] md:py-16">
-      
+    <section id="winners-listing-grid" className="relative flex-grow scroll-mt-20 bg-[#0B0C0E] bg-tachometer-grid py-12 md:py-16 text-white">
+      {/* Ambient glows */}
+      <div className="pointer-events-none absolute top-10 left-10 w-[500px] h-[400px] bg-[#FF1E27]/5 rounded-full blur-[150px] -z-0" />
+      <div className="pointer-events-none absolute bottom-20 right-10 w-[450px] h-[350px] bg-[#B3000C]/5 rounded-full blur-[140px] -z-0" />
+
       {/* Dynamic Filters Header bar */}
       <WinnersFilterBar
         activeTab={activeTab}
@@ -57,22 +62,22 @@ export default function WinnersGrid() {
         setSortBy={setSortBy}
       />
 
-      <div className="container-custom relative mt-8 md:mt-12">
+      <div className="container-custom relative mt-8 md:mt-12 z-10">
         {/* Winner Type Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-10 max-w-3xl mx-auto">
           {[
             { label: "All Winners", value: "all" },
-            { label: "Main Draw", value: "main_draw" },
+            { label: "Main Draws", value: "main_draw" },
             { label: "Instant Wins", value: "instant" },
           ].map((tab) => (
             <button
               key={tab.value}
               onClick={() => { setWinnerTypeFilter(tab.value as any); setCurrentPage(1); }}
               className={cn(
-                "font-sans font-semibold text-xs px-5 py-2.5 rounded-button border transition-all duration-200 cursor-pointer select-none",
+                "font-heading text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl border transition-all duration-200 cursor-pointer select-none",
                 winnerTypeFilter === tab.value
-                  ? "bg-primary border-primary text-primary-text hover:bg-primary-hover"
-                  : "bg-surface border-border text-text-muted hover:text-text-primary hover:border-border-medium"
+                  ? "bg-[#FF1E27] border-[#FF1E27] font-black text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
+                  : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#FF1E27]/40"
               )}
             >
               {tab.label}
@@ -81,11 +86,16 @@ export default function WinnersGrid() {
         </div>
 
         {isLoading ? (
-          <div className="flex justify-center items-center h-[400px] text-primary">Loading winners...</div>
+          <div className="flex flex-col justify-center items-center h-[400px] gap-4">
+            <div className="w-10 h-10 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
+            <span className="font-heading text-xs font-bold uppercase tracking-wider text-[#D1D5DB]">
+              Loading verified winners...
+            </span>
+          </div>
         ) : visibleWinners.length > 0 ? (
           <>
             {/* Grid of Winner Cards: 4 columns desktop, 2 cols tablet, 1 col mobile */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-7">
               {visibleWinners.map((winner) => (
                 <WinnerCard key={winner.id} winner={winner} />
               ))}
@@ -93,14 +103,19 @@ export default function WinnersGrid() {
 
             {/* Pagination Controls */}
             {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-2 mt-12 pt-8 border-t border-divider select-none font-sans">
+              <div className="flex justify-center items-center gap-2 mt-12 pt-8 border-t border-white/10 select-none font-sans">
                 {/* Previous Button */}
                 <button
                   onClick={() => handlePageChange(activePage - 1)}
                   disabled={activePage === 1}
-                  className="px-4 py-2 border border-[#bdd3ba] text-[#0b4d35] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#0b4d35] hover:text-white hover:border-[#0b4d35] rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer bg-surface shadow-xs"
+                  className={cn(
+                    "px-4 py-2 border rounded-xl font-heading text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer",
+                    activePage === 1
+                      ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
+                      : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C]"
+                  )}
                 >
-                  ← Previous
+                  ← Prev
                 </button>
 
                 {/* Page Index Numbers */}
@@ -112,10 +127,10 @@ export default function WinnersGrid() {
                       key={pageNumber}
                       onClick={() => handlePageChange(pageNumber)}
                       className={cn(
-                        "w-9 h-9 rounded-full flex items-center justify-center font-sans text-xs font-bold transition-all duration-200 cursor-pointer select-none",
+                        "w-9 h-9 rounded-xl flex items-center justify-center font-heading text-xs font-black transition-all duration-200 cursor-pointer select-none",
                         isActive
-                          ? "bg-[#0b4d35] text-white border border-[#0b4d35] shadow-sm"
-                          : "bg-surface border border-[#bdd3ba] text-[#0b4d35] hover:bg-[#0b4d35] hover:text-white hover:border-[#0b4d35]"
+                          ? "bg-[#FF1E27] text-white border border-[#FF1E27] shadow-[0_0_15px_rgba(255,30,39,0.4)]"
+                          : "bg-[#12141C] border border-white/10 text-[#8A92A0] hover:bg-white/5 hover:text-white hover:border-[#FF1E27]/40"
                       )}
                     >
                       {pageNumber}
@@ -127,7 +142,12 @@ export default function WinnersGrid() {
                 <button
                   onClick={() => handlePageChange(activePage + 1)}
                   disabled={activePage === totalPages}
-                  className="px-4 py-2 border border-[#bdd3ba] text-[#0b4d35] disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#0b4d35] hover:text-white hover:border-[#0b4d35] rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer bg-surface shadow-xs"
+                  className={cn(
+                    "px-4 py-2 border rounded-xl font-heading text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer",
+                    activePage === totalPages
+                      ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
+                      : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C]"
+                  )}
                 >
                   Next →
                 </button>
@@ -136,26 +156,15 @@ export default function WinnersGrid() {
           </>
         ) : (
           /* Empty State if filter yields 0 items */
-          <div className="py-24 text-center select-none">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-12 h-12 text-text-secondary mx-auto mb-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
-              />
-            </svg>
-            <h3 className="font-heading font-semibold text-lg text-text-primary">
+          <div className="py-20 text-center select-none bg-[#12141C] border border-white/10 border-dashed rounded-2xl max-w-lg mx-auto p-8 shadow-2xl">
+            <div className="w-14 h-14 rounded-2xl bg-[#1A1D27] border border-[#FF1E27]/30 flex items-center justify-center mb-5 text-[#FF1E27] mx-auto shadow-[0_0_15px_rgba(255,30,39,0.2)]">
+              <Trophy className="w-7 h-7" />
+            </div>
+            <h3 className="font-heading font-black text-xl text-white uppercase tracking-wide">
               No Winners Found
             </h3>
-            <p className="font-sans text-xs text-text-muted mt-2">
-              We couldn&apos;t find any winner records matching this filter selection.
+            <p className="font-sans text-xs text-[#8A92A0] mt-2 max-w-xs mx-auto leading-relaxed">
+              We couldn&apos;t find any winner records matching your selected filter parameters.
             </p>
           </div>
         )}

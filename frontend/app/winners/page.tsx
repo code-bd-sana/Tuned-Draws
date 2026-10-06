@@ -7,9 +7,9 @@ import WinnersGrid from "../../components/website/winners/WinnersGrid";
 import WinnerHighlightCard from "../../components/website/winners/WinnerHighlightCard";
 
 export const metadata: Metadata = {
-  title: "Winners Gallery | Fairway Draws",
+  title: "Winners Gallery | Tuned Draws",
   description:
-    "See all the completed raffle winners. Check past draw dates, verified delivered prizes, and transparency records.",
+    "See all the completed automotive raffle winners. Check past draw dates, verified delivered supercars and performance packages, and audit records.",
 };
 
 /**
@@ -22,7 +22,7 @@ export default function WinnersPage() {
       {/* Sticky top navbar */}
       <WebsiteNavbar />
 
-      <main className="min-h-screen flex flex-col bg-bg">
+      <main className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
         {/* Page Hero with stats counters */}
         <WinnersHero />
 
@@ -30,7 +30,7 @@ export default function WinnersPage() {
         <WinnersGrid />
 
         {/* Featured winner testimonial row */}
-        {/* <WinnerHighlightCard /> */}
+        <WinnerHighlightCard />
       </main>
 
       {/* Global website footer */}

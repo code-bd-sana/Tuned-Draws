@@ -11,6 +11,7 @@ interface WinnersFilterBarProps {
 /**
  * Filter bar for Winners page.
  * Manages timeline capsule selections (All Time, This Month, This Week) and sort order.
+ * Styled in Tuned Draws dark carbon and Electric Racing Red design.
  */
 export default function WinnersFilterBar({
   activeTab,
@@ -19,18 +20,18 @@ export default function WinnersFilterBar({
   setSortBy,
 }: WinnersFilterBarProps) {
   return (
-    <div className="select-none border-y border-[#0b4d35]/20 bg-[#dcebd8]/94 py-4 shadow-[0_8px_22px_rgba(11,77,53,.1)] backdrop-blur-xl">
+    <div className="sticky top-[60px] md:top-[68px] z-30 select-none border-y border-white/10 bg-[#0B0C0E]/90 py-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.7)] backdrop-blur-xl">
       <div className="container-custom flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
         
         {/* Timeline Toggles */}
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center overflow-x-auto scrollbar-none py-1">
           <button
             onClick={() => setActiveTab("all")}
             className={cn(
-              "px-4 py-2 rounded-full border font-sans text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer",
+              "px-4 py-2 rounded-xl border font-heading text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer shrink-0 select-none",
               activeTab === "all"
-                ? "bg-primary border-primary text-primary-text"
-                : "border-[#bbd3b8] bg-[#eff6ec] text-text-secondary hover:border-[#0b4d35]/45 hover:text-[#0b4d35]"
+                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
+                : "border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-[#FF1E27]/40 hover:text-white"
             )}
           >
             All Time
@@ -38,10 +39,10 @@ export default function WinnersFilterBar({
           <button
             onClick={() => setActiveTab("month")}
             className={cn(
-              "px-4 py-2 rounded-full border font-sans text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer",
+              "px-4 py-2 rounded-xl border font-heading text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer shrink-0 select-none",
               activeTab === "month"
-                ? "bg-primary border-primary text-primary-text"
-                : "border-[#bbd3b8] bg-[#eff6ec] text-text-secondary hover:border-[#0b4d35]/45 hover:text-[#0b4d35]"
+                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
+                : "border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-[#FF1E27]/40 hover:text-white"
             )}
           >
             This Month
@@ -49,10 +50,10 @@ export default function WinnersFilterBar({
           <button
             onClick={() => setActiveTab("week")}
             className={cn(
-              "px-4 py-2 rounded-full border font-sans text-xs font-semibold uppercase tracking-wider transition-all duration-200 cursor-pointer",
+              "px-4 py-2 rounded-xl border font-heading text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer shrink-0 select-none",
               activeTab === "week"
-                ? "bg-primary border-primary text-primary-text"
-                : "border-[#bbd3b8] bg-[#eff6ec] text-text-secondary hover:border-[#0b4d35]/45 hover:text-[#0b4d35]"
+                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
+                : "border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-[#FF1E27]/40 hover:text-white"
             )}
           >
             This Week
@@ -64,15 +65,15 @@ export default function WinnersFilterBar({
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as "newest" | "oldest")}
-            className="w-full appearance-none rounded-xl border border-[#bbd3b8] bg-[#eff6ec] px-4 py-2.5 font-sans text-xs font-semibold text-text-primary transition-colors duration-200 hover:border-[#0b4d35]/45 cursor-pointer outline-none"
+            className="w-full appearance-none rounded-xl border border-white/10 bg-[#12141C] px-4 py-2.5 font-heading text-xs font-bold uppercase tracking-wider text-[#D1D5DB] transition-colors duration-200 hover:border-[#FF1E27]/40 cursor-pointer outline-none focus:border-[#FF1E27]"
             aria-label="Sort Winner Records"
           >
-            <option value="newest">Newest First</option>
-            <option value="oldest">Oldest First</option>
+            <option value="newest" className="bg-[#12141C] text-white">Newest First</option>
+            <option value="oldest" className="bg-[#12141C] text-white">Oldest First</option>
           </select>
           
           {/* Custom Select Chevron Icon */}
-          <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-text-brand">
+          <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-[#FF1E27]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
