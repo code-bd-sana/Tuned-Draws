@@ -544,7 +544,7 @@ export class AdminDashboardService {
     });
 
     const totalCategoryRev = Array.from(categoryTotals.values()).reduce((a, b) => a + b, 0);
-    const colors = ['#0B4D35', '#15803D', '#16A34A', '#4ADE80', '#86EFAC'];
+    const colors = ['#FF1E27', '#EF4444', '#F59E0B', '#3B82F6', '#8B5CF6'];
     let colorIdx = 0;
 
     let categorySales = Array.from(categoryTotals.entries()).map(([name, val]) => {

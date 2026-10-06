@@ -2,95 +2,122 @@
 
 import React from "react";
 import { useAdminUsersStats } from "../../../hooks/useAdminHooks";
+import { Users, UserPlus, UserCheck, ShieldAlert } from "lucide-react";
 
 export default function UsersStatsCards() {
   const { data: stats, isLoading, isError } = useAdminUsersStats();
 
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 animate-pulse">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 animate-pulse">
         {[1, 2, 3, 4].map((i) => (
-          <div key={i} className="bg-surface border border-border rounded-card h-[120px] shadow-card" />
+          <div key={i} className="bg-[#12141C] border border-white/10 rounded-2xl h-[130px] shadow-xl" />
         ))}
       </div>
     );
   }
 
   if (isError || !stats) {
-    return <div className="text-[#DC2626] font-bold text-xs">Failed to load statistics.</div>;
+    return (
+      <div className="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 font-bold text-xs">
+        Failed to load member statistics.
+      </div>
+    );
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
-      
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
       {/* Total Users */}
-      <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-2 shadow-card">
-        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
-          Total Registered Users
-        </span>
-        <div className="flex flex-col gap-1 mt-1">
-          <span className="font-heading font-black text-3xl lg:text-4xl text-text-primary leading-none">
+      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            Total Registered Users
+          </span>
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FF1E27] group-hover:scale-105 transition-transform">
+            <Users className="w-5 h-5" />
+          </div>
+        </div>
+        <div className="flex flex-col gap-1 mt-3">
+          <span className="font-heading font-black text-3xl lg:text-4xl text-white leading-none tracking-tight">
             {stats.totalUsers.toLocaleString()}
           </span>
-          <div className="flex items-center gap-1.5 mt-2">
-            <div className="px-2.5 py-0.5 rounded-full bg-accent-bg border border-primary/30 flex items-center justify-center">
-              <span className="font-sans font-bold text-[10px] text-text-brand">All time</span>
-            </div>
+          <div className="flex items-center gap-2 mt-3">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/25 text-[#FF1E27] font-sans font-bold text-[10px]">
+              All-Time
+            </span>
+            <span className="font-sans font-medium text-xs text-[#8A92A0]">Platform member accounts</span>
           </div>
         </div>
       </div>
 
       {/* New This Month */}
-      <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-2 shadow-card">
-        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
-          New Users This Month
-        </span>
-        <div className="flex flex-col gap-1 mt-1">
-          <span className="font-heading font-black text-3xl lg:text-4xl text-text-primary leading-none">
+      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            New This Month
+          </span>
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+            <UserPlus className="w-5 h-5" />
+          </div>
+        </div>
+        <div className="flex flex-col gap-1 mt-3">
+          <span className="font-heading font-black text-3xl lg:text-4xl text-white leading-none tracking-tight">
             {stats.newThisMonth.toLocaleString()}
           </span>
-          <div className="flex items-center gap-1.5 mt-2">
-            <div className="px-2.5 py-0.5 rounded-full bg-success-bg border border-[#BBF7D0] flex items-center justify-center">
-              <span className="font-sans font-bold text-[10px] text-success-text">This month</span>
-            </div>
+          <div className="flex items-center gap-2 mt-3">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-sans font-bold text-[10px]">
+              30-Day Growth
+            </span>
+            <span className="font-sans font-medium text-xs text-[#8A92A0]">Recent registrations</span>
           </div>
         </div>
       </div>
 
       {/* Active Users */}
-      <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-2 shadow-card">
-        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
-          Active Players
-        </span>
-        <div className="flex flex-col gap-1 mt-1">
-          <span className="font-heading font-black text-3xl lg:text-4xl text-text-primary leading-none">
+      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            Active Players
+          </span>
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform">
+            <UserCheck className="w-5 h-5" />
+          </div>
+        </div>
+        <div className="flex flex-col gap-1 mt-3">
+          <span className="font-heading font-black text-3xl lg:text-4xl text-white leading-none tracking-tight">
             {stats.activeUsers.toLocaleString()}
           </span>
-          <div className="flex items-center gap-1.5 mt-2">
-            <div className="px-2.5 py-0.5 rounded-full bg-success-bg border border-[#BBF7D0] flex items-center justify-center">
-              <span className="font-sans font-bold text-[10px] text-success-text">{stats.activePercentage}% active</span>
-            </div>
+          <div className="flex items-center gap-2 mt-3">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-sans font-bold text-[10px]">
+              {stats.activePercentage}% Rate
+            </span>
+            <span className="font-sans font-medium text-xs text-[#8A92A0]">Active entrants</span>
           </div>
         </div>
       </div>
 
       {/* Blocked Users */}
-      <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-2 shadow-card">
-        <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
-          Blocked Accounts
-        </span>
-        <div className="flex flex-col gap-1 mt-1">
-          <span className="font-heading font-black text-3xl lg:text-4xl text-text-primary leading-none">
+      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+        <div className="flex items-center justify-between">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            Suspended Accounts
+          </span>
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-rose-400 group-hover:scale-105 transition-transform">
+            <ShieldAlert className="w-5 h-5" />
+          </div>
+        </div>
+        <div className="flex flex-col gap-1 mt-3">
+          <span className="font-heading font-black text-3xl lg:text-4xl text-white leading-none tracking-tight">
             {stats.blockedUsers.toLocaleString()}
           </span>
-          <div className="flex items-center gap-1.5 mt-2">
-            <div className="px-2.5 py-0.5 rounded-full bg-[#FEE2E2] border border-[#FECACA] flex items-center justify-center">
-              <span className="font-sans font-bold text-[10px] text-[#DC2626]">{stats.blockedPercentage}% blocked</span>
-            </div>
+          <div className="flex items-center gap-2 mt-3">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 font-sans font-bold text-[10px]">
+              {stats.blockedPercentage}% Blocked
+            </span>
+            <span className="font-sans font-medium text-xs text-[#8A92A0]">Security sanctions</span>
           </div>
         </div>
       </div>
-
     </div>
   );
 }

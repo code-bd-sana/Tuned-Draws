@@ -59,17 +59,17 @@ export default function CompetitionApprovalQueue() {
         {isLoading && (
           <div className="flex flex-col gap-6">
             {[1, 2, 3].map(i => (
-              <div key={i} className="w-full bg-surface border border-border rounded-card h-[240px] animate-pulse shadow-card" />
+              <div key={i} className="w-full bg-[#12141C] border border-white/10 rounded-2xl h-[240px] animate-pulse shadow-xl" />
             ))}
           </div>
         )}
 
         {!isLoading && pendingRaffles?.map((item: any) => (
-          <div key={item.id} className="relative w-full bg-surface border border-border rounded-card flex flex-col overflow-hidden shadow-card">
+          <div key={item.id} className="relative w-full bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl flex flex-col overflow-hidden shadow-xl transition-all">
 
             {/* Glowing Loading Overlay */}
             {approvingId === item.id && (
-              <div className="absolute inset-0 z-10 bg-white/90 backdrop-blur-sm flex flex-col items-center justify-center animate-in fade-in duration-300">
+              <div className="absolute inset-0 z-10 bg-[#12141C]/95 backdrop-blur-md flex flex-col items-center justify-center animate-in fade-in duration-300">
                 <div className="relative flex items-center justify-center w-[100px] h-[100px] mb-4">
                   <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping" style={{ animationDuration: '2s' }}></div>
                   <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-primary border-r-primary animate-spin" style={{ animationDuration: '0.8s' }}></div>
@@ -159,11 +159,11 @@ export default function CompetitionApprovalQueue() {
                     </span>
                   )}
                   {item.isAutoDraw ? (
-                    <span className="px-2 py-0.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-sans font-bold text-[10px] uppercase tracking-wider">
+                    <span className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-400 font-sans font-bold text-[10px] uppercase tracking-wider">
                       Auto Draw
                     </span>
                   ) : (
-                    <span className="px-2 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-purple-700 font-sans font-bold text-[10px] uppercase tracking-wider">
+                    <span className="px-2 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/25 text-purple-400 font-sans font-bold text-[10px] uppercase tracking-wider">
                       Live Draw
                     </span>
                   )}
@@ -179,7 +179,7 @@ export default function CompetitionApprovalQueue() {
                 </p>
                 <div className="flex items-center gap-2 mt-1 flex-wrap">
                   {item.mainPrizeValue !== undefined && item.mainPrizeValue !== null && item.mainPrizeValue !== '' && (
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#ecfdf5] border border-[#a7f3d0] text-[#065f46] font-sans font-black text-[10px] uppercase tracking-wider shadow-xs">
+                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-sans font-black text-[10px] uppercase tracking-wider shadow-xs">
                       Main Prize Value: £{Number(item.mainPrizeValue).toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </span>
                   )}
@@ -201,7 +201,7 @@ export default function CompetitionApprovalQueue() {
                     Draws (UK): {item.endDate ? formatUkDateTime(item.endDate) : 'TBD'}
                   </span>
                   {item._count?.instantWins ? (
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#fef3c7] border border-[#fde68a] text-[#92400e] font-sans font-bold text-[10px] uppercase tracking-wider">
+                    <span className="px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-400 font-sans font-bold text-[10px] uppercase tracking-wider">
                       ⚡ {item._count.instantWins} Instant Wins
                     </span>
                   ) : null}

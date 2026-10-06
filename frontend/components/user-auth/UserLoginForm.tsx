@@ -79,14 +79,22 @@ export default function UserLoginForm() {
     setFormState((prev) => ({ ...prev, isSubmitting: true }));
 
     try {
-      await loginMutation.mutateAsync({
+      const authRes = await loginMutation.mutateAsync({
         email: formData.email.trim(),
         password: formData.password,
       });
 
       showToast("Signed in successfully! Redirecting...");
       setTimeout(() => {
-        router.push(redirectUrl);
+        if (redirectUrl && redirectUrl !== "/") {
+          router.push(redirectUrl);
+        } else if (authRes?.user?.role?.toUpperCase() === "ADMIN") {
+          router.push("/dashboard/admin");
+        } else if (authRes?.user?.role?.toUpperCase() === "HOST") {
+          router.push("/dashboard/host");
+        } else {
+          router.push(redirectUrl);
+        }
       }, 1000);
     } catch (error: any) {
       setFormState((prev) => ({

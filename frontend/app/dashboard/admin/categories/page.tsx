@@ -221,12 +221,13 @@ export default function AdminCategoriesPage() {
                   <td className='py-4 px-6'>
                     <button
                       onClick={() => toggleStatus(category)}
-                      className={`px-3 py-1 inline-flex text-[10px] font-sans font-bold uppercase tracking-wider rounded-full border shadow-xs cursor-pointer ${
+                      className={`px-3 py-1 inline-flex items-center gap-1.5 text-[10px] font-sans font-bold uppercase tracking-wider rounded-full border shadow-xs cursor-pointer transition-all ${
                         category.isActive
-                          ? 'border-[#BBF7D0] bg-[#DCFCE7] text-[#15803D]'
-                          : 'border-[#FECACA] bg-[#FEE2E2] text-[#DC2626]'
+                          ? 'border-emerald-500/25 bg-emerald-500/10 text-emerald-400 shadow-[0_0_10px_rgba(16,185,129,0.15)]'
+                          : 'border-rose-500/25 bg-rose-500/10 text-rose-400 shadow-[0_0_10px_rgba(244,63,94,0.15)]'
                       }`}
                     >
+                      <span className={`w-1.5 h-1.5 rounded-full ${category.isActive ? 'bg-emerald-400' : 'bg-rose-400'}`} />
                       {category.isActive ? 'Active' : 'Inactive'}
                     </button>
                   </td>

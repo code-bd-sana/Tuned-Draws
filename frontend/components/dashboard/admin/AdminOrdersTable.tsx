@@ -21,11 +21,26 @@ export default function AdminOrdersTable() {
   const getStatusPill = (status: string) => {
     switch (status) {
       case "Paid":
-        return <span className="px-3 py-1 rounded-full border border-[#BBF7D0] bg-[#DCFCE7] text-[#15803D] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">{status}</span>;
+        return (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/25 bg-emerald-500/10 text-emerald-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(16,185,129,0.15)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            Paid
+          </span>
+        );
       case "Refunded":
-        return <span className="px-3 py-1 rounded-full border border-[#FECACA] bg-[#FEE2E2] text-[#DC2626] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">{status}</span>;
+        return (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-500/25 bg-amber-500/10 text-amber-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(245,158,11,0.15)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+            Refunded
+          </span>
+        );
       case "Failed":
-        return <span className="px-3 py-1 rounded-full border border-[#FECACA] bg-[#FEE2E2] text-[#DC2626] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">{status}</span>;
+        return (
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-rose-500/25 bg-rose-500/10 text-rose-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(244,63,94,0.15)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+            Failed
+          </span>
+        );
       default:
         return null;
     }

@@ -31,15 +31,15 @@ export default function WithdrawalsTable({ withdrawals: propWithdrawals, isLoadi
       case "APPROVED":
       case "COMPLETED":
       case "PAID":
-        return "border-[#BBF7D0] bg-[#DCFCE7] text-[#15803D] font-bold shadow-xs";
+        return "border-emerald-500/25 bg-emerald-500/10 text-emerald-400 font-bold shadow-[0_0_10px_rgba(16,185,129,0.15)]";
       case "PENDING":
       case "PROCESSING":
-        return "border-[#FDE68A] bg-[#FEF3C7] text-[#D97706] font-bold shadow-xs";
+        return "border-amber-500/25 bg-amber-500/10 text-amber-400 font-bold shadow-[0_0_10px_rgba(245,158,11,0.15)]";
       case "REJECTED":
       case "FAILED":
-        return "border-[#FECACA] bg-[#FEE2E2] text-[#DC2626] font-bold shadow-xs";
+        return "border-rose-500/25 bg-rose-500/10 text-rose-400 font-bold shadow-[0_0_10px_rgba(244,63,94,0.15)]";
       default:
-        return "border-border bg-elevated text-text-muted font-bold shadow-xs";
+        return "border-white/10 bg-white/5 text-[#8A92A0] font-bold";
     }
   };
 

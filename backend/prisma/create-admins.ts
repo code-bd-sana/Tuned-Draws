@@ -19,6 +19,12 @@ interface AdminAccountConfig {
 
 const adminAccounts: AdminAccountConfig[] = [
   {
+    email: 'admin@gmail.com',
+    firstName: 'System',
+    lastName: 'Admin',
+    password: process.env.ADMIN_DEFAULT_PASSWORD || 'admin@gmail.com',
+  },
+  {
     email: 'admin@tuneddraws.com',
     firstName: 'Tuned',
     lastName: 'Admin',

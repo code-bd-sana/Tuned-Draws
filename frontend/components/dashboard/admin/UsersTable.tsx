@@ -64,9 +64,19 @@ export default function UsersTable() {
 
   const getStatusPill = (isBlocked: boolean) => {
     if (isBlocked) {
-      return <span className="px-3 py-1 rounded-full border border-[#FECACA] bg-[#FEE2E2] text-[#DC2626] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">Blocked</span>;
+      return (
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-rose-500/25 bg-rose-500/10 text-rose-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(244,63,94,0.15)]">
+          <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+          Blocked
+        </span>
+      );
     }
-    return <span className="px-3 py-1 rounded-full border border-[#BBF7D0] bg-[#DCFCE7] text-[#15803D] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">Active</span>;
+    return (
+      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/25 bg-emerald-500/10 text-emerald-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(16,185,129,0.15)]">
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+        Active
+      </span>
+    );
   };
 
   const getInitials = (firstName: string | null, lastName: string | null, email: string) => {

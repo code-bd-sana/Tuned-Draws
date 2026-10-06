@@ -119,16 +119,35 @@ export default function HostsTable() {
 
   const getStatusPill = (isBlocked: boolean) => {
     if (isBlocked) {
-      return <span className="px-3 py-1 rounded-full border border-[#FECACA] bg-[#FEE2E2] text-[#DC2626] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">Blocked</span>;
+      return (
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-rose-500/25 bg-rose-500/10 text-rose-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(244,63,94,0.15)]">
+          <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+          Blocked
+        </span>
+      );
     }
-    return <span className="px-3 py-1 rounded-full border border-[#BBF7D0] bg-[#DCFCE7] text-[#15803D] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">Active</span>;
+    return (
+      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/25 bg-emerald-500/10 text-emerald-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(16,185,129,0.15)]">
+        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+        Active
+      </span>
+    );
   };
 
   const getPlanPill = (plan: string) => {
     if (plan === "Pending Approval") {
-      return <span className="px-3 py-1 rounded-full border border-[#FDE68A] bg-[#FEF3C7] text-[#D97706] font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">{plan}</span>;
+      return (
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-amber-500/25 bg-amber-500/10 text-amber-400 font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(245,158,11,0.15)]">
+          <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+          {plan}
+        </span>
+      );
     }
-    return <span className="px-3 py-1 rounded-full border border-primary/30 bg-accent-bg text-text-brand font-sans font-bold text-[10px] uppercase tracking-wider shadow-xs">{plan || 'Free'}</span>;
+    return (
+      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#FF1E27]/30 bg-[#FF1E27]/10 text-[#FF1E27] font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(255,30,39,0.15)]">
+        {plan || 'Free'}
+      </span>
+    );
   };
 
   return (
