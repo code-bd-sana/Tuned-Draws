@@ -7,9 +7,9 @@ import PricingComparisonSection from "../../components/website/pricing/PricingCo
 import PricingFaqSection from "../../components/website/pricing/PricingFaqSection";
 
 export const metadata: Metadata = {
-  title: "Pricing & Plans | Fairway Draws",
+  title: "Pricing & Plans | Tuned Draws",
   description:
-    "Choose the right hosting plan for your golf competitions. Start free or unlock advanced host dashboard access, custom branding, and priority payouts.",
+    "Choose the right hosting plan for your performance automotive draws. Start free or unlock advanced host dashboard access, custom branding, and priority payouts.",
 };
 
 /**
@@ -22,7 +22,7 @@ export default function PricingPage() {
       {/* Sticky top navbar */}
       <WebsiteNavbar />
 
-      <main className="min-h-screen flex flex-col bg-bg">
+      <main className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white">
         {/* Hero Section & Plan Grid switcher */}
         <PricingHero />
 
