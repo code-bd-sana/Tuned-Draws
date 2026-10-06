@@ -33,7 +33,6 @@ export default function DashboardSidebar({ account }: DashboardSidebarProps) {
   };
 
   return (
-  return (
     <aside className="hidden lg:flex flex-col w-[260px] h-screen bg-[#12141C] border-r border-white/10 fixed left-0 top-0 z-40 shadow-2xl backdrop-blur-md">
 
       {/* Brand / Logo Area */}

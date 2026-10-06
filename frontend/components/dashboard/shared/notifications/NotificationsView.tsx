@@ -124,13 +124,13 @@ export default function NotificationsView({
     switch (type.toUpperCase()) {
       case "WIN":
       case "INSTANT_WIN":
-        return "text-[#15803D] bg-[#DCFCE7] border border-[#BBF7D0]";
+        return "text-emerald-400 bg-emerald-500/10 border border-emerald-500/30";
       case "PURCHASE":
-        return "text-text-brand bg-accent-bg border border-primary/30";
+        return "text-[#FF1E27] bg-[#FF1E27]/10 border border-[#FF1E27]/30";
       case "RAFFLE":
-        return "text-[#D97706] bg-[#FEF3C7] border border-[#FDE68A]";
+        return "text-amber-400 bg-amber-500/10 border border-amber-500/30";
       default:
-        return "text-text-primary bg-elevated border border-border";
+        return "text-white bg-white/5 border border-white/10";
     }
   };
 
@@ -138,20 +138,20 @@ export default function NotificationsView({
     <div className="w-full px-[20px] lg:px-[40px] py-[24px] lg:py-[32px] flex flex-col gap-6 animate-fadeIn max-w-6xl mx-auto">
       
       {/* Top Header Card */}
-      <div className="bg-surface border border-border rounded-card p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-card">
+      <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-2xl backdrop-blur-md">
         <div>
-          <h1 className="font-heading font-black text-2xl text-text-primary uppercase tracking-tight">
+          <h1 className="font-heading font-black text-2xl text-white uppercase tracking-tight">
             {portalTitle}
           </h1>
-          <p className="font-sans text-xs text-text-muted mt-1 max-w-xl">
+          <p className="font-sans text-xs text-[#8A92A0] mt-1 max-w-xl">
             {portalSubtitle}
           </p>
         </div>
 
         <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
           {unreadCount > 0 && (
-            <span className="px-3 py-1 rounded-full text-xs font-bold font-sans bg-[#FEE2E2] text-[#DC2626] border border-[#FCA5A5]/60 flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-[#DC2626]" />
+            <span className="px-3 py-1 rounded-full text-xs font-bold font-sans bg-[#FF1E27]/15 text-[#FF1E27] border border-[#FF1E27]/30 flex items-center gap-1.5 shadow-xs">
+              <span className="w-2 h-2 rounded-full bg-[#FF1E27] animate-pulse" />
               {unreadCount} Unread
             </span>
           )}
@@ -159,7 +159,7 @@ export default function NotificationsView({
           <button
             onClick={() => markAllReadMutation.mutate()}
             disabled={markAllReadMutation.isPending || unreadCount === 0}
-            className="px-4 py-2 rounded-xl text-xs font-bold font-sans bg-accent-bg border border-primary/30 text-text-brand hover:bg-primary hover:text-white transition-all shadow-xs disabled:opacity-40 disabled:pointer-events-none cursor-pointer flex items-center gap-2"
+            className="px-4 py-2 rounded-xl text-xs font-bold font-heading uppercase tracking-wider bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] hover:bg-[#FF1E27] hover:text-white transition-all shadow-xs disabled:opacity-40 disabled:pointer-events-none cursor-pointer flex items-center gap-2"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -175,10 +175,10 @@ export default function NotificationsView({
           <button
             key={filter}
             onClick={() => handleFilterChange(filter)}
-            className={`px-4 py-2 rounded-xl text-xs font-sans font-bold transition-all whitespace-nowrap cursor-pointer ${
+            className={`px-4 py-2 rounded-xl text-xs font-heading font-bold uppercase tracking-wider transition-all whitespace-nowrap cursor-pointer ${
               activeFilter === filter
-                ? "bg-accent-bg border border-primary/50 text-text-brand shadow-xs"
-                : "bg-surface border border-border text-text-muted hover:text-text-primary hover:bg-elevated"
+                ? "bg-[#FF1E27] border border-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.5)]"
+                : "bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-white hover:bg-white/5"
             }`}
           >
             {filter}
@@ -187,35 +187,35 @@ export default function NotificationsView({
       </div>
 
       {/* Notifications Feed */}
-      <div className="bg-surface border border-border rounded-card shadow-card overflow-hidden flex flex-col">
+      <div className="bg-[#12141C] border border-white/10 rounded-2xl shadow-2xl backdrop-blur-md overflow-hidden flex flex-col">
         {isLoading ? (
-          <div className="p-16 text-center text-text-muted text-sm font-sans flex flex-col items-center justify-center gap-2">
-            <div className="w-8 h-8 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+          <div className="p-16 text-center text-[#8A92A0] text-sm font-sans flex flex-col items-center justify-center gap-2">
+            <div className="w-8 h-8 rounded-full border-2 border-[#FF1E27] border-t-transparent animate-spin" />
             <span>Loading notifications...</span>
           </div>
         ) : notifications.length === 0 ? (
-          <div className="p-16 flex flex-col items-center justify-center text-center gap-3 text-text-muted">
-            <div className="w-16 h-16 rounded-full bg-elevated border border-border-medium flex items-center justify-center text-text-muted">
+          <div className="p-16 flex flex-col items-center justify-center text-center gap-3 text-[#8A92A0]">
+            <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8A92A0]">
               <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
               </svg>
             </div>
-            <span className="text-base font-heading font-bold text-text-primary">No notifications found</span>
-            <p className="text-xs font-sans max-w-sm">
+            <span className="text-base font-heading font-bold text-white">No notifications found</span>
+            <p className="text-xs font-sans max-w-sm text-[#8A92A0]">
               {activeFilter === "All"
                 ? "You have no notifications yet. Activity updates will appear here automatically."
                 : `No notifications matching the "${activeFilter}" filter.`}
             </p>
           </div>
         ) : (
-          <div className="divide-y divide-divider">
+          <div className="divide-y divide-white/5">
             {notifications.map((notification) => (
               <div
                 key={notification.id}
                 onClick={() => handleItemClick(notification)}
-                className={`p-5 flex items-start gap-4 transition-colors cursor-pointer hover:bg-elevated/60 ${
+                className={`p-5 flex items-start gap-4 transition-colors cursor-pointer hover:bg-white/5 ${
                   !notification.isRead
-                    ? "border-l-4 border-l-primary bg-accent-bg/15"
+                    ? "border-l-4 border-l-[#FF1E27] bg-[#FF1E27]/5"
                     : "border-l-4 border-l-transparent"
                 }`}
               >
@@ -226,25 +226,25 @@ export default function NotificationsView({
                 <div className="flex flex-col gap-1.5 flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2">
-                      <span className="font-heading font-black text-sm text-text-primary">
+                      <span className="font-heading font-black text-sm text-white">
                         {notification.title}
                       </span>
                       {!notification.isRead && (
-                        <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                        <span className="w-2 h-2 rounded-full bg-[#FF1E27] shrink-0" />
                       )}
                     </div>
-                    <span className="font-sans font-medium text-xs text-text-muted shrink-0">
+                    <span className="font-sans font-medium text-xs text-[#8A92A0] shrink-0">
                       {formatTimeAgo(notification.createdAt)}
                     </span>
                   </div>
 
-                  <p className="font-sans text-xs text-text-muted leading-relaxed">
+                  <p className="font-sans text-xs text-[#8A92A0] leading-relaxed">
                     {notification.message}
                   </p>
 
                   {notification.link && (
                     <div className="mt-1">
-                      <span className="inline-flex items-center gap-1 text-[11px] font-bold font-sans text-text-brand hover:underline">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold font-sans text-[#FF1E27] hover:underline">
                         <span>View details</span>
                         <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -261,7 +261,7 @@ export default function NotificationsView({
                       markReadMutation.mutate(notification.id);
                     }}
                     title="Mark as read"
-                    className="p-1.5 rounded-lg text-text-muted hover:text-text-brand hover:bg-accent-bg transition-colors shrink-0 cursor-pointer"
+                    className="p-1.5 rounded-lg text-[#8A92A0] hover:text-[#FF1E27] hover:bg-white/5 transition-colors shrink-0 cursor-pointer"
                   >
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -275,22 +275,22 @@ export default function NotificationsView({
 
         {/* Pagination Footer */}
         {totalPages > 1 && (
-          <div className="p-4 border-t border-divider bg-surface flex items-center justify-between">
-            <span className="font-sans text-xs text-text-muted">
+          <div className="p-4 border-t border-white/10 bg-[#0B0C0E]/50 flex items-center justify-between">
+            <span className="font-sans text-xs text-[#8A92A0]">
               Showing page {page} of {totalPages} ({total} total)
             </span>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setPage((p) => Math.max(1, p - 1))}
                 disabled={page <= 1}
-                className="px-3 py-1.5 rounded-lg text-xs font-bold font-sans bg-elevated border border-border text-text-primary hover:bg-accent-bg disabled:opacity-40 cursor-pointer"
+                className="px-3 py-1.5 rounded-lg text-xs font-bold font-heading uppercase bg-[#12141C] border border-white/10 text-white hover:border-[#FF1E27] disabled:opacity-40 cursor-pointer"
               >
                 Previous
               </button>
               <button
                 onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                 disabled={page >= totalPages}
-                className="px-3 py-1.5 rounded-lg text-xs font-bold font-sans bg-elevated border border-border text-text-primary hover:bg-accent-bg disabled:opacity-40 cursor-pointer"
+                className="px-3 py-1.5 rounded-lg text-xs font-bold font-heading uppercase bg-[#12141C] border border-white/10 text-white hover:border-[#FF1E27] disabled:opacity-40 cursor-pointer"
               >
                 Next
               </button>

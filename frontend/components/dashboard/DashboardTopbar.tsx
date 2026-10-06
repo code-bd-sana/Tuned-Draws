@@ -31,7 +31,6 @@ export default function DashboardTopbar({ account, onMenuClick, title = "Dashboa
   };
 
   return (
-  return (
     <header className="h-[88px] w-full bg-[#12141C]/90 border-b border-white/10 flex items-center justify-between px-[20px] lg:px-[40px] shrink-0 sticky top-0 z-30 shadow-2xl backdrop-blur-md">
       <div className="flex items-center gap-3 sm:gap-4">
         {/* Mobile menu trigger */}

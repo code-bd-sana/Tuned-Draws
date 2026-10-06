@@ -194,17 +194,17 @@ export default function UserDashboardPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex flex-col gap-1">
-          <h1 className="font-heading font-black text-2xl lg:text-3xl text-text-primary uppercase tracking-tight">
+          <h1 className="font-heading font-black text-2xl lg:text-3xl text-white uppercase tracking-tight">
             Player Dashboard
           </h1>
-          <p className="font-sans text-xs text-text-muted">
+          <p className="font-sans text-xs text-[#8A92A0]">
             Welcome back, {firstName}! Track your active competition entries, ticket spend, and recent prize wins.
           </p>
         </div>
         <div className="flex items-center gap-3">
           <Link
             href="/dashboard/user/winners"
-            className="px-4 py-2 rounded-xl bg-surface border border-border hover:bg-elevated text-text-primary font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-xs"
+            className="px-4 py-2 rounded-xl bg-[#12141C] border border-white/10 hover:bg-white/5 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
           >
             <span>🏆</span> My Winnings ({totalWins})
           </Link>
@@ -220,62 +220,62 @@ export default function UserDashboardPage() {
       {/* KPI Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 w-full">
         {/* Total Tickets */}
-        <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-3 shadow-card">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
+        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
             Total Tickets Purchased
           </p>
-          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-text-primary">
+          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
             {isTicketsLoading ? "..." : allTickets.length}
           </p>
-          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-success-bg border border-[#BBF7D0] w-fit">
-            <span className="font-sans text-[10px] font-bold text-success-text">
+          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 w-fit">
+            <span className="font-sans text-[10px] font-bold text-emerald-400">
               {allTickets.length > 0 ? "Lifetime entries" : "No entries yet"}
             </span>
           </div>
         </div>
 
         {/* Active Entries */}
-        <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-3 shadow-card">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
+        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
             Active Entries
           </p>
-          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-text-primary">
+          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
             {isTicketsLoading ? "..." : activeTickets.length}
           </p>
-          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-accent-bg border border-primary/30 w-fit">
-            <span className="font-sans text-[10px] font-bold text-text-brand">
+          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30 w-fit">
+            <span className="font-sans text-[10px] font-bold text-[#FF1E27]">
               {activeCompetitions.length} live draw{activeCompetitions.length === 1 ? "" : "s"}
             </span>
           </div>
         </div>
 
         {/* Won Competitions / Prizes */}
-        <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-3 shadow-card">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
+        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
             Won Prizes
           </p>
-          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-text-primary">
+          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
             {isWinnersLoading ? "..." : totalWins}
           </p>
-          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-success-bg border border-[#BBF7D0] w-fit">
-            <span className="font-sans text-[10px] font-bold text-success-text">
+          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 w-fit">
+            <span className="font-sans text-[10px] font-bold text-amber-400">
               {instantWinsCount > 0 ? `⚡ ${instantWinsCount} Instant Win(s)` : `🏆 ${totalWins} Total Prize(s)`}
             </span>
           </div>
         </div>
 
         {/* Total Lifetime Spent */}
-        <div className="bg-surface border border-border rounded-card p-6 flex flex-col gap-3 shadow-card">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-text-muted">
+        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
             Total Lifetime Spent
           </p>
-          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-text-primary">
+          <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
             {isTransactionsLoading && isTicketsLoading
               ? "..."
               : `£${totalLifetimeSpent.toFixed(2)}`}
           </p>
-          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-elevated border border-border-medium w-fit">
-            <span className="font-sans text-[10px] font-bold text-text-muted">
+          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 w-fit">
+            <span className="font-sans text-[10px] font-bold text-[#8A92A0]">
               Lifetime purchases
             </span>
           </div>
@@ -284,33 +284,33 @@ export default function UserDashboardPage() {
 
       {/* Row 2: Ticket Spend Overview Chart */}
       <div className="w-full">
-        <div className="w-full bg-surface border border-border rounded-card p-6 flex flex-col min-h-[320px] shadow-card">
+        <div className="w-full bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col min-h-[320px] shadow-2xl backdrop-blur-md">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 sm:gap-0">
             <div className="flex flex-col">
               <div className="flex items-center gap-3">
-                <span className="font-heading font-black text-2xl lg:text-3xl text-text-primary leading-none">
+                <span className="font-heading font-black text-2xl lg:text-3xl text-white leading-none">
                   £{spendChartData.reduce((acc, curr) => acc + curr.spend, 0).toFixed(2)}
                 </span>
-                <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-success-bg border border-[#BBF7D0]">
-                  <span className="font-sans text-[11px] font-bold text-success-text">
+                <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30">
+                  <span className="font-heading text-[10px] font-black uppercase text-emerald-400">
                     Audited Transactions
                   </span>
                 </div>
               </div>
-              <span className="font-sans text-xs text-text-muted mt-1">
+              <span className="font-sans text-xs text-[#8A92A0] mt-1">
                 Ticket Spend ({timeframe}) • Lifetime: £{totalLifetimeSpent.toFixed(2)}
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 bg-elevated p-1 rounded-xl border border-border-medium">
+            <div className="flex items-center gap-1.5 bg-[#0B0C0E] p-1 rounded-xl border border-white/10">
               {(["7D", "1M", "3M", "1Y"] as const).map((period) => (
                 <button
                   key={period}
                   onClick={() => setTimeframe(period)}
-                  className={`px-3 py-1 rounded-lg font-heading font-bold text-xs transition-all cursor-pointer ${
+                  className={`px-3 py-1 rounded-lg font-heading font-bold text-xs uppercase transition-all cursor-pointer ${
                     timeframe === period
-                      ? "border border-border bg-surface text-text-brand shadow-xs"
-                      : "border border-transparent text-text-muted hover:text-text-primary"
+                      ? "border border-[#FF1E27] bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.5)]"
+                      : "border border-transparent text-[#8A92A0] hover:text-white"
                   }`}
                 >
                   {period}
@@ -321,7 +321,7 @@ export default function UserDashboardPage() {
 
           <div className="mt-6 flex-1 w-full relative min-h-[220px]">
             {isTransactionsLoading ? (
-              <div className="w-full h-full min-h-[200px] flex items-center justify-center text-text-muted font-sans text-xs animate-pulse">
+              <div className="w-full h-full min-h-[200px] flex items-center justify-center text-[#8A92A0] font-sans text-xs animate-pulse">
                 Loading spend overview...
               </div>
             ) : (
@@ -329,33 +329,33 @@ export default function UserDashboardPage() {
                 <AreaChart data={spendChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <defs>
                     <linearGradient id="colorUserSpend" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#0b4d35" stopOpacity={0.25} />
-                      <stop offset="95%" stopColor="#0b4d35" stopOpacity={0} />
+                      <stop offset="5%" stopColor="#FF1E27" stopOpacity={0.35} />
+                      <stop offset="95%" stopColor="#FF1E27" stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <XAxis 
                     dataKey="name" 
                     axisLine={false} 
                     tickLine={false} 
-                    tick={{ fill: "#717D6E", fontSize: 11, fontFamily: "sans-serif" }} 
+                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "sans-serif" }} 
                     dy={10}
                   />
                   <YAxis 
                     axisLine={false} 
                     tickLine={false} 
-                    tick={{ fill: "#717D6E", fontSize: 11, fontFamily: "sans-serif" }}
+                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "sans-serif" }}
                     tickFormatter={(val) => `£${val >= 1000 ? `${(val / 1000).toFixed(1)}k` : val}`}
                   />
                   <RechartsTooltip
-                    cursor={{ stroke: "#E2EADF", strokeWidth: 1, strokeDasharray: "4 4" }}
+                    cursor={{ stroke: "rgba(255, 30, 39, 0.3)", strokeWidth: 1, strokeDasharray: "4 4" }}
                     contentStyle={{ 
-                      backgroundColor: "#FFFFFF", 
-                      borderColor: "#E2EADF", 
+                      backgroundColor: "#12141C", 
+                      borderColor: "rgba(255, 255, 255, 0.15)", 
                       borderRadius: "12px",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.06)",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.8)",
                       fontFamily: "sans-serif"
                     }}
-                    itemStyle={{ color: "#0b4d35", fontWeight: "bold" }}
+                    itemStyle={{ color: "#FF1E27", fontWeight: "bold" }}
                     formatter={(val: any) => [
                       `£${Number(val || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 
                       "Ticket Spend"
@@ -364,7 +364,7 @@ export default function UserDashboardPage() {
                   <Area 
                     type="monotone" 
                     dataKey="spend" 
-                    stroke="#0b4d35" 
+                    stroke="#FF1E27" 
                     strokeWidth={2.5}
                     fillOpacity={1} 
                     fill="url(#colorUserSpend)" 
@@ -379,19 +379,19 @@ export default function UserDashboardPage() {
       {/* Row 3: Active Entries & Recent Wins */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 w-full items-start">
         {/* My Active Entries */}
-        <div className="xl:col-span-6 bg-surface border border-border rounded-card p-6 flex flex-col shadow-card">
-          <div className="flex justify-between items-center mb-4 pb-3 border-b border-divider">
+        <div className="xl:col-span-6 bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col shadow-2xl backdrop-blur-md">
+          <div className="flex justify-between items-center mb-4 pb-3 border-b border-white/10">
             <div>
-              <h3 className="font-heading font-black text-lg text-text-primary uppercase tracking-tight">
+              <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                 My Active Entries
               </h3>
-              <p className="font-sans text-[11px] text-text-muted">
+              <p className="font-sans text-[11px] text-[#8A92A0]">
                 Competitions you are currently participating in
               </p>
             </div>
             <Link
               href="/dashboard/user/tickets"
-              className="flex items-center gap-1 font-sans font-bold text-xs text-text-brand hover:underline transition-all cursor-pointer"
+              className="flex items-center gap-1 font-sans font-bold text-xs text-[#FF1E27] hover:underline transition-all cursor-pointer"
             >
               View All
               <svg
@@ -408,18 +408,18 @@ export default function UserDashboardPage() {
 
           {isTicketsLoading ? (
             <div className="py-12 flex flex-col items-center justify-center">
-              <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mb-2" />
-              <span className="font-sans text-xs text-text-muted">Loading active entries...</span>
+              <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin mb-2" />
+              <span className="font-sans text-xs text-[#8A92A0]">Loading active entries...</span>
             </div>
           ) : activeCompetitions.length === 0 ? (
             <div className="flex flex-col items-center justify-center text-center py-12 px-4">
-              <div className="w-14 h-14 bg-accent-bg rounded-full border border-primary/30 flex items-center justify-center mb-3 text-primary">
+              <div className="w-14 h-14 bg-white/5 rounded-full border border-white/10 flex items-center justify-center mb-3 text-2xl">
                 🎟️
               </div>
-              <h4 className="font-heading font-bold text-sm text-text-primary mb-1">
+              <h4 className="font-heading font-bold text-sm text-white mb-1">
                 No active entries found
               </h4>
-              <p className="font-sans text-xs text-text-muted max-w-[280px] mb-4">
+              <p className="font-sans text-xs text-[#8A92A0] max-w-[280px] mb-4">
                 You do not have any tickets in active draws. Browse live competitions to participate!
               </p>
               <Link
@@ -430,19 +430,19 @@ export default function UserDashboardPage() {
               </Link>
             </div>
           ) : (
-            <div className="flex flex-col divide-y divide-divider">
+            <div className="flex flex-col divide-y divide-white/5">
               {activeCompetitions.map((item) => (
                 <div
                   key={item.raffle.id}
-                  className="py-3.5 flex items-center justify-between gap-3 hover:bg-elevated/40 px-2 rounded-xl transition-colors"
+                  className="py-3.5 flex items-center justify-between gap-3 hover:bg-white/5 px-2 rounded-xl transition-colors"
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-accent-bg shrink-0 border border-border">
+                    <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-black/40 shrink-0 border border-white/10">
                       <Image
                         src={
                           item.raffle.images?.[0] ||
                           item.raffle.mainImage ||
-                          "https://placehold.co/400x300/1a230a/8cb34a?text=Draw"
+                          "https://placehold.co/400x300/12141C/FF1E27?text=Draw"
                         }
                         alt={item.raffle.title}
                         fill
@@ -453,14 +453,14 @@ export default function UserDashboardPage() {
                     <div className="flex flex-col min-w-0">
                       <Link
                         href={`/live-raffles/${item.raffle.slug || item.raffle.id}`}
-                        className="font-heading font-bold text-xs text-text-primary truncate hover:text-text-brand"
+                        className="font-heading font-bold text-xs text-white truncate hover:text-[#FF1E27]"
                       >
                         {item.raffle.title}
                       </Link>
-                      <span className="font-sans text-[11px] text-text-muted truncate">
-                        Hosted by {item.raffle.host?.businessName || "Fairway Draws Host"}
+                      <span className="font-sans text-[11px] text-[#8A92A0] truncate">
+                        Hosted by {item.raffle.host?.businessName || "Tuned Draws Official"}
                       </span>
-                      <span className="font-sans text-[10px] text-text-muted mt-0.5">
+                      <span className="font-sans text-[10px] text-[#8A92A0]/80 mt-0.5">
                         Draw Date:{" "}
                         {item.raffle.endDate
                           ? format(new Date(item.raffle.endDate), "dd MMM yyyy")
@@ -470,8 +470,8 @@ export default function UserDashboardPage() {
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0">
-                    <div className="px-3 py-1 bg-elevated border border-border-medium rounded-lg text-center">
-                      <span className="font-sans font-bold text-xs text-text-brand">
+                    <div className="px-3 py-1 bg-[#0B0C0E] border border-white/10 rounded-lg text-center">
+                      <span className="font-sans font-bold text-xs text-[#FF1E27]">
                         {item.ticketCount} {item.ticketCount === 1 ? "ticket" : "tickets"}
                       </span>
                     </div>
@@ -483,26 +483,26 @@ export default function UserDashboardPage() {
         </div>
 
         {/* Recent Wins (Instant Wins & Main Draw Wins) */}
-        <div className="xl:col-span-6 bg-surface border border-border rounded-card p-6 flex flex-col shadow-card">
-          <div className="flex justify-between items-center mb-4 pb-3 border-b border-divider">
+        <div className="xl:col-span-6 bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col shadow-2xl backdrop-blur-md">
+          <div className="flex justify-between items-center mb-4 pb-3 border-b border-white/10">
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-heading font-black text-lg text-text-primary uppercase tracking-tight">
+                <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                   Recent Wins
                 </h3>
                 {instantWinsCount > 0 && (
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#D97706] font-sans font-bold text-[9px] uppercase tracking-wider">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-sans font-bold text-[9px] uppercase tracking-wider">
                     ⚡ {instantWinsCount} Instant Win{instantWinsCount === 1 ? "" : "s"}
                   </span>
                 )}
               </div>
-              <p className="font-sans text-[11px] text-text-muted">
+              <p className="font-sans text-[11px] text-[#8A92A0]">
                 Your recent Instant Win prizes and Competition victories
               </p>
             </div>
             <Link
               href="/dashboard/user/winners"
-              className="flex items-center gap-1 font-sans font-bold text-xs text-text-brand hover:underline transition-all cursor-pointer"
+              className="flex items-center gap-1 font-sans font-bold text-xs text-[#FF1E27] hover:underline transition-all cursor-pointer"
             >
               View All ({totalWins})
               <svg
@@ -519,19 +519,19 @@ export default function UserDashboardPage() {
 
           {isWinnersLoading ? (
             <div className="py-12 flex flex-col items-center justify-center">
-              <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mb-2" />
-              <span className="font-sans text-xs text-text-muted">Loading your winning records...</span>
+              <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin mb-2" />
+              <span className="font-sans text-xs text-[#8A92A0]">Loading your winning records...</span>
             </div>
           ) : recentWins.length === 0 ? (
             <div className="flex flex-col items-center justify-center text-center py-12 px-4">
-              <div className="w-14 h-14 bg-accent-bg rounded-full border border-primary/30 flex items-center justify-center mb-3 text-primary shadow-xs">
+              <div className="w-14 h-14 bg-white/5 rounded-full border border-white/10 flex items-center justify-center mb-3 text-2xl shadow-xs">
                 🏆
               </div>
-              <h4 className="font-heading font-bold text-sm text-text-primary mb-1">
+              <h4 className="font-heading font-bold text-sm text-white mb-1">
                 No wins recorded yet
               </h4>
-              <p className="font-sans text-xs text-text-muted max-w-[280px] mb-4">
-                Enter active competitions for your chance to win instant prizes and premium golf equipment.
+              <p className="font-sans text-xs text-[#8A92A0] max-w-[280px] mb-4">
+                Enter active competitions for your chance to win instant prizes, custom builds, and performance cash.
               </p>
               <Link
                 href="/dashboard/user/competitions"
@@ -541,19 +541,19 @@ export default function UserDashboardPage() {
               </Link>
             </div>
           ) : (
-            <div className="flex flex-col divide-y divide-divider">
+            <div className="flex flex-col divide-y divide-white/5">
               {recentWins.map((win) => (
                 <div
                   key={win.id}
-                  className="py-3.5 flex items-center justify-between gap-3 hover:bg-elevated/40 px-2 rounded-xl transition-colors"
+                  className="py-3.5 flex items-center justify-between gap-3 hover:bg-white/5 px-2 rounded-xl transition-colors"
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-accent-bg shrink-0 border border-border">
+                    <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-black/40 shrink-0 border border-white/10">
                       <Image
                         src={
                           win.prizeImage ||
                           win.raffle?.mainImage ||
-                          "https://placehold.co/400x300/1a230a/8cb34a?text=Prize"
+                          "https://placehold.co/400x300/12141C/FF1E27?text=Prize"
                         }
                         alt={win.prizeName}
                         fill
@@ -563,32 +563,32 @@ export default function UserDashboardPage() {
                     </div>
                     <div className="flex flex-col min-w-0">
                       <div className="flex items-center gap-1.5 flex-wrap">
-                        <span className="font-heading font-bold text-xs text-text-primary truncate">
+                        <span className="font-heading font-bold text-xs text-white truncate">
                           {win.prizeName}
                         </span>
                         {win.winType === "INSTANT_WIN" ? (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#FEF3C7] border border-[#FDE68A] text-[#D97706] font-sans font-bold text-[9px] uppercase tracking-wider">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 font-sans font-bold text-[9px] uppercase tracking-wider">
                             ⚡ Instant Win
                           </span>
                         ) : (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#DCFCE7] border border-[#BBF7D0] text-[#15803D] font-sans font-bold text-[9px] uppercase tracking-wider">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-sans font-bold text-[9px] uppercase tracking-wider">
                             🏆 Main Draw
                           </span>
                         )}
                       </div>
 
-                      <p className="font-sans text-[11px] text-text-muted truncate">
-                        {win.raffle?.title || "Fairway Draws Competition"}
+                      <p className="font-sans text-[11px] text-[#8A92A0] truncate">
+                        {win.raffle?.title || "Tuned Draws Competition"}
                       </p>
 
-                      <div className="flex items-center gap-2 mt-0.5 text-[10px] font-sans text-text-muted">
-                        <span className="font-mono font-semibold text-text-primary">
+                      <div className="flex items-center gap-2 mt-0.5 text-[10px] font-sans text-[#8A92A0]">
+                        <span className="font-mono font-semibold text-white">
                           Ticket #{win.ticketNumber}
                         </span>
                         {win.rrpValue ? (
                           <>
                             <span>•</span>
-                            <span className="font-semibold text-[#15803d]">
+                            <span className="font-semibold text-emerald-400">
                               Value: £{Number(win.rrpValue).toFixed(2)}
                             </span>
                           </>
@@ -598,16 +598,16 @@ export default function UserDashboardPage() {
                   </div>
 
                   <div className="flex flex-col items-end shrink-0 gap-1.5">
-                    <span className="font-sans text-[10px] text-text-muted">
+                    <span className="font-sans text-[10px] text-[#8A92A0]">
                       {win.createdAt ? format(new Date(win.createdAt), "dd MMM yyyy") : ""}
                     </span>
                     <span
                       className={`px-2 py-0.5 rounded-full text-[9px] font-sans font-bold uppercase tracking-wider ${
                         win.deliveryStatus === "DELIVERED"
-                          ? "bg-green-100 text-green-700 border border-green-200"
+                          ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30"
                           : win.deliveryStatus === "SHIPPED"
-                          ? "bg-blue-100 text-blue-700 border border-blue-200"
-                          : "bg-amber-100 text-amber-700 border border-amber-200"
+                          ? "bg-blue-500/10 text-blue-400 border border-blue-500/30"
+                          : "bg-amber-500/10 text-amber-400 border border-amber-500/30"
                       }`}
                     >
                       {win.deliveryStatus === "DELIVERED"
