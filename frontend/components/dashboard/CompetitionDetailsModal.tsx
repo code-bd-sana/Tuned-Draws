@@ -207,7 +207,7 @@ export default function CompetitionDetailsModal({
                 <span className="font-heading font-bold text-xs text-white uppercase tracking-wider">Draw Rules & Details</span>
               </div>
               <p className="font-sans text-xs text-[#8A92A0] leading-relaxed pl-6">
-                Winner selected via certified random cryptographic draw. All ticket holders notified within 24h of draw. Supercar and parts shipping arranged across UK & EU.
+                Winner selected via certified random cryptographic draw. All ticket holders notified within 24h of draw. Performance parts delivery and workshop service fulfillment arranged across UK.
               </p>
             </div>
           </div>

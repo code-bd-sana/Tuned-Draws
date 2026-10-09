@@ -47,8 +47,8 @@ export default function LiveRaffleCard({ raffle, viewMode = "grid" }: LiveRaffle
 
   const rawCategory = r.category;
   const category = typeof rawCategory === 'object' && rawCategory !== null
-    ? (rawCategory.name || rawCategory.slug || 'Supercar')
-    : (typeof rawCategory === 'string' ? rawCategory : 'Supercar');
+    ? (rawCategory.name || rawCategory.slug || 'Performance Parts')
+    : (typeof rawCategory === 'string' ? rawCategory : 'Performance Parts');
 
   const hostName = host?.businessName || (host?.user?.firstName ? `${host.user.firstName} ${host.user.lastName || ''}`.trim() : "");
 

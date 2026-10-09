@@ -14,7 +14,7 @@ interface TunedDrawsBrandLogoProps {
 
 export default function TunedDrawsBrandLogo({
   className,
-  subtitle = "AUTOMOTIVE SWEEPSTAKES",
+  subtitle = "PERFORMANCE & MOD COMPETITIONS",
   size = "md",
   href = "/",
 }: TunedDrawsBrandLogoProps) {

@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Tuned Draws | Premium Automotive Sweepstakes & Builds',
+  title: 'Tuned Draws | Performance Car Parts, Tuning & Modification Competitions',
   description:
-    'Win track-ready supercars, custom high-horsepower builds, crate engines, and performance motorsport gear for less. Transparent, fair, and certified prize draws.',
+    'Win performance car parts, tuning packages, custom wrapping, detailing, and track days for less. Transparent, fair, and certified UK automotive competitions.',
 };
 
 export default function RootLayout({

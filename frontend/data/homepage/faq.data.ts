@@ -19,7 +19,7 @@ export const faqData: FaqItem[] = [
     id: "faq-3",
     question: "How do I receive my prize?",
     answer:
-      "Once confirmed as a winner, the competition host will arrange delivery or collection of your prize. For vehicle draws, handover and title transfers are coordinated directly with insured nationwide delivery."
+      "Once confirmed as a winner, the competition host will arrange courier delivery of your performance parts or coordinate your workshop service booking (such as car wrapping, detailing, dyno runs, or track days)."
   },
 
   {
@@ -47,7 +47,7 @@ export const faqData: FaqItem[] = [
     id: "faq-7",
     question: "Do I need to be 18 to enter?",
     answer:
-      "Yes. Tuned Draws competitions are strictly available to individuals aged 18 and over. Identity and age verification checks are completed before any vehicle or major prize is released."
+      "Yes. Tuned Draws competitions are strictly available to individuals aged 18 and over. Identity and age verification checks are completed before any major prize or service voucher is released."
   },
 
   {

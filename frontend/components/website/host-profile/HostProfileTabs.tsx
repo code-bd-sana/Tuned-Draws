@@ -250,8 +250,8 @@ export default function HostProfileTabs({
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
                   <span className="text-xl">🏎️</span>
                   <div>
-                    <div className="font-heading text-xs font-bold text-white uppercase">Performance Builds</div>
-                    <div className="font-sans text-[11px] text-[#8A92A0]">Supercars &amp; Engines</div>
+                    <div className="font-heading text-xs font-bold text-white uppercase">Performance Mods</div>
+                    <div className="font-sans text-[11px] text-[#8A92A0]">Parts &amp; Tuning Services</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">

@@ -29,12 +29,11 @@ export default function WinnerHighlightCard() {
           <div className="lg:col-span-6 w-full">
             <div className="relative w-full h-[320px] sm:h-[380px] md:h-[420px] rounded-2xl border border-white/10 overflow-hidden bg-[#12141C] shadow-2xl group">
               <Image
-                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop"
-                alt="Featured Winner Aisha R."
+                src="/images/car-winner.jpg"
+                alt="Featured Winner BMW M340i"
                 fill
                 sizes="(max-width: 1024px) 100vw, 500px"
                 className="object-cover opacity-85 group-hover:scale-105 transition-transform duration-500"
-                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-transparent" />
               {/* Overlay Label Badge */}

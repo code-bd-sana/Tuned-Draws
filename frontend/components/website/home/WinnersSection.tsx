@@ -35,7 +35,7 @@ export default function WinnersSection() {
             Recent Winners
           </h2>
           <p className="font-sans text-sm text-[#8A92A0] mt-3 max-w-md mx-auto leading-relaxed">
-            Real enthusiasts, real dream builds. See our most recent lucky winners and their verified prize deliveries.
+            Real enthusiasts, real car mods. See our most recent lucky winners and their verified parts &amp; service prizes.
           </p>
         </div>
 

@@ -10,7 +10,7 @@ import HowItWorksFinalCta from '../../components/website/how-it-works/HowItWorks
 export const metadata: Metadata = {
   title: 'How It Works | Tuned Draws',
   description:
-    'Learn how to enter premium tuned supercar and performance parts draws or host your own verified automotive competitions.',
+    'Learn how to enter premium car modification services and performance parts competitions or host your own verified draws.',
 };
 
 /**

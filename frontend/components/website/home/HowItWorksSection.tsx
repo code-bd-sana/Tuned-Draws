@@ -4,9 +4,9 @@ import Link from "next/link";
 const STEPS = [
   {
     n: 1,
-    emoji: "🏎️",
-    title: "Pick Your Machine",
-    desc: "Browse active automotive competitions — tuned supercars, crate engines, turbo packages, performance wheel setups, or VIP track days.",
+    emoji: "⚙️",
+    title: "Pick Your Mod or Service",
+    desc: "Browse active automotive competitions — performance parts, ECU remaps, custom car wrapping, detailing packages, or track days.",
   },
   {
     n: 2,
@@ -17,8 +17,8 @@ const STEPS = [
   {
     n: 3,
     emoji: "🏆",
-    title: "Win & Take Delivery",
-    desc: "When ticket sales conclude, the winner is drawn live using a certified random draw system for a transparent, verifiable result.",
+    title: "Win & Book Your Service",
+    desc: "When ticket sales conclude, the winner is drawn live using a certified random draw system with direct courier delivery or workshop booking.",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function HowItWorksSection() {
             How Tuned Draws Works
           </h2>
           <p className="font-sans text-sm text-[#8A92A0] mt-3 max-w-md mx-auto leading-relaxed">
-            Enter automotive sweepstakes in three easy steps and win high-horsepower builds. Transparent, secure, and certified.
+            Enter car parts and modification service competitions in three easy steps. Transparent, secure, and certified.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ import WebsiteFooter from "../../components/website/layout/WebsiteFooter";
 
 export const metadata: Metadata = {
   title: "Verified Hosts | Tuned Draws",
-  description: "Browse verified tuning shops, garages, and performance builders hosting authentic automotive sweepstakes.",
+  description: "Browse verified tuning shops, performance garages, and car styling specialists hosting authentic automotive competitions.",
 };
 
 export default async function VerifiedHostsPage() {
@@ -38,7 +38,7 @@ export default async function VerifiedHostsPage() {
         <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0B0C0E] pt-28 pb-14 sm:pt-36 md:pb-16 text-white">
           <Image
             src="/images/tuned-hero-bg.jpg"
-            alt="Tuned Draws high performance custom supercar"
+            alt="Tuned Draws high performance car modifications and parts"
             fill
             priority
             className="-z-20 object-cover object-[75%_center] lg:object-center opacity-65 contrast-115"
@@ -59,7 +59,7 @@ export default async function VerifiedHostsPage() {
                 </span>
               </h1>
               <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-[#12141C]/80 p-4 font-sans text-sm font-medium leading-relaxed text-[#8A92A0] shadow-2xl backdrop-blur-md sm:text-base">
-                Explore the fully vetted performance garages, tuning specialists, and certified builders hosting auditable Tuned Draws sweepstakes.
+                Explore the fully vetted performance garages, tuning specialists, wrapping studios, and parts builders hosting auditable Tuned Draws competitions.
               </p>
             </div>
           </div>

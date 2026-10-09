@@ -23,7 +23,7 @@ export default function FairwayDrawsLogo({
       className={className}
       size={mappedSize}
       href={href}
-      subtitle="AUTOMOTIVE SWEEPSTAKES"
+      subtitle="PERFORMANCE & MOD COMPETITIONS"
     />
   );
 }

@@ -55,7 +55,7 @@ export default function HostRulesPage() {
                   </h3>
                 </div>
                 <p>
-                  All items offered as prizes—including performance builds, aftermarket automotive hardware, precision turned artisan crafts, and workshop machinery—must be 100% authentic, brand-new or accurately documented, and strictly match the descriptions and media uploaded to your competition.
+                  All items offered as prizes—including aftermarket performance hardware, tuning vouchers, wrapping or detailing services, precision tools, and workshop machinery—must be 100% authentic, brand-new or accurately documented, and strictly match the descriptions and media uploaded to your competition.
                 </p>
               </div>
 
@@ -85,7 +85,7 @@ export default function HostRulesPage() {
                   </h3>
                 </div>
                 <p>
-                  Hosts are required to dispatch physical prizes within 7 working days of winner verification. Valid courier tracking numbers must be submitted through your host portal to confirm delivery and release competition escrow proceeds.
+                  Hosts are required to dispatch physical prizes or confirm service booking details within 7 working days of winner verification. Valid courier tracking numbers or service confirmations must be submitted through your host portal to verify fulfillment and release host proceeds.
                 </p>
               </div>
 
@@ -100,7 +100,7 @@ export default function HostRulesPage() {
                   </h3>
                 </div>
                 <p>
-                  Hosts, their immediate family members, and business associates are strictly prohibited from purchasing tickets in their own hosted competitions. Any detected manipulation will result in immediate account suspension, forfeiture of escrow balance, and referral to regulatory authorities.
+                  Hosts, their immediate family members, and business associates are strictly prohibited from purchasing tickets in their own hosted competitions. Any detected manipulation will result in immediate account suspension, forfeiture of host balance, and referral to regulatory authorities.
                 </p>
               </div>
 

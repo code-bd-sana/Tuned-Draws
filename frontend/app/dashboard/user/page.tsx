@@ -531,7 +531,7 @@ export default function UserDashboardPage() {
                 No wins recorded yet
               </h4>
               <p className="font-sans text-xs text-[#8A92A0] max-w-[280px] mb-4">
-                Enter active competitions for your chance to win instant prizes, custom builds, and performance cash.
+                Enter active competitions for your chance to win instant prizes, performance parts, and tuning services.
               </p>
               <Link
                 href="/dashboard/user/competitions"

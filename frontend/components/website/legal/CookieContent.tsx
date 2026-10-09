@@ -49,7 +49,7 @@ export default function CookieContent() {
       
       {/* Top Banner */}
       <div className="relative isolate overflow-hidden border-b border-white/10 py-16 sm:py-20 mb-12 bg-[#0B0C0E]">
-        <Image src="/images/tuned-hero-bg.jpg" alt="Tuned Draws Supercar" fill priority className="z-0 object-cover object-center opacity-65" />
+        <Image src="/images/tuned-hero-bg.jpg" alt="Tuned Draws Performance Competitions" fill priority className="z-0 object-cover object-center opacity-65" />
         <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/85 to-[#0B0C0E]/50" />
         <div className="container-custom relative z-10 max-w-6xl mx-auto px-4">
           <div className="flex max-w-2xl flex-col gap-4">

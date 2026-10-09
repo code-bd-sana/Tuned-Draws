@@ -82,7 +82,7 @@ function ComingSoonContent() {
 
             {/* Description */}
             <p className="text-sm sm:text-base text-[#9CA3AF] max-w-xl mx-auto leading-relaxed mb-10 font-sans">
-              The <span className="text-white font-semibold">{formattedTarget}</span> portal is currently undergoing final dyno testing and certified sweepstakes compliance. Our high-octane automotive draws, live block allocations, and instant key releases will unlock shortly.
+              The <span className="text-white font-semibold">{formattedTarget}</span> portal is currently undergoing final dyno testing and certified competition compliance. Our high-octane automotive draws, live block allocations, and instant key releases will unlock shortly.
             </p>
 
             {/* Quick Action Navigation Buttons */}
@@ -120,8 +120,8 @@ function ComingSoonContent() {
                 <Car className="w-4 h-4" />
               </div>
               <div>
-                <p className="text-xs font-heading font-bold uppercase text-white">Turnkey Builds</p>
-                <p className="text-[11px] text-[#8A92A0]">Track & street supercars</p>
+                <p className="text-xs font-heading font-bold uppercase text-white">Performance Parts</p>
+                <p className="text-[11px] text-[#8A92A0]">Tuning & styling mods</p>
               </div>
             </div>
 
@@ -152,7 +152,7 @@ function ComingSoonContent() {
       <footer className="relative z-10 border-t border-white/[0.06] py-5 bg-[#07080A]/90">
         <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p className="text-xs text-[#6B7280]">
-            © {new Date().getFullYear()} Tuned Draws. Certified Automotive Sweepstakes Platform.
+            © {new Date().getFullYear()} Tuned Draws. Certified Automotive Competitions Platform.
           </p>
           <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-wider text-[#8A92A0]">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>

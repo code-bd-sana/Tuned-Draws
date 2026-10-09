@@ -14,7 +14,7 @@ export default function TestimonialsSection() {
         <SectionHeader
           badgeText="TESTIMONIALS"
           headingText="What Our Community Says"
-          paragraphText="Thousands of happy competitors and verified hosts trust our escrow platform for fair draws."
+          paragraphText="Thousands of happy competitors and verified hosts trust our verified platform for fair draws."
         />
 
         {/* Testimonials Grid */}

@@ -58,12 +58,12 @@ export default function ComingSoonHero() {
         <div className="flex flex-col items-start text-left order-2 lg:order-1">
           {/* Official Brand Logo */}
           <div className="mb-6">
-            <TunedDrawsBrandLogo subtitle="AUTOMOTIVE SWEEPSTAKES" />
+            <TunedDrawsBrandLogo subtitle="PERFORMANCE & MOD COMPETITIONS" />
           </div>
 
           {/* Tagline */}
           <p className="text-[#8A92A0] text-base sm:text-lg leading-relaxed mb-8 max-w-md font-sans">
-            Win <strong className="text-white font-semibold">turnkey supercar builds</strong>, performance bolt-ons &amp; exclusive{" "}
+            Win <strong className="text-white font-semibold">performance tuning packages</strong>, custom car wraps, detailing &amp; exclusive{" "}
             <strong className="text-[#FF1E27] font-semibold">track day experiences</strong> — for genuine automotive enthusiasts across the UK.
           </p>
 
@@ -72,7 +72,7 @@ export default function ComingSoonHero() {
             {[
               { value: "1,200+", label: "Racers Registered" },
               { value: "£0", label: "Entry Min. Price" },
-              { value: "100%", label: "Certified Builds" },
+              { value: "100%", label: "Verified Services" },
             ].map((stat) => (
               <div
                 key={stat.label}
@@ -87,7 +87,7 @@ export default function ComingSoonHero() {
           {/* Trust strip */}
           <div className="flex items-center gap-2 text-xs text-[#8A92A0] font-medium">
             <ShieldCheck className="w-4 h-4 text-[#FF1E27]" />
-            UK Sweepstakes Compliant · Provably Fair RNG · Zero Spam
+            UK Competition Compliant · Provably Fair RNG · Zero Spam
           </div>
         </div>
 
@@ -103,7 +103,7 @@ export default function ComingSoonHero() {
           <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden border border-white/15 shadow-2xl group bg-[#12141C]">
             <Image
               src="/images/tuned-hero-bg.jpg"
-              alt="Tuned Draws Supercar Sweepstakes"
+              alt="Tuned Draws Performance Competitions"
               fill
               sizes="(max-width: 768px) 100vw, 480px"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-90"

@@ -22,10 +22,10 @@ export const FOOTER_SECTIONS = [
     title: "Competitions",
     links: [
       { label: "All Live Draws", href: "/live-raffles" },
-      { label: "Tuned Supercars & Builds", href: "/live-raffles?category=supercars" },
-      { label: "Performance Engines & Turbos", href: "/live-raffles?category=performance" },
-      { label: "Wheels, Brakes & Suspension", href: "/live-raffles?category=parts" },
-      { label: "Track Days & VIP Experiences", href: "/live-raffles?category=experiences" },
+      { label: "Performance Parts & Turbos", href: "/live-raffles?category=parts" },
+      { label: "Remaps, Tuning & Dyno Runs", href: "/live-raffles?category=tuning" },
+      { label: "Car Wrapping & Detailing", href: "/live-raffles?category=services" },
+      { label: "Track Days & Driving Experiences", href: "/live-raffles?category=experiences" },
     ],
   },
   {

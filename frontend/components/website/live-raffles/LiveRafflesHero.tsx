@@ -29,18 +29,18 @@ export default function LiveRafflesHero({
 
   return (
     <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0B0C0E] pt-24 sm:pt-28">
-      {/* Background competition hero image with dark cinematic gradient overlays */}
+      {/* Background competition hero image with high clarity */}
       <Image
         src="/images/tuned-hero-bg.jpg"
-        alt="Tuned Draws high performance custom supercar"
+        alt="Tuned Draws high performance car modifications and parts"
         fill
         priority
-        className="-z-20 object-cover object-[75%_center] lg:object-center opacity-70 contrast-115"
+        className="-z-20 object-cover object-[75%_center] lg:object-center opacity-85 contrast-110 brightness-105"
       />
 
       {/* Atmospheric lighting falloff & speed-line gradients */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/85 to-[#0B0C0E]/40" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B0C0E] via-[#0B0C0E]/30 to-[#0B0C0E]/80" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/75 to-[#0B0C0E]/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B0C0E] via-transparent to-[#0B0C0E]/60" />
       <div className="absolute -top-32 left-1/3 w-[650px] h-[450px] bg-[#FF1E27]/15 rounded-full blur-[160px] pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-10 w-[450px] h-[350px] bg-[#B3000C]/12 rounded-full blur-[140px] pointer-events-none -z-10" />
 
@@ -72,16 +72,16 @@ export default function LiveRafflesHero({
           <div className="max-w-2xl">
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FF1E27]/30 bg-[#12141C]/90 px-4 py-1.5 font-heading text-[11px] font-black tracking-widest text-[#D1D5DB] uppercase shadow-[0_0_15px_rgba(255,30,39,0.2)]">
               <span className="h-2 w-2 rounded-full bg-[#FF1E27] animate-pulse shadow-[0_0_8px_rgba(255,30,39,0.8)]" />
-              UK AUTOMOTIVE SWEEPSTAKES — LIVE ARENA
+              UK CAR MODIFICATIONS &amp; PARTS ARENA
             </div>
             <h1 className="font-heading text-4xl font-black leading-[0.95] tracking-tight text-white uppercase sm:text-5xl md:text-6xl">
-              ENTER THE RACE.<br />
+              ENTER THE ARENA.<br />
               <span className="text-[#FF1E27] drop-shadow-[0_0_25px_rgba(255,30,39,0.55)]">
-                WIN BUILT BEASTS.
+                WIN CAR MODS &amp; SERVICES.
               </span>
             </h1>
             <p className="mt-4 font-sans text-xs sm:text-sm text-[#8A92A0] max-w-lg leading-relaxed">
-              Guaranteed live draws, transparent UK ticket allocations, and real-time instant win releases. Pick your tickets and unlock your next dream build.
+              Guaranteed live draws, transparent UK ticket allocations, and real-time instant wins. Win tuning packages, performance parts, wraps, detailing, and track days.
             </p>
           </div>
 

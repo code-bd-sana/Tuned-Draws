@@ -115,7 +115,7 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
 export const mockHostRafflesList: HostRaffleDetail[] = [
   {
     id: "r-1",
-    name: "Summer Car Raffle 2024",
+    name: "Stage 3 Turbo Package Draw 2024",
     ticketsSold: 342,
     totalTickets: 500,
     raised: 855.00,
@@ -160,7 +160,7 @@ export const mockHostRafflesList: HostRaffleDetail[] = [
   },
   {
     id: "r-4",
-    name: "Tech Bundle Giveaway",
+    name: "Track Day Package",
     ticketsSold: 80,
     totalTickets: 300,
     raised: 200.00,

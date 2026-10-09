@@ -7,7 +7,7 @@ import { raffleService, PublicHostPreviewStats } from "../../../services/raffle.
 
 const BULLETS = [
   "Set your own ticket pricing & allocation volume",
-  "Escrow-protected next-day host payouts",
+  "Secure, verified next-day host payouts",
   "Direct exposure to our active automotive community",
   "Fair and transparent 10% platform commission",
 ];
@@ -46,11 +46,11 @@ export default function FinalCtaSection() {
 
             <h2 className="font-heading text-[38px] sm:text-[46px] font-black leading-[0.92] text-white uppercase mb-5">
               RUN YOUR OWN<br />
-              <span className="text-[#FF1E27] drop-shadow-[0_0_15px_rgba(255,30,39,0.5)]">AUTOMOTIVE DRAW</span>
+              <span className="text-[#FF1E27] drop-shadow-[0_0_15px_rgba(255,30,39,0.5)]">MOD &amp; TUNING DRAW</span>
             </h2>
 
             <p className="font-sans text-sm sm:text-base text-[#8A92A0] leading-relaxed mb-8 max-w-md">
-              Monetize project cars, crate motors, or aftermarket parts as an established workshop, builder, or brand. We handle payments, compliance, and winner verification.
+              Monetize tuning packages, performance parts, car wrapping, or detailing services as an established garage, workshop, or tuner brand. We handle payments, compliance, and winner verification.
             </p>
 
             {/* Bullets */}

@@ -17,14 +17,14 @@ export default function HowItWorksFinalCta() {
         </span>
 
         <h2 className="max-w-2xl font-heading text-3xl font-black text-white uppercase sm:text-4xl md:text-5xl leading-tight">
-          READY TO CLAIM YOUR NEXT <br />
+          READY TO UPGRADE YOUR <br />
           <span className="text-[#FF1E27] drop-shadow-[0_0_25px_rgba(255,30,39,0.5)]">
-            PERFORMANCE BUILD?
+            MODIFIED CAR?
           </span>
         </h2>
 
         <p className="max-w-xl font-sans text-sm md:text-base text-[#8A92A0] leading-relaxed">
-          Join thousands of petrolheads entering transparent, regulated automotive sweepstakes. Guaranteed draws, verified winners, direct UK delivery.
+          Join thousands of petrolheads entering transparent, regulated automotive competitions. Guaranteed draws, verified winners, direct UK delivery &amp; workshop bookings.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 w-full sm:w-auto">

@@ -130,7 +130,7 @@ export default function UserRegistrationForm() {
     return (
       <AuthSuccessState
         title="Account Created!"
-        description="Your registration has been processed successfully. Please verify your email to begin entering live automotive sweepstakes."
+        description="Your registration has been processed successfully. Please verify your email to begin entering live automotive competitions."
         buttonText="Return to Homepage"
         buttonHref="/"
       />

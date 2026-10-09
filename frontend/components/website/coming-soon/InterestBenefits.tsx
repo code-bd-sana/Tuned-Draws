@@ -6,23 +6,23 @@ import { Car, Percent, ShieldCheck, Trophy, Lock, Truck } from "lucide-react";
 const BENEFITS = [
   {
     icon: <Car className="w-6 h-6 text-[#FF1E27]" />,
-    title: "Launch Day Supercars",
+    title: "Launch Day Mod Packages",
     description:
-      "Be first to enter inaugural competitions — tuned GT-Rs, high-boost BMW M cars, custom track builds & instant cash keys.",
-    tag: "Drivers",
+      "Be first to enter inaugural competitions — stage tuning kits, custom exhaust setups, full wraps & detailing packages.",
+    tag: "Enthusiasts",
   },
   {
     icon: <Percent className="w-6 h-6 text-[#FF1E27]" />,
     title: "Zero Host Platform Fees",
     description:
-      "Performance garages, tuners & automotive clubs who register early lock in zero platform fees for their first 3 competitions.",
-    tag: "Builders & Hosts",
+      "Performance garages, tuners & styling shops who register early lock in zero platform fees for their first 3 competitions.",
+    tag: "Workshops & Hosts",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#FF1E27]" />,
-    title: "100% Certified Builds",
+    title: "100% Verified Services",
     description:
-      "Every vehicle and performance package is dyno-tested, verified authentic, and fully compliant with UK prize draw regulations.",
+      "Every modification service and performance parts package is verified authentic, and fully compliant with UK prize competition regulations.",
     tag: "All Members",
   },
 ];
@@ -87,7 +87,7 @@ export default function InterestBenefits() {
         {[
           { icon: <Trophy className="w-4 h-4 text-[#FF1E27]" />, text: "UK Prize Competition Compliant" },
           { icon: <Lock className="w-4 h-4 text-[#16A34A]" />, text: "GDPR & Encrypted Data Protection" },
-          { icon: <Truck className="w-4 h-4 text-[#FF1E27]" />, text: "Vehicle Delivery Arranged Nationwide" },
+          { icon: <Truck className="w-4 h-4 text-[#FF1E27]" />, text: "Parts Delivery & Workshop Bookings Nationwide" },
         ].map((item, idx) => (
           <div key={idx} className="flex items-center gap-2.5 text-[#D1D5DB]">
             <span>{item.icon}</span>

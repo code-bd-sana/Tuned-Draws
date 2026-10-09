@@ -13,7 +13,7 @@ interface WinnerCardProps {
  */
 export default function WinnerCard({ winner }: WinnerCardProps) {
   const { name, location, avatar, competitionImage, initials, prizeTitle, drawDate, ticketNumber } = winner;
-  const displayImage = competitionImage || avatar;
+  const displayImage = competitionImage || "/images/car-winner.jpg";
 
   return (
     <div className="relative min-h-[195px] w-full rounded-2xl border border-white/10 bg-[#12141C] p-5 shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:border-[#FF1E27]/40 hover:shadow-[0_0_30px_rgba(255,30,39,0.22)] group flex flex-col justify-between">

@@ -13,7 +13,7 @@ export default function UserAuthBrandPanel({ mode }: UserAuthBrandPanelProps) {
   const trustStats = [
     {
       label: "100% Secure & Verified Live Draws",
-      description: "UK-regulated sweepstakes with provably fair winner selection",
+      description: "UK-regulated competitions with provably fair winner selection",
       icon: <ShieldCheck className="w-5 h-5 text-[#FF1E27]" />,
     },
     {
@@ -22,8 +22,8 @@ export default function UserAuthBrandPanel({ mode }: UserAuthBrandPanelProps) {
       icon: <Zap className="w-5 h-5 text-[#FF1E27]" />,
     },
     {
-      label: "Built Beasts, Track Weapons & Supercars",
-      description: "High-horsepower Japanese imports, European exotics and custom monsters",
+      label: "Tuning, Wraps, Detailing & Track Days",
+      description: "Stage remaps, full body wraps, ceramic detailing packages & VIP circuit days",
       icon: <Car className="w-5 h-5 text-[#FF1E27]" />,
     },
   ];
@@ -36,7 +36,7 @@ export default function UserAuthBrandPanel({ mode }: UserAuthBrandPanelProps) {
 
       {/* Top Branding Logo */}
       <div className="relative z-10">
-        <TunedDrawsBrandLogo subtitle="AUTOMOTIVE SWEEPSTAKES" />
+        <TunedDrawsBrandLogo subtitle="PERFORMANCE & MOD COMPETITIONS" />
       </div>
 
       {/* Center Body Panel */}
@@ -45,7 +45,7 @@ export default function UserAuthBrandPanel({ mode }: UserAuthBrandPanelProps) {
         <div className="self-start bg-[#12141C] border border-[#FF1E27]/30 px-3.5 py-1.5 rounded-full shadow-[0_0_12px_rgba(255,30,39,0.15)] flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-[#FF1E27] animate-pulse" />
           <p className="font-sans font-bold text-[10px] md:text-xs text-[#FF1E27] tracking-widest uppercase">
-            UK PERFORMANCE SWEEPSTAKES
+            UK PERFORMANCE COMPETITIONS
           </p>
         </div>
 
@@ -56,14 +56,14 @@ export default function UserAuthBrandPanel({ mode }: UserAuthBrandPanelProps) {
               <>
                 <span className="metallic-text block">WELCOME BACK.</span>
                 <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]">
-                  READY TO RACE?
+                  READY TO UPGRADE?
                 </span>
               </>
             ) : (
               <>
-                <span className="metallic-text block">ENTER THE RACE.</span>
+                <span className="metallic-text block">ENTER THE ARENA.</span>
                 <span className="text-[#FF1E27] drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]">
-                  WIN BUILT BEASTS.
+                  WIN CAR MODS &amp; SERVICES.
                 </span>
               </>
             )}

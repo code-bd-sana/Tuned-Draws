@@ -9,7 +9,7 @@ import ContactInfoCards from "../../components/website/contact/ContactInfoCards"
 export const metadata: Metadata = {
   title: "Contact Us | Tuned Draws",
   description:
-    "Have questions about tuned supercar draws, performance host verification, or ticket allocation? Send us a message and our support crew will reach out within 24 hours.",
+    "Have questions about car modification competitions, performance host verification, or ticket allocation? Send us a message and our support crew will reach out within 24 hours.",
 };
 
 /**

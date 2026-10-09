@@ -8,7 +8,7 @@ import LiveRaffleGrid from "../../components/website/live-raffles/LiveRaffleGrid
 export const metadata: Metadata = {
   title: "Live Competitions | Tuned Draws",
   description:
-    "Browse and enter active high-performance automotive draws. Built supercars, track weapons, and instant key releases.",
+    "Browse and enter active car modification and performance parts competitions. Performance parts, tuning packages, car wrapping, detailing, and track days.",
 };
 
 /**

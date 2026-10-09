@@ -99,7 +99,7 @@ export default function InvoiceReceiptModal({
                 </span>
               </div>
               <p className="font-sans text-xs text-text-muted mt-1">
-                Official Automotive Sweepstakes &amp; Host Management
+                Official Automotive Competitions &amp; Host Management
               </p>
               <p className="font-sans text-[11px] text-text-muted mt-0.5">
                 Tuned Draws Ltd &bull; Suite 104, Dyno House, London EC1A 1BB &bull; support@tuneddraws.com

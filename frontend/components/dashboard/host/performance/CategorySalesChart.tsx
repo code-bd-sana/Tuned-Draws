@@ -9,7 +9,7 @@ interface Props {
 }
 
 export default function CategorySalesChart({ data = [] }: Props) {
-  // Use Tuned Draws luxury supercar color palette
+  // Use Tuned Draws performance tuning color palette
   const automotiveColors = ["#FF1E27", "#EF4444", "#F59E0B", "#3B82F6", "#8B5CF6"];
   const updatedData = data.map((d, i) => ({
     ...d,

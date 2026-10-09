@@ -255,7 +255,7 @@ export default function TermsContent() {
                 6.1. The prize details are described on the Website. Prizes are non-transferable and subject to availability.
               </p>
               <p>
-                6.2. Physical, Vehicle & Experience Prizes: Winners are solely responsible for ensuring appropriate safety precautions, valid insurance (where applicable for vehicle or equipment prizes), and lawful usage on public or private property. For experience prizes, winners are responsible for their own travel arrangements and adhering to venue regulations.
+                6.2. Physical Parts & Workshop / Experience Services: For physical car parts and equipment, winners are solely responsible for proper fitment, installation by qualified technicians, and compliance with vehicle roadworthiness regulations. For workshop services (such as ECU remaps, dyno sessions, car wrapping, detailing) or track day experiences, winners are provided booking vouchers or appointment confirmations, and are responsible for arranging their vehicle transportation to the certified partner workshop or track venue.
               </p>
               <p>
                 6.3. Tuned Draws reserves the right to substitute a prize with an equivalent cash alternative if circumstances beyond reasonable control make it necessary.
@@ -362,7 +362,7 @@ export default function TermsContent() {
                 13.1. <strong className="text-white">One Account Per Person:</strong> Each participant is strictly limited to one user account on Tuned Draws.
               </p>
               <p>
-                13.2. Creating duplicate accounts to gain an unfair advantage in free giveaways or bypass ticket limits is strictly forbidden.
+                13.2. Creating duplicate accounts to gain an unfair advantage in free entries, competitions, or bypass ticket limits is strictly forbidden.
               </p>
               <p>
                 13.3. If duplicate accounts are detected, all entries will be rendered void and forfeited without refund, and offending accounts will be permanently banned.

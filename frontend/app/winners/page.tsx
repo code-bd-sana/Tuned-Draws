@@ -9,7 +9,7 @@ import WinnerHighlightCard from "../../components/website/winners/WinnerHighligh
 export const metadata: Metadata = {
   title: "Winners Gallery | Tuned Draws",
   description:
-    "See all the completed automotive raffle winners. Check past draw dates, verified delivered supercars and performance packages, and audit records.",
+    "See all the completed automotive competition winners. Check past draw dates, verified performance parts, tuning packages, and audit records.",
 };
 
 /**

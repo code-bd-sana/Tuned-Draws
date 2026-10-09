@@ -15,7 +15,7 @@ import NewsletterSection from '../components/website/home/NewsletterSection';
 import HomepagePaymentAndInstantWinModal from '../components/website/home/HomepagePaymentAndInstantWinModal';
 
 /**
- * Public Homepage for the Tuned Draws automotive sweepstakes application.
+ * Public Homepage for the Tuned Draws car modifications & performance parts competitions platform.
  * Composes layout and modular sections for high performance and responsiveness.
  */
 export default function Home() {

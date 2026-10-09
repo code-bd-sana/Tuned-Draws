@@ -63,16 +63,16 @@ const steps = [
   },
   {
     id: 5,
-    title: "Prize Fulfillment & Host Escrow Payout",
+    title: "Prize Fulfillment & Host Payout",
     role: "Fulfillment",
     badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/25",
     icon: <DollarSign className="w-5 h-5 text-purple-400" />,
-    description: "The host dispatches the physical prize to the verified winner. Once delivery tracking is confirmed, host escrow proceeds are released.",
+    description: "The host dispatches the physical prize or confirms the service booking for the verified winner. Once fulfillment is confirmed, host proceeds are released.",
     details: [
       "Winner completes identity & delivery address verification.",
-      "Host ships item via tracked courier and uploads proof of transit.",
-      "Admin audits delivery confirmation.",
-      "Escrow net payout is transferred to host merchant bank account."
+      "Host ships item via tracked courier or issues workshop booking voucher.",
+      "Admin audits fulfillment confirmation.",
+      "Net payout is transferred to host merchant bank account."
     ]
   }
 ];

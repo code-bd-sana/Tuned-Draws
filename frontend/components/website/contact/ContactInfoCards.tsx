@@ -136,7 +136,7 @@ export default function ContactInfoCards() {
           Looking for quick answers?
         </h4>
         <p className="font-sans text-xs sm:text-[13px] text-[#8A92A0] leading-relaxed mb-4">
-          Our FAQ covers ticket draws, random number generation, vehicle handover, and host subscriptions.
+          Our FAQ covers ticket draws, random number generation, parts delivery, workshop bookings, and host subscriptions.
         </p>
         <Link
           href="/pricing#faq"

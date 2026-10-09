@@ -14,7 +14,7 @@ export const PRICING_FAQ: FaqItem[] = [
   {
     id: "commission-fee",
     question: "How is the host commission handled?",
-    answer: "Free tier hosts receive an 85% net payout (15% platform commission). Upgrading to Premium or Pro automatically reduces your platform fee to 10%, granting a 90% net payout on all competition ticket sales. Commission is deducted upon withdrawal to cover escrow security, payment processing, and draw auditing.",
+    answer: "Free tier hosts receive an 85% net payout (15% platform commission). Upgrading to Premium or Pro automatically reduces your platform fee to 10%, granting a 90% net payout on all competition ticket sales. Commission is deducted upon withdrawal to cover platform security, payment processing, and draw auditing.",
   },
   {
     id: "payout-process",

@@ -36,10 +36,10 @@ export default function NewsletterSection() {
             </div>
 
             <h2 className="font-heading text-3xl sm:text-4xl font-black text-white mb-4 leading-tight uppercase">
-              Never Miss a Supercar Draw
+              Never Miss a Mod or Tuning Draw
             </h2>
             <p className="font-sans text-sm text-[#8A92A0] leading-relaxed mb-10 max-w-lg mx-auto">
-              Get instant notifications when new tuned vehicle sweepstakes, crate motors, track packages, or instant-win prizes go live. Unsubscribe anytime.
+              Get instant notifications when new performance parts, ECU remaps, car wraps, detailing packages, or track days go live. Unsubscribe anytime.
             </p>
 
             {subscribed ? (

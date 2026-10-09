@@ -103,7 +103,7 @@ export default function HostAuthBrandPanel({
             </h1>
             <p className="font-sans font-normal text-sm md:text-base text-[#9CA3AF] leading-relaxed max-w-md">
               {mode === "login"
-                ? "Log in to manage your vehicle raffles, monitor live ticket sales, and track your host earnings."
+                ? "Log in to manage your competitions, monitor live ticket sales, and track your host earnings."
                 : "Apply in minutes. Our automotive verification team reviews and approves host applications within 24 hours."}
             </p>
           </div>

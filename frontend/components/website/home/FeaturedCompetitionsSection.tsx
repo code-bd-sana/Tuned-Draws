@@ -57,7 +57,7 @@ export default function FeaturedCompetitionsSection() {
               Featured Competitions
             </h2>
             <p className="font-sans text-sm text-[#8A92A0] mt-2 max-w-md">
-              Browse elite automotive sweepstakes hosted by verified tuners, workshops &amp; brands.
+              Browse car modification services and performance parts competitions hosted by verified tuners, workshops &amp; brands.
             </p>
           </div>
           <Link
@@ -113,7 +113,7 @@ export default function FeaturedCompetitionsSection() {
           <div className="text-center py-16 bg-[#12141C] border border-dashed border-white/10 rounded-2xl max-w-md mx-auto">
             <div className="text-4xl mb-4">🏁</div>
             <h3 className="font-heading font-black text-lg text-white mb-2 uppercase">No Live Competitions Yet</h3>
-            <p className="font-sans text-xs text-[#8A92A0]">New tuned supercar builds and parts are dropping soon. Follow us on Instagram to be first.</p>
+            <p className="font-sans text-xs text-[#8A92A0]">New car modification services and performance parts competitions are dropping soon. Follow us on Instagram to be first.</p>
           </div>
         )}
 

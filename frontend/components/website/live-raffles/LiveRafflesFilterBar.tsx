@@ -39,11 +39,11 @@ export default function LiveRafflesFilterBar({
     ...(dbCategories && dbCategories.length > 0
       ? dbCategories.map((c) => ({ label: c.name, value: c.slug || c.name }))
       : [
-          { label: "Supercars & Builds", value: "supercars" },
-          { label: "Performance & Turbos", value: "performance" },
-          { label: "Wheels & Brakes", value: "parts" },
+          { label: "Performance Parts", value: "parts" },
+          { label: "Tuning & Remaps", value: "tuning" },
+          { label: "Car Wrapping", value: "wrapping" },
+          { label: "Detailing", value: "detailing" },
           { label: "Track Days", value: "experiences" },
-          { label: "Instant Wins & Cash", value: "cash" },
         ]),
   ];
 

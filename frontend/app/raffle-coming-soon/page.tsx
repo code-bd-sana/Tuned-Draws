@@ -10,7 +10,7 @@ import TunedDrawsBrandLogo from "../../components/shared/TunedDrawsBrandLogo";
 export const metadata: Metadata = {
   title: "Early Access VIP | Tuned Draws",
   description:
-    "Join the official VIP waitlist for Tuned Draws. Win tuned supercar builds, high-horsepower upgrades, and track experiences.",
+    "Join the official VIP waitlist for Tuned Draws. Win car modification services, performance parts upgrades, and track experiences.",
 };
 
 /**

@@ -51,7 +51,7 @@ export default function UserRafflesPage() {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search supercars, tuning parts, or garage..."
+              placeholder="Search performance parts, tuning, wrapping, garage..."
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               className="w-full h-11 bg-[#12141C] border border-white/10 rounded-xl px-4 pr-10 text-sm text-white placeholder:text-[#8A92A0]/50 focus:outline-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 transition-all shadow-md"
@@ -82,7 +82,7 @@ export default function UserRafflesPage() {
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 w-full">
           <div className="flex flex-wrap items-center gap-2">
-            {["All", "Supercars", "JDM", "European", "Performance Parts", "Track Days", "Cash Draws"].map((cat) => (
+            {["All", "Performance Parts", "Tuning & Remaps", "Car Wrapping", "Detailing", "Track Days"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setCategory(cat); setPage(1); }}

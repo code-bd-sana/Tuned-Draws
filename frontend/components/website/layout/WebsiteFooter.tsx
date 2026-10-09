@@ -51,7 +51,7 @@ export default function WebsiteFooter() {
             <TunedDrawsBrandLogo size="lg" />
 
             <p className="font-sans text-xs text-[#8A92A0] leading-relaxed max-w-sm">
-              The premier platform for automotive tuning &amp; performance sweepstakes. Win track-ready supercars, high-horsepower custom builds, crate engines &amp; VIP motorsport experiences.
+              The premier platform for car modification services &amp; performance parts competitions. Win tuning packages, performance upgrades, car wrapping, precision detailing &amp; track days.
             </p>
 
             {/* Trust badge */}
