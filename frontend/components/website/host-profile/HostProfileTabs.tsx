@@ -3,12 +3,14 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import DrawCard from "../shared/DrawCard";
+import HostReviewList from "../host-reviews/HostReviewList";
 
 interface HostProfileTabsProps {
   raffles?: any[];
   name?: string;
   bio?: string;
   location?: string;
+  hostId?: string;
 }
 
 export default function HostProfileTabs({
@@ -16,6 +18,7 @@ export default function HostProfileTabs({
   name = "Host",
   bio = "",
   location = "",
+  hostId = "",
 }: HostProfileTabsProps) {
   const [activeTab, setActiveTab] = useState<"active" | "past" | "reviews" | "about">("active");
 
@@ -206,21 +209,7 @@ export default function HostProfileTabs({
 
         {activeTab === "reviews" && (
           <div className="animate-in fade-in duration-300">
-            <div className="flex flex-col items-center justify-center py-16 px-6 text-center rounded-2xl border border-white/10 bg-[#12141C]/80 shadow-2xl my-2 backdrop-blur-md">
-              <div className="w-16 h-16 rounded-2xl bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-3xl mb-4 text-[#FF1E27] shadow-inner">
-                ⭐
-              </div>
-              <h3 className="font-heading font-black text-xl sm:text-2xl text-white mb-2 uppercase tracking-tight">
-                Host Ratings &amp; Reviews
-              </h3>
-              <p className="font-sans text-sm text-[#8A92A0] max-w-md leading-relaxed mb-4">
-                Verified ticket buyers can leave feedback after completing draws with <strong className="text-white">{name}</strong>.
-              </p>
-              <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-xl">
-                <span className="text-[#FF1E27] font-heading font-black text-lg">★ 5.0</span>
-                <span className="text-xs font-heading font-bold uppercase text-[#D1D5DB]">Verified Host Standard</span>
-              </div>
-            </div>
+            <HostReviewList hostId={hostId} />
           </div>
         )}
 

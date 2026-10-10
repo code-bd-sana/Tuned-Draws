@@ -214,6 +214,7 @@ export class UsersService {
             createdAt: true,
           },
         },
+        review: true,
       },
       orderBy: { createdAt: 'desc' },
     });
@@ -254,12 +255,24 @@ export class UsersService {
         verificationStatus: w.verificationStatus,
         trackingNumber: w.trackingNumber,
         createdAt: w.createdAt,
+        hasReviewed: Boolean(w.review),
+        review: w.review
+          ? {
+              id: w.review.id,
+              rating: w.review.rating,
+              comment: w.review.comment,
+              status: w.review.status,
+              createdAt: w.review.createdAt,
+            }
+          : null,
         raffle: {
           id: w.raffle.id,
           title: w.raffle.title,
           slug: w.raffle.slug,
           mainImage: w.raffle.mainImage,
+          hostId: w.raffle.hostId,
           hostBusinessName: w.raffle.host?.businessName || 'Host',
+          hostSlug: w.raffle.host?.slug || w.raffle.host?.id,
           status: w.raffle.status,
         },
         instantWinDetails: instantWinDetails

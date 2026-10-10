@@ -8,7 +8,8 @@ interface HostProfileHeaderProps {
   logo: string;
   isVerified: boolean;
   drawsHosted: number;
-  rating: number;
+  rating?: number | null;
+  totalReviews?: number;
   memberSince: number;
 }
 
@@ -18,7 +19,8 @@ export default function HostProfileHeader({
   logo,
   isVerified,
   drawsHosted = 0,
-  rating = 5.0,
+  rating = null,
+  totalReviews,
   memberSince = 2026,
 }: HostProfileHeaderProps) {
   const [imgError, setImgError] = React.useState(false);
@@ -112,7 +114,16 @@ export default function HostProfileHeader({
               <div className="flex items-center gap-2 bg-white/5 backdrop-blur-md border border-white/10 px-3.5 py-1.5 rounded-xl shadow-sm">
                 <span className="text-[#FF1E27] text-base">★</span>
                 <span className="font-heading text-xs sm:text-sm font-bold text-white uppercase">
-                  {Number(rating).toFixed(1)} Host Rating
+                  {rating !== null && rating !== undefined && totalReviews !== undefined && totalReviews > 0 ? (
+                    <span>
+                      {Number(rating).toFixed(1)} Host Rating{" "}
+                      <span className="text-[#8A92A0] font-sans lowercase font-normal">
+                        ({totalReviews} {totalReviews === 1 ? "review" : "reviews"})
+                      </span>
+                    </span>
+                  ) : (
+                    <span>No reviews yet</span>
+                  )}
                 </span>
               </div>
 

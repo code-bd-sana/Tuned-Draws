@@ -34,6 +34,19 @@ export class HostsService {
                 status: 'ACTIVE',
               },
             },
+            reviews: {
+              where: {
+                status: 'APPROVED',
+              },
+            },
+          },
+        },
+        reviews: {
+          where: {
+            status: 'APPROVED',
+          },
+          select: {
+            rating: true,
           },
         },
       },
@@ -42,19 +55,32 @@ export class HostsService {
       },
     });
 
-    return hosts.map((host) => ({
-      id: host.id,
-      slug: host.slug || host.id,
-      name: host.businessName,
-      logo: host.user.avatarUrl,
-      description: host.bio || null,
-      category: null,
-      competitionCount: host._count.raffles,
-      averageRating: 5.0, // Mocked for now
-      totalReviews: 12, // Mocked for now
-      isVerified: host.isVerified,
-      isBlocked: host.user.isBlocked,
-    }));
+    return hosts.map((host) => {
+      const totalReviews = host._count.reviews || 0;
+      const averageRating =
+        totalReviews > 0
+          ? Number(
+              (
+                host.reviews.reduce((acc, r) => acc + r.rating, 0) / totalReviews
+              ).toFixed(1),
+            )
+          : null;
+
+      return {
+        id: host.id,
+        slug: host.slug || host.id,
+        name: host.businessName,
+        logo: host.user.avatarUrl,
+        description: host.bio || null,
+        category: null,
+        competitionCount: host._count.raffles,
+        averageRating,
+        totalReviews,
+        rating: averageRating,
+        isVerified: host.isVerified,
+        isBlocked: host.user.isBlocked,
+      };
+    });
   }
 
   async findOnePublic(slug: string) {
@@ -96,6 +122,19 @@ export class HostsService {
                 status: 'ACTIVE',
               },
             },
+            reviews: {
+              where: {
+                status: 'APPROVED',
+              },
+            },
+          },
+        },
+        reviews: {
+          where: {
+            status: 'APPROVED',
+          },
+          select: {
+            rating: true,
           },
         },
       },
@@ -104,6 +143,16 @@ export class HostsService {
     if (!host) {
       throw new NotFoundException('Host not found or is unavailable');
     }
+
+    const totalReviews = host._count.reviews || 0;
+    const averageRating =
+      totalReviews > 0
+        ? Number(
+            (
+              host.reviews.reduce((acc, r) => acc + r.rating, 0) / totalReviews
+            ).toFixed(1),
+          )
+        : null;
 
     return {
       id: host.id,
@@ -114,7 +163,9 @@ export class HostsService {
       isVerified: host.isVerified,
       isBlocked: host.user.isBlocked,
       drawsHosted: host._count.raffles,
-      rating: null,
+      rating: averageRating,
+      averageRating,
+      totalReviews,
       memberSince: host.createdAt.getFullYear(),
       raffles: host.raffles.map((raffle) => {
         // Format endDate as "Ends in Xd Yh" or a clean date string

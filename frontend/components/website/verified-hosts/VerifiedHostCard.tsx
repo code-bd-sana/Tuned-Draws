@@ -69,10 +69,13 @@ export default function VerifiedHostCard({ host }: VerifiedHostCardProps) {
         <div className="relative z-10 mt-6 flex items-center justify-between border-t border-white/10 pt-4">
           <div className="flex items-center gap-3 font-heading text-xs font-bold text-[#8A92A0]">
             <span className="text-white">{host.competitionCount} Draws</span>
-            {host.averageRating && (
+            {host.averageRating && host.totalReviews && host.totalReviews > 0 ? (
               <span className="flex items-center gap-1 text-[#D1D5DB]">
-                <span className="text-[#FF1E27]">★</span> {host.averageRating}
+                <span className="text-[#FF1E27]">★</span> {Number(host.averageRating).toFixed(1)}
+                <span className="text-[#8A92A0] text-[10px]">({host.totalReviews})</span>
               </span>
+            ) : (
+              <span className="text-[#8A92A0] text-[11px] font-sans font-medium">★ New Host</span>
             )}
           </div>
           <span className="flex -translate-x-2 items-center gap-1 font-heading text-xs font-black uppercase text-[#FF1E27] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">

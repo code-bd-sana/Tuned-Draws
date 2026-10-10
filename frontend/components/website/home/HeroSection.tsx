@@ -25,32 +25,33 @@ export default function HeroSection() {
   const drawsCompletedStat = stats.find(s => s.id === 1 || s.label.toLowerCase().includes('draws'));
 
   return (
-    <section className="relative min-h-[760px] overflow-hidden bg-[#0B0C0E] pt-28 sm:min-h-[780px] md:pt-36 lg:min-h-[720px]">
-      {/* High-Clarity Background Car Banner Image */}
-      <Image
-        src="/images/car-main.jpg"
-        alt="Tuned Draws BMW M340i Custom Build"
-        fill
-        priority
-        className="-z-20 object-cover object-[70%_center] lg:object-center opacity-85 contrast-110 brightness-105"
-      />
-      
-      {/* Light atmospheric overlays for optimal legibility & crystal-clear car visibility */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/75 to-[#0B0C0E]/30" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B0C0E] via-transparent to-[#0B0C0E]/60" />
-
-      {/* Ambient Crimson Red Glows */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute -top-32 left-1/4 w-[600px] h-[600px] bg-[#FF1E27]/12 rounded-full blur-[160px]" />
-        <div className="absolute top-1/3 -right-24 w-[500px] h-[500px] bg-[#FF1E27]/10 rounded-full blur-[140px]" />
+    <section className="relative isolate min-h-[760px] overflow-hidden bg-[#0B0C0E] pt-28 sm:min-h-[780px] md:pt-36 lg:min-h-[720px]">
+      {/* 100% Crystal-Clear Cinematic Automotive Banner */}
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <Image
+          src="/images/car-main.jpg"
+          alt="Tuned Draws Performance Custom Build"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[75%_center] sm:object-[78%_center] lg:object-right select-none contrast-[1.06] brightness-[1.03]"
+        />
+        
+        {/* Clean, targeted gradient: perfectly protects text on left, leaves the car on the right 100% crystal clear */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/75 via-25% md:via-35% to-transparent to-60%" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#0B0C0E] via-[#0B0C0E]/60 to-transparent" />
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#0B0C0E]/80 to-transparent" />
+        
+        {/* Subtle crimson racing backlight aura */}
+        <div className="absolute top-1/4 left-1/6 w-[450px] h-[450px] bg-[#FF1E27]/12 rounded-full blur-[140px]" />
       </div>
 
       <div className="container-custom relative z-10 flex min-h-[580px] items-center pb-24 lg:pb-28">
-        <div className="grid w-full grid-cols-1 items-center lg:grid-cols-12 gap-12">
+        <div className="grid w-full grid-cols-1 items-center lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Main Hero Headline & CTAs */}
           <div className="flex max-w-[760px] flex-col items-start text-left lg:col-span-8">
             {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#12141C] border border-[#FF1E27]/30 text-white text-[11px] font-heading font-black uppercase tracking-widest mb-6 shadow-[0_0_20px_rgba(255,30,39,0.2)]">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#12141C]/90 backdrop-blur-md border border-[#FF1E27]/30 text-white text-[11px] font-heading font-black uppercase tracking-widest mb-6 shadow-[0_0_20px_rgba(255,30,39,0.2)]">
               <span className="w-2 h-2 rounded-full bg-[#FF1E27] animate-pulse shadow-[0_0_8px_rgba(255,30,39,0.8)]" />
               <span className="text-[#D1D5DB]">CAR MODS, TUNING &amp; PERFORMANCE PARTS</span>
             </div>
@@ -73,7 +74,7 @@ export default function HeroSection() {
             </div>
 
             {/* Description Subtitle */}
-            <p className="mb-9 max-w-xl font-sans text-sm sm:text-base font-normal leading-relaxed text-[#8A92A0]">
+            <p className="mb-9 max-w-xl font-sans text-sm sm:text-base font-normal leading-relaxed text-[#A0A8B6]">
               Discover elite automotive competitions for performance parts, ECU tuning packages, custom car wrapping, detailing, and track days. Every draw is <strong className="font-bold text-white">fair, transparent, and 100% verified</strong>.
             </p>
 
@@ -107,33 +108,26 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* RIGHT — High-Clarity Featured Modification Showcase Card */}
-          <div className="hidden lg:flex lg:col-span-4 justify-end items-center relative">
-            <div className="relative w-full max-w-sm rounded-2xl border border-white/20 bg-[#12141C]/80 backdrop-blur-xl p-3.5 shadow-[0_20px_50px_rgba(0,0,0,0.85)] group hover:border-[#FF1E27]/50 transition-all duration-300">
-              <div className="relative w-full h-56 rounded-xl overflow-hidden border border-white/15 shadow-inner">
-                <Image
-                  src="/images/car-main.jpg"
-                  alt="Performance Tuning Package"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  priority
-                />
-                <div className="absolute top-3 left-3 bg-[#0B0C0E]/90 border border-[#FF1E27]/40 px-3 py-1 rounded-full text-[9px] font-heading font-black text-white tracking-widest uppercase shadow-md flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27] animate-pulse" />
-                  FEATURED SERVICE
-                </div>
+          {/* RIGHT — Sleek Floating Build Badge positioned cleanly without blocking car */}
+          <div className="hidden xl:flex lg:col-span-4 justify-end items-end relative pb-4 z-20">
+            <div className="rounded-2xl border border-white/15 bg-[#0B0C0E]/75 backdrop-blur-xl p-4 shadow-[0_25px_50px_rgba(0,0,0,0.8)] flex items-center gap-3.5 max-w-sm hover:border-[#FF1E27]/40 hover:shadow-[0_0_30px_rgba(255,30,39,0.25)] transition-all duration-300">
+              <div className="w-11 h-11 rounded-xl bg-[#12141C] border border-[#FF1E27]/30 flex items-center justify-center text-xl text-[#FF1E27] shrink-0 shadow-inner">
+                🏎️
               </div>
-              <div className="mt-3 px-2.5 pb-1 flex items-center justify-between">
-                <div>
-                  <h3 className="font-heading font-black text-sm text-white uppercase tracking-tight">
-                    Stage 2 ECU + Exhaust Package
-                  </h3>
-                  <p className="font-sans text-[11px] text-[#8A92A0] mt-0.5">
-                    Dyno Tune · Custom Map · Free Workshop Install
-                  </p>
+              <div className="flex flex-col min-w-0">
+                <div className="flex items-center gap-2">
+                  <span className="font-heading text-[10px] font-black uppercase tracking-wider text-white">
+                    Featured Performance Build
+                  </span>
+                  <span className="flex items-center gap-1 bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] text-[8px] font-heading font-black px-1.5 py-0.5 rounded uppercase">
+                    <span className="w-1 h-1 rounded-full bg-[#FF1E27] animate-pulse" /> Live
+                  </span>
                 </div>
-                <span className="font-heading text-xs font-black text-[#FF1E27] bg-[#FF1E27]/10 border border-[#FF1E27]/30 px-2.5 py-1 rounded-lg">
-                  LIVE
+                <span className="font-heading font-bold text-xs text-[#D1D5DB] truncate mt-0.5">
+                  Stage 2 ECU + Full Exhaust Package
+                </span>
+                <span className="font-sans text-[11px] text-[#8A92A0]">
+                  Dyno Tuned · Audited Competition Draw
                 </span>
               </div>
             </div>

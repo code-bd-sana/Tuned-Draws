@@ -2,89 +2,69 @@
 
 import React from "react";
 import Link from "next/link";
-import { Gauge } from "lucide-react";
+import Image from "next/image";
 import { cn } from "../../lib/utils";
 
 interface TunedDrawsBrandLogoProps {
   className?: string;
+  imageClassName?: string;
   subtitle?: string;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   href?: string;
+  priority?: boolean;
 }
 
 export default function TunedDrawsBrandLogo({
   className,
-  subtitle = "PERFORMANCE & MOD COMPETITIONS",
+  imageClassName,
+  subtitle,
   size = "md",
   href = "/",
+  priority = false,
 }: TunedDrawsBrandLogoProps) {
-  const iconSizes = {
-    sm: "w-8 h-8 rounded-lg",
-    md: "w-10 h-10 rounded-xl",
-    lg: "w-12 h-12 rounded-2xl",
+  // Height configurations optimized for responsive display and aspect ratio 2.28:1
+  const sizeClasses = {
+    sm: "h-[34px] sm:h-[38px]",
+    md: "h-[42px] md:h-[48px]",
+    lg: "h-[54px] md:h-[62px]",
+    xl: "h-[70px] md:h-[80px]",
   };
 
-  const svgSizes = {
-    sm: "w-4 h-4",
-    md: "w-5 h-5",
-    lg: "w-6 h-6",
-  };
-
-  const textSizes = {
-    sm: "text-lg",
-    md: "text-2xl",
-    lg: "text-3xl",
-  };
-
-  const subtitleSizes = {
-    sm: "text-[8px] tracking-[0.2em]",
-    md: "text-[9px] tracking-[0.25em]",
-    lg: "text-[10px] tracking-[0.25em]",
-  };
+  const isCustomSubtitle =
+    Boolean(subtitle) &&
+    subtitle !== "PERFORMANCE & MOD COMPETITIONS" &&
+    subtitle !== "YOUR MODS OUR PLATFORM";
 
   const content = (
-    <div className={cn("inline-flex items-center gap-3 select-none group", className)}>
-      <div
-        className={cn(
-          "bg-[#12141C] border border-[#FF1E27]/30 flex items-center justify-center shadow-[0_0_15px_rgba(255,30,39,0.25)] group-hover:border-[#FF1E27] group-hover:shadow-[0_0_20px_rgba(255,30,39,0.4)] transition-all shrink-0",
-          iconSizes[size]
-        )}
-      >
-        <Gauge
+    <div className={cn("inline-flex flex-col items-start select-none group", className)}>
+      <div className="relative transition-transform duration-300 group-hover:scale-[1.02] flex items-center">
+        <Image
+          src="/logo_transparent.png"
+          alt="Tuned Draws - Your Mods Our Platform"
+          width={940}
+          height={412}
+          priority={priority || size === "md"}
           className={cn(
-            "text-[#FF1E27] group-hover:scale-110 transition-transform duration-300",
-            svgSizes[size]
+            "w-auto object-contain transition-all duration-300 drop-shadow-[0_0_12px_rgba(255,30,39,0.22)] group-hover:drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]",
+            sizeClasses[size],
+            imageClassName
           )}
         />
       </div>
-      <div className="flex flex-col">
-        <span
-          className={cn(
-            "font-heading font-black tracking-wider leading-none",
-            textSizes[size]
-          )}
-        >
-          <span className="metallic-text">TUNED</span>{" "}
-          <span className="text-[#FF1E27] drop-shadow-[0_0_12px_rgba(255,30,39,0.5)]">
-            DRAWS
-          </span>
+      {isCustomSubtitle && (
+        <span className="font-heading text-[9px] md:text-[10px] uppercase font-bold tracking-[0.25em] text-[#FF1E27] mt-1 pl-1">
+          {subtitle}
         </span>
-        {subtitle && (
-          <span
-            className={cn(
-              "font-bold uppercase text-[#8A92A0] group-hover:text-[#D1D5DB] transition-colors mt-0.5",
-              subtitleSizes[size]
-            )}
-          >
-            {subtitle}
-          </span>
-        )}
-      </div>
+      )}
     </div>
   );
 
   if (href) {
-    return <Link href={href} className="inline-flex">{content}</Link>;
+    return (
+      <Link href={href} className="inline-flex items-center focus:outline-none shrink-0">
+        {content}
+      </Link>
+    );
   }
 
   return content;

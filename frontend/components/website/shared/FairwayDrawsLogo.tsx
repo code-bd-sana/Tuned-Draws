@@ -16,14 +16,14 @@ export default function FairwayDrawsLogo({
   className,
   size = 'md',
   href = '/',
+  priority = false,
 }: FairwayDrawsLogoProps) {
-  const mappedSize = size === 'xl' ? 'lg' : size;
   return (
     <TunedDrawsBrandLogo
       className={className}
-      size={mappedSize}
+      size={size}
       href={href}
-      subtitle="PERFORMANCE & MOD COMPETITIONS"
+      priority={priority}
     />
   );
 }

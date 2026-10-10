@@ -14,12 +14,21 @@ export interface UserWinner {
   verificationStatus: 'PENDING' | 'VERIFIED' | 'REJECTED';
   trackingNumber: string | null;
   createdAt: string;
+  hasReviewed?: boolean;
+  review?: {
+    id: string;
+    rating: number;
+    comment: string | null;
+    createdAt: string;
+  } | null;
   raffle: {
     id: string;
     title: string;
     slug: string;
     mainImage: string | null;
+    hostId?: string;
     hostBusinessName: string;
+    hostSlug?: string;
     status: string;
   };
   instantWinDetails?: {
