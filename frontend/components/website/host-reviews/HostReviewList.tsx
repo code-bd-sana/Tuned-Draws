@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useHostReviewsQuery } from "@/hooks/useReviewHooks";
 import HostReviewCard from "./HostReviewCard";
+import { HostReview } from "@/types/review.types";
 import { cn } from "@/lib/utils";
 
 interface HostReviewListProps {
@@ -174,7 +175,7 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.map((review) => (
+          {reviews.map((review: HostReview) => (
             <HostReviewCard key={review.id} review={review} />
           ))}
         </div>

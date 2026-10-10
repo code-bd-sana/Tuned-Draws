@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useHostDashboardReviewsQuery } from "@/hooks/useReviewHooks";
 import HostReviewCard from "@/components/website/host-reviews/HostReviewCard";
+import { HostReview } from "@/types/review.types";
 import { cn } from "@/lib/utils";
 
 export default function HostReviewsDashboardPage() {
@@ -192,7 +193,7 @@ export default function HostReviewsDashboardPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {reviews.map((review) => (
+          {reviews.map((review: HostReview) => (
             <HostReviewCard key={review.id} review={review} />
           ))}
         </div>
