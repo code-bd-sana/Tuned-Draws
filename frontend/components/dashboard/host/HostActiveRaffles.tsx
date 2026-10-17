@@ -48,7 +48,7 @@ export default function HostActiveRaffles({ raffles, isLoading: propIsLoading }:
         {!isLoading && activeRaffles.map((comp: any) => {
           const progress = Math.min(Math.round((comp.ticketsSold / comp.totalTickets) * 100), 100);
           const isEndingSoon = false;
-          const imageUrl = comp.images && comp.images.length > 0 ? comp.images[0] : "https://placehold.co/100x100/ecf5ee/0b4d35?text=Raffle";
+          const imageUrl = comp.images && comp.images.length > 0 ? comp.images[0] : "https://placehold.co/100x100/12141C/FF1E27?text=Draw";
 
           return (
             <Link 

@@ -595,19 +595,19 @@ export default function RaffleEntryCard({ raffle }: RaffleEntryCardProps) {
         </div>
 
         {(isExpired || isStatusEnded) && (
-          <div className="p-3 rounded-xl text-xs font-sans text-center font-bold bg-[#FEE2E2] text-[#991B1B] border border-[#FECACA]">
+          <div className="p-3 rounded-xl text-xs font-sans text-center font-bold bg-red-500/10 text-red-400 border border-red-500/30">
             🔒 Competition Closed: This competition has ended and entries are closed.
           </div>
         )}
 
         {!isExpired && !isStatusEnded && isSoldOut && (
-          <div className="p-3 rounded-xl text-xs font-sans text-center font-bold bg-[#FEF3C7] text-[#B45309] border border-[#FDE68A]">
+          <div className="p-3 rounded-xl text-xs font-sans text-center font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30">
             🎟️ Sold Out: All tickets for this competition have been allocated.
           </div>
         )}
 
         {!isEnded && isPersonalLimitReached && (
-          <div className="p-3 rounded-xl text-xs font-sans text-center font-bold bg-[#FEF3C7] text-[#B45309] border border-[#FDE68A]">
+          <div className="p-3 rounded-xl text-xs font-sans text-center font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30">
             Personal Limit Reached: You hold {userOwnedTickets} / {maxPerPerson} tickets
           </div>
         )}
@@ -618,7 +618,7 @@ export default function RaffleEntryCard({ raffle }: RaffleEntryCardProps) {
               type="button"
               onClick={handleAddToBasket}
               disabled={isEnded || isPersonalLimitReached || isPurchasing}
-              className="w-full h-12 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 border-2 border-[#15803d] text-[#15803d] hover:bg-[#15803d] hover:text-white shadow-xs active:scale-98 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full h-12 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-white/5 border border-white/20 text-white hover:border-[#FF1E27] hover:text-[#FF1E27] hover:bg-[#FF1E27]/10 shadow-xs active:scale-98 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -673,7 +673,7 @@ export default function RaffleEntryCard({ raffle }: RaffleEntryCardProps) {
 
         {statusMessage && (
           <div className={`p-3 rounded-xl text-xs font-sans text-center font-medium ${
-            statusMessage.type === 'success' ? 'bg-[#DCFCE7] text-[#15803D] border border-[#BBF7D0]' : 'bg-[#FEE2E2] text-[#991B1B] border border-[#FECACA]'
+            statusMessage.type === 'success' ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' : 'bg-red-500/10 text-red-400 border border-red-500/30'
           }`}>
             {statusMessage.text}
           </div>

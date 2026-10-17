@@ -34,9 +34,9 @@ function FastRollingNumbers() {
   }, []);
 
   return (
-    <div className="flex gap-2 items-center justify-center font-heading text-[40px] text-[#8CB34A] blur-[0.5px] opacity-80">
+    <div className="flex gap-2 items-center justify-center font-heading text-[40px] text-[#FF1E27] blur-[0.5px] opacity-90">
       {numbers.map((num, i) => (
-        <div key={i} className="w-[50px] text-center bg-[#1A230A] rounded-lg py-2 border border-[#8CB34A]/30 shadow-inner">
+        <div key={i} className="w-[50px] text-center bg-[#12141C] text-[#FF1E27] rounded-lg py-2 border border-[#FF1E27]/40 shadow-inner">
           {num}
         </div>
       ))}

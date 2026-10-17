@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Category, categoryService } from '../../../../services/category.service';
 
-const AVAILABLE_ICONS = ['GolfClubs', 'Trophy', 'Shirt', 'Watch', 'ShoppingBag', 'Star', 'Tag', 'Crosshair'];
+const AVAILABLE_ICONS = ['Car', 'Gauge', 'Wrench', 'Trophy', 'Zap', 'Watch', 'ShoppingBag', 'Star', 'Tag', 'Crosshair'];
 
 export default function AdminCategoriesPage() {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -322,7 +322,7 @@ export default function AdminCategoriesPage() {
                   value={currentCategory.name || ''}
                   onChange={(e) => setCurrentCategory({ ...currentCategory, name: e.target.value })}
                   className='w-full h-11 px-4 bg-elevated border border-border-medium rounded-xl text-text-primary font-sans text-xs placeholder:text-text-muted outline-none focus:border-primary transition-colors'
-                  placeholder='e.g. Golf Clubs'
+                  placeholder='e.g. Performance Exhausts'
                 />
               </div>
 
@@ -335,7 +335,7 @@ export default function AdminCategoriesPage() {
                   value={currentCategory.slug || ''}
                   onChange={(e) => setCurrentCategory({ ...currentCategory, slug: e.target.value })}
                   className='w-full h-11 px-4 bg-elevated border border-border-medium rounded-xl text-text-primary font-sans text-xs placeholder:text-text-muted outline-none focus:border-primary transition-colors'
-                  placeholder='e.g. golf-clubs'
+                  placeholder='e.g. performance-exhausts'
                 />
               </div>
 

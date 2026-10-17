@@ -50,19 +50,19 @@ export const hostUpcomingDraws: HostUpcomingDraw[] = [
 ];
 
 export const hostRecentActivities: HostRecentActivity[] = [
-  { id: "ra-1", type: "purchase", title: "New ticket purchase", description: "Titleist T100 Iron Set", timeAgo: "2 min ago" },
-  { id: "ra-2", type: "approved", title: "Raffle approved by admin", description: "TaylorMade Qi10 Driver", timeAgo: "1h ago" },
+  { id: "ra-1", type: "purchase", title: "New ticket purchase", description: "Milltek Cat-Back Exhaust", timeAgo: "2 min ago" },
+  { id: "ra-2", type: "approved", title: "Raffle approved by admin", description: "BBS Alloy Wheels", timeAgo: "1h ago" },
   { id: "ra-3", type: "payout", title: "Payout processed", description: "£840.00", timeAgo: "3h ago" },
-  { id: "ra-4", type: "joined", title: "New entrant joined", description: "Scotty Cameron Putter", timeAgo: "5h ago" },
+  { id: "ra-4", type: "joined", title: "New entrant joined", description: "Brembo Big Brake Kit", timeAgo: "5h ago" },
   { id: "ra-5", type: "review", title: "Host review received", description: "5 stars", timeAgo: "1d ago" }
 ];
 
 export const hostRecentCompetitions: HostCompetitionSummary[] = [
   {
     id: "comp-1",
-    title: "TaylorMade Qi10 Max Driver 10.5°",
+    title: "Milltek Non-Resonated Cat-Back Exhaust",
     status: "live",
-    image: "https://placehold.co/400x400/0b4d35/ffffff?text=Driver",
+    image: "https://placehold.co/400x400/12141C/FF1E27?text=Exhaust",
     totalTickets: 500,
     soldTickets: 320,
     revenue: 1600,
@@ -71,9 +71,9 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-2",
-    title: "Titleist T100 Iron Set (4-PW)",
+    title: "BBS Super RS 19\" Alloy Wheel Set",
     status: "live",
-    image: "https://placehold.co/400x400/0b4d35/ffffff?text=Irons",
+    image: "https://placehold.co/400x400/12141C/FF1E27?text=Wheels",
     totalTickets: 300,
     soldTickets: 125,
     revenue: 625,
@@ -82,8 +82,8 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-3",
-    title: "Scotty Cameron Phantom X 11 Putter",
-    image: "https://placehold.co/400x400/0b4d35/ffffff?text=Putter",
+    title: "Air Lift Performance 3P Suspension Kit",
+    image: "https://placehold.co/400x400/12141C/FF1E27?text=Suspension",
     status: "ending-soon",
     soldTickets: 450,
     totalTickets: 500,
@@ -92,8 +92,8 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-4",
-    title: "Bushnell Pro X3+ Rangefinder",
-    image: "https://placehold.co/400x400/0b4d35/ffffff?text=Rangefinder",
+    title: "Brembo 6-Piston Big Brake Kit",
+    image: "https://placehold.co/400x400/12141C/FF1E27?text=Brakes",
     status: "live",
     soldTickets: 120,
     totalTickets: 300,
@@ -102,8 +102,8 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-5",
-    title: "Titleist Tour Stand Bag Bundle",
-    image: "https://placehold.co/400x400/0b4d35/ffffff?text=GolfBag",
+    title: "Eventuri Carbon Fiber Intake System",
+    image: "https://placehold.co/400x400/12141C/FF1E27?text=Intake",
     status: "live",
     soldTickets: 250,
     totalTickets: 1000,

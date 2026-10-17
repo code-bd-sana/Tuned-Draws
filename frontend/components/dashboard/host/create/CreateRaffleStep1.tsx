@@ -9,12 +9,12 @@ interface Props {
 }
 
 const DEFAULT_CATEGORIES = [
-  "Golf Drivers",
-  "Golf Irons",
-  "Golf Putters",
-  "Golf Bags & Apparel",
-  "Rangefinders & Tech",
-  "Experiences & Bundles",
+  "Performance Parts & Exhausts",
+  "ECU Tuning & Remaps",
+  "Suspension & Coilovers",
+  "Wheels & Performance Tyres",
+  "Car Wrapping & Detailing",
+  "Track Days & Experiences",
 ];
 
 export default function CreateRaffleStep1({ formData, updateForm, onNext }: Props) {
@@ -51,7 +51,7 @@ export default function CreateRaffleStep1({ formData, updateForm, onNext }: Prop
             type="text"
             value={formData.title}
             onChange={(e) => updateForm({ title: e.target.value })}
-            placeholder="e.g. TaylorMade Qi10 LS Driver or Titleist Scotty Cameron Putter"
+            placeholder="e.g. Milltek Non-Resonated Cat-Back Exhaust System or BBS Super RS Alloy Wheels"
             className="h-[48px] px-4 bg-elevated border border-border-medium rounded-xl font-sans font-medium text-sm text-text-primary placeholder:text-text-muted outline-none focus:border-primary focus:bg-surface transition-all"
           />
         </div>

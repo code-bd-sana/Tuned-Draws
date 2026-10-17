@@ -14,12 +14,12 @@ interface Props {
 }
 
 const DEFAULT_CATEGORIES = [
-  "Golf Drivers",
-  "Golf Irons",
-  "Golf Putters",
-  "Golf Bags & Apparel",
-  "Rangefinders & Tech",
-  "Experiences & Bundles",
+  "Performance Parts & Exhausts",
+  "ECU Tuning & Remaps",
+  "Suspension & Coilovers",
+  "Wheels & Performance Tyres",
+  "Car Wrapping & Detailing",
+  "Track Days & Experiences",
 ];
 
 export default function EditRaffleForm({ raffleId }: Props) {
@@ -38,7 +38,7 @@ export default function EditRaffleForm({ raffleId }: Props) {
     if (raffle) {
       setFormData({
         title: raffle.title || "",
-        category: (raffle as any).category || "Golf Drivers",
+        category: (raffle as any).category || (categoryOptions[0] ?? "Performance Parts & Exhausts"),
         description: raffle.description || "",
         prizeName: raffle.prizeName || "",
         mainPrizeValue: (raffle as any).mainPrizeValue ?? "",
@@ -213,7 +213,7 @@ export default function EditRaffleForm({ raffleId }: Props) {
               </label>
               <select
                 id="category"
-                value={formData.category || (categoryOptions[0] ?? "Golf Drivers")}
+                value={formData.category || (categoryOptions[0] ?? "Performance Parts & Exhausts")}
                 onChange={(e) => handleChange("category", e.target.value)}
                 className="w-full h-[46px] bg-bg border border-border rounded-button px-4 font-sans text-xs md:text-sm text-text-primary outline-none focus:border-primary focus:ring-1 focus:ring-primary/20 transition-all cursor-pointer"
               >

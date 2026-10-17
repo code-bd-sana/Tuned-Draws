@@ -110,18 +110,18 @@ function CheckoutSuccessContent() {
   return (
     <div className="container-custom max-w-3xl mx-auto px-4 sm:px-6">
       {isLoading ? (
-        <div className="bg-surface border border-border rounded-card p-12 text-center shadow-card flex flex-col items-center">
-          <div className="w-10 h-10 border-3 border-primary border-t-transparent rounded-full animate-spin mb-4" />
-          <h2 className="font-heading font-bold text-base uppercase tracking-wider text-text-primary mb-1">
+        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-12 text-center shadow-2xl flex flex-col items-center">
+          <div className="w-10 h-10 border-3 border-[#FF1E27] border-t-transparent rounded-full animate-spin mb-4" />
+          <h2 className="font-heading font-bold text-base uppercase tracking-wider text-white mb-1">
             Confirming Your Entries...
           </h2>
-          <p className="font-sans text-xs text-text-muted">
+          <p className="font-sans text-xs text-[#8A92A0]">
             Communicating with payment gateway and assigning your unique ticket numbers.
           </p>
         </div>
       ) : error ? (
-        <div className="bg-surface border border-border rounded-card p-10 text-center shadow-card flex flex-col items-center">
-          <div className="w-14 h-14 rounded-full bg-red-100 text-red-600 flex items-center justify-center mb-4">
+        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-10 text-center shadow-2xl flex flex-col items-center">
+          <div className="w-14 h-14 rounded-2xl bg-red-500/10 border border-red-500/30 text-[#FF1E27] flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(255,30,39,0.25)]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -133,22 +133,22 @@ function CheckoutSuccessContent() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
           </div>
-          <h2 className="font-heading font-bold text-lg uppercase tracking-wider text-text-primary mb-2">
+          <h2 className="font-heading font-bold text-lg uppercase tracking-wider text-white mb-2">
             Payment Not Completed
           </h2>
-          <p className="font-sans text-xs text-text-muted mb-6">{error}</p>
+          <p className="font-sans text-xs text-[#8A92A0] mb-6">{error}</p>
           <Link
             href="/basket"
-            className="btn-glossy-red px-6 py-2.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-white shadow-md"
+            className="btn-racing-red px-6 py-2.5 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-white shadow-[0_0_20px_rgba(255,30,39,0.35)]"
           >
             Return to Basket
           </Link>
         </div>
       ) : (
         /* Order Confirmed View */
-        <div className="bg-surface border border-border rounded-card p-6 sm:p-10 shadow-card flex flex-col items-center text-center animate-fadeIn">
+        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl flex flex-col items-center text-center animate-fadeIn">
           {/* Green checkmark badge */}
-          <div className="w-16 h-16 rounded-full bg-[#dcfce7] border border-[#bbf7d0] text-[#15803d] flex items-center justify-center mb-4 shadow-sm">
+          <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-4 shadow-[0_0_25px_rgba(16,185,129,0.25)]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -161,42 +161,42 @@ function CheckoutSuccessContent() {
             </svg>
           </div>
 
-          <span className="px-3 py-1 rounded-full bg-[#ecf5ee] text-[#15803d] font-sans font-bold text-[10px] uppercase tracking-wider mb-2">
-            Payment & Entry Confirmed
+          <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 font-sans font-bold text-[10px] uppercase tracking-wider mb-2">
+            Payment &amp; Entry Confirmed
           </span>
 
-          <h1 className="font-heading font-black text-2xl sm:text-3xl text-text-primary uppercase tracking-tight mb-2">
+          <h1 className="font-heading font-black text-2xl sm:text-3xl text-white uppercase tracking-tight mb-2">
             You&apos;re In The Draw!
           </h1>
 
-          <p className="font-sans text-xs sm:text-sm text-text-muted max-w-lg mb-6">
+          <p className="font-sans text-xs sm:text-sm text-[#8A92A0] max-w-lg mb-6">
             Thank you for participating. Your payment was verified and your official ticket numbers
             have been assigned below. Best of luck!
           </p>
 
           {orderRef && (
-            <div className="mb-6 px-4 py-2 rounded-xl bg-elevated border border-divider text-xs font-sans text-text-muted">
-              Order Reference: <strong className="text-text-primary font-mono">{orderRef}</strong>
+            <div className="mb-6 px-4 py-2 rounded-xl bg-[#1A1D27] border border-white/10 text-xs font-sans text-[#8A92A0]">
+              Order Reference: <strong className="text-white font-mono">{orderRef}</strong>
             </div>
           )}
 
           {/* Instant Wins Banner (if any) */}
           {instantWins.length > 0 && (
-            <div className="w-full mb-6 p-4 rounded-xl bg-gradient-to-r from-amber-500/10 via-yellow-500/20 to-amber-500/10 border border-amber-500/30 text-left">
+            <div className="w-full mb-6 p-4 rounded-2xl bg-gradient-to-r from-amber-500/15 via-yellow-500/10 to-amber-500/15 border border-amber-500/30 text-left">
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xl">🏆</span>
-                <span className="font-heading font-black text-sm uppercase tracking-wider text-amber-900">
+                <span className="font-heading font-black text-sm uppercase tracking-wider text-amber-400">
                   Instant Win Prize Detected!
                 </span>
               </div>
-              <p className="font-sans text-xs text-amber-900/80 mb-3">
+              <p className="font-sans text-xs text-amber-200/80 mb-3">
                 One or more of your allocated tickets hit an Instant Win prize:
               </p>
               <div className="flex flex-wrap gap-2">
                 {instantWins.map((iw: any, idx: number) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-600 text-white font-heading font-bold text-xs shadow-xs"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-heading font-bold text-xs shadow-xs"
                   >
                     <span>🎉</span>
                     <span>{iw.prizeName || iw.title || "Instant Prize"}</span>
@@ -208,12 +208,12 @@ function CheckoutSuccessContent() {
 
           {/* Allocated Tickets Breakdown */}
           {tickets.length > 0 && (
-            <div className="w-full mb-8 text-left bg-elevated border border-border rounded-xl p-5">
-              <div className="flex items-center justify-between pb-3 border-b border-divider mb-4">
-                <span className="font-heading font-bold text-xs uppercase tracking-wider text-text-primary">
+            <div className="w-full mb-8 text-left bg-[#1A1D27] border border-white/10 rounded-2xl p-5">
+              <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+                <span className="font-heading font-bold text-xs uppercase tracking-wider text-white">
                   Assigned Ticket Numbers ({tickets.length})
                 </span>
-                <span className="text-[10px] font-sans text-text-muted">Certified Random</span>
+                <span className="text-[10px] font-sans text-emerald-400 font-semibold">Certified Random</span>
               </div>
 
               <div className="flex flex-wrap gap-2 max-h-56 overflow-y-auto pr-1">
@@ -227,8 +227,8 @@ function CheckoutSuccessContent() {
                       key={idx}
                       className={`inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-mono font-bold border transition-all ${
                         isWinningTicket
-                          ? "bg-amber-100 border-amber-400 text-amber-900 shadow-xs ring-2 ring-amber-400/40"
-                          : "bg-surface border-border-medium text-text-primary"
+                          ? "bg-amber-500/20 border-amber-500/40 text-amber-300 shadow-xs ring-2 ring-amber-500/30"
+                          : "bg-[#12141C] border-white/10 text-white"
                       }`}
                     >
                       #{t.ticketNumber}
@@ -244,7 +244,7 @@ function CheckoutSuccessContent() {
           <div className="flex flex-col sm:flex-row items-center gap-3 w-full justify-center">
             <Link
               href="/dashboard/user/tickets"
-              className="btn-glossy-red w-full sm:w-auto px-8 py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-white shadow-md active:scale-98 transition-all flex items-center justify-center gap-2"
+              className="btn-racing-red w-full sm:w-auto px-8 py-3.5 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-white shadow-[0_0_20px_rgba(255,30,39,0.35)] active:scale-98 transition-all flex items-center justify-center gap-2"
             >
               <span>View In My Tickets</span>
               <span>→</span>
@@ -252,13 +252,13 @@ function CheckoutSuccessContent() {
 
             <Link
               href="/live-raffles"
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-surface border border-border hover:bg-elevated text-text-primary font-heading font-bold text-xs uppercase tracking-wider transition-all text-center"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-[#D1D5DB] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all text-center"
             >
               Explore More Draws
             </Link>
           </div>
 
-          <p className="mt-8 text-[11px] font-sans text-text-muted">
+          <p className="mt-8 text-[11px] font-sans text-[#8A92A0]">
             A confirmation receipt and ticket breakdown has been sent to your email address.
           </p>
         </div>
@@ -277,14 +277,14 @@ function CheckoutSuccessContent() {
 
 export default function CheckoutSuccessPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8faf6]">
+    <div className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
       <WebsiteNavbar />
 
       <main className="flex-1 pt-28 pb-20">
         <Suspense
           fallback={
             <div className="flex items-center justify-center py-20">
-              <div className="w-8 h-8 border-3 border-primary border-t-transparent rounded-full animate-spin" />
+              <div className="w-8 h-8 border-3 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
             </div>
           }
         >

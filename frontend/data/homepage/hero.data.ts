@@ -14,9 +14,9 @@ export interface HeroData {
 }
 
 export const heroData: HeroData = {
-  badgeText: "PREMIUM GOLF COMPETITIONS",
-  headingText: "Win Premium Golf Gear For Less",
-  paragraphText: "Enter premium golf draws from just £1 per ticket. Fair, transparent & fully verified. Over £180k in luxury prizes already won by our community.",
+  badgeText: "CAR MODS, TUNING & PERFORMANCE PARTS",
+  headingText: "Win Premium Performance Car Parts",
+  paragraphText: "Enter premium automotive draws from just £1 per ticket. Fair, transparent & fully verified. Over £180k in luxury tuning builds & performance parts won by our community.",
   primaryCtaLabel: "Browse Live Draws",
   primaryCtaHref: "#live-draws",
   secondaryCtaLabel: "How It Works",
@@ -36,16 +36,16 @@ export const heroData: HeroData = {
   ],
   featuredDraw: {
     id: "hero-feat-1",
-    title: "TaylorMade Stealth 2 Driver + Full Iron Set",
-    description: "Worth £1,400. Brand-new TaylorMade Stealth 2 driver bundle including full iron set, premium golf bag, and rangefinder.",
-    image: "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=800&auto=format&fit=crop",
+    title: "Milltek Cat-Back Exhaust + Stage 2 Remap Package",
+    description: "Worth £2,400. Brand-new Milltek Performance Exhaust system with downpipe, Airtec intercooler, and dyno-proven stage 2 tune.",
+    image: "/images/car-main.jpg",
     ticketPrice: 2.50,
     totalTickets: 500,
     soldTickets: 342,
     endDate: "Ends in 2d 4h",
     status: "live",
-    category: "equipment",
-    worthPrice: 1400,
+    category: "performance",
+    worthPrice: 2400,
     isFeatured: true,
   },
 };

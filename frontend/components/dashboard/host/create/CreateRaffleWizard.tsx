@@ -42,7 +42,7 @@ export interface RaffleFormData {
 
 const initialData: RaffleFormData = {
   title: "",
-  category: "Golf Drivers",
+  category: "Performance Parts & Exhausts",
   description: "",
   mainPrizeValue: "",
   totalTickets: "",

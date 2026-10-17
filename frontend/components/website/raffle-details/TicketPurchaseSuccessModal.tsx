@@ -122,7 +122,7 @@ export default function TicketPurchaseSuccessModal({
                         {iw.prizeName}
                       </span>
                     </div>
-                    <span className="text-[10px] font-sans font-bold text-[#15803D] bg-[#DCFCE7] border border-[#BBF7D0] px-2 py-0.5 rounded-full shadow-xs">
+                    <span className="text-[10px] font-sans font-bold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded-full shadow-xs">
                       Instant Win Claimed
                     </span>
                   </div>
@@ -159,7 +159,7 @@ export default function TicketPurchaseSuccessModal({
                     className={cn(
                       "py-2.5 px-3 rounded-xl font-mono font-bold text-sm text-center border transition-all flex items-center justify-center gap-1",
                       isWinningTicket
-                        ? "bg-[#FEF3C7] border-[#FDE68A] text-[#D97706] shadow-xs animate-bounce"
+                        ? "bg-amber-500/20 border-amber-500/40 text-amber-300 shadow-xs animate-bounce"
                         : "bg-accent-bg border-primary/30 text-text-brand"
                     )}
                   >

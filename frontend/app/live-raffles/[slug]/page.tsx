@@ -61,18 +61,18 @@ async function getRaffle(slug: string): Promise<RaffleDetail | undefined> {
 
     const catStr =
       typeof draw.category === "object" && draw.category !== null
-        ? (draw.category.name || draw.category.slug || "Drivers")
-        : (typeof draw.category === "string" ? draw.category : "Drivers");
+        ? (draw.category.name || draw.category.slug || "Performance Parts")
+        : (typeof draw.category === "string" ? draw.category : "Performance Parts");
 
     return {
       id: draw.id,
-      title: draw.title || "Golf Competition",
+      title: draw.title || "Tuned Draws Competition",
       slug: draw.slug || draw.id,
       category: catStr,
       status: isPast ? "ended" : (draw.status === "ACTIVE" ? "live" : "ending_soon"),
       images: Array.isArray(draw.images) && draw.images.length > 0
         ? draw.images
-        : [draw.mainImage || "https://placehold.co/800x600/1a230a/8cb34a?text=No+Image"],
+        : [draw.mainImage || "https://placehold.co/800x600/12141C/FF1E27?text=Tuned+Draws"],
       ticketPrice: Number(draw.pricePerTicket || 0),
       worthPrice: worth,
       totalPoolValue: totalPool,

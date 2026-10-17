@@ -192,18 +192,22 @@ export default function BasketPage() {
   } = useBasket();
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#f8faf6]">
+    <div className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
       <WebsiteNavbar />
 
       <main className="flex-1 pt-28 pb-20">
         <div className="container-custom max-w-5xl mx-auto px-4 sm:px-6">
           {/* Header Title */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-[#e2eadf]">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-white/10">
             <div>
-              <h1 className="font-heading font-black text-2xl sm:text-3xl text-text-primary uppercase tracking-tight">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#12141C] border border-[#FF1E27]/30 text-[10px] font-heading font-black uppercase tracking-widest text-[#FF1E27] mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27] animate-pulse" />
+                SECURE PIT LANE CHECKOUT
+              </div>
+              <h1 className="font-heading font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">
                 Your Basket
               </h1>
-              <p className="font-sans text-xs text-text-muted mt-1">
+              <p className="font-sans text-xs text-[#8A92A0] mt-1">
                 Review your competition entries before proceeding to secure checkout.
               </p>
             </div>
@@ -212,7 +216,7 @@ export default function BasketPage() {
               <button
                 type="button"
                 onClick={clearBasket}
-                className="self-start sm:self-auto text-xs font-sans text-red-600 hover:text-red-700 underline transition-colors cursor-pointer"
+                className="self-start sm:self-auto text-xs font-heading font-bold text-[#FF1E27] hover:text-[#B3000C] uppercase tracking-wider transition-colors cursor-pointer"
               >
                 Clear Entire Basket
               </button>
@@ -220,14 +224,14 @@ export default function BasketPage() {
           </div>
 
           {!isInitialized ? (
-            <div className="bg-surface border border-border rounded-card p-12 text-center shadow-card">
-              <div className="w-8 h-8 border-3 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-              <p className="font-sans text-xs text-text-muted">Loading your basket...</p>
+            <div className="bg-[#12141C] border border-white/10 rounded-2xl p-12 text-center shadow-2xl">
+              <div className="w-8 h-8 border-3 border-[#FF1E27] border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+              <p className="font-sans text-xs text-[#8A92A0]">Loading your basket...</p>
             </div>
           ) : items.length === 0 ? (
             /* Empty State */
-            <div className="bg-surface border border-border rounded-card p-12 text-center shadow-card flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-[#ecf5ee] flex items-center justify-center text-[#15803d] mb-4">
+            <div className="bg-[#12141C] border border-white/10 rounded-2xl p-12 text-center shadow-2xl flex flex-col items-center">
+              <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FF1E27] mb-4 shadow-inner">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -243,17 +247,17 @@ export default function BasketPage() {
                   />
                 </svg>
               </div>
-              <h2 className="font-heading font-bold text-lg text-text-primary uppercase tracking-wider mb-2">
+              <h2 className="font-heading font-black text-xl text-white uppercase tracking-wider mb-2">
                 Your basket is empty
               </h2>
-              <p className="font-sans text-xs text-text-muted max-w-md mb-6">
-                You haven&apos;t added any competition entries yet. Browse active draws and win premium golf gear!
+              <p className="font-sans text-xs text-[#8A92A0] max-w-md mb-6 leading-relaxed">
+                You haven&apos;t added any competition entries yet. Browse active competitions and win high-performance car mods, tuning packages &amp; precision parts!
               </p>
               <Link
                 href="/live-raffles"
-                className="btn-glossy-red px-6 py-3 rounded-xl font-heading font-bold text-xs uppercase tracking-wider text-white shadow-md active:scale-98 transition-all"
+                className="btn-racing-red px-7 py-3.5 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-white shadow-[0_0_20px_rgba(255,30,39,0.35)] active:scale-98 transition-all"
               >
-                Browse Live Draws
+                Browse Live Competitions →
               </Link>
             </div>
           ) : (
@@ -268,12 +272,12 @@ export default function BasketPage() {
                   return (
                     <div
                       key={item.raffleId}
-                      className="bg-surface border border-border rounded-card p-4 sm:p-5 shadow-card flex flex-col sm:flex-row items-start sm:items-center gap-4 transition-all hover:border-border-medium"
+                      className="bg-[#12141C] border border-white/10 rounded-2xl p-4 sm:p-5 shadow-xl flex flex-col sm:flex-row items-start sm:items-center gap-4 transition-all hover:border-[#FF1E27]/40"
                     >
                       {/* Image Thumbnail */}
-                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden bg-bg shrink-0 border border-divider">
+                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden bg-[#1A1D27] shrink-0 border border-white/10">
                         <Image
-                          src={item.image || "https://placehold.co/400x300/1a230a/8cb34a?text=Draw"}
+                          src={item.image || "https://placehold.co/400x300/12141C/FF1E27?text=Draw"}
                           alt={item.title}
                           fill
                           unoptimized
@@ -284,26 +288,26 @@ export default function BasketPage() {
                       {/* Details */}
                       <div className="flex-1 min-w-0">
                         {item.category && (
-                          <span className="inline-block px-2 py-0.5 rounded-full bg-[#ecf5ee] text-[#15803d] font-sans font-bold text-[9px] uppercase tracking-wider mb-1">
+                          <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] font-sans font-bold text-[9px] uppercase tracking-wider mb-1">
                             {item.category}
                           </span>
                         )}
                         <Link
                           href={`/live-raffles/${item.slug}`}
-                          className="font-heading font-bold text-sm sm:text-base text-text-primary hover:text-text-brand line-clamp-1 transition-colors"
+                          className="font-heading font-black text-sm sm:text-base text-white hover:text-[#FF1E27] line-clamp-1 transition-colors block"
                         >
                           {item.title}
                         </Link>
-                        <p className="font-sans text-xs text-text-muted mt-0.5">
+                        <p className="font-sans text-xs text-[#8A92A0] mt-0.5">
                           £{item.pricePerTicket.toFixed(2)} per ticket
                         </p>
                         {item.maxTickets && (
-                          <span className="font-sans text-[10px] text-text-muted block mt-0.5">
+                          <span className="font-sans text-[10px] text-[#8A92A0] block mt-0.5">
                             Max {item.maxTickets} tickets per person
                           </span>
                         )}
                         {remaining < 20 && (
-                          <span className="font-sans text-[10px] text-amber-700 font-semibold block">
+                          <span className="font-sans text-[10px] text-amber-400 font-semibold block">
                             Only {remaining} left!
                           </span>
                         )}
@@ -319,10 +323,10 @@ export default function BasketPage() {
 
                         {/* Price Subtotal */}
                         <div className="text-right min-w-[70px]">
-                          <span className="font-heading font-black text-sm text-text-primary block">
+                          <span className="font-heading font-black text-sm text-white block">
                             £{itemSubtotal.toFixed(2)}
                           </span>
-                          <span className="text-[10px] font-sans text-text-muted">
+                          <span className="text-[10px] font-sans text-[#8A92A0]">
                             ({item.quantity} {item.quantity === 1 ? "ticket" : "tickets"})
                           </span>
                         </div>
@@ -331,7 +335,7 @@ export default function BasketPage() {
                         <button
                           type="button"
                           onClick={() => removeItem(item.raffleId)}
-                          className="p-1.5 text-text-muted hover:text-red-600 transition-colors cursor-pointer rounded-lg hover:bg-red-50"
+                          className="p-1.5 text-[#8A92A0] hover:text-[#FF1E27] transition-colors cursor-pointer rounded-lg hover:bg-white/5"
                           aria-label={`Remove ${item.title} from basket`}
                         >
                           <svg
@@ -358,7 +362,7 @@ export default function BasketPage() {
                 <div className="pt-2">
                   <Link
                     href="/live-raffles"
-                    className="inline-flex items-center gap-1.5 text-xs font-sans font-bold text-text-brand hover:underline uppercase tracking-wider"
+                    className="inline-flex items-center gap-1.5 text-xs font-sans font-bold text-[#FF1E27] hover:text-[#B3000C] uppercase tracking-wider"
                   >
                     ← Continue exploring competitions
                   </Link>
@@ -366,29 +370,29 @@ export default function BasketPage() {
               </div>
 
               {/* Order Summary Sidebar */}
-              <div className="lg:col-span-4 bg-surface border border-border rounded-card p-6 shadow-card sticky top-24">
-                <h3 className="font-heading font-black text-sm uppercase tracking-wider text-text-primary pb-3 border-b border-divider mb-4">
+              <div className="lg:col-span-4 bg-[#12141C] border border-white/10 rounded-2xl p-6 shadow-2xl sticky top-24">
+                <h3 className="font-heading font-black text-sm uppercase tracking-wider text-white pb-3 border-b border-white/10 mb-4">
                   Basket Summary
                 </h3>
 
                 <div className="flex flex-col gap-3 text-xs font-sans">
-                  <div className="flex items-center justify-between text-text-muted">
+                  <div className="flex items-center justify-between text-[#8A92A0]">
                     <span>Active Competitions</span>
-                    <span className="font-semibold text-text-primary">{itemCount}</span>
+                    <span className="font-semibold text-white">{itemCount}</span>
                   </div>
-                  <div className="flex items-center justify-between text-text-muted">
+                  <div className="flex items-center justify-between text-[#8A92A0]">
                     <span>Total Ticket Entries</span>
-                    <span className="font-semibold text-text-primary">{totalTickets}</span>
+                    <span className="font-semibold text-white">{totalTickets}</span>
                   </div>
-                  <div className="flex items-center justify-between text-text-muted">
-                    <span>Delivery & Shipping</span>
-                    <span className="font-bold text-[#15803d]">FREE TRACKED</span>
+                  <div className="flex items-center justify-between text-[#8A92A0]">
+                    <span>Delivery &amp; Shipping</span>
+                    <span className="font-bold text-emerald-400">FREE TRACKED</span>
                   </div>
-                  <div className="pt-3 border-t border-divider flex items-center justify-between">
-                    <span className="font-heading font-bold text-sm text-text-primary uppercase">
+                  <div className="pt-3 border-t border-white/10 flex items-center justify-between">
+                    <span className="font-heading font-bold text-sm text-white uppercase">
                       Total Payable
                     </span>
-                    <span className="font-heading font-black text-xl text-text-brand">
+                    <span className="font-heading font-black text-2xl text-[#FF1E27] drop-shadow-[0_0_12px_rgba(255,30,39,0.5)]">
                       £{totalPrice.toFixed(2)}
                     </span>
                   </div>
@@ -396,23 +400,23 @@ export default function BasketPage() {
 
                 <Link
                   href="/checkout"
-                  className="mt-6 w-full h-12 rounded-xl btn-glossy-red font-heading font-bold text-xs uppercase tracking-wider text-white shadow-md active:scale-98 flex items-center justify-center gap-2 transition-all cursor-pointer"
+                  className="mt-6 w-full h-12 rounded-xl btn-racing-red font-heading font-black text-xs uppercase tracking-wider text-white shadow-[0_0_20px_rgba(255,30,39,0.35)] active:scale-98 flex items-center justify-center gap-2 transition-all cursor-pointer"
                 >
                   <span>Proceed to Checkout</span>
                   <span>→</span>
                 </Link>
 
-                <div className="mt-4 pt-4 border-t border-divider flex flex-col gap-2 text-[10px] text-text-muted">
+                <div className="mt-4 pt-4 border-t border-white/10 flex flex-col gap-2 text-[10px] text-[#8A92A0]">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-[#15803d] font-bold">✓</span>
+                    <span className="text-emerald-400 font-bold">✓</span>
                     <span>100% fair and transparent certified draws</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-[#15803d] font-bold">✓</span>
+                    <span className="text-emerald-400 font-bold">✓</span>
                     <span>Automated ticket number assignment</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <span className="text-[#15803d] font-bold">✓</span>
+                    <span className="text-emerald-400 font-bold">✓</span>
                     <span>Instant win prize notifications</span>
                   </div>
                 </div>

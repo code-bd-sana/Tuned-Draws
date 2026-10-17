@@ -66,9 +66,9 @@ export const liveRafflesData: Draw[] = [
   },
   {
     id: "raffle-5",
-    title: "Galvin Green Waterproof GORE-TEX Golf Suit",
-    description: "Top-tier waterproof golf jacket and trouser bundle in Paclite GORE-TEX stretch fabric for complete weather protection on the course.",
-    image: "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=600&auto=format&fit=crop",
+    title: "Sparco Racing Suit & Motorsport Gloves Bundle",
+    description: "FIA-approved lightweight race suit and premium breathable motorsport gloves for track days and club racing.",
+    image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=600&auto=format&fit=crop",
     ticketPrice: 1.00,
     totalTickets: 200,
     soldTickets: 80,
@@ -76,7 +76,7 @@ export const liveRafflesData: Draw[] = [
     status: "live",
     category: "apparel",
     worthPrice: 450,
-    slug: "galvin-green-waterproof-golf-suit",
+    slug: "sparco-racing-suit-motorsport-bundle",
   },
   {
     id: "raffle-6",
@@ -167,8 +167,8 @@ export const liveRafflesData: Draw[] = [
   },
   {
     id: "raffle-12",
-    title: "£1,000 Golf Store Credit Cash Draw",
-    description: "Get £1,000 to spend on any golf equipment or accessories from major online retailers. Delivered as gift vouchers or cash transfer.",
+    title: "£1,000 Performance Tuning Store Credit or Cash",
+    description: "Get £1,000 to spend on any car modifications, performance parts, or remaps from major tuning suppliers. Delivered as cash or voucher.",
     image: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=600&auto=format&fit=crop",
     ticketPrice: 2.00,
     totalTickets: 800,
