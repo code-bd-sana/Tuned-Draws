@@ -66,12 +66,17 @@ export default function UserTicketsPage() {
         status = "instant-win";
       }
     }
+    const isManual =
+      t.transaction?.paymentGateway === 'ADMIN_MANUAL' ||
+      t.paymentGateway === 'ADMIN_MANUAL';
+
     return {
       id: t.id,
       ticketId: `#TKT-${t.ticketNumber}`,
       competitionName: t.raffle.title,
       purchaseDate: format(new Date(t.createdAt), "dd MMM yyyy"),
-      pricePaid: "Paid",
+      pricePaid: isManual ? "Admin Assigned" : "Paid",
+      isManual,
       status,
       raw: t,
     };

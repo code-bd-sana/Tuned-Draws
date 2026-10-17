@@ -9,6 +9,7 @@ export interface Ticket {
   competitionName: string;
   purchaseDate: string;
   pricePaid: string;
+  isManual?: boolean;
   status: "live" | "drawn-won" | "drawn-lost" | "instant-win";
   raw?: any; // The raw backend ticket data for the modal
 }
@@ -104,11 +105,18 @@ export default function TicketsTable({ tickets }: TicketsTableProps) {
                       {ticket.purchaseDate}
                     </div>
 
-                    {/* Price Paid */}
+                    {/* Price Paid / Allocation Status */}
                     <div className="col-span-1">
-                      <span className="font-sans font-bold text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full inline-block">
-                        {ticket.pricePaid}
-                      </span>
+                      {ticket.isManual || ticket.pricePaid === "Admin Assigned" || ticket.raw?.transaction?.paymentGateway === "ADMIN_MANUAL" ? (
+                        <span className="font-sans font-bold text-[10px] text-purple-300 bg-purple-500/10 border border-purple-500/30 px-2 py-0.5 rounded-full inline-flex items-center gap-1 shadow-xs whitespace-nowrap">
+                          <span>🛡️</span>
+                          <span>Admin Assigned</span>
+                        </span>
+                      ) : (
+                        <span className="font-sans font-bold text-xs text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full inline-block">
+                          {ticket.pricePaid}
+                        </span>
+                      )}
                     </div>
 
                     {/* Status */}

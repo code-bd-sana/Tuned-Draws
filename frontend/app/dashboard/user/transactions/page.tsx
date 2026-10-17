@@ -173,8 +173,15 @@ export default function UserTransactionsPage() {
                   </div>
 
                   {/* Payment Method */}
-                  <div className="col-span-2 text-center font-sans font-semibold text-xs text-[#8A92A0] uppercase">
-                    {transaction.paymentMethod}
+                  <div className="col-span-2 text-center font-sans font-semibold text-xs text-[#8A92A0] uppercase flex justify-center items-center">
+                    {transaction.paymentMethod === "ADMIN_MANUAL" ? (
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 font-bold text-[11px] shadow-[0_0_10px_rgba(168,85,247,0.15)]">
+                        <span>🛡️</span>
+                        <span>Admin Assigned</span>
+                      </span>
+                    ) : (
+                      <span>{transaction.paymentMethod}</span>
+                    )}
                   </div>
 
                   {/* Status */}

@@ -87,6 +87,11 @@ const Icons = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499c.195-.39.771-.39.966 0l2.484 4.969 5.433.791c.42.061.587.576.283.876l-3.93 3.83 1.026 5.405c.08.423-.365.747-.738.547L12 18.254l-4.864 2.563c-.372.2-.818-.124-.738-.547l1.026-5.405-3.93-3.83c-.304-.3-.138-.815.283-.876l5.433-.791 2.484-4.969Z" />
     </svg>
   ),
+  Ticket: (props: any) => (
+    <svg fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
+    </svg>
+  ),
 };
 
 export const dashboardNavigation: DashboardNavItem[] = [
@@ -182,6 +187,12 @@ export const dashboardNavigation: DashboardNavItem[] = [
     label: "Ticket / Order Overview",
     href: "/dashboard/admin/orders",
     icon: Icons.Sales,
+    roles: ["admin"],
+  },
+  {
+    label: "Manual Ticket Assignment",
+    href: "/dashboard/admin/ticket-assignment",
+    icon: Icons.Ticket,
     roles: ["admin"],
   },
   {
