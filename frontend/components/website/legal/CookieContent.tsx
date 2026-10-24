@@ -250,7 +250,7 @@ export default function CookieContent() {
               </div>
 
               <p className="text-xs text-[#8A92A0] pt-3">
-                For further information on managing your data, please contact our privacy team at <a href="mailto:privacy@tuneddraws.com" className="text-[#FF1E27] underline">privacy@tuneddraws.com</a>.
+                For further information on managing your data, please contact our team at <a href="mailto:info@tuneddraws.com" className="text-[#FF1E27] underline">info@tuneddraws.com</a>.
               </p>
             </section>
 

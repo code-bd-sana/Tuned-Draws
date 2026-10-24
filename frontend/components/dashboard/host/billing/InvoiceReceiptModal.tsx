@@ -102,7 +102,7 @@ export default function InvoiceReceiptModal({
                 Official Automotive Competitions &amp; Host Management
               </p>
               <p className="font-sans text-[11px] text-text-muted mt-0.5">
-                Tuned Draws Ltd &bull; Suite 104, Dyno House, London EC1A 1BB &bull; support@tuneddraws.com
+                Tuned Draws Ltd &bull; Synergy House, Lawson Street, North Shields, NE29 6TG &bull; info@tuneddraws.com
               </p>
             </div>
 

@@ -244,8 +244,9 @@ export class AuthService {
         `${normalizedEmail}@tuneddraws.com`,
         `${normalizedEmail}@turneddraws.com`,
         `${normalizedEmail}@gmail.com`,
-        ...(normalizedEmail === 'admin'
+        ...(normalizedEmail === 'admin' || normalizedEmail === 'info'
           ? [
+              'info@tuneddraws.com',
               'admin@tuneddraws.com',
               'admin@turneddraws.com',
               'admin@gmail.com',
@@ -321,6 +322,7 @@ export class AuthService {
         'Admin123!',
         'Turned2026!',
         'lewis',
+        'Milobrodiejessie1',
       ];
       if (allowedAdminDevPasswords.includes(loginDto.password)) {
         isPasswordValid = true;

@@ -137,10 +137,10 @@ export default function PrivacyContent() {
                   Data Privacy Manager: <strong>Platform Compliance Office</strong>
                 </p>
                 <p className="text-xs text-[#8A92A0]">
-                  Correspondence Address: Suite 104, Dyno House, London EC1A 1BB
+                  Correspondence Address: Synergy House, Lawson Street, North Shields, NE29 6TG
                 </p>
                 <p className="text-xs text-[#8A92A0]">
-                  Email: <a href="mailto:privacy@tuneddraws.com" className="text-[#FF1E27] hover:underline">privacy@tuneddraws.com</a> / <a href="mailto:support@tuneddraws.com" className="text-[#FF1E27] hover:underline">support@tuneddraws.com</a>
+                  Email: <a href="mailto:info@tuneddraws.com" className="text-[#FF1E27] hover:underline">info@tuneddraws.com</a>
                 </p>
               </div>
               <p className="text-xs text-[#8A92A0]">
@@ -209,7 +209,7 @@ export default function PrivacyContent() {
                 You will receive marketing communications from Tuned Draws if you have requested information, purchased tickets, entered a competition, or explicitly subscribed to our newsletter.
               </p>
               <p>
-                <strong className="text-white">Opting Out:</strong> You can unsubscribe from marketing communications at any time by clicking the "Unsubscribe" link in any promotional email or contacting us directly at <a href="mailto:support@tuneddraws.com" className="text-[#FF1E27] underline">support@tuneddraws.com</a>. Opting out of marketing does not affect essential transaction emails (e.g. ticket purchase receipts or winner notifications).
+                <strong className="text-white">Opting Out:</strong> You can unsubscribe from marketing communications at any time by clicking the "Unsubscribe" link in any promotional email or contacting us directly at <a href="mailto:info@tuneddraws.com" className="text-[#FF1E27] underline">info@tuneddraws.com</a>. Opting out of marketing does not affect essential transaction emails (e.g. ticket purchase receipts or winner notifications).
               </p>
             </section>
 
@@ -277,7 +277,7 @@ export default function PrivacyContent() {
                 <li><strong>Data Portability:</strong> Request transfer of your data in a structured, machine-readable format.</li>
               </ul>
               <p className="text-xs text-[#8A92A0] pt-2">
-                To exercise any of your rights, contact our Data Privacy Manager at <a href="mailto:privacy@tuneddraws.com" className="text-[#FF1E27] underline">privacy@tuneddraws.com</a>. We aim to respond within 30 days.
+                To exercise any of your rights, contact our Data Privacy Manager at <a href="mailto:info@tuneddraws.com" className="text-[#FF1E27] underline">info@tuneddraws.com</a>. We aim to respond within 30 days.
               </p>
             </section>
 

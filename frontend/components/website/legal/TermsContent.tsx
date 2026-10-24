@@ -124,18 +124,18 @@ export default function TermsContent() {
                 1. The Promoter
               </h2>
               <p>
-                1.1. The Promoter is: <strong className="text-white">Tuned Draws Ltd — Company No. 17396815</strong> ("Tuned Draws") whose registered office is at Suite 104, Dyno House, London EC1A 1BB.
+                1.1. The Promoter is: <strong className="text-white">Tuned Draws Ltd — Company No. 17506322</strong> (&quot;Tuned Draws&quot;), part of House A Draw Group, whose registered office is at Synergy House, Lawson Street, North Shields, NE29 6TG.
               </p>
               <p>
-                1.2. Our correspondence address is: <span className="text-white font-medium">Suite 104, Dyno House, London EC1A 1BB</span>.
+                1.2. Our correspondence address is: <span className="text-white font-medium">Synergy House, Lawson Street, North Shields, NE29 6TG</span>.
               </p>
               <p>
                 1.3. If you wish to contact us for any reason, please email us at{" "}
                 <a
-                  href="mailto:support@tuneddraws.com"
+                  href="mailto:info@tuneddraws.com"
                   className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  support@tuneddraws.com
+                  info@tuneddraws.com
                 </a>.
               </p>
             </section>
@@ -198,7 +198,7 @@ export default function TermsContent() {
                   You may enter any competition for free by post by complying with the following conditions:
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 text-xs text-[#D1D5DB] pl-2">
-                  <li>Send your entry on an unenclosed postcard by 1st or 2nd class post to: <strong className="text-white">Tuned Draws Ltd, Suite 104, Dyno House, London EC1A 1BB</strong>.</li>
+                  <li>Send your entry on an unenclosed postcard by 1st or 2nd class post to: <strong className="text-white">Tuned Draws Ltd, Synergy House, Lawson Street, North Shields, NE29 6TG</strong>.</li>
                   <li>Include your full name, postal address, contact phone number, email address, and the exact Competition Name.</li>
                   <li><strong className="text-white">Mandatory Requirement:</strong> You MUST have created a free registered account on the Website for the free entry to be processed. Details on the postcard MUST correspond exactly to your registered account.</li>
                   <li>Each free entry must be posted separately on an individual postcard. Bulk entries in an envelope will count as only one single entry.</li>
@@ -218,10 +218,10 @@ export default function TermsContent() {
               <p>
                 4.2. All Entrants will have their names and entry numbers included in an entry spreadsheet published on the Website during the live draw. If you wish to censor your name on the live spreadsheet, notify us at{" "}
                 <a
-                  href="mailto:support@tuneddraws.com"
+                  href="mailto:info@tuneddraws.com"
                   className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  support@tuneddraws.com
+                  info@tuneddraws.com
                 </a>{" "}
                 at least 48 hours prior to the draw.
               </p>

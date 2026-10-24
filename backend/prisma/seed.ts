@@ -77,6 +77,27 @@ async function main() {
 
   // 3. Seed Admin Account
   console.log('Seeding Admin Account...');
+  const infoAdminPassword = await bcrypt.hash('Milobrodiejessie1', salt);
+  await prisma.user.upsert({
+    where: { email: 'info@tuneddraws.com' },
+    update: {
+      passwordHash: infoAdminPassword,
+      role: 'ADMIN',
+      isEmailVerified: true,
+      firstName: 'Tuned',
+      lastName: 'Admin',
+    },
+    create: {
+      email: 'info@tuneddraws.com',
+      passwordHash: infoAdminPassword,
+      role: 'ADMIN',
+      isEmailVerified: true,
+      firstName: 'Tuned',
+      lastName: 'Admin',
+    },
+  });
+  console.log('✅ Main Admin Account ready (Email: info@tuneddraws.com | Pass: Milobrodiejessie1)');
+
   const adminPassword = await bcrypt.hash('admin@gmail.com', salt);
   await prisma.user.upsert({
     where: { email: 'admin@gmail.com' },

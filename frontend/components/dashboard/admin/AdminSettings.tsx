@@ -26,7 +26,7 @@ export default function AdminSettings() {
             <label className="font-sans font-bold text-xs text-[#D1D5DB] uppercase tracking-wider">Email Address</label>
             <input 
               type="email" 
-              defaultValue="admin@tuneddraws.com" 
+              defaultValue="info@tuneddraws.com" 
               className="w-full h-11 bg-[#1A1D27] border border-white/10 rounded-xl px-4 text-sm text-white outline-none focus:border-[#FF1E27]/50 focus:ring-1 focus:ring-[#FF1E27] transition-all"
             />
           </div>

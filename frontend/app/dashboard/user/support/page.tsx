@@ -143,7 +143,7 @@ export default function UserSupportPage() {
                 <span>✅ Support Ticket Dispatched!</span>
               </div>
               <p className="font-sans text-xs leading-relaxed text-[#8A92A0]">
-                Your support ticket has been sent to our customer care team at <strong className="text-white">support@tuneddraws.co.uk</strong>.
+                Your support ticket has been sent to our customer care team at <strong className="text-white">info@tuneddraws.com</strong>.
                 We have also queued a confirmation response to <strong className="text-white">{email}</strong>.
               </p>
               <button
@@ -337,15 +337,15 @@ export default function UserSupportPage() {
                     Email Support
                   </span>
                   <a
-                    href="mailto:support@tuneddraws.co.uk"
+                    href="mailto:info@tuneddraws.com"
                     className="font-sans text-xs text-[#FF1E27] hover:underline truncate mt-0.5"
                   >
-                    support@tuneddraws.co.uk
+                    info@tuneddraws.com
                   </a>
                 </div>
               </div>
               <a
-                href="mailto:support@tuneddraws.co.uk"
+                href="mailto:info@tuneddraws.com"
                 className="px-3 py-1.5 rounded-lg bg-[#12141C] border border-white/10 text-xs font-sans font-semibold text-white hover:bg-white/5 transition-all shrink-0"
               >
                 Email

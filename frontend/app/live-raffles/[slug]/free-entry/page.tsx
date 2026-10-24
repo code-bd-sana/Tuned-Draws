@@ -52,10 +52,10 @@ export default async function FreeEntryPage({ params }: PageProps) {
                   Send your entry to:
                 </h3>
                 <p className="text-[#D1D5DB] font-mono text-xs leading-relaxed">
-                  Tuned Draws Competitions Ltd<br />
-                  Suite 104, Dyno House<br />
-                  London<br />
-                  EC1A 1BB
+                  Tuned Draws Ltd<br />
+                  Synergy House, Lawson Street<br />
+                  North Shields<br />
+                  NE29 6TG
                 </p>
               </div>
               
