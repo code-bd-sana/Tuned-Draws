@@ -1,90 +1,90 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowRight, Heart, MapPin, Sparkles } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
-import { raffleService, RecentWinner } from '@/services/raffle.service';
+import { raffleService, type RecentWinner } from '@/services/raffle.service';
 
-/**
- * Recent Winners section — dark automotive carbon cards.
- */
+function WinnerAvatar({ winner }: { winner: RecentWinner }) {
+  const [imageFailed, setImageFailed] = useState(false);
+  return (
+    <div className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border border-[#e5d3b9] bg-[#f4eadc] font-serif text-lg text-[#9a713e]">
+      {winner.avatarUrl && !imageFailed ? (
+        <Image src={winner.avatarUrl} alt="" fill unoptimized sizes="56px" className="object-cover" onError={() => setImageFailed(true)} />
+      ) : (winner.initials || winner.name?.charAt(0) || '✦')}
+    </div>
+  );
+}
+
 export default function WinnersSection() {
   const [winners, setWinners] = useState<RecentWinner[]>([]);
   const [loading, setLoading] = useState(true);
+  const [failed, setFailed] = useState(false);
 
   useEffect(() => {
     raffleService.getRecentWinners()
-      .then(data => setWinners(data))
-      .catch(() => {})
+      .then(setWinners)
+      .catch(() => setFailed(true))
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading || winners.length === 0) return null;
-
   return (
-    <section id="recent-winners" className="py-20 bg-[#0B0C0E] border-t border-white/10 relative">
-      <div className="container-custom">
-
-        {/* Header */}
-        <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#12141C] border border-[#FF1E27]/30 text-[10px] font-heading font-black uppercase tracking-widest text-[#FF1E27] mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27] animate-pulse" />
-            COMMUNITY WINS
+    <section id="recent-winners" className="wedding-light winners-section relative overflow-hidden py-20 sm:py-24">
+      <div className="container-custom relative z-10">
+        <div className="mb-10 flex flex-col gap-6 sm:mb-12 sm:flex-row sm:items-end sm:justify-between">
+          <div className="max-w-xl">
+            <p className="wedding-eyebrow mb-3 flex items-center gap-3"><span className="h-px w-9 bg-[#c8a36f]" /> Real people, special moments</p>
+            <h2 className="text-4xl leading-tight sm:text-5xl">A Little Love, <span className="italic text-[#ad824a]">A Little Luck.</span></h2>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-[#766c60]">Every prize has a story. Meet the people behind some of our recent wins.</p>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl font-black text-white uppercase tracking-tight">
-            Recent Winners
-          </h2>
-          <p className="font-sans text-sm text-[#8A92A0] mt-3 max-w-md mx-auto leading-relaxed">
-            Real enthusiasts, real car mods. See our most recent lucky winners and their verified parts &amp; service prizes.
-          </p>
+          <Link href="/winners" className="group inline-flex w-fit shrink-0 items-center gap-3 rounded-full border border-[#bd9a6b] px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#76542c] transition hover:bg-[#eadcc9]">View all winners <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" /></Link>
         </div>
 
-        {/* Winners Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {winners.map((winner) => (
-            <div
-              key={winner.id}
-              className="group bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col justify-between hover:border-[#FF1E27]/40 hover:shadow-[0_0_25px_rgba(255,30,39,0.2)] transition-all duration-300"
-            >
-              {/* Avatar + Status */}
-              <div className="flex items-center justify-between mb-5">
-                {winner.avatarUrl ? (
-                  <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-white/15 shadow-sm">
-                    <Image src={winner.avatarUrl} alt={winner.name} fill unoptimized sizes="48px" className="object-cover" />
-                  </div>
-                ) : (
-                  <div className="w-12 h-12 rounded-xl bg-[#1A1D27] border border-white/10 flex items-center justify-center font-heading font-black text-white text-sm shadow-sm">
-                    {winner.initials}
-                  </div>
-                )}
-
-                <span className="inline-flex items-center gap-1.5 bg-emerald-950/60 border border-emerald-700/50 px-2.5 py-1 rounded-full text-[9px] font-black text-emerald-400 tracking-wide uppercase">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  {winner.statusText}
-                </span>
-              </div>
-
-              {/* Name + Location */}
-              <h3 className="font-heading font-black text-base text-white mb-0.5 group-hover:text-[#FF1E27] transition-colors">{winner.name}</h3>
-              <p className="font-sans text-[11px] text-[#8A92A0] mb-4">{winner.location}</p>
-
-              {/* Divider */}
-              <div className="h-px bg-white/10 my-3" />
-
-              {/* Prize */}
-              <div className="mb-4">
-                <span className="text-[9px] text-[#8A92A0] uppercase tracking-wider font-bold block mb-1">Prize Won</span>
-                <span className="font-heading font-black text-sm text-[#FF1E27] line-clamp-2">{winner.prizeWon}</span>
-              </div>
-
-              {/* Timestamp */}
-              <p className="font-sans text-[10px] text-[#8A92A0] italic mt-auto">
-                {formatDistanceToNow(new Date(winner.whenWon), { addSuffix: true })}
-              </p>
+        <div className="grid gap-5 lg:grid-cols-[0.85fr_1.6fr]">
+          <div className="relative flex min-h-[290px] overflow-hidden rounded-sm bg-[#4a3829] sm:min-h-[340px] lg:min-h-[400px]">
+            <Image src="/images/wedding-flowers.png" alt="" fill sizes="(max-width: 1024px) 100vw, 40vw" className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+            <div className="winner-feature-copy relative mt-auto p-7 text-white sm:p-9">
+              <Heart className="mb-4 h-7 w-7 text-[#eed2a4]" strokeWidth={1.2} />
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#efd2a2]">Moments worth celebrating</p>
+              <p className="mt-3 max-w-xs font-serif text-3xl leading-tight sm:text-4xl" style={{ color: '#fffaf2', textShadow: '0 2px 12px rgba(0,0,0,0.65)' }}>Here&apos;s to happy beginnings.</p>
             </div>
-          ))}
-        </div>
+          </div>
 
+          {winners.length > 0 ? (
+            <div className={`grid content-center gap-4 ${winners.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+              {winners.slice(0, 4).map((winner) => {
+                const wonDate = new Date(winner.whenWon);
+                const dateLabel = Number.isNaN(wonDate.getTime()) ? null : formatDistanceToNow(wonDate, { addSuffix: true });
+                return (
+                  <article key={winner.id} className="flex flex-col rounded-sm border border-[#e9ddce] bg-[#fffdf9] p-6 shadow-[0_10px_32px_rgba(82,59,31,0.05)] sm:p-8">
+                    <div className="flex items-start gap-4">
+                      <WinnerAvatar winner={winner} />
+                      <div className="min-w-0 pt-1">
+                        <h3 className="truncate font-serif text-xl font-normal text-[#29221b]">{winner.name}</h3>
+                        {winner.location && <p className="mt-1 flex items-center gap-1 text-xs text-[#887d70]"><MapPin className="h-3 w-3 text-[#b69262]" />{winner.location}</p>}
+                      </div>
+                    </div>
+                    <div className="mt-5 border-t border-[#eee5d9] pt-4">
+                      <p className="wedding-eyebrow mb-1.5">Prize won</p>
+                      <p className="line-clamp-2 font-serif text-lg leading-snug text-[#3b3024]">{winner.prizeWon}</p>
+                      {dateLabel && <p className="mt-2 text-xs text-[#938575]">{dateLabel}</p>}
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="flex min-h-[290px] flex-col items-center justify-center rounded-sm border border-[#e9ddce] bg-[#fffdf9] px-8 py-12 text-center sm:min-h-[340px] lg:min-h-[400px]">
+              <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#dfc9a8] bg-[#faf4eb] text-[#ad824a]"><Sparkles className="h-7 w-7" strokeWidth={1.2} /></div>
+              <h3 className="font-serif text-2xl font-normal text-[#342b22]">{loading ? 'Gathering the latest stories' : failed ? 'Stories are taking a moment' : 'Your story could be next'}</h3>
+              <p className="mt-3 max-w-xs text-sm leading-relaxed text-[#817668]">{loading ? 'Please wait while we load our recent winners.' : failed ? 'We couldn’t load recent winners just now. Please try again later.' : 'Our latest winner stories will be shared here as they become available.'}</p>
+              {!loading && <Link href="/live-raffles" className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-[#946a35] hover:text-[#68491f]">Explore competitions <ArrowRight className="h-4 w-4" /></Link>}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

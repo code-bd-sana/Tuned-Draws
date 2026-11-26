@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Tuned Draws | Performance Car Parts, Tuning & Modification Competitions',
+  title: 'Wedding Draws | Wedding Competitions and Prizes',
   description:
-    'Win performance car parts, tuning packages, custom wrapping, detailing, and track days for less. Transparent, fair, and certified UK automotive competitions.',
+    'Discover wedding competitions, special prizes and memorable experiences from wedding suppliers.',
 };
 
 export default function RootLayout({

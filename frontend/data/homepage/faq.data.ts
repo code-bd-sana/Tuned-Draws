@@ -19,7 +19,7 @@ export const faqData: FaqItem[] = [
     id: "faq-3",
     question: "How do I receive my prize?",
     answer:
-      "Once confirmed as a winner, the competition host will arrange courier delivery of your performance parts or coordinate your workshop service booking (such as car wrapping, detailing, dyno runs, or track days)."
+      "Once confirmed as a winner, the competition host will arrange delivery or provide details for claiming your prize."
   },
 
   {
@@ -38,9 +38,9 @@ export const faqData: FaqItem[] = [
 
   {
     id: "faq-6",
-    question: "Do I need special motorsport licenses to enter?",
+    question: "Who can enter competitions?",
     answer:
-      "No. You do not need any racing licenses or club memberships to enter Tuned Draws competitions. Any automotive enthusiast aged 18+ can enter eligible competitions."
+      "Eligible entrants aged 18 or over can enter, subject to the terms of each competition."
   },
 
   {

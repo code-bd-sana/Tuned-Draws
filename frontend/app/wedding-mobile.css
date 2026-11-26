@@ -1,0 +1,100 @@
+.wedding-mobile-image { display: none; }
+
+.romantic-steps {
+  background: #faf5ef;
+  border-top: 1px solid #eadfd2;
+}
+.romantic-steps-floral {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(250,245,239,.84), #faf5ef 38%, #faf5ef 62%, rgba(250,245,239,.84)), url('/images/wedding-flowers.png') center / cover;
+  opacity: .48;
+}
+.romantic-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #a97b42;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.romantic-eyebrow span { width: 30px; height: 1px; background: #d4b58a; }
+.romantic-step-card { transition: transform .25s ease, box-shadow .25s ease; }
+.romantic-faq { background: #f8f2ea; border-top: 1px solid #eadfd2; }
+.romantic-faq-glow { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 0% 15%, rgba(221,190,153,.2), transparent 45%), radial-gradient(ellipse at 100% 85%, rgba(220,187,151,.15), transparent 40%); }
+.faq-eyebrow { display: flex; align-items: center; gap: 12px; color: #a97b42; font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.faq-eyebrow span { width: 30px; height: 1px; background: #d4b58a; }
+.romantic-faq-item summary::-webkit-details-marker { display: none; }
+.romantic-faq-item summary:focus-visible { outline: 2px solid #ac8049; outline-offset: 3px; border-radius: 4px; }
+.romantic-faq-item[open] { border-color: #d3b58e; }
+.romantic-faq-toggle { transition: transform .2s ease, background-color .2s ease; }
+.romantic-faq-item[open] .romantic-faq-toggle { transform: rotate(45deg); background: #f8efe4; }
+@media (hover: hover) {
+  .romantic-step-card:hover { transform: translateY(-4px); box-shadow: 0 18px 42px rgba(89,59,30,.1); }
+}
+
+@media (max-width: 767px) {
+  .wedding-nav.wedding-home-nav {
+    background: rgba(18, 15, 13, .97);
+    border-color: rgba(212, 168, 99, .2);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .25);
+  }
+  .wedding-home-nav a[aria-label^="Shopping Basket"],
+  .wedding-home-nav button[aria-label="Toggle Navigation Menu"] {
+    border-color: rgba(212, 168, 99, .35);
+    color: #e4c28c;
+  }
+  .home-wedding .wedding-hero {
+    display: block;
+    min-height: 0;
+    padding: 66px 0 32px;
+    overflow: hidden;
+    background: #17130f;
+  }
+  .home-wedding .wedding-hero-image {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: clamp(260px, 44svh, 390px);
+    aspect-ratio: auto;
+  }
+  .home-wedding .wedding-hero-image .wedding-desktop-image { display: none; }
+  .home-wedding .wedding-hero-image .wedding-mobile-image { display: block; object-fit: cover; object-position: center 32%; }
+  .home-wedding .wedding-hero-overlay { display: none; }
+  .home-wedding .wedding-hero-content {
+    display: block;
+    min-height: 0;
+    width: calc(100% - 32px);
+    margin: -40px auto 0;
+    padding: 24px 18px 26px;
+    border: 1px solid rgba(212, 168, 99, .3);
+    border-radius: 12px;
+    background: #211b16;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, .3);
+  }
+  .home-wedding .wedding-hero-content > div { margin-inline: auto; }
+  .home-wedding .wedding-hero-badge {
+    margin-bottom: 14px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: #dfbd83;
+    font-size: 9px;
+    letter-spacing: .13em;
+  }
+  .home-wedding .wedding-hero-content h1 { color: #fffaf1; font-size: clamp(2.3rem, 9vw, 3.5rem); line-height: 1.04; }
+  .home-wedding .wedding-hero-content h1 span { color: #e6bd7c; white-space: nowrap; }
+  .home-wedding .wedding-hero-description { margin-top: 12px; color: #d2c7b8; font-size: .8125rem; line-height: 1.6; }
+  .home-wedding .wedding-hero-actions { margin-top: 18px; gap: 10px; }
+  .home-wedding .wedding-hero-actions a { min-height: 44px; padding: 12px 18px; font-size: 10px; }
+  .home-wedding .wedding-hero-actions a:not(.btn-racing-red) { border-color: rgba(212, 173, 111, .65); background: transparent; color: #fffaf1; }
+  .wedding-home-dock { background: rgba(18, 15, 13, .97); border-color: rgba(212, 168, 99, .2); box-shadow: 0 -5px 20px rgba(0, 0, 0, .3); }
+  .wedding-home-dock a { color: #b5a99a; }
+  .wedding-home-dock a[href="/"] { color: #e6bd7c; }
+  .wedding-home-dock a > span { color: inherit; }
+  .wedding-home-dock a .btn-racing-red { background: linear-gradient(180deg, #e4bf88, #c69557); border-color: #e2c396; color: #241a0f; box-shadow: 0 5px 16px rgba(164, 115, 54, .25); }
+}

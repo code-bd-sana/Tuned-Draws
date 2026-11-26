@@ -40,9 +40,9 @@ export default function WebsiteFooter() {
   };
 
   return (
-    <footer className="bg-[#0B0C0E] border-t border-white/10 pt-16 pb-12 mt-auto relative overflow-hidden">
+    <footer className="wedding-footer bg-[#0B0C0E] border-t border-white/10 pt-16 pb-12 mt-auto relative overflow-hidden">
       {/* Ambient background glow */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FF1E27]/5 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4A863]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-14">
@@ -51,7 +51,7 @@ export default function WebsiteFooter() {
             <TunedDrawsBrandLogo size="lg" />
 
             <p className="font-sans text-xs text-[#8A92A0] leading-relaxed max-w-sm">
-              The premier platform for car modification services &amp; performance parts competitions. Win tuning packages, performance upgrades, car wrapping, precision detailing &amp; track days.
+              Discover beautiful prizes and memorable experiences for your special day, from wedding suppliers and hosts.
             </p>
 
             {/* Trust badge */}
@@ -62,7 +62,7 @@ export default function WebsiteFooter() {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="w-4 h-4 text-[#FF1E27]"
+                className="w-4 h-4 text-[#D4A863]"
               >
                 <path
                   strokeLinecap="round"
@@ -81,7 +81,7 @@ export default function WebsiteFooter() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-[#FF1E27] hover:border-[#FF1E27]/40 hover:shadow-[0_0_12px_rgba(255,30,39,0.3)] transition-all duration-200"
+                  className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-[#D4A863] hover:border-[#D4A863]/40 hover:shadow-[0_0_12px_rgba(212,168,99,0.3)] transition-all duration-200"
                   aria-label={`${link.platform} Profile`}
                 >
                   {renderSocialIcon(link.platform)}
@@ -94,7 +94,7 @@ export default function WebsiteFooter() {
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title} className="flex flex-col gap-4">
               <h4 className="font-heading font-black text-xs text-[#D1D5DB] uppercase tracking-wider flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#D4A863]" />
                 {section.title}
               </h4>
               <ul className="flex flex-col gap-3">

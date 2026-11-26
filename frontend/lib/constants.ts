@@ -1,6 +1,6 @@
 import { NavLink, SocialLink } from "../types/common.types";
 
-export const BRAND_NAME = "Tuned Draws";
+export const BRAND_NAME = "Wedding Draws";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
@@ -22,10 +22,6 @@ export const FOOTER_SECTIONS = [
     title: "Competitions",
     links: [
       { label: "All Live Draws", href: "/live-raffles" },
-      { label: "Performance Parts & Turbos", href: "/live-raffles?category=parts" },
-      { label: "Remaps, Tuning & Dyno Runs", href: "/live-raffles?category=tuning" },
-      { label: "Car Wrapping & Detailing", href: "/live-raffles?category=services" },
-      { label: "Track Days & Driving Experiences", href: "/live-raffles?category=experiences" },
     ],
   },
   {

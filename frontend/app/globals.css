@@ -1,5 +1,117 @@
 @import "tailwindcss";
 
+/* A subtle champagne accent for the wedding-inspired homepage. */
+.home-wedding .btn-racing-red,
+.wedding-nav .btn-racing-red {
+  background: linear-gradient(180deg, #e4bf88 0%, #c69557 100%);
+  color: #17120d;
+  border-color: #d4a863;
+  box-shadow: 0 8px 24px rgba(164, 115, 54, 0.2);
+}
+
+.home-wedding .btn-racing-red:hover,
+.wedding-nav .btn-racing-red:hover {
+  background: linear-gradient(180deg, #efd2a7 0%, #d4a863 100%);
+  box-shadow: 0 10px 26px rgba(164, 115, 54, 0.3);
+}
+
+.wedding-title,
+.wedding-light h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: -0.025em;
+}
+
+.wedding-hero-overlay {
+  background: linear-gradient(90deg, rgba(23, 19, 14, .94) 0%, rgba(23, 19, 14, .78) 30%, rgba(23, 19, 14, .2) 72%), linear-gradient(0deg, rgba(15, 13, 11, .55), transparent 35%);
+}
+
+.wedding-supplier {
+  background-image: linear-gradient(90deg, rgba(11, 10, 8, .98) 0%, rgba(11, 10, 8, .88) 42%, rgba(11, 10, 8, .15) 100%), url('/images/wedding-reception.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.wedding-eyebrow {
+  color: #a57738;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+}
+
+.wedding-steps {
+  background-image: radial-gradient(ellipse at 0% 50%, rgba(212, 168, 99, .13), transparent 30%), radial-gradient(ellipse at 100% 50%, rgba(212, 168, 99, .13), transparent 30%);
+}
+
+.wedding-faq summary::-webkit-details-marker { display: none; }
+.wedding-faq[open] .wedding-faq-toggle { transform: rotate(45deg); }
+.wedding-faq-toggle { transition: transform .2s ease; }
+
+.wedding-closing {
+  background: linear-gradient(90deg, rgba(16, 13, 11, .95), rgba(16, 13, 11, .8)), url('/images/wedding-flowers.png') center 52% / cover;
+}
+.wedding-closing .wedding-eyebrow { color: #e1bd83; }
+
+@media (max-width: 767px) {
+  .wedding-nav {
+    background: #faf6ef;
+    border-color: #e8dece;
+    box-shadow: 0 2px 12px rgba(35, 25, 12, .08);
+  }
+  .wedding-nav a[aria-label^="Shopping Basket"],
+  .wedding-nav button[aria-label="Toggle Navigation Menu"] {
+    background: transparent;
+    border-color: #e1d1b9;
+    color: #8e652f;
+    box-shadow: none;
+  }
+  .wedding-supplier { background-position: 65% center; }
+}
+
+.home-wedding .wedding-light {
+  background: #faf6ef;
+  border-color: #e9ddca;
+  color: #211b16;
+}
+
+.wedding-light h2,
+.wedding-light h3,
+.wedding-light h4,
+.wedding-light [class*="text-white"]:not(.btn-racing-red) {
+  color: #211b16;
+}
+
+.wedding-light p,
+.wedding-light [class*="text-[#8A92A0]"] {
+  color: #655e55;
+}
+
+.wedding-light .wedding-eyebrow { color: #a57738; }
+.home-wedding .winners-section { background: #f7f1e8; }
+.home-wedding .winners-section .winner-feature-copy p { color: #fffaf2; }
+.home-wedding .winners-section .winner-feature-copy p:first-of-type { color: #efd2a2; }
+
+.wedding-footer { background: #12100e; border-color: rgba(212, 168, 99, .2); }
+.wedding-footer h4 { color: #e7d6bd; }
+.wedding-footer p, .wedding-footer li a { color: #b4aa9c; }
+.wedding-footer li a:hover { color: #e8c991; }
+
+.wedding-light [class*="bg-[#12141C]"],
+.wedding-light [class*="bg-[#1A1D27]"] {
+  background-color: #fffdf9;
+  border-color: #e4d8c6;
+}
+
+.wedding-light [class*="text-[#D4A863]"] {
+  color: #9a6929;
+}
+
+.wedding-light .btn-racing-red {
+  color: #17120d;
+}
+
 :root {
   /* Semantic Colors - Tuned Draws Automotive Theme */
   --color-bg: #0B0C0E;

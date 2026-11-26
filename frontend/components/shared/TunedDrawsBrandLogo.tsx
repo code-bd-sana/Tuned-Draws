@@ -2,7 +2,6 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { cn } from "../../lib/utils";
 
 interface TunedDrawsBrandLogoProps {
@@ -20,7 +19,6 @@ export default function TunedDrawsBrandLogo({
   subtitle,
   size = "md",
   href = "/",
-  priority = false,
 }: TunedDrawsBrandLogoProps) {
   // Height configurations optimized for responsive display and aspect ratio 2.28:1
   const sizeClasses = {
@@ -37,19 +35,9 @@ export default function TunedDrawsBrandLogo({
 
   const content = (
     <div className={cn("inline-flex flex-col items-start select-none group", className)}>
-      <div className="relative transition-transform duration-300 group-hover:scale-[1.02] flex items-center">
-        <Image
-          src="/logo_transparent.png"
-          alt="Tuned Draws - Your Mods Our Platform"
-          width={940}
-          height={412}
-          priority={priority || size === "md"}
-          className={cn(
-            "w-auto object-contain transition-all duration-300 drop-shadow-[0_0_12px_rgba(255,30,39,0.22)] group-hover:drop-shadow-[0_0_20px_rgba(255,30,39,0.5)]",
-            sizeClasses[size],
-            imageClassName
-          )}
-        />
+      <div className={cn("flex flex-col items-center justify-center text-[#d4ab72]", sizeClasses[size], imageClassName)}>
+        <span className="font-serif text-[28px] leading-none tracking-tight">Wedding</span>
+        <span className="mt-1 text-[8px] font-semibold uppercase tracking-[0.45em]">Draws</span>
       </div>
       {isCustomSubtitle && (
         <span className="font-heading text-[9px] md:text-[10px] uppercase font-bold tracking-[0.25em] text-[#FF1E27] mt-1 pl-1">
