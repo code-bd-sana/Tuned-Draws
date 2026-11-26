@@ -11,10 +11,10 @@ export const CONTACT_INFO_ITEMS: ContactInfoCardItem[] = [
   },
   {
     id: "whatsapp",
-    title: "Pit Crew Support",
-    description: "Chat directly with Tuned Draws Support on WhatsApp.",
+    title: "Wedding Support",
+    description: "Chat directly with Wedding Draws Support on WhatsApp.",
     value: "07466 347548",
-    href: "https://wa.me/447466347548?text=Hello%20Tuned%20Draws%20Customer%20Service%2C%20I%20have%20an%20inquiry",
+    href: "https://wa.me/447466347548?text=Hello%20Wedding%20Draws%20Customer%20Service%2C%20I%20have%20an%20inquiry",
     type: "whatsapp",
   },
   {

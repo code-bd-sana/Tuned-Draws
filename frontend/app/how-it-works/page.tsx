@@ -8,9 +8,9 @@ import HowItWorksVideoSection from '../../components/website/how-it-works/HowItW
 import HowItWorksFinalCta from '../../components/website/how-it-works/HowItWorksFinalCta';
 
 export const metadata: Metadata = {
-  title: 'How It Works | Tuned Draws',
+  title: 'How It Works | Wedding Draws',
   description:
-    'Learn how to enter premium car modification services and performance parts competitions or host your own verified draws.',
+    'Learn how to enter premium wedding services and bridal package competitions or host your own verified draws.',
 };
 
 /**

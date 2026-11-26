@@ -7,9 +7,9 @@ import ContactForm from "../../components/website/contact/ContactForm";
 import ContactInfoCards from "../../components/website/contact/ContactInfoCards";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Tuned Draws",
+  title: "Contact Us | Wedding Draws",
   description:
-    "Have questions about car modification competitions, performance host verification, or ticket allocation? Send us a message and our support crew will reach out within 24 hours.",
+    "Have questions about wedding competitions, supplier host verification, or ticket allocation? Send us a message and our support team will reach out within 24 hours.",
 };
 
 /**

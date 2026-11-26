@@ -288,7 +288,7 @@ export default function UserWinnersPage() {
                           Hosted By
                         </span>
                         <span className="font-sans text-xs font-semibold text-[#D4A863] truncate">
-                          {win.raffle.hostBusinessName || "Tuned Draws Official"}
+                          {win.raffle.hostBusinessName || "Wedding Draws Official"}
                         </span>
                       </div>
                       <div className="flex flex-col">

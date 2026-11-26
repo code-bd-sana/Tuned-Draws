@@ -4,8 +4,8 @@ import UserAuthLayout from "../../components/user-auth/UserAuthLayout";
 import UserRegistrationForm from "../../components/user-auth/UserRegistrationForm";
 
 export const metadata: Metadata = {
-  title: "Player Registration | Tuned Draws",
-  description: "Create an account to join the Tuned Draws community, purchase tickets, and win premium prizes.",
+  title: "Player Registration | Wedding Draws",
+  description: "Create an account to join the Wedding Draws community, purchase tickets, and win premium wedding prizes.",
 };
 
 export default function UserRegisterPage() {

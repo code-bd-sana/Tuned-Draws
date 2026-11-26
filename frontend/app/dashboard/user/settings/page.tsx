@@ -13,7 +13,7 @@ export default function UserSettingsPage() {
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-1">
               <span className="font-sans font-bold text-sm text-white">Show my name on public Winners page</span>
-              <span className="font-sans text-xs text-[#B6AA9C]">Your display name will be visible in the Tuned Draws Winners gallery</span>
+              <span className="font-sans text-xs text-[#B6AA9C]">Your display name will be visible in the Wedding Draws Winners gallery</span>
             </div>
             {/* Active Toggle */}
             <div className="w-11 h-6 bg-[#94632F] rounded-full relative cursor-pointer shrink-0 transition-colors shadow-[0_0_10px_rgba(212,168,99,0.4)]">
@@ -23,8 +23,8 @@ export default function UserSettingsPage() {
           
           <div className="flex items-center justify-between">
             <div className="flex flex-col gap-1">
-              <span className="font-sans font-bold text-sm text-white">Allow verified garage/host messages</span>
-              <span className="font-sans text-xs text-[#B6AA9C]">Verified performance garages can contact you about your draw entries</span>
+              <span className="font-sans font-bold text-sm text-white">Allow verified wedding supplier/host messages</span>
+              <span className="font-sans text-xs text-[#B6AA9C]">Verified wedding suppliers and hosts can contact you about your draw entries</span>
             </div>
             {/* Inactive Toggle */}
             <div className="w-11 h-6 bg-[#14110F] border border-white/20 rounded-full relative cursor-pointer shrink-0 transition-colors">

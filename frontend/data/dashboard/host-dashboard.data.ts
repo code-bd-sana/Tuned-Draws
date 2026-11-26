@@ -50,19 +50,19 @@ export const hostUpcomingDraws: HostUpcomingDraw[] = [
 ];
 
 export const hostRecentActivities: HostRecentActivity[] = [
-  { id: "ra-1", type: "purchase", title: "New ticket purchase", description: "Milltek Cat-Back Exhaust", timeAgo: "2 min ago" },
-  { id: "ra-2", type: "approved", title: "Raffle approved by admin", description: "BBS Alloy Wheels", timeAgo: "1h ago" },
+  { id: "ra-1", type: "purchase", title: "New ticket purchase", description: "Designer Bridal Gown Package", timeAgo: "2 min ago" },
+  { id: "ra-2", type: "approved", title: "Raffle approved by admin", description: "Diamond Wedding Rings Set", timeAgo: "1h ago" },
   { id: "ra-3", type: "payout", title: "Payout processed", description: "£840.00", timeAgo: "3h ago" },
-  { id: "ra-4", type: "joined", title: "New entrant joined", description: "Brembo Big Brake Kit", timeAgo: "5h ago" },
+  { id: "ra-4", type: "joined", title: "New entrant joined", description: "Historic Manor Venue Draw", timeAgo: "5h ago" },
   { id: "ra-5", type: "review", title: "Host review received", description: "5 stars", timeAgo: "1d ago" }
 ];
 
 export const hostRecentCompetitions: HostCompetitionSummary[] = [
   {
     id: "comp-1",
-    title: "Milltek Non-Resonated Cat-Back Exhaust",
+    title: "Designer Bridal Gown & Veil Package",
     status: "live",
-    image: "https://placehold.co/400x400/12141C/FF1E27?text=Exhaust",
+    image: "https://placehold.co/400x400/12141C/D4A863?text=Bridal+Gown",
     totalTickets: 500,
     soldTickets: 320,
     revenue: 1600,
@@ -71,9 +71,9 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-2",
-    title: "BBS Super RS 19\" Alloy Wheel Set",
+    title: "Diamond Wedding Rings & Bands Set",
     status: "live",
-    image: "https://placehold.co/400x400/12141C/FF1E27?text=Wheels",
+    image: "https://placehold.co/400x400/12141C/D4A863?text=Wedding+Rings",
     totalTickets: 300,
     soldTickets: 125,
     revenue: 625,
@@ -82,8 +82,8 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-3",
-    title: "Air Lift Performance 3P Suspension Kit",
-    image: "https://placehold.co/400x400/12141C/FF1E27?text=Suspension",
+    title: "Exclusive Manor House Wedding Venue Hire",
+    image: "https://placehold.co/400x400/12141C/D4A863?text=Wedding+Venue",
     status: "ending-soon",
     soldTickets: 450,
     totalTickets: 500,
@@ -92,8 +92,8 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-4",
-    title: "Brembo 6-Piston Big Brake Kit",
-    image: "https://placehold.co/400x400/12141C/FF1E27?text=Brakes",
+    title: "Full-Day Wedding Photography Package",
+    image: "https://placehold.co/400x400/12141C/D4A863?text=Photography",
     status: "live",
     soldTickets: 120,
     totalTickets: 300,
@@ -102,8 +102,8 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
   },
   {
     id: "comp-5",
-    title: "Eventuri Carbon Fiber Intake System",
-    image: "https://placehold.co/400x400/12141C/FF1E27?text=Intake",
+    title: "Luxury Chauffeur Wedding Car Package",
+    image: "https://placehold.co/400x400/12141C/D4A863?text=Wedding+Car",
     status: "live",
     soldTickets: 250,
     totalTickets: 1000,
@@ -115,7 +115,7 @@ export const hostRecentCompetitions: HostCompetitionSummary[] = [
 export const mockHostRafflesList: HostRaffleDetail[] = [
   {
     id: "r-1",
-    name: "Stage 3 Turbo Package Draw 2024",
+    name: "All-Inclusive Maldives Honeymoon Draw",
     ticketsSold: 342,
     totalTickets: 500,
     raised: 855.00,
@@ -160,7 +160,7 @@ export const mockHostRafflesList: HostRaffleDetail[] = [
   },
   {
     id: "r-4",
-    name: "Track Day Package",
+    name: "Luxury Wedding Venue Package",
     ticketsSold: 80,
     totalTickets: 300,
     raised: 200.00,

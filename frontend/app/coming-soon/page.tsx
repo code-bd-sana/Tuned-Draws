@@ -9,7 +9,7 @@ import {
   ShieldCheck, 
   Flame, 
   Sparkles, 
-  Car, 
+  Gift, 
   Lock 
 } from 'lucide-react';
 import TunedDrawsBrandLogo from '../../components/shared/TunedDrawsBrandLogo';
@@ -82,7 +82,7 @@ function ComingSoonContent() {
 
             {/* Description */}
             <p className="text-sm sm:text-base text-[#9CA3AF] max-w-xl mx-auto leading-relaxed mb-10 font-sans">
-              The <span className="text-white font-semibold">{formattedTarget}</span> portal is currently undergoing final dyno testing and certified competition compliance. Our high-octane automotive draws, live block allocations, and instant key releases will unlock shortly.
+              The <span className="text-white font-semibold">{formattedTarget}</span> portal is currently undergoing final verification and preparations before opening to our founding members. Our luxury wedding draws, live ticket allocations, and instant win releases will unlock shortly.
             </p>
 
             {/* Quick Action Navigation Buttons */}
@@ -117,11 +117,11 @@ function ComingSoonContent() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-6">
             <div className="rounded-xl bg-[#14110F]/70 border border-white/[0.06] p-4 flex items-center gap-3">
               <div className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#D4A863] shrink-0">
-                <Car className="w-4 h-4" />
+                <Gift className="w-4 h-4" />
               </div>
               <div>
-                <p className="text-xs font-heading font-bold uppercase text-white">Performance Parts</p>
-                <p className="text-[11px] text-[#B6AA9C]">Tuning & styling mods</p>
+                <p className="text-xs font-heading font-bold uppercase text-white">Wedding Prizes</p>
+                <p className="text-[11px] text-[#B6AA9C]">Bridal &amp; honeymoon packages</p>
               </div>
             </div>
 
@@ -152,7 +152,7 @@ function ComingSoonContent() {
       <footer className="relative z-10 border-t border-white/[0.06] py-5 bg-[#07080A]/90">
         <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p className="text-xs text-[#6B7280]">
-            © {new Date().getFullYear()} Tuned Draws. Certified Automotive Competitions Platform.
+            © {new Date().getFullYear()} Wedding Draws. Certified Wedding Competitions Platform.
           </p>
           <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-wider text-[#B6AA9C]">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -171,7 +171,7 @@ export default function ComingSoonPage() {
   return (
     <Suspense fallback={
       <div className="min-h-screen bg-[#07080A] flex items-center justify-center text-white font-mono text-sm">
-        Initializing Tuned Draws Arena...
+        Initializing Wedding Draws Arena...
       </div>
     }>
       <ComingSoonContent />

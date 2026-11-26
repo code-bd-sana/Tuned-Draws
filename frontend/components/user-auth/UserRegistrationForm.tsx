@@ -130,7 +130,7 @@ export default function UserRegistrationForm() {
     return (
       <AuthSuccessState
         title="Account Created!"
-        description="Your registration has been processed successfully. Please verify your email to begin entering live automotive competitions."
+        description="Your registration has been processed successfully. Please verify your email to begin entering live wedding competitions."
         buttonText="Return to Homepage"
         buttonHref="/"
       />
@@ -164,7 +164,7 @@ export default function UserRegistrationForm() {
             User Registration
           </h2>
           <p className="font-sans text-xs sm:text-sm text-[#9CA3AF]">
-            Create your player account to enter live competitions and win built performance cars.
+            Create your player account to enter live competitions and win dream weddings &amp; luxury prizes.
           </p>
         </div>
 

@@ -61,7 +61,7 @@ export default function VerifiedHostCard({ host }: VerifiedHostCardProps) {
               {host.name}
             </h3>
             <span className="line-clamp-2 font-sans text-xs sm:text-[13px] leading-relaxed text-[#B6AA9C]">
-              {host.description || "Verified Tuned Draws partner hosting auditable performance automotive competitions."}
+              {host.description || "Verified Wedding Draws partner hosting auditable wedding competitions."}
             </span>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function VerifiedHostCard({ host }: VerifiedHostCardProps) {
             )}
           </div>
           <span className="flex -translate-x-2 items-center gap-1 font-heading text-xs font-black uppercase text-[#D4A863] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
-            View Garage 
+            View Host 
             <svg className="w-3 h-3 translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>

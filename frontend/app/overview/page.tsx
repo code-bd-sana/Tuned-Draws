@@ -93,7 +93,7 @@ export default function OverviewPage() {
               Lifecycle &amp; System Flow
             </h1>
             <p className="text-sm md:text-base text-[#B6AA9C] max-w-2xl mx-auto leading-relaxed">
-              Interactive high-level overview of the Tuned Draws platform. Understand how Hosts, Admins, and Entrants interact securely from launch to prize delivery.
+              Interactive high-level overview of the Wedding Draws platform. Understand how Hosts, Admins, and Entrants interact securely from launch to prize delivery.
             </p>
           </div>
 
@@ -146,7 +146,7 @@ export default function OverviewPage() {
           {/* Bottom Callout */}
           <div className="mt-20 p-8 rounded-2xl bg-[#211C18] border border-white/10 text-center max-w-2xl mx-auto shadow-2xl">
             <h3 className="font-heading font-black text-2xl text-white uppercase tracking-tight mb-2">
-              Ready to Experience Tuned Draws?
+              Ready to Experience Wedding Draws?
             </h3>
             <p className="text-xs text-[#B6AA9C] mb-6">
               Browse live competitions or apply to become an authorized hosting merchant.

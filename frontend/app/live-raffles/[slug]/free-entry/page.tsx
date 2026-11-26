@@ -11,7 +11,7 @@ interface PageProps {
 }
 
 export const metadata: Metadata = {
-  title: "Free Postal Entry Information | Tuned Draws",
+  title: "Free Postal Entry Information | Wedding Draws",
 };
 
 export default async function FreeEntryPage({ params }: PageProps) {
@@ -40,7 +40,7 @@ export default async function FreeEntryPage({ params }: PageProps) {
               </p>
               
               <ul className="list-disc pl-5 space-y-2 text-[#D4A863]">
-                <li><span className="text-[#E5DCCD]">The title of the automotive competition you wish to enter.</span></li>
+                <li><span className="text-[#E5DCCD]">The title of the wedding competition you wish to enter.</span></li>
                 <li><span className="text-[#E5DCCD]">Your full legal name and residential address.</span></li>
                 <li><span className="text-[#E5DCCD]">Your date of birth (you must be 18 or older).</span></li>
                 <li><span className="text-[#E5DCCD]">Your contact telephone number and registered account email address.</span></li>
@@ -52,7 +52,7 @@ export default async function FreeEntryPage({ params }: PageProps) {
                   Send your entry to:
                 </h3>
                 <p className="text-[#E5DCCD] font-mono text-xs leading-relaxed">
-                  Tuned Draws Ltd<br />
+                  Wedding Draws Ltd<br />
                   Synergy House, Lawson Street<br />
                   North Shields<br />
                   NE29 6TG

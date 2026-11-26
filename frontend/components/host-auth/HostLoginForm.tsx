@@ -141,7 +141,7 @@ export default function HostLoginForm() {
             Host Sign In
           </h2>
           <div className="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm">
-            <span className="text-[#B6AA9C]">Want to run automotive competitions?</span>
+            <span className="text-[#B6AA9C]">Want to run wedding competitions?</span>
             <Link
               href="/host/register"
               className="font-bold text-[#D4A863] hover:text-[#F0D5A8] transition-colors duration-200 flex items-center gap-1"

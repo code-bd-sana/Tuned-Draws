@@ -5,9 +5,9 @@ import WebsiteFooter from "../../components/website/layout/WebsiteFooter";
 import CookieContent from "../../components/website/legal/CookieContent";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Tuned Draws",
+  title: "Cookie Policy | Wedding Draws",
   description:
-    "Learn about the cookies and tracking technologies used on Tuned Draws to ensure security, site functionality, and optimal performance.",
+    "Learn about the cookies and tracking technologies used on Wedding Draws to ensure security, site functionality, and optimal performance.",
 };
 
 export default function CookiePolicyPage() {

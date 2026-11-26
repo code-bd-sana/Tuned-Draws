@@ -6,9 +6,9 @@ import WebsiteFooter from "../../components/website/layout/WebsiteFooter";
 import { ShieldCheck, Award, Radio, Truck, ArrowLeft, AlertCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Host Rules & Guidelines | Tuned Draws",
+  title: "Host Rules & Guidelines | Wedding Draws",
   description:
-    "Official operational rules, prize authenticity, live draw protocols, and fulfillment standards for verified Tuned Draws hosts.",
+    "Official operational rules, prize authenticity, live draw protocols, and fulfillment standards for verified Wedding Draws hosts.",
 };
 
 export default function HostRulesPage() {
@@ -39,7 +39,7 @@ export default function HostRulesPage() {
             </h1>
 
             <p className="font-sans text-sm text-[#B6AA9C] leading-relaxed mb-8">
-              As a Verified Host on <strong className="text-white">Tuned Draws</strong>, you are expected to maintain the highest standards of integrity, transparency, and timely customer service. Please review our mandatory guidelines below.
+              As a Verified Host on <strong className="text-white">Wedding Draws</strong>, you are expected to maintain the highest standards of integrity, transparency, and timely customer service. Please review our mandatory guidelines below.
             </p>
 
             {/* Operational Standards Grid */}
@@ -55,7 +55,7 @@ export default function HostRulesPage() {
                   </h3>
                 </div>
                 <p>
-                  All items offered as prizes—including aftermarket performance hardware, tuning vouchers, wrapping or detailing services, precision tools, and workshop machinery—must be 100% authentic, brand-new or accurately documented, and strictly match the descriptions and media uploaded to your competition.
+                  All items offered as prizes—including bespoke bridal wear, honeymoon vouchers, venue hire, photography packages, and luxury wedding accessories—must be 100% authentic, brand-new or accurately documented, and strictly match the descriptions and media uploaded to your competition.
                 </p>
               </div>
 

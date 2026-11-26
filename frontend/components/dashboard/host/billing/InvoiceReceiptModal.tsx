@@ -95,14 +95,14 @@ export default function InvoiceReceiptModal({
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-heading font-black text-2xl text-text-primary uppercase tracking-tight">
-                  Tuned<span className="text-primary">Draws</span>
+                  Wedding<span className="text-primary">Draws</span>
                 </span>
               </div>
               <p className="font-sans text-xs text-text-muted mt-1">
-                Official Automotive Competitions &amp; Host Management
+                Official Wedding Competitions &amp; Host Management
               </p>
               <p className="font-sans text-[11px] text-text-muted mt-0.5">
-                Tuned Draws Ltd &bull; Synergy House, Lawson Street, North Shields, NE29 6TG &bull; info@tuneddraws.com
+                Wedding Draws Ltd &bull; Synergy House, Lawson Street, North Shields, NE29 6TG &bull; info@weddingdraws.com
               </p>
             </div>
 
@@ -190,7 +190,7 @@ export default function InvoiceReceiptModal({
 
           {/* Receipt Footer Note */}
           <div className="border-t border-divider pt-4 text-center text-[11px] font-sans text-text-muted">
-            <p>Thank you for partnering with Tuned Draws. This document acts as an official payment receipt.</p>
+            <p>Thank you for partnering with Wedding Draws. This document acts as an official payment receipt.</p>
           </div>
         </div>
       </div>

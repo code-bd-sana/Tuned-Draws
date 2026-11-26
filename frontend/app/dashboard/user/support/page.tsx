@@ -143,7 +143,7 @@ export default function UserSupportPage() {
                 <span>✅ Support Ticket Dispatched!</span>
               </div>
               <p className="font-sans text-xs leading-relaxed text-[#B6AA9C]">
-                Your support ticket has been sent to our customer care team at <strong className="text-white">info@tuneddraws.com</strong>.
+                Your support ticket has been sent to our customer care team at <strong className="text-white">info@weddingdraws.com</strong>.
                 We have also queued a confirmation response to <strong className="text-white">{email}</strong>.
               </p>
               <button
@@ -337,15 +337,15 @@ export default function UserSupportPage() {
                     Email Support
                   </span>
                   <a
-                    href="mailto:info@tuneddraws.com"
+                    href="mailto:info@weddingdraws.com"
                     className="font-sans text-xs text-[#D4A863] hover:underline truncate mt-0.5"
                   >
-                    info@tuneddraws.com
+                    info@weddingdraws.com
                   </a>
                 </div>
               </div>
               <a
-                href="mailto:info@tuneddraws.com"
+                href="mailto:info@weddingdraws.com"
                 className="px-3 py-1.5 rounded-lg bg-[#211C18] border border-white/10 text-xs font-sans font-semibold text-white hover:bg-white/5 transition-all shrink-0"
               >
                 Email
@@ -370,7 +370,7 @@ export default function UserSupportPage() {
                 </div>
               </div>
               <a
-                href="https://wa.me/447466347548?text=Hello%20Tuned%20Draws%20Support%2C%20I%20have%20an%20inquiry%20regarding%20my%20account"
+                href="https://wa.me/447466347548?text=Hello%20Wedding%20Draws%20Support%2C%20I%20have%20an%20inquiry%20regarding%20my%20account"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3.5 py-1.5 rounded-lg bg-[#25D366]/15 border border-[#25D366]/40 text-[#25D366] font-sans text-xs font-bold hover:bg-[#25D366] hover:text-white transition-all shrink-0 flex items-center gap-1.5 shadow-sm"

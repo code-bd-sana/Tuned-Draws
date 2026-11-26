@@ -66,7 +66,7 @@ export default function TermsContent() {
               Terms & Conditions
             </h1>
             <p className="font-sans text-sm sm:text-base text-[#B6AA9C] max-w-2xl">
-              Official rules governing all prize competitions, free postal entries, eligibility, anti-money laundering policies, and fair play on Tuned Draws.
+              Official rules governing all prize competitions, free postal entries, eligibility, anti-money laundering policies, and fair play on Wedding Draws.
             </p>
             <div className="flex items-center gap-4 text-xs font-sans text-[#B6AA9C]/80 pt-2">
               <span>Last Updated: July 2026</span>
@@ -124,7 +124,7 @@ export default function TermsContent() {
                 1. The Promoter
               </h2>
               <p>
-                1.1. The Promoter is: <strong className="text-white">Tuned Draws Ltd — Company No. 17506322</strong> (&quot;Tuned Draws&quot;), part of House A Draw Group, whose registered office is at Synergy House, Lawson Street, North Shields, NE29 6TG.
+                1.1. The Promoter is: <strong className="text-white">Wedding Draws Ltd — Company No. 17506322</strong> (&quot;Wedding Draws&quot;), part of House A Draw Group, whose registered office is at Synergy House, Lawson Street, North Shields, NE29 6TG.
               </p>
               <p>
                 1.2. Our correspondence address is: <span className="text-white font-medium">Synergy House, Lawson Street, North Shields, NE29 6TG</span>.
@@ -132,10 +132,10 @@ export default function TermsContent() {
               <p>
                 1.3. If you wish to contact us for any reason, please email us at{" "}
                 <a
-                  href="mailto:info@tuneddraws.com"
+                  href="mailto:info@weddingdraws.com"
                   className="text-[#D4A863] font-semibold underline underline-offset-4 decoration-[#D4A863]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  info@tuneddraws.com
+                  info@weddingdraws.com
                 </a>.
               </p>
             </section>
@@ -148,12 +148,12 @@ export default function TermsContent() {
               <p>
                 2.1. These terms and conditions apply to all competitions listed on the Promoter’s website at{" "}
                 <a
-                  href="https://tuneddraws.com"
+                  href="https://weddingdraws.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#D4A863] font-semibold underline underline-offset-4 decoration-[#D4A863]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  https://tuneddraws.com
+                  https://weddingdraws.com
                 </a>{" "}
                 (the “Website”).
               </p>
@@ -198,7 +198,7 @@ export default function TermsContent() {
                   You may enter any competition for free by post by complying with the following conditions:
                 </p>
                 <ul className="list-disc list-inside space-y-1.5 text-xs text-[#E5DCCD] pl-2">
-                  <li>Send your entry on an unenclosed postcard by 1st or 2nd class post to: <strong className="text-white">Tuned Draws Ltd, Synergy House, Lawson Street, North Shields, NE29 6TG</strong>.</li>
+                  <li>Send your entry on an unenclosed postcard by 1st or 2nd class post to: <strong className="text-white">Wedding Draws Ltd, Synergy House, Lawson Street, North Shields, NE29 6TG</strong>.</li>
                   <li>Include your full name, postal address, contact phone number, email address, and the exact Competition Name.</li>
                   <li><strong className="text-white">Mandatory Requirement:</strong> You MUST have created a free registered account on the Website for the free entry to be processed. Details on the postcard MUST correspond exactly to your registered account.</li>
                   <li>Each free entry must be posted separately on an individual postcard. Bulk entries in an envelope will count as only one single entry.</li>
@@ -218,10 +218,10 @@ export default function TermsContent() {
               <p>
                 4.2. All Entrants will have their names and entry numbers included in an entry spreadsheet published on the Website during the live draw. If you wish to censor your name on the live spreadsheet, notify us at{" "}
                 <a
-                  href="mailto:info@tuneddraws.com"
+                  href="mailto:info@weddingdraws.com"
                   className="text-[#D4A863] font-semibold underline underline-offset-4 decoration-[#D4A863]/60 hover:text-white hover:decoration-white transition-colors"
                 >
-                  info@tuneddraws.com
+                  info@weddingdraws.com
                 </a>{" "}
                 at least 48 hours prior to the draw.
               </p>
@@ -236,7 +236,7 @@ export default function TermsContent() {
                 5. Eligibility
               </h2>
               <p>
-                5.1. Competitions are open to residents in the United Kingdom aged <strong className="text-white">18 years or over</strong>, except employees of Tuned Draws, their immediate families, or agents directly connected with competition administration.
+                5.1. Competitions are open to residents in the United Kingdom aged <strong className="text-white">18 years or over</strong>, except employees of Wedding Draws, their immediate families, or agents directly connected with competition administration.
               </p>
               <p>
                 5.2. Proof of age and UK residency will be required prior to releasing any major prize.
@@ -255,10 +255,10 @@ export default function TermsContent() {
                 6.1. The prize details are described on the Website. Prizes are non-transferable and subject to availability.
               </p>
               <p>
-                6.2. Physical Parts & Workshop / Experience Services: For physical car parts and equipment, winners are solely responsible for proper fitment, installation by qualified technicians, and compliance with vehicle roadworthiness regulations. For workshop services (such as ECU remaps, dyno sessions, car wrapping, detailing) or track day experiences, winners are provided booking vouchers or appointment confirmations, and are responsible for arranging their vehicle transportation to the certified partner workshop or track venue.
+                6.2. Wedding Prizes, Vouchers &amp; Experience Services: For physical wedding prizes, fine jewellery, couture bridal wear, and equipment, winners will receive delivery directly or collection vouchers from certified suppliers. For wedding service vouchers (such as venue hire, photography/cinematography, bridal fittings, catering, or honeymoon travel), winners are provided official booking vouchers or appointment confirmations, and are responsible for coordinating dates and arrangements directly with the certified wedding supplier or venue.
               </p>
               <p>
-                6.3. Tuned Draws reserves the right to substitute a prize with an equivalent cash alternative if circumstances beyond reasonable control make it necessary.
+                6.3. Wedding Draws reserves the right to substitute a prize with an equivalent cash alternative if circumstances beyond reasonable control make it necessary.
               </p>
             </section>
 
@@ -297,10 +297,10 @@ export default function TermsContent() {
                 9. Limitation of Liability
               </h2>
               <p>
-                9.1. Tuned Draws accepts no liability for technical failures, network outages, payment gateway delays, or lost postal entries.
+                9.1. Wedding Draws accepts no liability for technical failures, network outages, payment gateway delays, or lost postal entries.
               </p>
               <p>
-                9.2. To the fullest extent permitted by law, Tuned Draws and its registered hosts shall not be liable for any loss, damage, personal injury, or death resulting from participation in any draw or the use of any prize, except where caused by negligence.
+                9.2. To the fullest extent permitted by law, Wedding Draws and its registered hosts shall not be liable for any loss, damage, personal injury, or death resulting from participation in any draw or the use of any prize, except where caused by negligence.
               </p>
             </section>
 
@@ -333,7 +333,7 @@ export default function TermsContent() {
                 11.1. Competitions are governed by English Law and the exclusive jurisdiction of the courts of England & Wales.
               </p>
               <p>
-                11.2. Competitions on Tuned Draws are in no way sponsored, endorsed, or administered by Meta (Facebook/Instagram) or any automotive manufacturer or venue unless explicitly stated.
+                11.2. Competitions on Wedding Draws are in no way sponsored, endorsed, or administered by Meta (Facebook/Instagram) or any brand manufacturer or venue unless explicitly stated.
               </p>
             </section>
 
@@ -343,7 +343,7 @@ export default function TermsContent() {
                 12. Anti-Money Laundering (AML) Policy
               </h2>
               <p>
-                12.1. Tuned Draws enforces strict anti-money laundering measures under UK regulations and the Gambling Act 2005.
+                12.1. Wedding Draws enforces strict anti-money laundering measures under UK regulations and the Gambling Act 2005.
               </p>
               <p>
                 12.2. A designated Money Laundering Reporting Officer (MLRO) oversees platform compliance.
@@ -359,7 +359,7 @@ export default function TermsContent() {
                 13. Fair Play & Strict One Account Policy
               </h2>
               <p>
-                13.1. <strong className="text-white">One Account Per Person:</strong> Each participant is strictly limited to one user account on Tuned Draws.
+                13.1. <strong className="text-white">One Account Per Person:</strong> Each participant is strictly limited to one user account on Wedding Draws.
               </p>
               <p>
                 13.2. Creating duplicate accounts to gain an unfair advantage in free entries, competitions, or bypass ticket limits is strictly forbidden.

@@ -27,7 +27,7 @@ export default function LiveRaffleCard({ raffle, viewMode = "grid" }: LiveRaffle
   const isAutoDraw = r.isAutoDraw;
   const host = r.host;
 
-  const fallbackImg = "https://placehold.co/800x600/12141C/FF1E27?text=Tuned+Draws";
+  const fallbackImg = "https://placehold.co/800x600/12141C/D4A863?text=Wedding+Draws";
   const image = r.mainImage || r.image || fallbackImg;
 
   const ticketPrice = Number(r.pricePerTicket ?? r.ticketPrice ?? 0) || 0;

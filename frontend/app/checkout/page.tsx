@@ -295,7 +295,7 @@ export default function CheckoutPage() {
                   />
                 </svg>
                 <span>
-                  Already have a Tuned Draws account? Log in to auto-fill your saved address details.
+                  Already have a Wedding Draws account? Log in to auto-fill your saved address details.
                 </span>
               </div>
               <Link
@@ -609,7 +609,7 @@ export default function CheckoutPage() {
                           <Image
                             src={
                               item.image ||
-                              "https://placehold.co/400x300/12141C/FF1E27?text=Tuned+Draw"
+                              "https://placehold.co/400x300/12141C/D4A863?text=Wedding+Draw"
                             }
                             alt={item.title}
                             fill

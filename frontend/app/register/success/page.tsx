@@ -5,8 +5,8 @@ import UserAuthLayout from "../../../components/user-auth/UserAuthLayout";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Registration Successful | Tuned Draws",
-  description: "Your Tuned Draws account has been created successfully.",
+  title: "Registration Successful | Wedding Draws",
+  description: "Your Wedding Draws account has been created successfully.",
 };
 
 export default function RegisterSuccessPage() {
@@ -22,7 +22,7 @@ export default function RegisterSuccessPage() {
             Account Created!
           </h2>
           <p className="text-xs sm:text-sm text-[#B6AA9C] leading-relaxed max-w-sm">
-            Welcome to <strong className="text-white">Tuned Draws</strong>. Your player session is configured and ready. You can now enter live competitions and unlock instant-win allocations.
+            Welcome to <strong className="text-white">Wedding Draws</strong>. Your session is configured and ready. You can now enter live competitions and unlock instant-win allocations.
           </p>
         </div>
 

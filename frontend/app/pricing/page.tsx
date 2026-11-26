@@ -7,9 +7,9 @@ import PricingComparisonSection from "../../components/website/pricing/PricingCo
 import PricingFaqSection from "../../components/website/pricing/PricingFaqSection";
 
 export const metadata: Metadata = {
-  title: "Pricing & Plans | Tuned Draws",
+  title: "Pricing & Plans | Wedding Draws",
   description:
-    "Choose the right hosting plan for your performance automotive draws. Start free or unlock advanced host dashboard access, custom branding, and priority payouts.",
+    "Choose the right hosting plan for your wedding competitions. Start free or unlock advanced host dashboard access, custom branding, and priority payouts.",
 };
 
 /**

@@ -66,13 +66,13 @@ async function getRaffle(slug: string): Promise<RaffleDetail | undefined> {
 
     return {
       id: draw.id,
-      title: draw.title || "Tuned Draws Competition",
+      title: draw.title || "Wedding Draws Competition",
       slug: draw.slug || draw.id,
       category: catStr,
       status: isPast ? "ended" : (draw.status === "ACTIVE" ? "live" : "ending_soon"),
       images: Array.isArray(draw.images) && draw.images.length > 0
         ? draw.images
-        : [draw.mainImage || "https://placehold.co/800x600/12141C/FF1E27?text=Tuned+Draws"],
+        : [draw.mainImage || "https://placehold.co/800x600/12141C/D4A863?text=Wedding+Draws"],
       ticketPrice: Number(draw.pricePerTicket || 0),
       worthPrice: worth,
       totalPoolValue: totalPool,
@@ -103,7 +103,7 @@ async function getRaffle(slug: string): Promise<RaffleDetail | undefined> {
         "All winners will be contacted by email within 48 hours of the draw.",
         "Prizes are non-transferable and no cash alternative is offered.",
         "By entering you agree to be bound by these terms and conditions.",
-        "Free postal entry: send your name and address on a postcard to: Tuned Draws, PO Box 99, Manchester, M1 1AA."
+        "Free postal entry: send your name and address on a postcard to: Wedding Draws Ltd, Synergy House, Lawson Street, North Shields, NE29 6TG."
       ],
       instantWinPrizes: Array.isArray(draw.instantWins) ? draw.instantWins.map((iw: any) => ({
         id: iw.id,
@@ -115,7 +115,7 @@ async function getRaffle(slug: string): Promise<RaffleDetail | undefined> {
       isFeatured: false,
       hostId: draw.hostId || draw.host?.id,
       hostUserId: draw.host?.userId || draw.host?.user?.id,
-      hostName: draw.host?.businessName?.trim() || (draw.host?.user ? `${draw.host.user.firstName || ''} ${draw.host.user.lastName || ''}`.trim() : "Tuned Draws Host"),
+      hostName: draw.host?.businessName?.trim() || (draw.host?.user ? `${draw.host.user.firstName || ''} ${draw.host.user.lastName || ''}`.trim() : "Wedding Draws Host"),
       hostLogo: draw.host?.user?.avatarUrl || draw.host?.businessName?.trim()?.[0] || draw.host?.user?.firstName?.[0] || "TD",
       hostSlug: draw.host?.slug || draw.host?.id,
       hostDrawsCount: 1,
@@ -132,8 +132,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const raffle = await getRaffle(slug);
   return {
-    title: raffle ? `${raffle.title} | Tuned Draws` : "Competition Not Found | Tuned Draws",
-    description: raffle?.description || "Browse and enter active high-performance automotive draws.",
+    title: raffle ? `${raffle.title} | Wedding Draws` : "Competition Not Found | Wedding Draws",
+    description: raffle?.description || "Browse and enter active wedding competitions and luxury prizes.",
   };
 }
 

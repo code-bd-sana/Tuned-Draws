@@ -7,9 +7,9 @@ import WinnersGrid from "../../components/website/winners/WinnersGrid";
 import WinnerHighlightCard from "../../components/website/winners/WinnerHighlightCard";
 
 export const metadata: Metadata = {
-  title: "Winners Gallery | Tuned Draws",
+  title: "Winners Gallery | Wedding Draws",
   description:
-    "See all the completed automotive competition winners. Check past draw dates, verified performance parts, tuning packages, and audit records.",
+    "See all the completed wedding competition winners. Check past draw dates, verified wedding prizes, honeymoon packages, and audit records.",
 };
 
 /**

@@ -33,7 +33,7 @@ export const faqData: FaqItem[] = [
     id: "faq-5",
     question: "Can I enter competitions for free?",
     answer:
-      "Yes. Tuned Draws competitions provide a compliant free postal entry route for every draw in accordance with the UK Gambling Act 2005. Free entry instructions are detailed on each competition page and in our terms."
+      "Yes. Wedding Draws competitions provide a compliant free postal entry route for every draw in accordance with the UK Gambling Act 2005. Free entry instructions are detailed on each competition page and in our terms."
   },
 
   {
@@ -47,14 +47,14 @@ export const faqData: FaqItem[] = [
     id: "faq-7",
     question: "Do I need to be 18 to enter?",
     answer:
-      "Yes. Tuned Draws competitions are strictly available to individuals aged 18 and over. Identity and age verification checks are completed before any major prize or service voucher is released."
+      "Yes. Wedding Draws competitions are strictly available to individuals aged 18 and over. Identity and age verification checks are completed before any major prize or service voucher is released."
   },
 
   {
     id: "faq-8",
     question: "How much does it cost to become a host?",
     answer:
-      "Tuned Draws offers three host tiers: Free at £0 (15% platform commission), Premium at £29 per month (10% platform commission), and Pro at £79 per month (10% platform commission)."
+      "Wedding Draws offers three host tiers: Free at £0 (15% platform commission), Premium at £29 per month (10% platform commission), and Pro at £79 per month (10% platform commission)."
   },
 
   {
@@ -75,7 +75,7 @@ export const faqData: FaqItem[] = [
     id: "faq-11",
     question: "What is included in the Pro host plan?",
     answer:
-      "The Pro plan costs £79 per month and includes unlimited active draws, host dashboard access, 24/7 priority support, unlimited featured listing slots, priority payouts, access to Instant Wins, custom tuner branding, advanced sales telemetry, and a dedicated account manager. A reduced 10% commission applies."
+      "The Pro plan costs £79 per month and includes unlimited active draws, host dashboard access, 24/7 priority support, unlimited featured listing slots, priority payouts, access to Instant Wins, custom supplier branding, advanced sales telemetry, and a dedicated account manager. A reduced 10% commission applies."
   },
 
   {
@@ -96,7 +96,7 @@ export const faqData: FaqItem[] = [
     id: "faq-14",
     question: "What are featured listing slots?",
     answer:
-      "Featured listing slots give selected competitions premier visibility across the Tuned Draws homepage and category pages. Premium hosts receive up to 3 featured listing slots per month, while Pro hosts receive unlimited slots."
+      "Featured listing slots give selected competitions premier visibility across the Wedding Draws homepage and category pages. Premium hosts receive up to 3 featured listing slots per month, while Pro hosts receive unlimited slots."
   },
 
   {

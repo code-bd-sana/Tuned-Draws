@@ -22,7 +22,7 @@ export default function ContactHero() {
       <div className="container-custom relative flex flex-col items-center text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-[#D4A863]/30 bg-[#211C18]/90 px-4 py-2 font-heading text-[10px] font-black tracking-[.18em] text-[#E5DCCD] uppercase shadow-[0_0_15px_rgba(212,168,99,0.2)] backdrop-blur-md">
           <span className="h-2 w-2 rounded-full bg-[#94632F] animate-pulse shadow-[0_0_8px_rgba(212,168,99,0.8)]" />
-          Paddock Support · 24/7 Response
+          Wedding Concierge · 24/7 Response
         </span>
         
         {/* Title */}
@@ -32,7 +32,7 @@ export default function ContactHero() {
         
         {/* Subtitle */}
         <p className="max-w-2xl rounded-2xl border border-white/10 bg-[#211C18]/80 p-4 font-sans text-sm leading-relaxed text-[#B6AA9C] shadow-2xl backdrop-blur-md sm:text-base">
-          Questions about active ticket allocations, instant key payouts, or host verifications? Our pit crew is ready to assist.
+          Questions about active ticket allocations, instant win payouts, or host verifications? Our wedding support team is ready to assist.
         </p>
 
       </div>

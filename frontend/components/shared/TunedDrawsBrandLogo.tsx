@@ -30,8 +30,8 @@ export default function TunedDrawsBrandLogo({
 
   const isCustomSubtitle =
     Boolean(subtitle) &&
-    subtitle !== "PERFORMANCE & MOD COMPETITIONS" &&
-    subtitle !== "YOUR MODS OUR PLATFORM";
+    subtitle !== "WEDDING & HONEYMOON COMPETITIONS" &&
+    subtitle !== "YOUR WEDDING OUR PLATFORM";
 
   const content = (
     <div className={cn("inline-flex flex-col items-start select-none group", className)}>

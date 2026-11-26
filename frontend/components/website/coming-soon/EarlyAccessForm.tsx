@@ -57,7 +57,7 @@ export default function EarlyAccessForm() {
           <div className="w-16 h-16 rounded-2xl bg-[#16A34A]/20 border border-[#16A34A]/40 flex items-center justify-center mx-auto mb-6 text-[#22C55E]">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-heading font-black text-2xl text-white uppercase mb-2">You&apos;re on the VIP Grid!</h3>
+          <h3 className="font-heading font-black text-2xl text-white uppercase mb-2">You&apos;re on the VIP Guest List!</h3>
           <p className="font-sans text-sm text-[#B6AA9C] leading-relaxed max-w-sm mx-auto mb-6">
             Your early-access pass is locked. Check your inbox for exclusive launch day ticket drops and founding member perks.
           </p>
@@ -87,7 +87,7 @@ export default function EarlyAccessForm() {
             Secure Early Access
           </h3>
           <p className="font-sans text-sm text-[#B6AA9C] mt-2">
-            Join <strong className="text-white">1,200+ car enthusiasts</strong> on the official roster.
+            Join <strong className="text-white">1,200+ couples</strong> on the official roster.
           </p>
         </div>
 

@@ -73,8 +73,8 @@ export default function VerifiedHostsList({ hosts }: VerifiedHostsListProps) {
           </h3>
           <p className="max-w-[360px] font-sans text-sm leading-relaxed text-[#B6AA9C]">
             {activeLetter === "ALL"
-              ? "There are no verified automotive hosts active right now. Please check back soon or explore live draws."
-              : <>We couldn&apos;t find a verified host starting with &quot;{activeLetter}&quot;. Try selecting &quot;All&quot; to view the complete garage directory.</>}
+              ? "There are no verified wedding hosts active right now. Please check back soon or explore live draws."
+              : <>We couldn&apos;t find a verified host starting with &quot;{activeLetter}&quot;. Try selecting &quot;All&quot; to view the complete host directory.</>}
           </p>
         </div>
       )}

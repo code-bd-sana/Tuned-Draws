@@ -60,12 +60,12 @@ export default function CookieContent() {
               Cookie Policy
             </h1>
             <p className="rounded-2xl border border-white/10 bg-[#211C18]/80 p-4 font-sans text-sm sm:text-base leading-relaxed text-[#B6AA9C] max-w-2xl backdrop-blur-sm">
-              This policy details what cookies are, how Tuned Draws uses them, the categories of cookies deployed, and how to manage your cookie preferences.
+              This policy details what cookies are, how Wedding Draws uses them, the categories of cookies deployed, and how to manage your cookie preferences.
             </p>
             <div className="flex items-center gap-4 text-xs font-sans font-medium text-white/75 pt-1">
-              <span>Last Updated: April 2026</span>
+              <span>Last Updated: November 2026</span>
               <span>•</span>
-              <span>Applies to Domain: tuneddraws.com</span>
+              <span>Applies to Domain: weddingdraws.com</span>
             </div>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function CookieContent() {
                 1. Introduction & Consent
               </h2>
               <p>
-                This Cookie Policy explains what cookies are and how <strong className="text-white">Tuned Draws</strong> uses them. It details the types of cookies we deploy (i.e. the information we collect using cookies and how that information is used) and how to control your cookie preferences.
+                This Cookie Policy explains what cookies are and how <strong className="text-white">Wedding Draws</strong> uses them. It details the types of cookies we deploy (i.e. the information we collect using cookies and how that information is used) and how to control your cookie preferences.
               </p>
               <p>
                 For further information on how we use, store, and keep your personal data secure, please refer to our{" "}
@@ -131,7 +131,7 @@ export default function CookieContent() {
               </p>
               <div className="bg-[#302820] border border-white/10 rounded-xl p-4 mt-2">
                 <span className="font-sans text-xs text-white font-semibold block">Consent Domain Scope:</span>
-                <span className="font-sans text-xs text-[#B6AA9C]">Your cookie consent applies to the following domain: <strong>tuneddraws.com</strong></span>
+                <span className="font-sans text-xs text-[#B6AA9C]">Your cookie consent applies to the following domain: <strong>weddingdraws.com</strong></span>
               </div>
             </section>
 
@@ -187,7 +187,7 @@ export default function CookieContent() {
                     <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#211C18] text-[#D4A863] border border-[#D4A863]/30">Strictly Necessary</span>
                   </div>
                   <p className="text-xs text-[#B6AA9C]">
-                    Some cookies are essential for you to experience the full functionality of our site. They allow us to maintain user sessions and prevent security threats. They do not collect or store personal information. For example, these cookies allow you to log in to your Tuned Draws account, add tickets to your cart, and check out securely.
+                    Some cookies are essential for you to experience the full functionality of our site. They allow us to maintain user sessions and prevent security threats. They do not collect or store personal information. For example, these cookies allow you to log in to your Wedding Draws account, add tickets to your cart, and check out securely.
                   </p>
                 </div>
 
@@ -250,7 +250,7 @@ export default function CookieContent() {
               </div>
 
               <p className="text-xs text-[#B6AA9C] pt-3">
-                For further information on managing your data, please contact our team at <a href="mailto:info@tuneddraws.com" className="text-[#D4A863] underline">info@tuneddraws.com</a>.
+                For further information on managing your data, please contact our team at <a href="mailto:info@weddingdraws.com" className="text-[#D4A863] underline">info@weddingdraws.com</a>.
               </p>
             </section>
 

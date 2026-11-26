@@ -4,8 +4,8 @@ import UserAuthLayout from "../../components/user-auth/UserAuthLayout";
 import UserLoginForm from "../../components/user-auth/UserLoginForm";
 
 export const metadata: Metadata = {
-  title: "Player Login | Tuned Draws",
-  description: "Log in to your Tuned Draws account to view live competitions, purchase tickets, and view winners.",
+  title: "Player Login | Wedding Draws",
+  description: "Log in to your Wedding Draws account to view live competitions, purchase tickets, and view winners.",
 };
 
 /**

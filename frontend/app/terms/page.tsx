@@ -5,9 +5,9 @@ import WebsiteFooter from "../../components/website/layout/WebsiteFooter";
 import TermsContent from "../../components/website/legal/TermsContent";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions | Tuned Draws",
+  title: "Terms & Conditions | Wedding Draws",
   description:
-    "Read the official Terms and Conditions for Tuned Draws prize competitions, free postal entry route, eligibility rules, and Anti-Money Laundering policies.",
+    "Read the official Terms and Conditions for Wedding Draws prize competitions, free postal entry route, eligibility rules, and Anti-Money Laundering policies.",
 };
 
 export default function TermsPage() {

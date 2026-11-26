@@ -8,13 +8,13 @@ export const entrantSteps: HowItWorksStep[] = [
     id: "entrant-step-1",
     stepNumber: 1,
     title: "Create a Free Account",
-    description: "Sign up in under 60 seconds — no card required. Just an email and password and you're ready to start entering automotive competitions.",
+    description: "Sign up in under 60 seconds — no card required. Just an email and password and you're ready to start entering wedding competitions.",
   },
   {
     id: "entrant-step-2",
     stepNumber: 2,
-    title: "Browse Live Automotive Draws",
-    description: "Explore performance parts, ECU remaps, car wrapping, detailing packages, and track days. Filter by category, ticket price, or closing timer.",
+    title: "Browse Live Wedding Draws",
+    description: "Explore dream wedding venues, bridal wear, honeymoons, photography packages, and luxury rings. Filter by category, ticket price, or closing timer.",
   },
   {
     id: "entrant-step-3",
@@ -32,7 +32,7 @@ export const entrantSteps: HowItWorksStep[] = [
     id: "entrant-step-5",
     stepNumber: 5,
     title: "Await the Live Verified Draw",
-    description: "When the countdown ends or tickets sell out, the winner is drawn live via certified Google RNG. Winners receive instant phone & email alerts with UK-wide delivery or garage booking.",
+    description: "When the countdown ends or tickets sell out, the winner is drawn live via certified Google RNG. Winners receive instant phone & email alerts with UK-wide delivery or supplier booking.",
   },
 ];
 
@@ -44,13 +44,13 @@ export const hostSteps: HowItWorksStep[] = [
     id: "host-step-1",
     stepNumber: 1,
     title: "Register Host Account",
-    description: "Create your host account with your verified business or tuning workshop details. Every host is vetted to ensure entrant safety.",
+    description: "Create your host account with your verified business or boutique details. Every host is vetted to ensure entrant safety.",
   },
   {
     id: "host-step-2",
     stepNumber: 2,
     title: "Complete Workshop & Brand Profile",
-    description: "Showcase your tuning shop, garage history, social media, and modification services. A complete profile builds trust with performance enthusiasts.",
+    description: "Showcase your bridal boutique, venue, portfolio, and wedding services. A complete profile builds trust with couples.",
   },
   {
     id: "host-step-3",
@@ -62,13 +62,13 @@ export const hostSteps: HowItWorksStep[] = [
     id: "host-step-4",
     stepNumber: 4,
     title: "Submit Competition for Compliance Review",
-    description: "Specify performance parts or modification service details, ticket price, cap, and draw date. Our compliance team verifies entries within 24 hours.",
+    description: "Specify wedding prizes or supplier service details, ticket price, cap, and draw date. Our compliance team verifies entries within 24 hours.",
   },
   {
     id: "host-step-5",
     stepNumber: 5,
-    title: "Go Live on Tuned Draws",
-    description: "Once approved, your competition is featured across the Tuned Draws live board, social feeds, and email alerts to tens of thousands of petrolheads.",
+    title: "Go Live on Wedding Draws",
+    description: "Once approved, your competition is featured across the Wedding Draws live board, social feeds, and email alerts to thousands of couples.",
   },
   {
     id: "host-step-6",

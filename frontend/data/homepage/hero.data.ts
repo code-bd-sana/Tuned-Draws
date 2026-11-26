@@ -14,9 +14,9 @@ export interface HeroData {
 }
 
 export const heroData: HeroData = {
-  badgeText: "CAR MODS, TUNING & PERFORMANCE PARTS",
-  headingText: "Win Premium Performance Car Parts",
-  paragraphText: "Enter premium automotive draws from just £1 per ticket. Fair, transparent & fully verified. Over £180k in luxury tuning builds & performance parts won by our community.",
+  badgeText: "WEDDING PRIZES, BRIDAL WEAR & HONEYMOONS",
+  headingText: "Win Your Dream Wedding & Luxury Prizes",
+  paragraphText: "Enter premium wedding draws from just £1 per ticket. Fair, transparent & fully verified. Over £180k in dream weddings, bridal wear & luxury honeymoons won by our community.",
   primaryCtaLabel: "Browse Live Draws",
   primaryCtaHref: "#live-draws",
   secondaryCtaLabel: "How It Works",
@@ -36,15 +36,15 @@ export const heroData: HeroData = {
   ],
   featuredDraw: {
     id: "hero-feat-1",
-    title: "Milltek Cat-Back Exhaust + Stage 2 Remap Package",
-    description: "Worth £2,400. Brand-new Milltek Performance Exhaust system with downpipe, Airtec intercooler, and dyno-proven stage 2 tune.",
-    image: "/images/car-main.jpg",
+    title: "Luxury 7-Night Maldives Honeymoon & Resort Package",
+    description: "Worth £2,400. All-inclusive luxury resort stay with flights included, private beach villa, and romantic candlelit dinner experiences.",
+    image: "/images/wedding-hero.png",
     ticketPrice: 2.50,
     totalTickets: 500,
     soldTickets: 342,
     endDate: "Ends in 2d 4h",
     status: "live",
-    category: "performance",
+    category: "honeymoons",
     worthPrice: 2400,
     isFeatured: true,
   },

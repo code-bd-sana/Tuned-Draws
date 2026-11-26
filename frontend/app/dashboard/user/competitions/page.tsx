@@ -41,7 +41,7 @@ export default function UserRafflesPage() {
           Browse Competitions
         </h1>
         <p className="font-sans text-xs text-[#B6AA9C]">
-          Explore all active, upcoming, and featured draws across all performance garages and hosts.
+          Explore all active, upcoming, and featured draws across verified wedding hosts and suppliers.
         </p>
       </div>
 
@@ -51,7 +51,7 @@ export default function UserRafflesPage() {
           <div className="relative">
             <input
               type="text"
-              placeholder="Search performance parts, tuning, wrapping, garage..."
+              placeholder="Search wedding venues, bridal wear, honeymoons, suppliers..."
               value={searchInput}
               onChange={(e) => setSearchInput(e.target.value)}
               className="w-full h-11 bg-[#211C18] border border-white/10 rounded-xl px-4 pr-10 text-sm text-white placeholder:text-[#B6AA9C]/50 focus:outline-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 transition-all shadow-md"
@@ -82,7 +82,7 @@ export default function UserRafflesPage() {
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 w-full">
           <div className="flex flex-wrap items-center gap-2">
-            {["All", "Performance Parts", "Tuning & Remaps", "Car Wrapping", "Detailing", "Track Days"].map((cat) => (
+            {["All", "Venues", "Bridal Wear", "Honeymoons", "Photography", "Catering & Cakes"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setCategory(cat); setPage(1); }}

@@ -13,13 +13,13 @@ export default function HowItWorksFinalCta() {
       <div className="container-custom relative flex flex-col items-center gap-6 text-center">
         <span className="inline-flex items-center gap-2 rounded-full border border-[#D4A863]/30 bg-[#211C18]/90 px-4 py-1.5 font-heading text-[10px] font-black tracking-[.2em] text-[#D4A863] uppercase shadow-[0_0_15px_rgba(212,168,99,0.2)] backdrop-blur-md">
           <span className="h-1.5 w-1.5 rounded-full bg-[#94632F] animate-pulse shadow-[0_0_8px_rgba(212,168,99,0.8)]" />
-          START YOUR ENGINES
+          START YOUR JOURNEY
         </span>
 
         <h2 className="max-w-2xl font-heading text-3xl font-black text-white uppercase sm:text-4xl md:text-5xl leading-tight">
-          READY TO UPGRADE YOUR <br />
+          READY FOR YOUR <br />
           <span className="text-[#D4A863] drop-shadow-[0_0_25px_rgba(212,168,99,0.5)]">
-            MODIFIED CAR?
+            DREAM WEDDING?
           </span>
         </h2>
 

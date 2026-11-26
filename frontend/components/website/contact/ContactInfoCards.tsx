@@ -121,7 +121,7 @@ export default function ContactInfoCards() {
               Chat on WhatsApp
             </h4>
             <p className="font-sans text-xs text-[#B6AA9C]">
-              Instant access to Tuned Draws crew (07466 347548)
+              Instant access to Wedding Draws team (07466 347548)
             </p>
           </div>
         </div>

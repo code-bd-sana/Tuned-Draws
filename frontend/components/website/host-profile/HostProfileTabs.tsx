@@ -170,7 +170,7 @@ export default function HostProfileTabs({
                   No Active Draws At The Moment
                 </h3>
                 <p className="font-sans text-sm text-[#B6AA9C] max-w-md mb-6 leading-relaxed">
-                  <strong className="text-white">{name}</strong> does not have any live automotive draws running right now. Check back soon or explore live draws from other verified builders!
+                  <strong className="text-white">{name}</strong> does not have any live wedding draws running right now. Check back soon or explore live draws from other verified hosts!
                 </p>
                 <Link
                   href="/live-raffles"
@@ -220,7 +220,7 @@ export default function HostProfileTabs({
                 About {name}
               </h3>
               <p className="font-sans text-sm text-[#B6AA9C] leading-relaxed mb-4">
-                {bio || `${name} is an officially verified partner on Tuned Draws, delivering authentic automotive builds, transparent audited draws, and instant win opportunities.`}
+                {bio || `${name} is an officially verified partner on Wedding Draws, delivering authentic wedding prizes, transparent audited draws, and instant win opportunities.`}
               </p>
               {location && (
                 <div className="flex items-center gap-2 text-xs font-semibold text-[#E5DCCD] mb-6">
@@ -237,10 +237,10 @@ export default function HostProfileTabs({
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
-                  <span className="text-xl">🏎️</span>
+                  <span className="text-xl">💍</span>
                   <div>
-                    <div className="font-heading text-xs font-bold text-white uppercase">Performance Mods</div>
-                    <div className="font-sans text-[11px] text-[#B6AA9C]">Parts &amp; Tuning Services</div>
+                    <div className="font-heading text-xs font-bold text-white uppercase">Wedding Supplier</div>
+                    <div className="font-sans text-[11px] text-[#B6AA9C]">Bridal &amp; Wedding Services</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">

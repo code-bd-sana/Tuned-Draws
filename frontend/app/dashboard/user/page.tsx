@@ -458,7 +458,7 @@ export default function UserDashboardPage() {
                         {item.raffle.title}
                       </Link>
                       <span className="font-sans text-[11px] text-[#B6AA9C] truncate">
-                        Hosted by {item.raffle.host?.businessName || "Tuned Draws Official"}
+                        Hosted by {item.raffle.host?.businessName || "Wedding Draws Official"}
                       </span>
                       <span className="font-sans text-[10px] text-[#B6AA9C]/80 mt-0.5">
                         Draw Date:{" "}
@@ -531,7 +531,7 @@ export default function UserDashboardPage() {
                 No wins recorded yet
               </h4>
               <p className="font-sans text-xs text-[#B6AA9C] max-w-[280px] mb-4">
-                Enter active competitions for your chance to win instant prizes, performance parts, and tuning services.
+                Enter active competitions for your chance to win instant prizes, bridal packages, and dream wedding experiences.
               </p>
               <Link
                 href="/dashboard/user/competitions"
@@ -578,7 +578,7 @@ export default function UserDashboardPage() {
                       </div>
 
                       <p className="font-sans text-[11px] text-[#B6AA9C] truncate">
-                        {win.raffle?.title || "Tuned Draws Competition"}
+                        {win.raffle?.title || "Wedding Draws Competition"}
                       </p>
 
                       <div className="flex items-center gap-2 mt-0.5 text-[10px] font-sans text-[#B6AA9C]">

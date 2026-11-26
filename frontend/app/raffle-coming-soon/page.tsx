@@ -8,9 +8,9 @@ import InterestBenefits from "../../components/website/coming-soon/InterestBenef
 import TunedDrawsBrandLogo from "../../components/shared/TunedDrawsBrandLogo";
 
 export const metadata: Metadata = {
-  title: "Early Access VIP | Tuned Draws",
+  title: "Early Access VIP | Wedding Draws",
   description:
-    "Join the official VIP waitlist for Tuned Draws. Win car modification services, performance parts upgrades, and track experiences.",
+    "Join the official VIP waitlist for Wedding Draws. Win dream wedding venues, bridal wear packages, and luxury honeymoons.",
 };
 
 /**
@@ -71,7 +71,7 @@ export default function RaffleComingSoonPage() {
           <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-4">
             <TunedDrawsBrandLogo size="sm" href="/" />
             <p className="font-sans text-xs text-[#B6AA9C] text-center sm:text-right">
-              © {new Date().getFullYear()} Tuned Draws Ltd · UK Registered · All Rights Reserved
+              © {new Date().getFullYear()} Wedding Draws Ltd · UK Registered · All Rights Reserved
             </p>
           </div>
         </div>

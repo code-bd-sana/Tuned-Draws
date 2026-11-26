@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 /**
- * Tuned Draws Next.js Route Middleware
+ * Wedding Draws Next.js Route Middleware
  */
 export function middleware(_request: NextRequest) {
   return NextResponse.next();

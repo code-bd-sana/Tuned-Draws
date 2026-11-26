@@ -58,19 +58,19 @@ export default function ComingSoonHero() {
         <div className="flex flex-col items-start text-left order-2 lg:order-1">
           {/* Official Brand Logo */}
           <div className="mb-6">
-            <TunedDrawsBrandLogo subtitle="PERFORMANCE & MOD COMPETITIONS" />
+            <TunedDrawsBrandLogo subtitle="WEDDING & HONEYMOON COMPETITIONS" />
           </div>
 
           {/* Tagline */}
           <p className="text-[#B6AA9C] text-base sm:text-lg leading-relaxed mb-8 max-w-md font-sans">
-            Win <strong className="text-white font-semibold">performance tuning packages</strong>, custom car wraps, detailing &amp; exclusive{" "}
-            <strong className="text-[#D4A863] font-semibold">track day experiences</strong> — for genuine automotive enthusiasts across the UK.
+            Win <strong className="text-white font-semibold">luxury honeymoon packages</strong>, designer bridal gowns, venue hire &amp; exclusive{" "}
+            <strong className="text-[#D4A863] font-semibold">wedding supplier experiences</strong> — for couples across the UK.
           </p>
 
           {/* Stat Pills */}
           <div className="flex flex-wrap gap-3 mb-10">
             {[
-              { value: "1,200+", label: "Racers Registered" },
+              { value: "1,200+", label: "Couples Registered" },
               { value: "£0", label: "Entry Min. Price" },
               { value: "100%", label: "Verified Services" },
             ].map((stat) => (

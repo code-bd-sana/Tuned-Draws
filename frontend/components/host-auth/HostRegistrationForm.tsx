@@ -244,7 +244,7 @@ export default function HostRegistrationForm({
     return (
       <AuthSuccessState
         title="Application Submitted!"
-        description="Your details have been recorded. Our automotive verification team will review your application and activate your host portal within 24 hours."
+        description="Your details have been recorded. Our verification team will review your application and activate your host portal within 24 hours."
         buttonText="Return to Homepage"
         buttonHref="/"
       />
@@ -533,8 +533,8 @@ export default function HostRegistrationForm({
                 </div>
                 <span className="font-sans text-[11px] text-[#B6AA9C]">
                   {formData.hostType === "individual"
-                    ? "You are hosting draws as an individual automotive enthusiast."
-                    : "You are hosting draws as a registered tuning workshop or business entity."}
+                    ? "You are hosting draws as an individual wedding host."
+                    : "You are hosting draws as a registered wedding business, boutique or venue."}
                 </span>
               </div>
 
@@ -727,7 +727,7 @@ export default function HostRegistrationForm({
                   Tell Us About Your Business
                 </h2>
                 <p className="font-sans text-xs sm:text-sm text-[#9CA3AF]">
-                  This information helps us verify your garage or brand and process payouts securely.
+                  This information helps us verify your wedding business or brand and process payouts securely.
                 </p>
               </div>
 
@@ -744,7 +744,7 @@ export default function HostRegistrationForm({
                   id="businessName"
                   name="businessName"
                   autoComplete="organization"
-                  placeholder="e.g. Apex Performance Tuning"
+                  placeholder="e.g. The Grand Manor & Estate"
                   value={formData.businessName}
                   onChange={handleInputChange}
                   className={cn(
@@ -1003,7 +1003,7 @@ export default function HostRegistrationForm({
                     id="businessBio"
                     name="businessBio"
                     maxLength={300}
-                    placeholder="Tell entrants about your tuning builds, heritage, or performance projects..."
+                    placeholder="Tell entrants about your wedding services, bridal collections, or venue..."
                     value={formData.businessBio}
                     onChange={handleInputChange}
                     className={cn(
@@ -1094,7 +1094,7 @@ export default function HostRegistrationForm({
                     <span className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">
                       !
                     </span>
-                    <span className="text-[#E5DCCD] font-medium">Automotive verification pending</span>
+                    <span className="text-[#E5DCCD] font-medium">Verification pending</span>
                   </div>
                 </div>
               </div>

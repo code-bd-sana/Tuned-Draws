@@ -6,14 +6,14 @@ import LiveRafflesHero from "../../components/website/live-raffles/LiveRafflesHe
 import LiveRaffleGrid from "../../components/website/live-raffles/LiveRaffleGrid";
 
 export const metadata: Metadata = {
-  title: "Live Competitions | Tuned Draws",
+  title: "Live Competitions | Wedding Draws",
   description:
-    "Browse and enter active car modification and performance parts competitions. Performance parts, tuning packages, car wrapping, detailing, and track days.",
+    "Browse and enter active wedding competitions. Wedding venues, bridal wear, honeymoons, photography, and luxury jewellery.",
 };
 
 /**
  * Public Live Raffles Page.
- * Renders all active automotive draws with category, sorting, search, and layout controls.
+ * Renders all active wedding draws with category, sorting, search, and layout controls.
  */
 export default function LiveRafflesPage() {
   return (

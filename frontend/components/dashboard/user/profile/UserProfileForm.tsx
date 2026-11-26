@@ -295,9 +295,9 @@ export default function UserProfileForm() {
                 </div>
               </div>
               <div className="flex flex-col gap-1.5 md:col-span-2">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Delivery / Garage Address</label>
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Delivery / Postal Address</label>
                 <div className="bg-[#14110F] border border-white/10 rounded-xl p-3 flex focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
-                  <textarea name="address" value={formData.address} onChange={handleChange} className="bg-transparent outline-none w-full text-sm text-white font-sans resize-none h-[70px] placeholder:text-[#B6AA9C]/40" placeholder="123 Performance Way, London, UK" />
+                  <textarea name="address" value={formData.address} onChange={handleChange} className="bg-transparent outline-none w-full text-sm text-white font-sans resize-none h-[70px] placeholder:text-[#B6AA9C]/40" placeholder="123 High Street, London, UK" />
                 </div>
               </div>
             </div>

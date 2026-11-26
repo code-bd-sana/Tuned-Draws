@@ -65,7 +65,7 @@ export default function PrivacyContent() {
               Privacy Policy
             </h1>
             <p className="rounded-2xl border border-white/10 bg-[#211C18]/80 p-4 font-sans text-sm sm:text-base leading-relaxed text-[#B6AA9C] max-w-2xl backdrop-blur-sm">
-              Learn how Tuned Draws collects, protects, processes, and respects your personal data under UK GDPR and data protection laws.
+              Learn how Wedding Draws collects, protects, processes, and respects your personal data under UK GDPR and data protection laws.
             </p>
             <div className="flex items-center gap-4 text-xs font-sans font-medium text-white/75 pt-1">
               <span>Last Updated: 01/04/2026</span>
@@ -123,15 +123,15 @@ export default function PrivacyContent() {
                 1. Introduction & Data Controller
               </h2>
               <p>
-                Welcome to the <strong className="text-white">Tuned Draws</strong> Privacy Policy.
+                Welcome to the <strong className="text-white">Wedding Draws</strong> Privacy Policy.
               </p>
               <p>
-                Tuned Draws respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, process, and safeguard your personal data when you visit our website (regardless of where you access it from) and outlines your privacy rights under UK GDPR.
+                Wedding Draws respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, process, and safeguard your personal data when you visit our website (regardless of where you access it from) and outlines your privacy rights under UK GDPR.
               </p>
               <div className="bg-[#302820] border border-white/10 rounded-xl p-5 space-y-2 mt-4">
                 <h3 className="font-heading font-bold text-sm text-white">Data Controller & Privacy Contact</h3>
                 <p className="text-xs text-white">
-                  Legal Entity Name: <strong>Tuned Draws Ltd</strong>
+                  Legal Entity Name: <strong>Wedding Draws Ltd</strong>
                 </p>
                 <p className="text-xs text-[#B6AA9C]">
                   Data Privacy Manager: <strong>Platform Compliance Office</strong>
@@ -140,7 +140,7 @@ export default function PrivacyContent() {
                   Correspondence Address: Synergy House, Lawson Street, North Shields, NE29 6TG
                 </p>
                 <p className="text-xs text-[#B6AA9C]">
-                  Email: <a href="mailto:info@tuneddraws.com" className="text-[#D4A863] hover:underline">info@tuneddraws.com</a>
+                  Email: <a href="mailto:info@weddingdraws.com" className="text-[#D4A863] hover:underline">info@weddingdraws.com</a>
                 </p>
               </div>
               <p className="text-xs text-[#B6AA9C]">
@@ -206,10 +206,10 @@ export default function PrivacyContent() {
                 4. Marketing & Communication Preferences
               </h2>
               <p>
-                You will receive marketing communications from Tuned Draws if you have requested information, purchased tickets, entered a competition, or explicitly subscribed to our newsletter.
+                You will receive marketing communications from Wedding Draws if you have requested information, purchased tickets, entered a competition, or explicitly subscribed to our newsletter.
               </p>
               <p>
-                <strong className="text-white">Opting Out:</strong> You can unsubscribe from marketing communications at any time by clicking the "Unsubscribe" link in any promotional email or contacting us directly at <a href="mailto:info@tuneddraws.com" className="text-[#D4A863] underline">info@tuneddraws.com</a>. Opting out of marketing does not affect essential transaction emails (e.g. ticket purchase receipts or winner notifications).
+                <strong className="text-white">Opting Out:</strong> You can unsubscribe from marketing communications at any time by clicking the "Unsubscribe" link in any promotional email or contacting us directly at <a href="mailto:info@weddingdraws.com" className="text-[#D4A863] underline">info@weddingdraws.com</a>. Opting out of marketing does not affect essential transaction emails (e.g. ticket purchase receipts or winner notifications).
               </p>
             </section>
 
@@ -277,7 +277,7 @@ export default function PrivacyContent() {
                 <li><strong>Data Portability:</strong> Request transfer of your data in a structured, machine-readable format.</li>
               </ul>
               <p className="text-xs text-[#B6AA9C] pt-2">
-                To exercise any of your rights, contact our Data Privacy Manager at <a href="mailto:info@tuneddraws.com" className="text-[#D4A863] underline">info@tuneddraws.com</a>. We aim to respond within 30 days.
+                To exercise any of your rights, contact our Data Privacy Manager at <a href="mailto:info@weddingdraws.com" className="text-[#D4A863] underline">info@weddingdraws.com</a>. We aim to respond within 30 days.
               </p>
             </section>
 

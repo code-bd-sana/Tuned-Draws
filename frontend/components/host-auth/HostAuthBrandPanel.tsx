@@ -198,7 +198,7 @@ export default function HostAuthBrandPanel({
 
       {/* Bottom Footer Copy */}
       <div className="relative z-10 mt-8 lg:mt-0 pt-6 border-t border-white/10 lg:border-t-0 flex flex-wrap items-center gap-3 text-[11px] text-[#B6AA9C]">
-        <span>© {new Date().getFullYear()} Tuned Draws Ltd</span>
+        <span>© {new Date().getFullYear()} Wedding Draws Ltd</span>
         <span>•</span>
         <Link href="/privacy-policy" className="hover:text-white transition-colors">
           Privacy Policy

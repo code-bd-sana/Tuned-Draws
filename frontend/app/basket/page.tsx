@@ -251,7 +251,7 @@ export default function BasketPage() {
                 Your basket is empty
               </h2>
               <p className="font-sans text-xs text-[#B6AA9C] max-w-md mb-6 leading-relaxed">
-                You haven&apos;t added any competition entries yet. Browse active competitions and win high-performance car mods, tuning packages &amp; precision parts!
+                You haven&apos;t added any competition entries yet. Browse active competitions and win luxury wedding packages, designer bridal wear &amp; dream honeymoons!
               </p>
               <Link
                 href="/live-raffles"

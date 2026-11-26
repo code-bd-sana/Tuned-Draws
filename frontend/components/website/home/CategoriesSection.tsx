@@ -48,7 +48,7 @@ export default function CategoriesSection() {
           <SectionHeader
             badgeText="CATEGORIES"
             headingText="Browse by Category"
-            paragraphText="Find exactly what you are looking for by exploring our curated car modification services and performance parts categories."
+            paragraphText="Find exactly what you are looking for by exploring our curated wedding venues, bridal wear, honeymoons, and supplier categories."
           />
           
           {/* Navigation Arrows (Desktop) */}

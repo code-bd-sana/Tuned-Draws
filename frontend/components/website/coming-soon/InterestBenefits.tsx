@@ -6,23 +6,23 @@ import { Car, Percent, ShieldCheck, Trophy, Lock, Truck } from "lucide-react";
 const BENEFITS = [
   {
     icon: <Car className="w-6 h-6 text-[#D4A863]" />,
-    title: "Launch Day Mod Packages",
+    title: "Launch Day Wedding Packages",
     description:
-      "Be first to enter inaugural competitions — stage tuning kits, custom exhaust setups, full wraps & detailing packages.",
-    tag: "Enthusiasts",
+      "Be first to enter inaugural competitions — luxury honeymoons, couture bridal wear, venue packages & styling services.",
+    tag: "Couples",
   },
   {
     icon: <Percent className="w-6 h-6 text-[#D4A863]" />,
     title: "Zero Host Platform Fees",
     description:
-      "Performance garages, tuners & styling shops who register early lock in zero platform fees for their first 3 competitions.",
-    tag: "Workshops & Hosts",
+      "Bridal boutiques, wedding venues & planners who register early lock in zero platform fees for their first 3 competitions.",
+    tag: "Suppliers & Hosts",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-[#D4A863]" />,
     title: "100% Verified Services",
     description:
-      "Every modification service and performance parts package is verified authentic, and fully compliant with UK prize competition regulations.",
+      "Every wedding supplier and prize package is verified authentic, and fully compliant with UK prize competition regulations.",
     tag: "All Members",
   },
 ];

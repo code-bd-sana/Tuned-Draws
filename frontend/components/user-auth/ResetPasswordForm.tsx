@@ -95,7 +95,7 @@ export default function ResetPasswordForm() {
           Password Reset Successful
         </h2>
         <p className="font-sans text-xs sm:text-sm text-[#9CA3AF] leading-relaxed mb-8 max-w-sm">
-          Your credentials have been securely updated. You can now sign in to your Tuned Draws account.
+          Your credentials have been securely updated. You can now sign in to your Wedding Draws account.
         </p>
 
         <Link
