@@ -49,7 +49,7 @@ export default function AssignmentConfirmationModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
       <div
-        className="w-full max-w-lg bg-[#12141C] border border-white/20 rounded-2xl p-6 flex flex-col gap-5 shadow-2xl animate-scaleUp"
+        className="w-full max-w-lg bg-[#211C18] border border-white/20 rounded-2xl p-6 flex flex-col gap-5 shadow-2xl animate-scaleUp"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -60,14 +60,14 @@ export default function AssignmentConfirmationModal({
               <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                 Confirm Manual Ticket Assignment
               </h3>
-              <p className="font-sans text-xs text-[#8A92A0]">
+              <p className="font-sans text-xs text-[#B6AA9C]">
                 Review financial details before finalizing allocation
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 text-[#8A92A0] hover:text-white flex items-center justify-center text-sm font-bold cursor-pointer"
+            className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 text-[#B6AA9C] hover:text-white flex items-center justify-center text-sm font-bold cursor-pointer"
           >
             ✕
           </button>
@@ -87,24 +87,24 @@ export default function AssignmentConfirmationModal({
         )}
 
         {/* Details Breakdown List */}
-        <div className="flex flex-col divide-y divide-white/5 bg-[#0B0C0E] border border-white/10 rounded-xl p-4 text-xs font-sans">
+        <div className="flex flex-col divide-y divide-white/5 bg-[#14110F] border border-white/10 rounded-xl p-4 text-xs font-sans">
           <div className="py-2.5 flex items-center justify-between">
-            <span className="text-[#8A92A0]">Recipient:</span>
+            <span className="text-[#B6AA9C]">Recipient:</span>
             <div className="text-right">
               <span className="font-bold text-white">{recipient.name}</span>
-              <div className="text-[11px] text-[#8A92A0]">{recipient.email}</div>
+              <div className="text-[11px] text-[#B6AA9C]">{recipient.email}</div>
             </div>
           </div>
 
           <div className="py-2.5 flex items-center justify-between">
-            <span className="text-[#8A92A0]">Competition:</span>
+            <span className="text-[#B6AA9C]">Competition:</span>
             <span className="font-bold text-white max-w-[240px] truncate text-right">
               {competition.title}
             </span>
           </div>
 
           <div className="py-2.5 flex items-center justify-between">
-            <span className="text-[#8A92A0]">Assigned Tickets:</span>
+            <span className="text-[#B6AA9C]">Assigned Tickets:</span>
             <span className="font-mono font-bold text-white text-right">
               {mode === "specific"
                 ? `${count} Ticket(s) (${ticketNumbers.slice(0, 10).map((n) => `#${n}`).join(", ")}${ticketNumbers.length > 10 ? "..." : ""})`
@@ -113,7 +113,7 @@ export default function AssignmentConfirmationModal({
           </div>
 
           <div className="py-2.5 flex items-center justify-between">
-            <span className="text-[#8A92A0]">Total Accounting Value:</span>
+            <span className="text-[#B6AA9C]">Total Accounting Value:</span>
             <span className="font-heading font-black text-sm text-emerald-400">
               £{totalValue.toFixed(2)}
             </span>
@@ -128,7 +128,7 @@ export default function AssignmentConfirmationModal({
 
           {adminNotes && (
             <div className="py-2.5 flex items-start justify-between gap-4">
-              <span className="text-[#8A92A0] shrink-0">Admin Notes:</span>
+              <span className="text-[#B6AA9C] shrink-0">Admin Notes:</span>
               <span className="text-white text-right italic font-medium truncate max-w-xs">
                 &quot;{adminNotes}&quot;
               </span>
@@ -150,7 +150,7 @@ export default function AssignmentConfirmationModal({
             type="button"
             disabled={isLoading}
             onClick={onConfirm}
-            className="px-6 py-2.5 rounded-xl bg-[#FF1E27] hover:bg-[#e01921] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(255,30,39,0.5)] cursor-pointer flex items-center gap-2"
+            className="px-6 py-2.5 rounded-xl bg-[#94632F] hover:bg-[#805023] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(212,168,99,0.5)] cursor-pointer flex items-center gap-2"
           >
             {isLoading ? (
               <>

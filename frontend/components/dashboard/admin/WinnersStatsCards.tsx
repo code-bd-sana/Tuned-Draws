@@ -29,9 +29,9 @@ export default function WinnersStatsCards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
       {/* Total Winners */}
-      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+      <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
         <div className="flex items-center justify-between">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Total Platform Winners
           </span>
           <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform">
@@ -46,18 +46,18 @@ export default function WinnersStatsCards() {
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 font-sans font-bold text-[10px]">
               All-Time Draws
             </span>
-            <span className="font-sans font-medium text-xs text-[#8A92A0]">Verified prize winners</span>
+            <span className="font-sans font-medium text-xs text-[#B6AA9C]">Verified prize winners</span>
           </div>
         </div>
       </div>
 
       {/* Pending Verification */}
-      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+      <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
         <div className="flex items-center justify-between">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Pending Verifications
           </span>
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FF1E27] group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#D4A863] group-hover:scale-105 transition-transform">
             <ShieldAlert className="w-5 h-5" />
           </div>
         </div>
@@ -69,15 +69,15 @@ export default function WinnersStatsCards() {
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 font-sans font-bold text-[10px]">
               Audit Required
             </span>
-            <span className="font-sans font-medium text-xs text-[#8A92A0]">Identity & ticket verification</span>
+            <span className="font-sans font-medium text-xs text-[#B6AA9C]">Identity & ticket verification</span>
           </div>
         </div>
       </div>
 
       {/* Prizes Pending Delivery */}
-      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+      <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
         <div className="flex items-center justify-between">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Prizes In Fulfillment
           </span>
           <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-blue-400 group-hover:scale-105 transition-transform">
@@ -92,7 +92,7 @@ export default function WinnersStatsCards() {
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 font-sans font-bold text-[10px]">
               In Transit
             </span>
-            <span className="font-sans font-medium text-xs text-[#8A92A0]">Dispatch delivery queue</span>
+            <span className="font-sans font-medium text-xs text-[#B6AA9C]">Dispatch delivery queue</span>
           </div>
         </div>
       </div>

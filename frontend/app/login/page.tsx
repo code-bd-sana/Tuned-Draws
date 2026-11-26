@@ -17,7 +17,7 @@ export default function UserLoginPage() {
       <Suspense
         fallback={
           <div className="w-full max-w-xl mx-auto h-96 flex items-center justify-center">
-            <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
+            <div className="w-8 h-8 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
           </div>
         }
       >

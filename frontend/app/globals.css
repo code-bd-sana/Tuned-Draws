@@ -42,7 +42,7 @@
 }
 
 .wedding-steps {
-  background-image: radial-gradient(ellipse at 0% 50%, rgba(212, 168, 99, .13), transparent 30%), radial-gradient(ellipse at 100% 50%, rgba(212, 168, 99, .13), transparent 30%);
+  background-image: radial-gradient(ellipse at 0% 50%, rgba(212,168,99, .13), transparent 30%), radial-gradient(ellipse at 100% 50%, rgba(212,168,99, .13), transparent 30%);
 }
 
 .wedding-faq summary::-webkit-details-marker { display: none; }
@@ -84,7 +84,7 @@
 }
 
 .wedding-light p,
-.wedding-light [class*="text-[#8A92A0]"] {
+.wedding-light [class*="text-[#B6AA9C]"] {
   color: #655e55;
 }
 
@@ -93,13 +93,13 @@
 .home-wedding .winners-section .winner-feature-copy p { color: #fffaf2; }
 .home-wedding .winners-section .winner-feature-copy p:first-of-type { color: #efd2a2; }
 
-.wedding-footer { background: #12100e; border-color: rgba(212, 168, 99, .2); }
+.wedding-footer { background: #12100e; border-color: rgba(212,168,99, .2); }
 .wedding-footer h4 { color: #e7d6bd; }
 .wedding-footer p, .wedding-footer li a { color: #b4aa9c; }
 .wedding-footer li a:hover { color: #e8c991; }
 
-.wedding-light [class*="bg-[#12141C]"],
-.wedding-light [class*="bg-[#1A1D27]"] {
+.wedding-light [class*="bg-[#211C18]"],
+.wedding-light [class*="bg-[#302820]"] {
   background-color: #fffdf9;
   border-color: #e4d8c6;
 }
@@ -114,24 +114,24 @@
 
 :root {
   /* Semantic Colors - Tuned Draws Automotive Theme */
-  --color-bg: #0B0C0E;
-  --color-surface: #12141C;
-  --color-elevated: #1A1D27;
-  --color-accent-bg: rgba(255, 30, 39, 0.08);
+  --color-bg: #14110F;
+  --color-surface: #211C18;
+  --color-elevated: #302820;
+  --color-accent-bg: rgba(212,168,99, 0.08);
   
-  --color-primary: #FF1E27;
-  --color-primary-rgb: 255, 30, 39;
-  --color-primary-hover: #B3000C;
-  --color-primary-text: #ffffff;
+  --color-primary: #D4A863;
+  --color-primary-rgb: 212, 168, 99;
+  --color-primary-hover: #9B6A2F;
+  --color-primary-text: #21180f;
   
   --color-text-primary: #FFFFFF;
-  --color-text-secondary: #D1D5DB;
-  --color-text-muted: #8A92A0;
-  --color-text-brand: #FF1E27;
-  --color-text-accent: #FF1E27;
+  --color-text-secondary: #E5DCCD;
+  --color-text-muted: #B6AA9C;
+  --color-text-brand: #D4A863;
+  --color-text-accent: #D4A863;
   
   --color-border: rgba(255, 255, 255, 0.08);
-  --color-border-medium: rgba(255, 30, 39, 0.25);
+  --color-border-medium: rgba(212,168,99, 0.25);
   --color-divider: rgba(255, 255, 255, 0.06);
   
   --color-success: #16A34A;
@@ -145,15 +145,15 @@
   
   /* Shadows */
   --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 25px rgba(255, 30, 39, 0.35);
+  --shadow-glow: 0 0 25px rgba(212,168,99, 0.35);
   
   /* Tuned Draws Automotive Brand Palette */
-  --color-brand-dark: #0B0C0E;
-  --color-brand-surface: #12141C;
-  --color-brand-input: #1A1D27;
-  --color-brand-red: #FF1E27;
-  --color-brand-red-dark: #B3000C;
-  --color-brand-silver: #D1D5DB;
+  --color-brand-dark: #14110F;
+  --color-brand-surface: #211C18;
+  --color-brand-input: #302820;
+  --color-brand-red: #D4A863;
+  --color-brand-red-dark: #9B6A2F;
+  --color-brand-silver: #E5DCCD;
 }
 
 @theme {
@@ -256,48 +256,49 @@ body {
 
 /* 3D Hero Heading Text Shadows */
 .text-shadow-hero-green {
-  text-shadow: 0 4px 16px rgba(255, 30, 39, 0.4), 0 2px 6px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 4px 16px rgba(212,168,99, 0.4), 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .text-shadow-hero-red {
-  text-shadow: 0 4px 16px rgba(255, 30, 39, 0.6), 0 2px 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 4px 16px rgba(212,168,99, 0.6), 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* Electric Racing Red 3D Button */
 .btn-glossy-red {
-  background: linear-gradient(180deg, #FF1E27 0%, #D8141D 50%, #B3000C 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 8px 24px -4px rgba(255, 30, 39, 0.5);
+  background: linear-gradient(180deg, #e7c28a 0%, #c99b5c 100%);
+  color: #21180f;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 8px 24px -4px rgba(212,168,99, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-glossy-red:hover {
-  background: linear-gradient(180deg, #FF3840 0%, #FF1E27 50%, #D8141D 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 12px 28px -4px rgba(255, 30, 39, 0.7);
+  background: linear-gradient(180deg, #efd2a7 0%, #d4a863 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 12px 28px -4px rgba(212,168,99, 0.7);
 }
 
 /* Dark Carbon Glass / Metallic Button */
 .btn-glossy-white {
-  background: #12141C;
+  background: #211C18;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 4px 14px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #FFFFFF !important;
 }
 
 .btn-glossy-white:hover {
-  background: #1A1D27;
-  border-color: rgba(255, 30, 39, 0.5);
-  box-shadow: 0 0 20px rgba(255, 30, 39, 0.25);
+  background: #302820;
+  border-color: rgba(212,168,99, 0.5);
+  box-shadow: 0 0 20px rgba(212,168,99, 0.25);
   color: #FFFFFF !important;
 }
 
 /* Shared public legal-document treatment. Tuned Draws Automotive Luxury Theme */
 .legal-campaign {
-  background: #0B0C0E;
-  color: #D1D5DB;
+  background: #14110F;
+  color: #E5DCCD;
 }
 
 .legal-campaign > div:first-child {
-  background: #12141C !important;
+  background: #211C18 !important;
   border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -314,7 +315,7 @@ body {
 .cookie-policy main > section,
 .privacy-policy aside > div,
 .privacy-policy main > section {
-  background: #12141C !important;
+  background: #211C18 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
@@ -322,7 +323,7 @@ body {
 .legal-campaign main > section > div,
 .cookie-policy main > section > div,
 .privacy-policy main > section > div {
-  background: #1A1D27 !important;
+  background: #302820 !important;
   border-color: rgba(255, 255, 255, 0.08) !important;
 }
 
@@ -348,13 +349,13 @@ body {
 .privacy-policy main,
 .privacy-policy main p,
 .privacy-policy main li {
-  color: #8A92A0 !important;
+  color: #B6AA9C !important;
 }
 
 .legal-campaign a,
 .cookie-policy a,
 .privacy-policy a {
-  color: #FF1E27 !important;
+  color: #D4A863 !important;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -362,7 +363,7 @@ body {
 .legal-campaign a:hover,
 .cookie-policy a:hover,
 .privacy-policy a:hover {
-  color: #B3000C !important;
+  color: #9B6A2F !important;
 }
 
 .legal-campaign strong,
@@ -376,8 +377,8 @@ body {
 .cookie-policy aside a,
 .privacy-policy aside button,
 .privacy-policy aside a {
-  background: #FF1E27 !important;
-  border-color: #FF1E27 !important;
+  background: #D4A863 !important;
+  border-color: #D4A863 !important;
   color: #ffffff !important;
   text-decoration: none !important;
 }
@@ -385,14 +386,14 @@ body {
 .legal-campaign aside a:hover,
 .cookie-policy aside button.bg-\[\#1A230A\]:hover,
 .privacy-policy aside button.bg-\[\#1A230A\]:hover {
-  background: #B3000C !important;
-  border-color: #B3000C !important;
+  background: #9B6A2F !important;
+  border-color: #9B6A2F !important;
 }
 
 .cookie-policy,
 .privacy-policy {
-  background-color: #0B0C0E;
-  color: #8A92A0;
+  background-color: #14110F;
+  color: #B6AA9C;
 }
 
 /* Print / PDF Export Styles */
@@ -416,45 +417,42 @@ body {
 
 /* Chrome / Metallic Silver Gradient Text */
 .metallic-text {
-  background: linear-gradient(180deg, #FFFFFF 0%, #D1D5DB 50%, #8A92A0 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #E5DCCD 50%, #B6AA9C 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .metallic-text-red {
-  background: linear-gradient(180deg, #FF6B72 0%, #FF1E27 50%, #B3000C 100%);
+  background: linear-gradient(180deg, #f0d5a8 0%, #D4A863 50%, #9B6A2F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Tachometer Grid Background with Crimson Ambient Glows */
+/* Soft warm ambience used by authentication screens and dashboards. */
 .bg-tachometer-grid {
-  background-color: #0B0C0E;
-  background-image: 
-    radial-gradient(circle at 50% 0%, rgba(255, 30, 39, 0.12) 0%, transparent 55%),
-    radial-gradient(circle at 100% 100%, rgba(255, 30, 39, 0.07) 0%, transparent 50%),
-    radial-gradient(circle at 0% 100%, rgba(255, 30, 39, 0.05) 0%, transparent 45%),
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
+  background-color: #14110F;
+  background-image:
+    radial-gradient(ellipse at 50% 0%, rgba(212,168,99, 0.08), transparent 55%),
+    radial-gradient(ellipse at 100% 100%, rgba(212,168,99, 0.04), transparent 50%);
 }
 
 /* Sleek Dark Carbon Glass Surface */
 .carbon-glass {
-  background: rgba(18, 20, 28, 0.88);
+  background: rgba(33, 28, 24, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 30, 39, 0.22);
+  border: 1px solid rgba(212,168,99, 0.22);
   box-shadow: 
     0 24px 60px -12px rgba(0, 0, 0, 0.85),
-    0 0 35px -5px rgba(255, 30, 39, 0.1),
+    0 0 35px -5px rgba(212,168,99, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 /* Electric Racing Red Primary Button */
 .btn-racing-red {
-  background: linear-gradient(135deg, #FF1E27 0%, #B3000C 100%);
-  box-shadow: 0 4px 20px rgba(255, 30, 39, 0.4);
+  background: linear-gradient(135deg, #e7c48d 0%, #c59757 100%);
+  color: #21180f;
+  box-shadow: 0 4px 20px rgba(212,168,99, 0.2);
   position: relative;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -477,23 +475,25 @@ body {
 }
 
 .btn-racing-red:hover {
-  background: linear-gradient(135deg, #FF333B 0%, #C4000E 100%);
-  box-shadow: 0 8px 30px rgba(255, 30, 39, 0.65);
+  background: linear-gradient(135deg, #f0d2a4 0%, #d4a863 100%);
+  box-shadow: 0 8px 24px rgba(212,168,99, 0.3);
   transform: translateY(-1px);
 }
 
+.btn-racing-red svg, .btn-glossy-red svg { color: inherit; }
+
 .btn-racing-red:active {
   transform: translateY(0);
-  box-shadow: 0 2px 12px rgba(255, 30, 39, 0.5);
+  box-shadow: 0 2px 12px rgba(212,168,99, 0.5);
 }
 
 /* Animated Speed Needle Glow */
 @keyframes speedGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(255, 30, 39, 0.3);
+    box-shadow: 0 0 15px rgba(212,168,99, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(255, 30, 39, 0.65);
+    box-shadow: 0 0 30px rgba(212,168,99, 0.65);
   }
 }
 

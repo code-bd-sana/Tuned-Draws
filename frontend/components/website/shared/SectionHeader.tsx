@@ -25,8 +25,8 @@ export default function SectionHeader({
       )}
     >
       {badgeText && (
-        <div className="inline-flex items-center gap-2 bg-[#12141C] border border-[#FF1E27]/30 px-3.5 py-1.5 rounded-full text-[10px] font-heading font-black uppercase tracking-widest text-[#FF1E27] mb-4 shadow-[0_0_12px_rgba(255,30,39,0.15)]">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27] animate-pulse" />
+        <div className="inline-flex items-center gap-2 bg-[#211C18] border border-[#D4A863]/30 px-3.5 py-1.5 rounded-full text-[10px] font-heading font-black uppercase tracking-widest text-[#D4A863] mb-4 shadow-[0_0_12px_rgba(212,168,99,0.15)]">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#94632F] animate-pulse" />
           {badgeText}
         </div>
       )}
@@ -36,7 +36,7 @@ export default function SectionHeader({
       </h2>
       
       {paragraphText && (
-        <p className="font-sans text-xs sm:text-sm text-[#8A92A0] leading-relaxed">
+        <p className="font-sans text-xs sm:text-sm text-[#B6AA9C] leading-relaxed">
           {paragraphText}
         </p>
       )}

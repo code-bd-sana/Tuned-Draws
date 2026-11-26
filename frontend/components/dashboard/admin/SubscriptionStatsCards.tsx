@@ -21,9 +21,9 @@ export default function SubscriptionStatsCards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
       {/* Premium Subscribers */}
-      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+      <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
         <div className="flex items-center justify-between">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Premium Tier Subscribers
           </span>
           <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform">
@@ -38,18 +38,18 @@ export default function SubscriptionStatsCards() {
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 font-sans font-bold text-[10px]">
               {premiumPlan.percentage} Share
             </span>
-            <span className="font-sans font-medium text-xs text-[#8A92A0]">Active premium hosts</span>
+            <span className="font-sans font-medium text-xs text-[#B6AA9C]">Active premium hosts</span>
           </div>
         </div>
       </div>
 
       {/* Pro Subscribers */}
-      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+      <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
         <div className="flex items-center justify-between">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Pro Tier Subscribers
           </span>
-          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FF1E27] group-hover:scale-105 transition-transform">
+          <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#D4A863] group-hover:scale-105 transition-transform">
             <Zap className="w-5 h-5" />
           </div>
         </div>
@@ -58,18 +58,18 @@ export default function SubscriptionStatsCards() {
             {isLoading ? "..." : proPlan.value}
           </span>
           <div className="flex items-center gap-2 mt-3">
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/25 text-[#FF1E27] font-sans font-bold text-[10px]">
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#D4A863]/10 border border-[#D4A863]/25 text-[#D4A863] font-sans font-bold text-[10px]">
               {proPlan.percentage} Share
             </span>
-            <span className="font-sans font-medium text-xs text-[#8A92A0]">Unlimited tier hosts</span>
+            <span className="font-sans font-medium text-xs text-[#B6AA9C]">Unlimited tier hosts</span>
           </div>
         </div>
       </div>
 
       {/* MRR */}
-      <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+      <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
         <div className="flex items-center justify-between">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Monthly Recurring Revenue (MRR)
           </span>
           <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
@@ -89,7 +89,7 @@ export default function SubscriptionStatsCards() {
             <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-sans font-bold text-[10px]">
               Recurring
             </span>
-            <span className="font-sans font-medium text-xs text-[#8A92A0]">Active subscriptions</span>
+            <span className="font-sans font-medium text-xs text-[#B6AA9C]">Active subscriptions</span>
           </div>
         </div>
       </div>

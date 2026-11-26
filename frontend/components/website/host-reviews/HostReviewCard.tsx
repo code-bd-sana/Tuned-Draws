@@ -56,14 +56,14 @@ export default function HostReviewCard({ review }: HostReviewCardProps) {
         "border rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between shadow-lg text-white",
         isFlagged
           ? "bg-[#1A1414] border-red-900/40 opacity-75"
-          : "bg-[#12141C] border-white/10 hover:border-[#FF1E27]/40 hover:shadow-[0_4px_20px_rgba(255,30,39,0.15)]"
+          : "bg-[#211C18] border-white/10 hover:border-[#D4A863]/40 hover:shadow-[0_4px_20px_rgba(212,168,99,0.15)]"
       )}
     >
       <div>
         {/* Top Header: Reviewer Info + Star Rating */}
         <div className="flex items-start justify-between gap-3 mb-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#181B26] border border-white/15 flex items-center justify-center shrink-0 overflow-hidden text-xs font-heading font-black text-white">
+            <div className="w-10 h-10 rounded-xl bg-[#302820] border border-white/15 flex items-center justify-center shrink-0 overflow-hidden text-xs font-heading font-black text-white">
               {review.avatarUrl ? (
                 <img
                   src={review.avatarUrl}
@@ -79,11 +79,11 @@ export default function HostReviewCard({ review }: HostReviewCardProps) {
                 <span className="font-heading font-bold text-white text-sm">
                   {review.reviewerName}
                 </span>
-                <span className="bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] text-[9px] font-heading font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
+                <span className="bg-[#D4A863]/10 border border-[#D4A863]/30 text-[#D4A863] text-[9px] font-heading font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
                   Verified Winner
                 </span>
               </div>
-              <span className="font-sans text-[11px] text-[#8A92A0] mt-0.5">
+              <span className="font-sans text-[11px] text-[#B6AA9C] mt-0.5">
                 {formattedDate}
               </span>
             </div>
@@ -108,22 +108,22 @@ export default function HostReviewCard({ review }: HostReviewCardProps) {
             <span className="text-xs">
               {review.winType === "INSTANT_WIN" ? "⚡" : "🏆"}
             </span>
-            <span className="text-xs font-sans font-medium text-[#D1D5DB] truncate max-w-[320px]">
+            <span className="text-xs font-sans font-medium text-[#E5DCCD] truncate max-w-[320px]">
               Won: {wonItem}
             </span>
           </div>
         )}
 
         {/* Comment Text */}
-        <p className="font-sans text-xs sm:text-[13px] text-[#D1D5DB] leading-relaxed mb-4">
+        <p className="font-sans text-xs sm:text-[13px] text-[#E5DCCD] leading-relaxed mb-4">
           {isFlagged ? (
-            <span className="italic text-[#8A92A0]">
+            <span className="italic text-[#B6AA9C]">
               This review has been flagged and is currently under moderation.
             </span>
           ) : displayMessage ? (
             displayMessage
           ) : (
-            <span className="italic text-[#8A92A0]">
+            <span className="italic text-[#B6AA9C]">
               No written feedback provided.
             </span>
           )}
@@ -136,7 +136,7 @@ export default function HostReviewCard({ review }: HostReviewCardProps) {
           <button
             onClick={handleFlag}
             disabled={flagging}
-            className="text-[10px] font-heading font-bold uppercase tracking-wider text-[#8A92A0] hover:text-[#FF1E27] transition-colors flex items-center gap-1 cursor-pointer"
+            className="text-[10px] font-heading font-bold uppercase tracking-wider text-[#B6AA9C] hover:text-[#D4A863] transition-colors flex items-center gap-1 cursor-pointer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

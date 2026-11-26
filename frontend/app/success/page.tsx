@@ -115,18 +115,18 @@ function SuccessContent() {
   return (
     <div className="container-custom max-w-2xl mx-auto px-4 sm:px-6">
       {isLoading ? (
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-12 text-center shadow-xl flex flex-col items-center animate-fadeIn">
-          <div className="w-10 h-10 border-3 border-[#FF1E27] border-t-transparent rounded-full animate-spin mb-4" />
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-12 text-center shadow-xl flex flex-col items-center animate-fadeIn">
+          <div className="w-10 h-10 border-3 border-[#D4A863] border-t-transparent rounded-full animate-spin mb-4" />
           <h2 className="font-heading font-black text-lg uppercase tracking-wider text-white mb-1">
             Verifying Your Payment...
           </h2>
-          <p className="font-sans text-xs text-[#8A92A0] max-w-md">
+          <p className="font-sans text-xs text-[#B6AA9C] max-w-md">
             Connecting with the payment provider and confirming your transaction.
           </p>
         </div>
       ) : error ? (
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-8 sm:p-12 text-center shadow-xl flex flex-col items-center animate-fadeIn">
-          <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/30 text-[#FF1E27] flex items-center justify-center mb-4 shadow-xs">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-8 sm:p-12 text-center shadow-xl flex flex-col items-center animate-fadeIn">
+          <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/30 text-[#D4A863] flex items-center justify-center mb-4 shadow-xs">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -141,7 +141,7 @@ function SuccessContent() {
           <h2 className="font-heading font-black text-xl uppercase tracking-wider text-white mb-2">
             Payment Not Completed
           </h2>
-          <p className="font-sans text-xs text-[#8A92A0] mb-6 max-w-md">{error}</p>
+          <p className="font-sans text-xs text-[#B6AA9C] mb-6 max-w-md">{error}</p>
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <Link
               href="/dashboard"
@@ -159,7 +159,7 @@ function SuccessContent() {
         </div>
       ) : (
         /* Universal Payment Successful View */
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-8 sm:p-12 shadow-2xl flex flex-col items-center text-center animate-fadeIn relative overflow-hidden">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-8 sm:p-12 shadow-2xl flex flex-col items-center text-center animate-fadeIn relative overflow-hidden">
           {/* Neon Emerald Checkmark Circle */}
           <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-500/10 border-2 border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/10">
             <svg
@@ -185,13 +185,13 @@ function SuccessContent() {
           </h1>
 
           {/* Subtitle */}
-          <p className="font-sans text-xs sm:text-sm text-[#8A92A0] max-w-md mb-6 leading-relaxed">
+          <p className="font-sans text-xs sm:text-sm text-[#B6AA9C] max-w-md mb-6 leading-relaxed">
             Thank you! Your payment has been processed and verified successfully. Your account and services have been updated.
           </p>
 
           {/* Order Reference if present */}
           {orderRef && (
-            <div className="mb-6 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-sans text-[#8A92A0]">
+            <div className="mb-6 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-sans text-[#B6AA9C]">
               Order Reference: <strong className="text-white font-mono">{orderRef}</strong>
             </div>
           )}
@@ -226,13 +226,13 @@ function SuccessContent() {
                 <span className="font-heading font-bold text-xs uppercase tracking-wider text-white">
                   Assigned Ticket Numbers ({tickets.length})
                 </span>
-                <span className="text-[10px] font-sans text-[#8A92A0]">Certified Random</span>
+                <span className="text-[10px] font-sans text-[#B6AA9C]">Certified Random</span>
               </div>
               <div className="flex flex-wrap gap-2 max-h-44 overflow-y-auto pr-1">
                 {tickets.map((t: any, idx: number) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-[#0B0C0E] border border-white/15 text-white"
+                    className="inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-[#14110F] border border-white/15 text-white"
                   >
                     #{t.ticketNumber}
                   </span>
@@ -259,7 +259,7 @@ function SuccessContent() {
             </Link>
           </div>
 
-          <p className="mt-8 text-[11px] font-sans text-[#8A92A0]">
+          <p className="mt-8 text-[11px] font-sans text-[#B6AA9C]">
             A confirmation receipt has been dispatched to your email and dashboard notifications.
           </p>
         </div>
@@ -278,7 +278,7 @@ function SuccessContent() {
 
 export default function SuccessPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white">
+    <div className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white">
       <WebsiteNavbar />
 
       <main className="flex-1 pt-28 pb-20">

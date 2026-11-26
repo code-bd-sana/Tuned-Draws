@@ -21,7 +21,7 @@ export default function AssignmentSuccessModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fadeIn">
       <div
-        className="w-full max-w-lg bg-[#12141C] border border-white/20 rounded-2xl p-6 sm:p-7 flex flex-col gap-5 shadow-2xl animate-scaleUp max-h-[90vh] overflow-y-auto"
+        className="w-full max-w-lg bg-[#211C18] border border-white/20 rounded-2xl p-6 sm:p-7 flex flex-col gap-5 shadow-2xl animate-scaleUp max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Animated Celebration Banner for Instant Wins */}
@@ -67,37 +67,37 @@ export default function AssignmentSuccessModal({
             <h3 className="font-heading font-black text-xl text-white uppercase tracking-tight">
               Tickets Successfully Assigned!
             </h3>
-            <p className="font-sans text-xs text-[#8A92A0]">
+            <p className="font-sans text-xs text-[#B6AA9C]">
               The tickets have been credited and user notifications were dispatched.
             </p>
           </div>
         )}
 
         {/* Breakdown Card */}
-        <div className="bg-[#0B0C0E] border border-white/10 rounded-xl p-4 flex flex-col gap-2.5 text-xs font-sans">
+        <div className="bg-[#14110F] border border-white/10 rounded-xl p-4 flex flex-col gap-2.5 text-xs font-sans">
           <div className="flex items-center justify-between py-1 border-b border-white/5">
-            <span className="text-[#8A92A0]">Transaction Ref:</span>
-            <span className="font-mono font-bold text-[#FF1E27] truncate max-w-[220px]">
+            <span className="text-[#B6AA9C]">Transaction Ref:</span>
+            <span className="font-mono font-bold text-[#D4A863] truncate max-w-[220px]">
               {result.gatewayTransactionId}
             </span>
           </div>
 
           <div className="flex items-center justify-between py-1 border-b border-white/5">
-            <span className="text-[#8A92A0]">Recipient:</span>
+            <span className="text-[#B6AA9C]">Recipient:</span>
             <span className="font-bold text-white">
               {result.recipient.name} ({result.recipient.email})
             </span>
           </div>
 
           <div className="flex items-center justify-between py-1 border-b border-white/5">
-            <span className="text-[#8A92A0]">Competition:</span>
+            <span className="text-[#B6AA9C]">Competition:</span>
             <span className="font-bold text-white truncate max-w-[240px]">
               {result.competition.title}
             </span>
           </div>
 
           <div className="flex items-center justify-between py-1 border-b border-white/5">
-            <span className="text-[#8A92A0]">Accounting Value:</span>
+            <span className="text-[#B6AA9C]">Accounting Value:</span>
             <span className="font-heading font-black text-sm text-emerald-400">
               £{result.totalAmount.toFixed(2)}
             </span>
@@ -113,10 +113,10 @@ export default function AssignmentSuccessModal({
 
         {/* Assigned Ticket Numbers */}
         <div className="flex flex-col gap-2">
-          <span className="font-sans text-xs font-bold text-[#8A92A0] uppercase">
+          <span className="font-sans text-xs font-bold text-[#B6AA9C] uppercase">
             Allocated Ticket Numbers ({result.ticketNumbers.length}):
           </span>
-          <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto bg-[#0B0C0E] border border-white/10 rounded-xl p-3">
+          <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto bg-[#14110F] border border-white/10 rounded-xl p-3">
             {result.ticketNumbers.map((num) => {
               const isInstant = result.instantWins.some((iw) => iw.ticketNumber === num);
               return (
@@ -150,7 +150,7 @@ export default function AssignmentSuccessModal({
           <button
             type="button"
             onClick={onClose}
-            className="w-full py-3 rounded-xl bg-[#FF1E27] hover:bg-[#e01921] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(255,30,39,0.5)] cursor-pointer"
+            className="w-full py-3 rounded-xl bg-[#94632F] hover:bg-[#805023] text-white font-heading font-black text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(212,168,99,0.5)] cursor-pointer"
           >
             Done &amp; Close
           </button>

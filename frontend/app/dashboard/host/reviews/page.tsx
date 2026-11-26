@@ -37,7 +37,7 @@ export default function HostReviewsDashboardPage() {
           <h1 className="font-heading text-2xl lg:text-3xl font-black text-white uppercase tracking-tight">
             Customer Reviews
           </h1>
-          <p className="font-sans text-xs sm:text-sm text-[#8A92A0] mt-1">
+          <p className="font-sans text-xs sm:text-sm text-[#B6AA9C] mt-1">
             Monitor winner feedback, host reputation metrics, and prize delivery reviews.
           </p>
         </div>
@@ -46,9 +46,9 @@ export default function HostReviewsDashboardPage() {
       {/* KPI Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
         {/* Average Rating */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
           <div className="flex items-center justify-between">
-            <span className="font-heading text-[11px] uppercase tracking-wider text-[#8A92A0] font-bold">
+            <span className="font-heading text-[11px] uppercase tracking-wider text-[#B6AA9C] font-bold">
               Average Rating
             </span>
             <span className="text-[18px] text-[#EAB308]">★</span>
@@ -59,17 +59,17 @@ export default function HostReviewsDashboardPage() {
                 ? Number(averageRating).toFixed(1)
                 : "—"}
             </span>
-            <span className="font-sans text-xs text-[#8A92A0]">/ 5.0</span>
+            <span className="font-sans text-xs text-[#B6AA9C]">/ 5.0</span>
           </div>
-          <span className="font-sans text-xs text-[#FF1E27] mt-2 font-medium">
+          <span className="font-sans text-xs text-[#D4A863] mt-2 font-medium">
             Public reputation score
           </span>
         </div>
 
         {/* Total Reviews */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
           <div className="flex items-center justify-between">
-            <span className="font-heading text-[11px] uppercase tracking-wider text-[#8A92A0] font-bold">
+            <span className="font-heading text-[11px] uppercase tracking-wider text-[#B6AA9C] font-bold">
               Total Reviews
             </span>
             <span className="text-[18px]">🏆</span>
@@ -79,15 +79,15 @@ export default function HostReviewsDashboardPage() {
               {totalReviews}
             </span>
           </div>
-          <span className="font-sans text-xs text-[#8A92A0] mt-2">
+          <span className="font-sans text-xs text-[#B6AA9C] mt-2">
             Verified competition winners
           </span>
         </div>
 
         {/* 5-Star Reviews */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
           <div className="flex items-center justify-between">
-            <span className="font-heading text-[11px] uppercase tracking-wider text-[#8A92A0] font-bold">
+            <span className="font-heading text-[11px] uppercase tracking-wider text-[#B6AA9C] font-bold">
               5-Star Feedback
             </span>
             <span className="text-[18px]">🌟</span>
@@ -96,7 +96,7 @@ export default function HostReviewsDashboardPage() {
             <span className="font-heading font-black text-[34px] text-[#EAB308] leading-none">
               {fiveStarCount}
             </span>
-            <span className="font-sans text-xs text-[#8A92A0]">
+            <span className="font-sans text-xs text-[#B6AA9C]">
               ({stats?.percentages?.[5] || 0}%)
             </span>
           </div>
@@ -106,9 +106,9 @@ export default function HostReviewsDashboardPage() {
         </div>
 
         {/* Satisfaction Rate */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-5 flex flex-col justify-between shadow-xl">
           <div className="flex items-center justify-between">
-            <span className="font-heading text-[11px] uppercase tracking-wider text-[#8A92A0] font-bold">
+            <span className="font-heading text-[11px] uppercase tracking-wider text-[#B6AA9C] font-bold">
               Satisfaction Rate
             </span>
             <span className="text-[18px]">👍</span>
@@ -125,7 +125,7 @@ export default function HostReviewsDashboardPage() {
       </div>
 
       {/* Filter Tabs */}
-      <div className="flex flex-wrap items-center gap-2 bg-[#12141C] border border-white/10 p-3 rounded-xl">
+      <div className="flex flex-wrap items-center gap-2 bg-[#211C18] border border-white/10 p-3 rounded-xl">
         <button
           onClick={() => {
             setSelectedRating(undefined);
@@ -134,8 +134,8 @@ export default function HostReviewsDashboardPage() {
           className={cn(
             "h-8 px-4 rounded-lg text-xs font-heading font-bold uppercase tracking-wider transition-colors cursor-pointer",
             selectedRating === undefined
-              ? "bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.3)]"
-              : "bg-white/5 border border-white/10 text-[#8A92A0] hover:text-white"
+              ? "bg-[#94632F] text-white shadow-[0_0_10px_rgba(212,168,99,0.3)]"
+              : "bg-white/5 border border-white/10 text-[#B6AA9C] hover:text-white"
           )}
         >
           All Reviews ({totalReviews})
@@ -152,8 +152,8 @@ export default function HostReviewsDashboardPage() {
               className={cn(
                 "h-8 px-4 rounded-lg text-xs font-heading font-bold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1.5",
                 selectedRating === star
-                  ? "bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.3)]"
-                  : "bg-white/5 border border-white/10 text-[#8A92A0] hover:text-white"
+                  ? "bg-[#94632F] text-white shadow-[0_0_10px_rgba(212,168,99,0.3)]"
+                  : "bg-white/5 border border-white/10 text-[#B6AA9C] hover:text-white"
               )}
             >
               <span>{star} ★</span>
@@ -169,23 +169,23 @@ export default function HostReviewsDashboardPage() {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="bg-[#12141C] border border-white/10 rounded-2xl p-5 h-40 animate-pulse"
+              className="bg-[#211C18] border border-white/10 rounded-2xl p-5 h-40 animate-pulse"
             />
           ))}
         </div>
       ) : isError ? (
-        <div className="text-center py-12 bg-[#12141C] border border-red-500/20 rounded-2xl">
+        <div className="text-center py-12 bg-[#211C18] border border-red-500/20 rounded-2xl">
           <p className="font-sans text-sm text-red-400">
             Failed to load reviews. Please refresh the page.
           </p>
         </div>
       ) : reviews.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 text-center gap-3 bg-[#12141C] border border-white/10 rounded-2xl">
+        <div className="flex flex-col items-center justify-center py-20 text-center gap-3 bg-[#211C18] border border-white/10 rounded-2xl">
           <span className="text-[36px]">⭐</span>
           <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
             {selectedRating ? `No ${selectedRating}-Star Reviews` : "No Reviews Received Yet"}
           </h3>
-          <p className="font-sans text-xs sm:text-sm text-[#8A92A0] max-w-[380px] leading-relaxed">
+          <p className="font-sans text-xs sm:text-sm text-[#B6AA9C] max-w-[380px] leading-relaxed">
             {selectedRating
               ? `No reviews found for ${selectedRating} stars.`
               : "When players win prizes in your competitions, they can leave verified reviews and ratings here."}
@@ -205,17 +205,17 @@ export default function HostReviewsDashboardPage() {
           <button
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
-            className="px-4 py-2 rounded-xl border border-white/10 text-[#8A92A0] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
+            className="px-4 py-2 rounded-xl border border-white/10 text-[#B6AA9C] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
           >
             Previous
           </button>
-          <span className="text-xs font-sans text-[#8A92A0] px-2">
+          <span className="text-xs font-sans text-[#B6AA9C] px-2">
             Page {page} of {meta.totalPages}
           </span>
           <button
             onClick={() => setPage((p) => Math.min(meta.totalPages, p + 1))}
             disabled={page === meta.totalPages}
-            className="px-4 py-2 rounded-xl border border-white/10 text-[#8A92A0] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
+            className="px-4 py-2 rounded-xl border border-white/10 text-[#B6AA9C] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
           >
             Next
           </button>

@@ -92,16 +92,16 @@ export default function HostProfileTabs({
           onClick={() => setActiveTab("active")}
           className={`pb-3.5 pt-2 px-4 font-heading text-xs uppercase tracking-wider font-black transition-all border-b-2 -mb-[1px] whitespace-nowrap flex items-center gap-2 cursor-pointer ${
             activeTab === "active"
-              ? "border-[#FF1E27] text-white"
-              : "border-transparent text-[#8A92A0] hover:text-white"
+              ? "border-[#D4A863] text-white"
+              : "border-transparent text-[#B6AA9C] hover:text-white"
           }`}
         >
           <span>Active Draws</span>
           <span
             className={`px-2.5 py-0.5 rounded-full text-[10px] font-black transition-colors ${
               activeTab === "active"
-                ? "bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.5)]"
-                : "bg-white/10 text-[#8A92A0]"
+                ? "bg-[#94632F] text-white shadow-[0_0_10px_rgba(212,168,99,0.5)]"
+                : "bg-white/10 text-[#B6AA9C]"
             }`}
           >
             {liveDraws.length}
@@ -112,16 +112,16 @@ export default function HostProfileTabs({
           onClick={() => setActiveTab("past")}
           className={`pb-3.5 pt-2 px-4 font-heading text-xs uppercase tracking-wider font-black transition-all border-b-2 -mb-[1px] whitespace-nowrap flex items-center gap-2 cursor-pointer ${
             activeTab === "past"
-              ? "border-[#FF1E27] text-white"
-              : "border-transparent text-[#8A92A0] hover:text-white"
+              ? "border-[#D4A863] text-white"
+              : "border-transparent text-[#B6AA9C] hover:text-white"
           }`}
         >
           <span>Past Draws</span>
           <span
             className={`px-2.5 py-0.5 rounded-full text-[10px] font-black transition-colors ${
               activeTab === "past"
-                ? "bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.5)]"
-                : "bg-white/10 text-[#8A92A0]"
+                ? "bg-[#94632F] text-white shadow-[0_0_10px_rgba(212,168,99,0.5)]"
+                : "bg-white/10 text-[#B6AA9C]"
             }`}
           >
             {pastDraws.length}
@@ -132,8 +132,8 @@ export default function HostProfileTabs({
           onClick={() => setActiveTab("reviews")}
           className={`pb-3.5 pt-2 px-4 font-heading text-xs uppercase tracking-wider font-black transition-all border-b-2 -mb-[1px] whitespace-nowrap flex items-center gap-2 cursor-pointer ${
             activeTab === "reviews"
-              ? "border-[#FF1E27] text-white"
-              : "border-transparent text-[#8A92A0] hover:text-white"
+              ? "border-[#D4A863] text-white"
+              : "border-transparent text-[#B6AA9C] hover:text-white"
           }`}
         >
           <span>Reviews</span>
@@ -143,8 +143,8 @@ export default function HostProfileTabs({
           onClick={() => setActiveTab("about")}
           className={`pb-3.5 pt-2 px-4 font-heading text-xs uppercase tracking-wider font-black transition-all border-b-2 -mb-[1px] whitespace-nowrap flex items-center gap-2 cursor-pointer ${
             activeTab === "about"
-              ? "border-[#FF1E27] text-white"
-              : "border-transparent text-[#8A92A0] hover:text-white"
+              ? "border-[#D4A863] text-white"
+              : "border-transparent text-[#B6AA9C] hover:text-white"
           }`}
         >
           <span>About Host</span>
@@ -162,19 +162,19 @@ export default function HostProfileTabs({
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center py-16 px-6 text-center rounded-2xl border border-white/10 bg-[#12141C]/80 shadow-2xl my-2 backdrop-blur-md">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl mb-4 text-[#FF1E27] shadow-inner">
+              <div className="flex flex-col items-center justify-center py-16 px-6 text-center rounded-2xl border border-white/10 bg-[#211C18]/80 shadow-2xl my-2 backdrop-blur-md">
+                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl mb-4 text-[#D4A863] shadow-inner">
                   🏎️
                 </div>
                 <h3 className="font-heading font-black text-xl sm:text-2xl text-white mb-2 uppercase tracking-tight">
                   No Active Draws At The Moment
                 </h3>
-                <p className="font-sans text-sm text-[#8A92A0] max-w-md mb-6 leading-relaxed">
+                <p className="font-sans text-sm text-[#B6AA9C] max-w-md mb-6 leading-relaxed">
                   <strong className="text-white">{name}</strong> does not have any live automotive draws running right now. Check back soon or explore live draws from other verified builders!
                 </p>
                 <Link
                   href="/live-raffles"
-                  className="inline-flex items-center justify-center gap-2 font-heading font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#FF1E27] to-[#B3000C] text-white shadow-[0_0_20px_rgba(255,30,39,0.4)] transition-all hover:scale-105"
+                  className="inline-flex items-center justify-center gap-2 font-heading font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#94632F] to-[#70471F] text-white shadow-[0_0_20px_rgba(212,168,99,0.4)] transition-all hover:scale-105"
                 >
                   Explore All Live Competitions →
                 </Link>
@@ -192,14 +192,14 @@ export default function HostProfileTabs({
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center py-16 px-6 text-center rounded-2xl border border-white/10 bg-[#12141C]/80 shadow-2xl my-2 backdrop-blur-md">
-                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl mb-4 text-[#FF1E27] shadow-inner">
+              <div className="flex flex-col items-center justify-center py-16 px-6 text-center rounded-2xl border border-white/10 bg-[#211C18]/80 shadow-2xl my-2 backdrop-blur-md">
+                <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-3xl mb-4 text-[#D4A863] shadow-inner">
                   🏆
                 </div>
                 <h3 className="font-heading font-black text-xl sm:text-2xl text-white mb-2 uppercase tracking-tight">
                   No Past Draws Yet
                 </h3>
-                <p className="font-sans text-sm text-[#8A92A0] max-w-md leading-relaxed">
+                <p className="font-sans text-sm text-[#B6AA9C] max-w-md leading-relaxed">
                   This host hasn't completed any competitions yet. Completed draw history and winning tickets will appear here once draws wrap up.
                 </p>
               </div>
@@ -215,15 +215,15 @@ export default function HostProfileTabs({
 
         {activeTab === "about" && (
           <div className="animate-in fade-in duration-300">
-            <div className="rounded-2xl border border-white/10 bg-[#12141C]/80 p-6 sm:p-8 shadow-2xl my-2 max-w-3xl backdrop-blur-md">
+            <div className="rounded-2xl border border-white/10 bg-[#211C18]/80 p-6 sm:p-8 shadow-2xl my-2 max-w-3xl backdrop-blur-md">
               <h3 className="font-heading font-black text-xl text-white mb-3 uppercase tracking-tight">
                 About {name}
               </h3>
-              <p className="font-sans text-sm text-[#8A92A0] leading-relaxed mb-4">
+              <p className="font-sans text-sm text-[#B6AA9C] leading-relaxed mb-4">
                 {bio || `${name} is an officially verified partner on Tuned Draws, delivering authentic automotive builds, transparent audited draws, and instant win opportunities.`}
               </p>
               {location && (
-                <div className="flex items-center gap-2 text-xs font-semibold text-[#D1D5DB] mb-6">
+                <div className="flex items-center gap-2 text-xs font-semibold text-[#E5DCCD] mb-6">
                   <span>📍</span>
                   <span>Based in {location}</span>
                 </div>
@@ -233,21 +233,21 @@ export default function HostProfileTabs({
                   <span className="text-xl">🛡️</span>
                   <div>
                     <div className="font-heading text-xs font-bold text-white uppercase">Fully Vetted</div>
-                    <div className="font-sans text-[11px] text-[#8A92A0]">Verified Partner</div>
+                    <div className="font-sans text-[11px] text-[#B6AA9C]">Verified Partner</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
                   <span className="text-xl">🏎️</span>
                   <div>
                     <div className="font-heading text-xs font-bold text-white uppercase">Performance Mods</div>
-                    <div className="font-sans text-[11px] text-[#8A92A0]">Parts &amp; Tuning Services</div>
+                    <div className="font-sans text-[11px] text-[#B6AA9C]">Parts &amp; Tuning Services</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white/5 border border-white/10">
                   <span className="text-xl">⚡</span>
                   <div>
                     <div className="font-heading text-xs font-bold text-white uppercase">Instant Payouts</div>
-                    <div className="font-sans text-[11px] text-[#8A92A0]">Guaranteed Delivery</div>
+                    <div className="font-sans text-[11px] text-[#B6AA9C]">Guaranteed Delivery</div>
                   </div>
                 </div>
               </div>

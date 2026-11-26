@@ -19,13 +19,13 @@ export default function AuthSuccessState({
   buttonHref = "/",
 }: AuthSuccessStateProps) {
   return (
-    <div className="carbon-glass border border-[#FF1E27]/20 p-8 md:p-12 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.7)] flex flex-col items-center text-center animate-fadeIn max-w-xl mx-auto backdrop-blur-xl relative overflow-hidden">
+    <div className="carbon-glass border border-[#D4A863]/20 p-8 md:p-12 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.7)] flex flex-col items-center text-center animate-fadeIn max-w-xl mx-auto backdrop-blur-xl relative overflow-hidden">
       {/* Ambient Crimson Glow */}
-      <div className="pointer-events-none absolute -top-16 -right-16 w-48 h-48 bg-[#FF1E27] opacity-10 blur-[80px] rounded-full" />
+      <div className="pointer-events-none absolute -top-16 -right-16 w-48 h-48 bg-[#94632F] opacity-10 blur-[80px] rounded-full" />
       
       {/* Animated Success Circle Icon */}
-      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#12141C] border border-[#FF1E27]/40 flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(255,30,39,0.3)]">
-        <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10 text-[#FF1E27] animate-scaleIn" />
+      <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[#211C18] border border-[#D4A863]/40 flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(212,168,99,0.3)]">
+        <CheckCircle2 className="w-8 h-8 md:w-10 md:h-10 text-[#D4A863] animate-scaleIn" />
       </div>
 
       {/* Success Text */}
@@ -39,7 +39,7 @@ export default function AuthSuccessState({
       {/* Action Button */}
       <Link
         href={buttonHref}
-        className="w-full sm:w-auto px-8 btn-racing-red py-3.5 rounded-xl text-white font-bold text-sm tracking-wide shadow-[0_0_20px_rgba(255,30,39,0.3)] hover:shadow-[0_0_25px_rgba(255,30,39,0.5)] transition-all flex items-center justify-center select-none uppercase cursor-pointer"
+        className="w-full sm:w-auto px-8 btn-racing-red py-3.5 rounded-xl text-white font-bold text-sm tracking-wide shadow-[0_0_20px_rgba(212,168,99,0.3)] hover:shadow-[0_0_25px_rgba(212,168,99,0.5)] transition-all flex items-center justify-center select-none uppercase cursor-pointer"
       >
         {buttonText}
       </Link>

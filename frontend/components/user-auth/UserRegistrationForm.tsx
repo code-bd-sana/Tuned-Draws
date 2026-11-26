@@ -141,8 +141,8 @@ export default function UserRegistrationForm() {
     <div className="relative w-full max-w-xl mx-auto flex flex-col gap-5 animate-fadeIn text-white">
       {/* Toast Alert popup */}
       {toastMessage && (
-        <div className="fixed top-5 right-5 z-50 bg-[#12141C]/95 border border-[#FF1E27] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(255,30,39,0.35)] text-xs sm:text-sm animate-fadeIn flex items-center gap-2.5 backdrop-blur-md">
-          <AlertCircle className="w-4 h-4 text-[#FF1E27] shrink-0" />
+        <div className="fixed top-5 right-5 z-50 bg-[#211C18]/95 border border-[#D4A863] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(212,168,99,0.35)] text-xs sm:text-sm animate-fadeIn flex items-center gap-2.5 backdrop-blur-md">
+          <AlertCircle className="w-4 h-4 text-[#D4A863] shrink-0" />
           <span className="font-medium">{toastMessage}</span>
         </div>
       )}
@@ -151,12 +151,12 @@ export default function UserRegistrationForm() {
       <AuthNavigationTabs activeTab="register" />
 
       {/* Main Registration Card - Carbon Glass Surface */}
-      <div className="carbon-glass border border-[#FF1E27]/25 p-6 sm:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full relative overflow-hidden backdrop-blur-xl">
+      <div className="carbon-glass border border-[#D4A863]/25 p-6 sm:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full relative overflow-hidden backdrop-blur-xl">
         {/* Subtle top crimson glow bar */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent opacity-80" />
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4A863] to-transparent opacity-80" />
 
         {/* Ambient Glow */}
-        <div className="pointer-events-none absolute -top-24 -right-24 w-60 h-60 bg-[#FF1E27] opacity-[0.06] blur-[90px] rounded-full" />
+        <div className="pointer-events-none absolute -top-24 -right-24 w-60 h-60 bg-[#94632F] opacity-[0.06] blur-[90px] rounded-full" />
 
         {/* Header section */}
         <div className="flex flex-col gap-1.5 mb-8">
@@ -174,7 +174,7 @@ export default function UserRegistrationForm() {
           <div className="flex flex-col w-full gap-1.5">
             <label
               htmlFor="fullName"
-              className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+              className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
             >
               Full Name
             </label>
@@ -188,12 +188,12 @@ export default function UserRegistrationForm() {
               onChange={handleInputChange}
               disabled={formState.isSubmitting}
               className={cn(
-                "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                errors.fullName && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                errors.fullName && "border-red-400 ring-1 ring-red-400"
               )}
             />
             {errors.fullName && (
-              <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+              <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                 <AlertCircle className="w-3 h-3 shrink-0" />
                 <span>{errors.fullName}</span>
               </span>
@@ -204,7 +204,7 @@ export default function UserRegistrationForm() {
           <div className="flex flex-col w-full gap-1.5">
             <label
               htmlFor="email"
-              className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+              className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
             >
               Email Address
             </label>
@@ -218,12 +218,12 @@ export default function UserRegistrationForm() {
               onChange={handleInputChange}
               disabled={formState.isSubmitting}
               className={cn(
-                "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                errors.email && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                errors.email && "border-red-400 ring-1 ring-red-400"
               )}
             />
             {errors.email && (
-              <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+              <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                 <AlertCircle className="w-3 h-3 shrink-0" />
                 <span>{errors.email}</span>
               </span>
@@ -234,7 +234,7 @@ export default function UserRegistrationForm() {
           <div className="flex flex-col w-full gap-1.5">
             <label
               htmlFor="phone"
-              className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+              className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
             >
               Phone Number
             </label>
@@ -248,12 +248,12 @@ export default function UserRegistrationForm() {
               onChange={handleInputChange}
               disabled={formState.isSubmitting}
               className={cn(
-                "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                errors.phone && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                errors.phone && "border-red-400 ring-1 ring-red-400"
               )}
             />
             {errors.phone && (
-              <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+              <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                 <AlertCircle className="w-3 h-3 shrink-0" />
                 <span>{errors.phone}</span>
               </span>
@@ -264,7 +264,7 @@ export default function UserRegistrationForm() {
           <div className="flex flex-col w-full gap-1.5">
             <label
               htmlFor="password"
-              className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+              className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
             >
               Password
             </label>
@@ -279,21 +279,21 @@ export default function UserRegistrationForm() {
                 onChange={handleInputChange}
                 disabled={formState.isSubmitting}
                 className={cn(
-                  "w-full bg-[#1A1D27] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                  errors.password && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                  "w-full bg-[#302820] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                  errors.password && "border-red-400 ring-1 ring-red-400"
                 )}
               />
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#8A92A0] hover:text-[#FF1E27] p-1 cursor-pointer select-none transition-colors"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#B6AA9C] hover:text-[#D4A863] p-1 cursor-pointer select-none transition-colors"
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
             {errors.password && (
-              <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+              <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                 <AlertCircle className="w-3 h-3 shrink-0" />
                 <span>{errors.password}</span>
               </span>
@@ -308,7 +308,7 @@ export default function UserRegistrationForm() {
                     "h-full flex-1 rounded-full transition-all duration-300",
                     formData.password.length > 0 && barIndex <= passwordStrength
                       ? passwordStrength <= 1
-                        ? "bg-[#FF1E27]"
+                        ? "bg-[#94632F]"
                         : passwordStrength === 2
                         ? "bg-amber-500"
                         : passwordStrength === 3
@@ -320,13 +320,13 @@ export default function UserRegistrationForm() {
               ))}
             </div>
             {formData.password.length > 0 && (
-              <div className="flex justify-between items-center text-[10px] text-[#8A92A0] mt-0.5 font-medium">
+              <div className="flex justify-between items-center text-[10px] text-[#B6AA9C] mt-0.5 font-medium">
                 <span>Password strength</span>
                 <span
                   className={cn(
                     "font-bold uppercase tracking-wider",
                     passwordStrength <= 1
-                      ? "text-[#FF1E27]"
+                      ? "text-[#D4A863]"
                       : passwordStrength === 2
                       ? "text-amber-500"
                       : passwordStrength === 3
@@ -350,7 +350,7 @@ export default function UserRegistrationForm() {
           <div className="flex flex-col w-full gap-1.5">
             <label
               htmlFor="confirmPassword"
-              className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+              className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
             >
               Confirm Password
             </label>
@@ -365,21 +365,21 @@ export default function UserRegistrationForm() {
                 onChange={handleInputChange}
                 disabled={formState.isSubmitting}
                 className={cn(
-                  "w-full bg-[#1A1D27] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                  errors.confirmPassword && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                  "w-full bg-[#302820] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                  errors.confirmPassword && "border-red-400 ring-1 ring-red-400"
                 )}
               />
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#8A92A0] hover:text-[#FF1E27] p-1 cursor-pointer select-none transition-colors"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#B6AA9C] hover:text-[#D4A863] p-1 cursor-pointer select-none transition-colors"
                 aria-label={showConfirmPassword ? "Hide password" : "Show password"}
               >
                 {showConfirmPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
             {errors.confirmPassword && (
-              <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+              <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                 <AlertCircle className="w-3 h-3 shrink-0" />
                 <span>{errors.confirmPassword}</span>
               </span>
@@ -396,23 +396,23 @@ export default function UserRegistrationForm() {
                 checked={formData.acceptedTerms}
                 onChange={handleInputChange}
                 disabled={formState.isSubmitting}
-                className="w-4.5 h-4.5 mt-0.5 rounded border border-white/20 bg-[#1A1D27] text-[#FF1E27] focus:ring-0 focus:ring-offset-0 focus:outline-none accent-[#FF1E27] transition-all duration-200 cursor-pointer shrink-0"
+                className="w-4.5 h-4.5 mt-0.5 rounded border border-white/20 bg-[#302820] text-[#D4A863] focus:ring-0 focus:ring-offset-0 focus:outline-none accent-[#D4A863] transition-all duration-200 cursor-pointer shrink-0"
               />
               <label
                 htmlFor="acceptedTerms"
-                className="font-sans text-xs sm:text-sm text-[#D1D5DB] select-none cursor-pointer leading-relaxed"
+                className="font-sans text-xs sm:text-sm text-[#E5DCCD] select-none cursor-pointer leading-relaxed"
               >
                 I confirm I am 18+ and agree to the{" "}
                 <Link
                   href="/terms"
-                  className="font-semibold text-[#FF1E27] hover:underline"
+                  className="font-semibold text-[#D4A863] hover:underline"
                 >
                   Terms & Conditions
                 </Link>{" "}
                 and{" "}
                 <Link
                   href="/privacy"
-                  className="font-semibold text-[#FF1E27] hover:underline"
+                  className="font-semibold text-[#D4A863] hover:underline"
                 >
                   Privacy Policy
                 </Link>
@@ -420,7 +420,7 @@ export default function UserRegistrationForm() {
               </label>
             </div>
             {errors.acceptedTerms && (
-              <span className="font-sans text-[11px] text-[#FF1E27] font-medium self-start flex items-center gap-1.5 animate-fadeIn ml-7.5">
+              <span className="font-sans text-[11px] text-[#D4A863] font-medium self-start flex items-center gap-1.5 animate-fadeIn ml-7.5">
                 <AlertCircle className="w-3 h-3 shrink-0" />
                 <span>{errors.acceptedTerms}</span>
               </span>
@@ -436,11 +436,11 @@ export default function UserRegistrationForm() {
               checked={formData.acceptedMarketing}
               onChange={handleInputChange}
               disabled={formState.isSubmitting}
-              className="w-4.5 h-4.5 mt-0.5 rounded border border-white/20 bg-[#1A1D27] text-[#FF1E27] focus:ring-0 focus:ring-offset-0 focus:outline-none accent-[#FF1E27] transition-all duration-200 cursor-pointer shrink-0"
+              className="w-4.5 h-4.5 mt-0.5 rounded border border-white/20 bg-[#302820] text-[#D4A863] focus:ring-0 focus:ring-offset-0 focus:outline-none accent-[#D4A863] transition-all duration-200 cursor-pointer shrink-0"
             />
             <label
               htmlFor="acceptedMarketing"
-              className="font-sans text-xs text-[#8A92A0] select-none cursor-pointer leading-relaxed"
+              className="font-sans text-xs text-[#B6AA9C] select-none cursor-pointer leading-relaxed"
             >
               Send me alerts for early-bird tickets, exclusive track weapon drops, and discount promotions.
             </label>
@@ -451,7 +451,7 @@ export default function UserRegistrationForm() {
             <button
               type="submit"
               disabled={formState.isSubmitting}
-              className="w-full btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none active:scale-[0.99]"
+              className="w-full btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none active:scale-[0.99]"
             >
               <span>{formState.isSubmitting ? "Creating Account..." : "Create Account"}</span>
               {!formState.isSubmitting && <ArrowRight className="w-4 h-4" />}

@@ -124,10 +124,10 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="relative w-full rounded-2xl border border-white/10 bg-[#12141C]/90 p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+    <div className="relative w-full rounded-2xl border border-white/10 bg-[#211C18]/90 p-6 sm:p-8 shadow-2xl backdrop-blur-md">
       <div className="flex items-center gap-2 mb-2">
-        <span className="h-1.5 w-1.5 rounded-full bg-[#FF1E27] animate-pulse shadow-[0_0_8px_rgba(255,30,39,0.8)]" />
-        <span className="font-heading text-[10px] font-black uppercase tracking-[0.2em] text-[#FF1E27]">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#94632F] animate-pulse shadow-[0_0_8px_rgba(212,168,99,0.8)]" />
+        <span className="font-heading text-[10px] font-black uppercase tracking-[0.2em] text-[#D4A863]">
           DIRECT TRANSMISSION
         </span>
       </div>
@@ -150,27 +150,27 @@ export default function ContactForm() {
 
       {/* Success Notification Alert */}
       {isSuccess ? (
-        <div className="bg-[#12141C] border border-[#FF1E27]/50 text-white rounded-2xl p-8 flex flex-col items-center text-center animate-fadeIn shadow-[0_0_30px_rgba(255,30,39,0.25)]">
-          <div className="w-16 h-16 rounded-full bg-[#FF1E27]/20 border border-[#FF1E27]/40 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(255,30,39,0.5)]">
+        <div className="bg-[#211C18] border border-[#D4A863]/50 text-white rounded-2xl p-8 flex flex-col items-center text-center animate-fadeIn shadow-[0_0_30px_rgba(212,168,99,0.25)]">
+          <div className="w-16 h-16 rounded-full bg-[#D4A863]/20 border border-[#D4A863]/40 flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(212,168,99,0.5)]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={2.5}
               stroke="currentColor"
-              className="w-8 h-8 text-[#FF1E27]"
+              className="w-8 h-8 text-[#D4A863]"
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
           </div>
           <h3 className="font-heading font-black text-xl text-white uppercase mb-2">Message Dispatched!</h3>
-          <p className="font-sans text-xs sm:text-sm text-[#8A92A0] leading-relaxed max-w-sm mb-6">
+          <p className="font-sans text-xs sm:text-sm text-[#B6AA9C] leading-relaxed max-w-sm mb-6">
             Thank you for reaching out. Your transmission has been received by our support crew. We will respond via email within 24 hours.
           </p>
           <button 
             type="button"
             onClick={() => setIsSuccess(false)} 
-            className="px-6 py-3 rounded-xl font-heading text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#FF1E27] to-[#B3000C] shadow-[0_0_20px_rgba(255,30,39,0.4)] transition-all hover:scale-105 cursor-pointer"
+            className="px-6 py-3 rounded-xl font-heading text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#94632F] to-[#70471F] shadow-[0_0_20px_rgba(212,168,99,0.4)] transition-all hover:scale-105 cursor-pointer"
           >
             Send Another Message
           </button>
@@ -181,9 +181,9 @@ export default function ContactForm() {
           <div className="flex flex-col w-full">
             <label
               htmlFor="fullName"
-              className="font-heading text-xs font-black uppercase tracking-wider text-[#D1D5DB] mb-1.5 self-start select-none"
+              className="font-heading text-xs font-black uppercase tracking-wider text-[#E5DCCD] mb-1.5 self-start select-none"
             >
-              Full Name <span className="text-[#FF1E27]">*</span>
+              Full Name <span className="text-[#D4A863]">*</span>
             </label>
             <input
               type="text"
@@ -195,13 +195,13 @@ export default function ContactForm() {
               disabled={isSubmitting}
               required
               className={cn(
-                "w-full rounded-xl border border-white/10 bg-[#0B0C0E] px-4 py-3 font-sans text-xs md:text-sm text-white placeholder:text-[#8A92A0]/40 outline-none transition-all duration-200 focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30",
+                "w-full rounded-xl border border-white/10 bg-[#14110F] px-4 py-3 font-sans text-xs md:text-sm text-white placeholder:text-[#B6AA9C]/40 outline-none transition-all duration-200 focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30",
                 errors.fullName && "border-red-500/80 focus:border-red-500",
                 isSubmitting && "opacity-50 cursor-not-allowed"
               )}
             />
             {errors.fullName && (
-              <span className="font-sans text-[11px] text-[#FF1E27] mt-1 self-start select-none">
+              <span className="font-sans text-[11px] text-[#D4A863] mt-1 self-start select-none">
                 {errors.fullName}
               </span>
             )}
@@ -211,9 +211,9 @@ export default function ContactForm() {
           <div className="flex flex-col w-full">
             <label
               htmlFor="email"
-              className="font-heading text-xs font-black uppercase tracking-wider text-[#D1D5DB] mb-1.5 self-start select-none"
+              className="font-heading text-xs font-black uppercase tracking-wider text-[#E5DCCD] mb-1.5 self-start select-none"
             >
-              Email Address <span className="text-[#FF1E27]">*</span>
+              Email Address <span className="text-[#D4A863]">*</span>
             </label>
             <input
               type="email"
@@ -225,13 +225,13 @@ export default function ContactForm() {
               disabled={isSubmitting}
               required
               className={cn(
-                "w-full rounded-xl border border-white/10 bg-[#0B0C0E] px-4 py-3 font-sans text-xs md:text-sm text-white placeholder:text-[#8A92A0]/40 outline-none transition-all duration-200 focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30",
+                "w-full rounded-xl border border-white/10 bg-[#14110F] px-4 py-3 font-sans text-xs md:text-sm text-white placeholder:text-[#B6AA9C]/40 outline-none transition-all duration-200 focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30",
                 errors.email && "border-red-500/80 focus:border-red-500",
                 isSubmitting && "opacity-50 cursor-not-allowed"
               )}
             />
             {errors.email && (
-              <span className="font-sans text-[11px] text-[#FF1E27] mt-1 self-start select-none">
+              <span className="font-sans text-[11px] text-[#D4A863] mt-1 self-start select-none">
                 {errors.email}
               </span>
             )}
@@ -241,9 +241,9 @@ export default function ContactForm() {
           <div className="flex flex-col w-full">
             <label
               htmlFor="subject"
-              className="font-heading text-xs font-black uppercase tracking-wider text-[#D1D5DB] mb-1.5 self-start select-none"
+              className="font-heading text-xs font-black uppercase tracking-wider text-[#E5DCCD] mb-1.5 self-start select-none"
             >
-              Inquiry Subject <span className="text-[#FF1E27]">*</span>
+              Inquiry Subject <span className="text-[#D4A863]">*</span>
             </label>
             <select
               id="subject"
@@ -252,19 +252,19 @@ export default function ContactForm() {
               onChange={handleInputChange}
               disabled={isSubmitting}
               className={cn(
-                "w-full appearance-none rounded-xl border border-white/10 bg-[#0B0C0E] px-4 py-3 font-sans text-xs md:text-sm text-white outline-none transition-all duration-200 focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 cursor-pointer",
+                "w-full appearance-none rounded-xl border border-white/10 bg-[#14110F] px-4 py-3 font-sans text-xs md:text-sm text-white outline-none transition-all duration-200 focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 cursor-pointer",
                 errors.subject && "border-red-500/80 focus:border-red-500",
                 isSubmitting && "opacity-50 cursor-not-allowed"
               )}
             >
               {SUBJECT_OPTIONS.map((opt) => (
-                <option key={opt.value} value={opt.value} className="bg-[#12141C] text-white py-2">
+                <option key={opt.value} value={opt.value} className="bg-[#211C18] text-white py-2">
                   {opt.label}
                 </option>
               ))}
             </select>
             {errors.subject && (
-              <span className="font-sans text-[11px] text-[#FF1E27] mt-1 self-start select-none">
+              <span className="font-sans text-[11px] text-[#D4A863] mt-1 self-start select-none">
                 {errors.subject}
               </span>
             )}
@@ -274,9 +274,9 @@ export default function ContactForm() {
           <div className="flex flex-col w-full">
             <label
               htmlFor="message"
-              className="font-heading text-xs font-black uppercase tracking-wider text-[#D1D5DB] mb-1.5 self-start select-none"
+              className="font-heading text-xs font-black uppercase tracking-wider text-[#E5DCCD] mb-1.5 self-start select-none"
             >
-              Message Content <span className="text-[#FF1E27]">*</span>
+              Message Content <span className="text-[#D4A863]">*</span>
             </label>
             <textarea
               id="message"
@@ -288,13 +288,13 @@ export default function ContactForm() {
               rows={5}
               required
               className={cn(
-                "w-full rounded-xl border border-white/10 bg-[#0B0C0E] px-4 py-3 font-sans text-xs md:text-sm text-white placeholder:text-[#8A92A0]/40 outline-none transition-all duration-200 resize-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30",
+                "w-full rounded-xl border border-white/10 bg-[#14110F] px-4 py-3 font-sans text-xs md:text-sm text-white placeholder:text-[#B6AA9C]/40 outline-none transition-all duration-200 resize-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30",
                 errors.message && "border-red-500/80 focus:border-red-500",
                 isSubmitting && "opacity-50 cursor-not-allowed"
               )}
             />
             {errors.message && (
-              <span className="font-sans text-[11px] text-[#FF1E27] mt-1 self-start select-none">
+              <span className="font-sans text-[11px] text-[#D4A863] mt-1 self-start select-none">
                 {errors.message}
               </span>
             )}
@@ -309,14 +309,14 @@ export default function ContactForm() {
                 checked={formValues.agreeToPolicy}
                 onChange={handleInputChange}
                 disabled={isSubmitting}
-                className="w-4 h-4 rounded border-white/20 text-[#FF1E27] bg-[#0B0C0E] focus:ring-[#FF1E27]/20 cursor-pointer mt-1 accent-[#FF1E27]"
+                className="w-4 h-4 rounded border-white/20 text-[#D4A863] bg-[#14110F] focus:ring-[#D4A863]/20 cursor-pointer mt-1 accent-[#D4A863]"
               />
-              <span className="font-sans font-medium text-xs md:text-sm text-[#8A92A0] group-hover:text-white transition-colors duration-200">
+              <span className="font-sans font-medium text-xs md:text-sm text-[#B6AA9C] group-hover:text-white transition-colors duration-200">
                 I agree to the <span className="text-white underline">Privacy Policy</span> and data processing terms
               </span>
             </label>
             {errors.agreeToPolicy && (
-              <span className="font-sans text-[11px] text-[#FF1E27] mt-1.5 self-start select-none">
+              <span className="font-sans text-[11px] text-[#D4A863] mt-1.5 self-start select-none">
                 {errors.agreeToPolicy}
               </span>
             )}
@@ -326,7 +326,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-4 mt-2 rounded-xl font-heading text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#FF1E27] to-[#B3000C] shadow-[0_0_20px_rgba(255,30,39,0.4)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,30,39,0.7)] hover:scale-[1.01] active:scale-98 disabled:opacity-50 cursor-pointer flex justify-center items-center gap-2"
+            className="w-full py-4 mt-2 rounded-xl font-heading text-xs font-black uppercase tracking-wider text-white bg-gradient-to-r from-[#94632F] to-[#70471F] shadow-[0_0_20px_rgba(212,168,99,0.4)] transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,168,99,0.7)] hover:scale-[1.01] active:scale-98 disabled:opacity-50 cursor-pointer flex justify-center items-center gap-2"
           >
             {isSubmitting ? (
               <>

@@ -65,10 +65,10 @@ export default function TermsContent() {
             <h1 className="font-heading font-extrabold text-3xl sm:text-5xl text-white tracking-tight">
               Terms & Conditions
             </h1>
-            <p className="font-sans text-sm sm:text-base text-[#8A92A0] max-w-2xl">
+            <p className="font-sans text-sm sm:text-base text-[#B6AA9C] max-w-2xl">
               Official rules governing all prize competitions, free postal entries, eligibility, anti-money laundering policies, and fair play on Tuned Draws.
             </p>
-            <div className="flex items-center gap-4 text-xs font-sans text-[#8A92A0]/80 pt-2">
+            <div className="flex items-center gap-4 text-xs font-sans text-[#B6AA9C]/80 pt-2">
               <span>Last Updated: July 2026</span>
               <span>•</span>
               <span>Effective Version: 2.4</span>
@@ -83,7 +83,7 @@ export default function TermsContent() {
           
           {/* Left Table of Contents */}
           <aside className="lg:col-span-4 hidden lg:block">
-            <div className="sticky top-28 bg-[#12141C] border border-white/10 rounded-2xl p-5 space-y-2 shadow-xl">
+            <div className="sticky top-28 bg-[#211C18] border border-white/10 rounded-2xl p-5 space-y-2 shadow-xl">
               <h3 className="font-heading font-bold text-xs text-white uppercase tracking-wider mb-3 px-2">
                 Table of Contents
               </h3>
@@ -95,8 +95,8 @@ export default function TermsContent() {
                     className={cn(
                       "text-left px-3 py-2 rounded-xl text-xs font-sans transition-all duration-200 truncate cursor-pointer",
                       activeSection === sec.id
-                        ? "bg-[#FF1E27] text-white font-semibold border-l-2 border-white pl-3 shadow-md"
-                        : "text-[#8A92A0] hover:bg-[#1A1D27] hover:text-white"
+                        ? "bg-[#94632F] text-white font-semibold border-l-2 border-white pl-3 shadow-md"
+                        : "text-[#B6AA9C] hover:bg-[#302820] hover:text-white"
                     )}
                   >
                     {sec.title}
@@ -107,7 +107,7 @@ export default function TermsContent() {
               <div className="pt-4 border-t border-white/10 mt-4">
                 <Link
                   href="/contact"
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#FF1E27] hover:bg-[#B3000C] border border-[#FF1E27] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#94632F] hover:bg-[#9B6A2F] border border-[#D4A863] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md"
                 >
                   ✉️ Need Legal Help? Contact Us
                 </Link>
@@ -116,10 +116,10 @@ export default function TermsContent() {
           </aside>
 
           {/* Right Main Text Content */}
-          <main className="lg:col-span-8 space-y-12 text-sm leading-relaxed text-[#D1D5DB]">
+          <main className="lg:col-span-8 space-y-12 text-sm leading-relaxed text-[#E5DCCD]">
             
             {/* 1. The Promoter */}
-            <section id="promoter" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="promoter" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 1. The Promoter
               </h2>
@@ -133,7 +133,7 @@ export default function TermsContent() {
                 1.3. If you wish to contact us for any reason, please email us at{" "}
                 <a
                   href="mailto:info@tuneddraws.com"
-                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
+                  className="text-[#D4A863] font-semibold underline underline-offset-4 decoration-[#D4A863]/60 hover:text-white hover:decoration-white transition-colors"
                 >
                   info@tuneddraws.com
                 </a>.
@@ -141,7 +141,7 @@ export default function TermsContent() {
             </section>
 
             {/* 2. The Competition */}
-            <section id="competition" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="competition" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 2. The Competition
               </h2>
@@ -151,7 +151,7 @@ export default function TermsContent() {
                   href="https://tuneddraws.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
+                  className="text-[#D4A863] font-semibold underline underline-offset-4 decoration-[#D4A863]/60 hover:text-white hover:decoration-white transition-colors"
                 >
                   https://tuneddraws.com
                 </a>{" "}
@@ -166,7 +166,7 @@ export default function TermsContent() {
             </section>
 
             {/* 3. How to Enter */}
-            <section id="how-to-enter" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="how-to-enter" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 3. How to Enter
               </h2>
@@ -190,14 +190,14 @@ export default function TermsContent() {
               </p>
 
               {/* Free Postal Entry Box */}
-              <div id="free-entry" className="mt-6 bg-[#1A1D27] border border-white/10 rounded-xl p-5 space-y-3">
+              <div id="free-entry" className="mt-6 bg-[#302820] border border-white/10 rounded-xl p-5 space-y-3">
                 <h3 className="font-heading font-bold text-base text-white flex items-center gap-2">
                   <span>✉️ 3.11. Free Postal Entry Route Method</span>
                 </h3>
-                <p className="text-xs leading-relaxed text-[#8A92A0]">
+                <p className="text-xs leading-relaxed text-[#B6AA9C]">
                   You may enter any competition for free by post by complying with the following conditions:
                 </p>
-                <ul className="list-disc list-inside space-y-1.5 text-xs text-[#D1D5DB] pl-2">
+                <ul className="list-disc list-inside space-y-1.5 text-xs text-[#E5DCCD] pl-2">
                   <li>Send your entry on an unenclosed postcard by 1st or 2nd class post to: <strong className="text-white">Tuned Draws Ltd, Synergy House, Lawson Street, North Shields, NE29 6TG</strong>.</li>
                   <li>Include your full name, postal address, contact phone number, email address, and the exact Competition Name.</li>
                   <li><strong className="text-white">Mandatory Requirement:</strong> You MUST have created a free registered account on the Website for the free entry to be processed. Details on the postcard MUST correspond exactly to your registered account.</li>
@@ -208,7 +208,7 @@ export default function TermsContent() {
             </section>
 
             {/* 4. Choosing a Winner */}
-            <section id="choosing-winner" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="choosing-winner" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 4. Choosing a Winner
               </h2>
@@ -219,7 +219,7 @@ export default function TermsContent() {
                 4.2. All Entrants will have their names and entry numbers included in an entry spreadsheet published on the Website during the live draw. If you wish to censor your name on the live spreadsheet, notify us at{" "}
                 <a
                   href="mailto:info@tuneddraws.com"
-                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
+                  className="text-[#D4A863] font-semibold underline underline-offset-4 decoration-[#D4A863]/60 hover:text-white hover:decoration-white transition-colors"
                 >
                   info@tuneddraws.com
                 </a>{" "}
@@ -231,7 +231,7 @@ export default function TermsContent() {
             </section>
 
             {/* 5. Eligibility */}
-            <section id="eligibility" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="eligibility" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 5. Eligibility
               </h2>
@@ -247,7 +247,7 @@ export default function TermsContent() {
             </section>
 
             {/* 6. The Prize */}
-            <section id="prize" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="prize" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 6. The Prize
               </h2>
@@ -263,7 +263,7 @@ export default function TermsContent() {
             </section>
 
             {/* 7. Winners */}
-            <section id="winners" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="winners" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 7. Winners
               </h2>
@@ -276,7 +276,7 @@ export default function TermsContent() {
             </section>
 
             {/* 8. Claiming the Prize */}
-            <section id="claiming-prize" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="claiming-prize" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 8. Claiming the Prize
               </h2>
@@ -292,7 +292,7 @@ export default function TermsContent() {
             </section>
 
             {/* 9. Limitation of Liability */}
-            <section id="liability" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="liability" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 9. Limitation of Liability
               </h2>
@@ -305,7 +305,7 @@ export default function TermsContent() {
             </section>
 
             {/* 10. Data Protection & Publicity */}
-            <section id="data-protection" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="data-protection" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 10. Data Protection & Publicity
               </h2>
@@ -313,7 +313,7 @@ export default function TermsContent() {
                 10.1. Personal information provided will be processed strictly in accordance with our{" "}
                 <Link
                   href="/privacy"
-                  className="text-[#FF1E27] font-semibold underline underline-offset-4 decoration-[#FF1E27]/60 hover:text-white hover:decoration-white transition-colors"
+                  className="text-[#D4A863] font-semibold underline underline-offset-4 decoration-[#D4A863]/60 hover:text-white hover:decoration-white transition-colors"
                 >
                   Privacy Policy
                 </Link>{" "}
@@ -325,7 +325,7 @@ export default function TermsContent() {
             </section>
 
             {/* 11. General Terms */}
-            <section id="general" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="general" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 11. General Terms & Governing Law
               </h2>
@@ -338,7 +338,7 @@ export default function TermsContent() {
             </section>
 
             {/* 12. AML Policy */}
-            <section id="aml-policy" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="aml-policy" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 12. Anti-Money Laundering (AML) Policy
               </h2>
@@ -354,7 +354,7 @@ export default function TermsContent() {
             </section>
 
             {/* 13. Fair Play */}
-            <section id="fair-play" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="fair-play" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 13. Fair Play & Strict One Account Policy
               </h2>

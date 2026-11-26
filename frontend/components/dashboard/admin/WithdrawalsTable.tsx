@@ -39,7 +39,7 @@ export default function WithdrawalsTable({ withdrawals: propWithdrawals, isLoadi
       case "FAILED":
         return "border-rose-500/25 bg-rose-500/10 text-rose-400 font-bold shadow-[0_0_10px_rgba(244,63,94,0.15)]";
       default:
-        return "border-white/10 bg-white/5 text-[#8A92A0] font-bold";
+        return "border-white/10 bg-white/5 text-[#B6AA9C] font-bold";
     }
   };
 

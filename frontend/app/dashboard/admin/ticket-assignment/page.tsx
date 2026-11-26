@@ -98,27 +98,27 @@ export default function AdminTicketAssignmentPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-white/10">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27] font-bold text-lg shadow-xs">
+            <div className="w-9 h-9 rounded-xl bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863] font-bold text-lg shadow-xs">
               🛡️
             </div>
             <h1 className="font-heading font-black text-2xl lg:text-3xl text-white uppercase tracking-tight">
               Admin Manual Ticket Assignment
             </h1>
           </div>
-          <p className="font-sans text-xs text-[#8A92A0]">
+          <p className="font-sans text-xs text-[#B6AA9C]">
             Directly allocate tickets to any user with 100% financial integrity, host wallet crediting, and instant win prize automation.
           </p>
         </div>
 
         {/* Tab Switcher */}
-        <div className="flex items-center bg-[#12141C] p-1.5 rounded-xl border border-white/10 shadow-lg">
+        <div className="flex items-center bg-[#211C18] p-1.5 rounded-xl border border-white/10 shadow-lg">
           <button
             type="button"
             onClick={() => setActiveTab("assign")}
             className={`px-5 py-2 rounded-lg font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
               activeTab === "assign"
-                ? "bg-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                : "text-[#8A92A0] hover:text-white"
+                ? "bg-[#94632F] text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                : "text-[#B6AA9C] hover:text-white"
             }`}
           >
             <span>🎟️</span>
@@ -129,8 +129,8 @@ export default function AdminTicketAssignmentPage() {
             onClick={() => setActiveTab("history")}
             className={`px-5 py-2 rounded-lg font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
               activeTab === "history"
-                ? "bg-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                : "text-[#8A92A0] hover:text-white"
+                ? "bg-[#94632F] text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                : "text-[#B6AA9C] hover:text-white"
             }`}
           >
             <span>📜</span>
@@ -148,9 +148,9 @@ export default function AdminTicketAssignmentPage() {
           />
 
           {isDetailsLoading && selectedCompetitionId && (
-            <div className="py-12 flex flex-col items-center justify-center gap-2 bg-[#12141C] border border-white/10 rounded-2xl">
-              <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
-              <p className="font-sans text-xs text-[#8A92A0]">
+            <div className="py-12 flex flex-col items-center justify-center gap-2 bg-[#211C18] border border-white/10 rounded-2xl">
+              <div className="w-8 h-8 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
+              <p className="font-sans text-xs text-[#B6AA9C]">
                 Loading competition grid and instant win data...
               </p>
             </div>

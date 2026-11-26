@@ -113,20 +113,20 @@ export default function UserSupportPage() {
         <h1 className="font-heading font-black text-2xl lg:text-3xl text-white uppercase tracking-tight">
           Help &amp; Support Center
         </h1>
-        <p className="font-sans text-xs sm:text-sm text-[#8A92A0]">
+        <p className="font-sans text-xs sm:text-sm text-[#B6AA9C]">
           Need assistance with a ticket order, prize claim, or account issue? Submit a ticket or connect with our support crew.
         </p>
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6 w-full items-start">
         {/* Left Column: Support Ticket Form */}
-        <div className="flex-1 bg-[#12141C] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col gap-6 shadow-2xl backdrop-blur-md w-full">
+        <div className="flex-1 bg-[#211C18] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col gap-6 shadow-2xl backdrop-blur-md w-full">
           <div className="flex items-center justify-between border-b border-white/10 pb-4">
             <div>
               <h2 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                 Submit a Support Ticket
               </h2>
-              <p className="font-sans text-xs text-[#8A92A0] mt-0.5">
+              <p className="font-sans text-xs text-[#B6AA9C] mt-0.5">
                 Our support team typically responds to all inquiries within 24 hours via email.
               </p>
             </div>
@@ -142,14 +142,14 @@ export default function UserSupportPage() {
               <div className="flex items-center gap-2 font-heading font-bold text-sm">
                 <span>✅ Support Ticket Dispatched!</span>
               </div>
-              <p className="font-sans text-xs leading-relaxed text-[#8A92A0]">
+              <p className="font-sans text-xs leading-relaxed text-[#B6AA9C]">
                 Your support ticket has been sent to our customer care team at <strong className="text-white">info@tuneddraws.com</strong>.
                 We have also queued a confirmation response to <strong className="text-white">{email}</strong>.
               </p>
               <button
                 type="button"
                 onClick={() => setIsSuccess(false)}
-                className="mt-2 w-fit px-4 py-1.5 bg-[#FF1E27] hover:bg-[#FF1E27]/90 text-white text-xs font-heading font-bold uppercase tracking-wider rounded-lg transition-all cursor-pointer"
+                className="mt-2 w-fit px-4 py-1.5 bg-[#94632F] hover:bg-[#D4A863]/90 text-white text-xs font-heading font-bold uppercase tracking-wider rounded-lg transition-all cursor-pointer"
               >
                 Send Another Ticket
               </button>
@@ -175,8 +175,8 @@ export default function UserSupportPage() {
               {/* Row 1: Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="font-sans font-bold text-[11px] text-[#8A92A0] uppercase tracking-wider">
-                    Full Name <span className="text-[#FF1E27]">*</span>
+                  <label className="font-sans font-bold text-[11px] text-[#B6AA9C] uppercase tracking-wider">
+                    Full Name <span className="text-[#D4A863]">*</span>
                   </label>
                   <input
                     type="text"
@@ -186,16 +186,16 @@ export default function UserSupportPage() {
                       if (errors.name) setErrors((prev) => ({ ...prev, name: "" }));
                     }}
                     placeholder="Your Full Name"
-                    className={`w-full h-11 bg-[#0B0C0E] border rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#8A92A0]/40 focus:outline-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 transition-all ${
+                    className={`w-full h-11 bg-[#14110F] border rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#B6AA9C]/40 focus:outline-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 transition-all ${
                       errors.name ? "border-red-500" : "border-white/10"
                     }`}
                   />
-                  {errors.name && <span className="text-[#FF1E27] text-[11px]">{errors.name}</span>}
+                  {errors.name && <span className="text-red-400 text-[11px]">{errors.name}</span>}
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="font-sans font-bold text-[11px] text-[#8A92A0] uppercase tracking-wider">
-                    Email Address <span className="text-[#FF1E27]">*</span>
+                  <label className="font-sans font-bold text-[11px] text-[#B6AA9C] uppercase tracking-wider">
+                    Email Address <span className="text-[#D4A863]">*</span>
                   </label>
                   <input
                     type="email"
@@ -205,19 +205,19 @@ export default function UserSupportPage() {
                       if (errors.email) setErrors((prev) => ({ ...prev, email: "" }));
                     }}
                     placeholder="your@email.com"
-                    className={`w-full h-11 bg-[#0B0C0E] border rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#8A92A0]/40 focus:outline-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 transition-all ${
+                    className={`w-full h-11 bg-[#14110F] border rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#B6AA9C]/40 focus:outline-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 transition-all ${
                       errors.email ? "border-red-500" : "border-white/10"
                     }`}
                   />
-                  {errors.email && <span className="text-[#FF1E27] text-[11px]">{errors.email}</span>}
+                  {errors.email && <span className="text-red-400 text-[11px]">{errors.email}</span>}
                 </div>
               </div>
 
               {/* Row 2: Topic & Optional Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
-                  <label className="font-sans font-bold text-[11px] text-[#8A92A0] uppercase tracking-wider">
-                    Inquiry Topic <span className="text-[#FF1E27]">*</span>
+                  <label className="font-sans font-bold text-[11px] text-[#B6AA9C] uppercase tracking-wider">
+                    Inquiry Topic <span className="text-[#D4A863]">*</span>
                   </label>
                   <select
                     value={subject}
@@ -225,21 +225,21 @@ export default function UserSupportPage() {
                       setSubject(e.target.value);
                       if (errors.subject) setErrors((prev) => ({ ...prev, subject: "" }));
                     }}
-                    className={`w-full h-11 bg-[#0B0C0E] border rounded-xl px-4 text-sm text-white font-sans focus:outline-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 transition-all cursor-pointer ${
+                    className={`w-full h-11 bg-[#14110F] border rounded-xl px-4 text-sm text-white font-sans focus:outline-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 transition-all cursor-pointer ${
                       errors.subject ? "border-red-500" : "border-white/10"
                     }`}
                   >
                     {TOPIC_OPTIONS.map((opt) => (
-                      <option key={opt.value} value={opt.value} className="bg-[#12141C] text-white">
+                      <option key={opt.value} value={opt.value} className="bg-[#211C18] text-white">
                         {opt.label}
                       </option>
                     ))}
                   </select>
-                  {errors.subject && <span className="text-[#FF1E27] text-[11px]">{errors.subject}</span>}
+                  {errors.subject && <span className="text-red-400 text-[11px]">{errors.subject}</span>}
                 </div>
 
                 <div className="flex flex-col gap-1.5">
-                  <label className="font-sans font-bold text-[11px] text-[#8A92A0] uppercase tracking-wider">
+                  <label className="font-sans font-bold text-[11px] text-[#B6AA9C] uppercase tracking-wider">
                     Phone / WhatsApp (Optional)
                   </label>
                   <input
@@ -247,14 +247,14 @@ export default function UserSupportPage() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="e.g. 07466 347548"
-                    className="w-full h-11 bg-[#0B0C0E] border border-white/10 rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#8A92A0]/40 focus:outline-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 transition-all"
+                    className="w-full h-11 bg-[#14110F] border border-white/10 rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#B6AA9C]/40 focus:outline-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 transition-all"
                   />
                 </div>
               </div>
 
               {/* Related Order / Transaction ID (Optional) */}
               <div className="flex flex-col gap-1.5">
-                <label className="font-sans font-bold text-[11px] text-[#8A92A0] uppercase tracking-wider">
+                <label className="font-sans font-bold text-[11px] text-[#B6AA9C] uppercase tracking-wider">
                   Related Order ID / Ticket Reference (Optional)
                 </label>
                 <input
@@ -262,14 +262,14 @@ export default function UserSupportPage() {
                   value={orderRef}
                   onChange={(e) => setOrderRef(e.target.value)}
                   placeholder="e.g. #ORDER-1849 or Competition Name"
-                  className="w-full h-11 bg-[#0B0C0E] border border-white/10 rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#8A92A0]/40 focus:outline-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 transition-all"
+                  className="w-full h-11 bg-[#14110F] border border-white/10 rounded-xl px-4 text-sm text-white font-sans placeholder:text-[#B6AA9C]/40 focus:outline-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 transition-all"
                 />
               </div>
 
               {/* Message Field */}
               <div className="flex flex-col gap-1.5">
-                <label className="font-sans font-bold text-[11px] text-[#8A92A0] uppercase tracking-wider">
-                  Detailed Message <span className="text-[#FF1E27]">*</span>
+                <label className="font-sans font-bold text-[11px] text-[#B6AA9C] uppercase tracking-wider">
+                  Detailed Message <span className="text-[#D4A863]">*</span>
                 </label>
                 <textarea
                   value={message}
@@ -278,11 +278,11 @@ export default function UserSupportPage() {
                     if (errors.message) setErrors((prev) => ({ ...prev, message: "" }));
                   }}
                   placeholder="Please describe your question or issue in detail..."
-                  className={`w-full h-[160px] bg-[#0B0C0E] border rounded-xl p-4 text-sm text-white font-sans placeholder:text-[#8A92A0]/40 focus:outline-none focus:border-[#FF1E27] focus:ring-1 focus:ring-[#FF1E27]/30 transition-all resize-none ${
+                  className={`w-full h-[160px] bg-[#14110F] border rounded-xl p-4 text-sm text-white font-sans placeholder:text-[#B6AA9C]/40 focus:outline-none focus:border-[#D4A863] focus:ring-1 focus:ring-[#D4A863]/30 transition-all resize-none ${
                     errors.message ? "border-red-500" : "border-white/10"
                   }`}
                 />
-                {errors.message && <span className="text-[#FF1E27] text-[11px]">{errors.message}</span>}
+                {errors.message && <span className="text-red-400 text-[11px]">{errors.message}</span>}
               </div>
 
               {/* Submit Button */}
@@ -315,15 +315,15 @@ export default function UserSupportPage() {
         {/* Right Column: Contact Channels & Quick FAQs */}
         <div className="w-full lg:w-[460px] flex flex-col gap-6 shrink-0">
           {/* Quick Contact Cards */}
-          <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl backdrop-blur-md">
+          <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl backdrop-blur-md">
             <h2 className="font-heading font-black text-lg text-white uppercase tracking-tight border-b border-white/10 pb-3">
               Direct Contact Channels
             </h2>
 
             {/* Email Support Card */}
-            <div className="flex items-center justify-between gap-4 p-4 rounded-xl bg-[#0B0C0E] border border-white/10 hover:border-[#FF1E27]/40 transition-all">
+            <div className="flex items-center justify-between gap-4 p-4 rounded-xl bg-[#14110F] border border-white/10 hover:border-[#D4A863]/40 transition-all">
               <div className="flex items-center gap-3.5 min-w-0">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27]">
+                <div className="w-10 h-10 shrink-0 rounded-full bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863]">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path
                       strokeLinecap="round"
@@ -338,7 +338,7 @@ export default function UserSupportPage() {
                   </span>
                   <a
                     href="mailto:info@tuneddraws.com"
-                    className="font-sans text-xs text-[#FF1E27] hover:underline truncate mt-0.5"
+                    className="font-sans text-xs text-[#D4A863] hover:underline truncate mt-0.5"
                   >
                     info@tuneddraws.com
                   </a>
@@ -346,14 +346,14 @@ export default function UserSupportPage() {
               </div>
               <a
                 href="mailto:info@tuneddraws.com"
-                className="px-3 py-1.5 rounded-lg bg-[#12141C] border border-white/10 text-xs font-sans font-semibold text-white hover:bg-white/5 transition-all shrink-0"
+                className="px-3 py-1.5 rounded-lg bg-[#211C18] border border-white/10 text-xs font-sans font-semibold text-white hover:bg-white/5 transition-all shrink-0"
               >
                 Email
               </a>
             </div>
 
             {/* WhatsApp Support Card */}
-            <div className="flex items-center justify-between gap-4 p-4 rounded-xl bg-[#0B0C0E] border border-white/10 hover:border-[#25D366]/40 transition-all">
+            <div className="flex items-center justify-between gap-4 p-4 rounded-xl bg-[#14110F] border border-white/10 hover:border-[#25D366]/40 transition-all">
               <div className="flex items-center gap-3.5 min-w-0">
                 <div className="w-10 h-10 shrink-0 rounded-full bg-[#25D366]/10 border border-[#25D366]/30 flex items-center justify-center text-[#25D366]">
                   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -364,7 +364,7 @@ export default function UserSupportPage() {
                   <span className="font-heading font-bold text-xs text-white uppercase tracking-wider">
                     Customer Service WhatsApp
                   </span>
-                  <span className="font-sans text-xs text-[#8A92A0] mt-0.5">
+                  <span className="font-sans text-xs text-[#B6AA9C] mt-0.5">
                     07466 347548
                   </span>
                 </div>
@@ -383,9 +383,9 @@ export default function UserSupportPage() {
             </div>
 
             {/* Operating Hours Card */}
-            <div className="flex items-center gap-3.5 p-4 rounded-xl bg-[#0B0C0E] border border-white/10">
-              <div className="w-10 h-10 shrink-0 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#8A92A0]">
-                <svg className="w-5 h-5 text-[#FF1E27]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <div className="flex items-center gap-3.5 p-4 rounded-xl bg-[#14110F] border border-white/10">
+              <div className="w-10 h-10 shrink-0 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-[#B6AA9C]">
+                <svg className="w-5 h-5 text-[#D4A863]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
               </div>
@@ -393,7 +393,7 @@ export default function UserSupportPage() {
                 <span className="font-heading font-bold text-xs text-white uppercase tracking-wider">
                   Operating Hours
                 </span>
-                <span className="font-sans text-xs text-[#8A92A0] mt-0.5">
+                <span className="font-sans text-xs text-[#B6AA9C] mt-0.5">
                   Mon – Sun: 8:00 AM – 10:00 PM GMT
                 </span>
               </div>
@@ -401,14 +401,14 @@ export default function UserSupportPage() {
           </div>
 
           {/* Quick FAQ Accordion */}
-          <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl backdrop-blur-md">
+          <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl backdrop-blur-md">
             <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <h2 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                 Frequently Asked Questions
               </h2>
               <Link
                 href="/faqs"
-                className="text-xs font-sans font-bold text-[#FF1E27] hover:underline"
+                className="text-xs font-sans font-bold text-[#D4A863] hover:underline"
               >
                 All FAQs →
               </Link>
@@ -424,15 +424,15 @@ export default function UserSupportPage() {
                       onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                       className="w-full flex items-center justify-between text-left group cursor-pointer"
                     >
-                      <span className="font-sans font-bold text-xs text-white group-hover:text-[#FF1E27] transition-colors">
+                      <span className="font-sans font-bold text-xs text-white group-hover:text-[#D4A863] transition-colors">
                         {faq.q}
                       </span>
-                      <span className="text-[#8A92A0] text-sm font-bold ml-2">
+                      <span className="text-[#B6AA9C] text-sm font-bold ml-2">
                         {isOpen ? "−" : "+"}
                       </span>
                     </button>
                     {isOpen && (
-                      <p className="font-sans text-xs text-[#8A92A0] leading-relaxed pl-1 pt-1 animate-in fade-in duration-150">
+                      <p className="font-sans text-xs text-[#B6AA9C] leading-relaxed pl-1 pt-1 animate-in fade-in duration-150">
                         {faq.a}
                       </p>
                     )}

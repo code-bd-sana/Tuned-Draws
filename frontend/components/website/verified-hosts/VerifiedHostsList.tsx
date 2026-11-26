@@ -31,8 +31,8 @@ export default function VerifiedHostsList({ hosts }: VerifiedHostsListProps) {
           className={cn(
             "h-[38px] px-4 rounded-xl font-heading text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer select-none",
             activeLetter === "ALL"
-              ? "bg-gradient-to-r from-[#FF1E27] to-[#B3000C] text-white shadow-[0_0_20px_rgba(255,30,39,0.4)] border border-[#FF1E27]"
-              : "border border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-white/30 hover:text-white"
+              ? "bg-gradient-to-r from-[#94632F] to-[#70471F] text-white shadow-[0_0_20px_rgba(212,168,99,0.4)] border border-[#D4A863]"
+              : "border border-white/10 bg-[#211C18] text-[#B6AA9C] hover:border-white/30 hover:text-white"
           )}
         >
           All
@@ -44,8 +44,8 @@ export default function VerifiedHostsList({ hosts }: VerifiedHostsListProps) {
             className={cn(
               "w-[38px] h-[38px] rounded-xl flex items-center justify-center font-heading text-xs font-black uppercase transition-all duration-200 cursor-pointer select-none",
               activeLetter === letter
-                ? "bg-gradient-to-r from-[#FF1E27] to-[#B3000C] text-white shadow-[0_0_20px_rgba(255,30,39,0.4)] border border-[#FF1E27]"
-                : "border border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-white/30 hover:text-white"
+                ? "bg-gradient-to-r from-[#94632F] to-[#70471F] text-white shadow-[0_0_20px_rgba(212,168,99,0.4)] border border-[#D4A863]"
+                : "border border-white/10 bg-[#211C18] text-[#B6AA9C] hover:border-white/30 hover:text-white"
             )}
           >
             {letter}
@@ -61,17 +61,17 @@ export default function VerifiedHostsList({ hosts }: VerifiedHostsListProps) {
           ))}
         </div>
       ) : (
-        <div className="mx-auto flex w-full max-w-[600px] flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-[#12141C]/80 px-8 py-20 text-center shadow-2xl backdrop-blur-md">
+        <div className="mx-auto flex w-full max-w-[600px] flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-[#211C18]/80 px-8 py-20 text-center shadow-2xl backdrop-blur-md">
           <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl shadow-inner">
             🔍
           </div>
-          <span className="font-heading text-[10px] font-black tracking-[.2em] text-[#FF1E27] uppercase">
+          <span className="font-heading text-[10px] font-black tracking-[.2em] text-[#D4A863] uppercase">
             HOST DIRECTORY
           </span>
           <h3 className="font-heading text-2xl font-black text-white uppercase tracking-tight">
             NO HOSTS FOUND
           </h3>
-          <p className="max-w-[360px] font-sans text-sm leading-relaxed text-[#8A92A0]">
+          <p className="max-w-[360px] font-sans text-sm leading-relaxed text-[#B6AA9C]">
             {activeLetter === "ALL"
               ? "There are no verified automotive hosts active right now. Please check back soon or explore live draws."
               : <>We couldn&apos;t find a verified host starting with &quot;{activeLetter}&quot;. Try selecting &quot;All&quot; to view the complete garage directory.</>}

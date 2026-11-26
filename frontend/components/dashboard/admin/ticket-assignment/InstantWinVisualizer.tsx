@@ -19,8 +19,8 @@ export default function InstantWinVisualizer({
 
   if (instantWins.length === 0) {
     return (
-      <div className="bg-[#12141C] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
-        <div className="flex items-center gap-3 text-[#8A92A0]">
+      <div className="bg-[#211C18] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
+        <div className="flex items-center gap-3 text-[#B6AA9C]">
           <span className="text-xl">ℹ️</span>
           <span className="font-sans text-xs">
             No instant win prizes configured for this competition.
@@ -34,7 +34,7 @@ export default function InstantWinVisualizer({
   const claimedCount = instantWins.length - unclaimedCount;
 
   return (
-    <div className="flex flex-col gap-4 bg-[#12141C] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
+    <div className="flex flex-col gap-4 bg-[#211C18] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-white/10">
         <div className="flex items-center gap-2.5">
@@ -48,7 +48,7 @@ export default function InstantWinVisualizer({
                 {unclaimedCount} Available
               </span>
             </h3>
-            <p className="font-sans text-xs text-[#8A92A0]">
+            <p className="font-sans text-xs text-[#B6AA9C]">
               Instant win prizes trigger automatically when the assigned ticket number matches
             </p>
           </div>
@@ -59,9 +59,9 @@ export default function InstantWinVisualizer({
             <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
             {unclaimedCount} Unclaimed
           </span>
-          <span className="text-[#8A92A0]">•</span>
-          <span className="flex items-center gap-1.5 text-[#8A92A0]">
-            <span className="w-2 h-2 rounded-full bg-[#8A92A0]" />
+          <span className="text-[#B6AA9C]">•</span>
+          <span className="flex items-center gap-1.5 text-[#B6AA9C]">
+            <span className="w-2 h-2 rounded-full bg-[#B6AA9C]" />
             {claimedCount} Claimed / Sold
           </span>
         </div>
@@ -81,7 +81,7 @@ export default function InstantWinVisualizer({
                   ? "bg-amber-500/15 border-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.25)] ring-1 ring-amber-400"
                   : isSold
                   ? "bg-black/30 border-white/5 opacity-60"
-                  : "bg-[#0B0C0E]/80 border-amber-500/30 hover:border-amber-400 hover:bg-[#181B26]"
+                  : "bg-[#14110F]/80 border-amber-500/30 hover:border-amber-400 hover:bg-[#302820]"
               }`}
             >
               <div className="flex items-start justify-between gap-2">
@@ -90,14 +90,14 @@ export default function InstantWinVisualizer({
                     #{iw.ticketNumber}
                   </span>
                   {iw.rrpValue && (
-                    <span className="text-[10px] font-sans font-bold text-[#8A92A0]">
+                    <span className="text-[10px] font-sans font-bold text-[#B6AA9C]">
                       RRP £{iw.rrpValue.toFixed(2)}
                     </span>
                   )}
                 </div>
 
                 {isSold ? (
-                  <span className="px-1.5 py-0.5 rounded text-[9px] font-bold uppercase bg-white/5 text-[#8A92A0] border border-white/10">
+                  <span className="px-1.5 py-0.5 rounded text-[9px] font-bold uppercase bg-white/5 text-[#B6AA9C] border border-white/10">
                     Claimed
                   </span>
                 ) : isSelected ? (
@@ -136,7 +136,7 @@ export default function InstantWinVisualizer({
                 onClick={() => onToggleTicketNumber(iw.ticketNumber)}
                 className={`w-full py-1.5 px-2.5 rounded-lg font-sans font-bold text-[11px] transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
                   isSold
-                    ? "bg-transparent text-[#8A92A0] cursor-not-allowed border border-white/5 line-through"
+                    ? "bg-transparent text-[#B6AA9C] cursor-not-allowed border border-white/5 line-through"
                     : isSelected
                     ? "bg-amber-500 text-black hover:bg-amber-400 shadow-xs font-black"
                     : "bg-amber-500/10 hover:bg-amber-500 text-amber-300 hover:text-black border border-amber-500/30 hover:border-amber-500 shadow-xs"

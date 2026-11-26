@@ -59,17 +59,17 @@ export default function CompetitionApprovalQueue() {
         {isLoading && (
           <div className="flex flex-col gap-6">
             {[1, 2, 3].map(i => (
-              <div key={i} className="w-full bg-[#12141C] border border-white/10 rounded-2xl h-[240px] animate-pulse shadow-xl" />
+              <div key={i} className="w-full bg-[#211C18] border border-white/10 rounded-2xl h-[240px] animate-pulse shadow-xl" />
             ))}
           </div>
         )}
 
         {!isLoading && pendingRaffles?.map((item: any) => (
-          <div key={item.id} className="relative w-full bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl flex flex-col overflow-hidden shadow-xl transition-all">
+          <div key={item.id} className="relative w-full bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl flex flex-col overflow-hidden shadow-xl transition-all">
 
             {/* Glowing Loading Overlay */}
             {approvingId === item.id && (
-              <div className="absolute inset-0 z-10 bg-[#12141C]/95 backdrop-blur-md flex flex-col items-center justify-center animate-in fade-in duration-300">
+              <div className="absolute inset-0 z-10 bg-[#211C18]/95 backdrop-blur-md flex flex-col items-center justify-center animate-in fade-in duration-300">
                 <div className="relative flex items-center justify-center w-[100px] h-[100px] mb-4">
                   <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-ping" style={{ animationDuration: '2s' }}></div>
                   <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-primary border-r-primary animate-spin" style={{ animationDuration: '0.8s' }}></div>

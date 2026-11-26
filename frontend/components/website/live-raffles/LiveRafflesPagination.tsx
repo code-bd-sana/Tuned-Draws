@@ -28,8 +28,8 @@ export default function LiveRafflesPagination({
         className={cn(
           "px-4 py-2 text-xs font-heading font-bold uppercase tracking-wider rounded-xl border select-none transition-all duration-200",
           currentPage === 1
-            ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
-            : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C] cursor-pointer"
+            ? "border-white/5 text-[#B6AA9C]/40 bg-[#211C18]/40 cursor-not-allowed"
+            : "border-white/10 text-[#E5DCCD] hover:text-white hover:border-[#D4A863]/50 bg-[#211C18] cursor-pointer"
         )}
       >
         ← Prev
@@ -44,8 +44,8 @@ export default function LiveRafflesPagination({
             className={cn(
               "w-9 h-9 text-xs font-heading font-black rounded-xl border flex items-center justify-center transition-all duration-200 cursor-pointer select-none",
               currentPage === p
-                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#FF1E27]/40"
+                ? "bg-[#94632F] border-[#D4A863] text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                : "bg-[#211C18] border-white/10 text-[#B6AA9C] hover:text-white hover:border-[#D4A863]/40"
             )}
           >
             {p}
@@ -60,8 +60,8 @@ export default function LiveRafflesPagination({
         className={cn(
           "px-4 py-2 text-xs font-heading font-bold uppercase tracking-wider rounded-xl border select-none transition-all duration-200",
           currentPage === totalPages
-            ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
-            : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C] cursor-pointer"
+            ? "border-white/5 text-[#B6AA9C]/40 bg-[#211C18]/40 cursor-not-allowed"
+            : "border-white/10 text-[#E5DCCD] hover:text-white hover:border-[#D4A863]/50 bg-[#211C18] cursor-pointer"
         )}
       >
         Next →

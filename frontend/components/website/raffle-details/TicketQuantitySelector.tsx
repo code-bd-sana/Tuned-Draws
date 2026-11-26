@@ -85,7 +85,7 @@ export default function TicketQuantitySelector({
         </button>
 
         {/* Quantity Display Box */}
-        <div className="flex-grow h-full bg-[#1A1D27] text-white flex items-center justify-center font-heading font-bold text-sm">
+        <div className="flex-grow h-full bg-[#302820] text-white flex items-center justify-center font-heading font-bold text-sm">
           {quantity}
         </div>
 

@@ -54,17 +54,17 @@ export default function AccountingSummaryBox({
   );
 
   return (
-    <div className="flex flex-col gap-5 bg-[#12141C] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
+    <div className="flex flex-col gap-5 bg-[#211C18] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
       {/* Header */}
       <div className="flex items-center gap-2.5 pb-3 border-b border-white/10">
-        <div className="w-8 h-8 rounded-xl bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27] font-bold text-sm shadow-xs">
+        <div className="w-8 h-8 rounded-xl bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863] font-bold text-sm shadow-xs">
           4
         </div>
         <div>
           <h3 className="font-heading font-black text-base sm:text-lg text-white uppercase tracking-tight">
             Financial &amp; Accounting Breakdown
           </h3>
-          <p className="font-sans text-xs text-[#8A92A0]">
+          <p className="font-sans text-xs text-[#B6AA9C]">
             Audit breakdown and Host wallet crediting before execution
           </p>
         </div>
@@ -95,58 +95,58 @@ export default function AccountingSummaryBox({
       {/* Accounting Summary Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
         {/* Recipient */}
-        <div className="p-3.5 rounded-xl bg-[#0B0C0E] border border-white/5 flex flex-col gap-1">
-          <span className="font-sans text-[11px] font-bold text-[#8A92A0] uppercase">
+        <div className="p-3.5 rounded-xl bg-[#14110F] border border-white/5 flex flex-col gap-1">
+          <span className="font-sans text-[11px] font-bold text-[#B6AA9C] uppercase">
             Recipient
           </span>
           <span className="font-heading font-bold text-xs text-white truncate">
             {recipient ? recipient.name : "None Selected"}
           </span>
-          <span className="font-sans text-[10px] text-[#8A92A0] truncate">
+          <span className="font-sans text-[10px] text-[#B6AA9C] truncate">
             {recipient ? recipient.email : "Select recipient above"}
           </span>
         </div>
 
         {/* Competition */}
-        <div className="p-3.5 rounded-xl bg-[#0B0C0E] border border-white/5 flex flex-col gap-1">
-          <span className="font-sans text-[11px] font-bold text-[#8A92A0] uppercase">
+        <div className="p-3.5 rounded-xl bg-[#14110F] border border-white/5 flex flex-col gap-1">
+          <span className="font-sans text-[11px] font-bold text-[#B6AA9C] uppercase">
             Competition
           </span>
           <span className="font-heading font-bold text-xs text-white truncate">
             {competition.title}
           </span>
-          <span className="font-sans text-[10px] text-[#8A92A0]">
+          <span className="font-sans text-[10px] text-[#B6AA9C]">
             Host: {competition.host.name}
           </span>
         </div>
 
         {/* Ticket Count */}
-        <div className="p-3.5 rounded-xl bg-[#0B0C0E] border border-white/5 flex flex-col gap-1">
-          <span className="font-sans text-[11px] font-bold text-[#8A92A0] uppercase">
+        <div className="p-3.5 rounded-xl bg-[#14110F] border border-white/5 flex flex-col gap-1">
+          <span className="font-sans text-[11px] font-bold text-[#B6AA9C] uppercase">
             Ticket Count
           </span>
           <span className="font-mono font-black text-sm text-white">
             {ticketCount} {ticketCount === 1 ? "Ticket" : "Tickets"}
           </span>
-          <span className="font-sans text-[10px] text-[#8A92A0]">
+          <span className="font-sans text-[10px] text-[#B6AA9C]">
             {mode === "specific" ? "Specific numbers" : "Random quantity"}
           </span>
         </div>
 
         {/* Unit Price */}
-        <div className="p-3.5 rounded-xl bg-[#0B0C0E] border border-white/5 flex flex-col gap-1">
-          <span className="font-sans text-[11px] font-bold text-[#8A92A0] uppercase">
+        <div className="p-3.5 rounded-xl bg-[#14110F] border border-white/5 flex flex-col gap-1">
+          <span className="font-sans text-[11px] font-bold text-[#B6AA9C] uppercase">
             Unit Price
           </span>
           <span className="font-heading font-bold text-sm text-white">
             £{unitPrice.toFixed(2)}
           </span>
-          <span className="font-sans text-[10px] text-[#8A92A0]">Standard rate</span>
+          <span className="font-sans text-[10px] text-[#B6AA9C]">Standard rate</span>
         </div>
 
         {/* Total Value */}
-        <div className="p-3.5 rounded-xl bg-[#0B0C0E] border border-white/5 flex flex-col gap-1">
-          <span className="font-sans text-[11px] font-bold text-[#8A92A0] uppercase">
+        <div className="p-3.5 rounded-xl bg-[#14110F] border border-white/5 flex flex-col gap-1">
+          <span className="font-sans text-[11px] font-bold text-[#B6AA9C] uppercase">
             Total Value
           </span>
           <span className="font-heading font-black text-sm text-emerald-400">
@@ -183,7 +183,7 @@ export default function AccountingSummaryBox({
 
       {/* Admin Notes Field */}
       <div className="flex flex-col gap-1.5">
-        <label className="font-sans text-xs font-bold text-[#8A92A0] uppercase">
+        <label className="font-sans text-xs font-bold text-[#B6AA9C] uppercase">
           Admin Audit Notes / Allocation Reason (Optional)
         </label>
         <input
@@ -191,13 +191,13 @@ export default function AccountingSummaryBox({
           value={adminNotes}
           onChange={(e) => onAdminNotesChange(e.target.value)}
           placeholder="e.g. VIP Giveaway Prize, Loyalty Reward Program, Promotional allocation..."
-          className="w-full bg-[#0B0C0E] border border-white/10 rounded-xl px-4 py-2.5 text-xs font-sans text-white placeholder-[#8A92A0] focus:outline-none focus:border-[#FF1E27]"
+          className="w-full bg-[#14110F] border border-white/10 rounded-xl px-4 py-2.5 text-xs font-sans text-white placeholder-[#B6AA9C] focus:outline-none focus:border-[#D4A863]"
         />
       </div>
 
       {/* CTA Button */}
       <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="text-xs font-sans text-[#8A92A0]">
+        <div className="text-xs font-sans text-[#B6AA9C]">
           {!recipient && <span className="text-amber-400">⚠️ Please select a recipient user above.</span>}
           {recipient && ticketCount === 0 && (
             <span className="text-amber-400">⚠️ Please select at least 1 ticket number.</span>
@@ -211,7 +211,7 @@ export default function AccountingSummaryBox({
           type="button"
           disabled={!isValid || isSubmitting}
           onClick={onOpenConfirmation}
-          className="w-full sm:w-auto px-8 py-3 rounded-xl bg-[#FF1E27] hover:bg-[#e01921] disabled:opacity-50 disabled:cursor-not-allowed text-white font-heading font-black text-sm uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(255,30,39,0.4)] cursor-pointer active:scale-95"
+          className="w-full sm:w-auto px-8 py-3 rounded-xl bg-[#94632F] hover:bg-[#805023] disabled:opacity-50 disabled:cursor-not-allowed text-white font-heading font-black text-sm uppercase tracking-wider transition-all shadow-[0_0_20px_rgba(212,168,99,0.4)] cursor-pointer active:scale-95"
         >
           {isSubmitting ? "Assigning..." : "Assign Tickets →"}
         </button>

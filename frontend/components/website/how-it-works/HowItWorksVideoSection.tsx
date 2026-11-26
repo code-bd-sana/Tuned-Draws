@@ -54,7 +54,7 @@ export default function HowItWorksVideoSection() {
 
           {/* Red play button circle overlay */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:bg-primary-hover group-hover:shadow-[0_0_30px_rgba(255,30,39,0.4)] transition-all duration-300 ease-out">
+            <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center shadow-lg transform group-hover:scale-110 group-hover:bg-primary-hover group-hover:shadow-[0_0_30px_rgba(212,168,99,0.4)] transition-all duration-300 ease-out">
               {/* Play SVG Icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"

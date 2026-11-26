@@ -167,7 +167,7 @@ export default function UserProfileForm() {
   };
 
   if (isLoading) {
-    return <div className="text-[#FF1E27] animate-pulse">Loading profile...</div>;
+    return <div className="text-[#D4A863] animate-pulse">Loading profile...</div>;
   }
 
   const initials = user?.firstName?.substring(0, 2).toUpperCase() || user?.email?.substring(0, 2).toUpperCase() || "TD";
@@ -176,7 +176,7 @@ export default function UserProfileForm() {
     <div className="flex flex-col xl:flex-row gap-6 p-6 lg:p-8 max-w-[1660px] mx-auto w-full animate-fadeIn items-start">
       {/* Left Column: Profile Summary */}
       <div className="w-full xl:w-[380px] shrink-0 flex flex-col gap-5">
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-8 flex flex-col items-center shadow-2xl backdrop-blur-md">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-8 flex flex-col items-center shadow-2xl backdrop-blur-md">
           {/* Avatar Area */}
           <div className="relative mb-6">
             <input 
@@ -186,18 +186,18 @@ export default function UserProfileForm() {
               accept="image/*" 
               className="hidden" 
             />
-            <div className="w-[140px] h-[140px] rounded-full border-2 border-white/10 bg-[#0B0C0E] flex items-center justify-center overflow-hidden shadow-xl">
+            <div className="w-[140px] h-[140px] rounded-full border-2 border-white/10 bg-[#14110F] flex items-center justify-center overflow-hidden shadow-xl">
               {user?.avatarUrl ? (
                 <img src={user.avatarUrl} alt="Avatar" className="w-full h-full object-cover" />
               ) : (
-                <span className="font-heading font-black text-4xl text-[#FF1E27]">{initials}</span>
+                <span className="font-heading font-black text-4xl text-[#D4A863]">{initials}</span>
               )}
             </div>
             <button 
               type="button"
               onClick={handleUploadClick}
               disabled={uploadAvatarMutation.isPending}
-              className="absolute bottom-2 right-2 w-9 h-9 btn-racing-red rounded-full flex items-center justify-center border-2 border-[#12141C] text-white transition-transform hover:scale-105 cursor-pointer shadow-lg disabled:opacity-50"
+              className="absolute bottom-2 right-2 w-9 h-9 btn-racing-red rounded-full flex items-center justify-center border-2 border-[#211C18] text-white transition-transform hover:scale-105 cursor-pointer shadow-lg disabled:opacity-50"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
@@ -207,7 +207,7 @@ export default function UserProfileForm() {
           </div>
           <p 
             onClick={handleUploadClick}
-            className="font-sans font-bold text-xs text-[#FF1E27] mb-6 cursor-pointer hover:underline transition-all"
+            className="font-sans font-bold text-xs text-[#D4A863] mb-6 cursor-pointer hover:underline transition-all"
           >
             {uploadAvatarMutation.isPending ? "Uploading..." : "Upload Profile Photo"}
           </p>
@@ -225,15 +225,15 @@ export default function UserProfileForm() {
           {/* Stats List */}
           <div className="w-full flex flex-col gap-3 pt-4 border-t border-white/10">
             <div className="flex justify-between items-center w-full">
-              <span className="font-sans text-xs text-[#8A92A0]">Member since</span>
+              <span className="font-sans text-xs text-[#B6AA9C]">Member since</span>
               <span className="font-heading font-bold text-xs text-white">
                 {user?.createdAt ? new Date(user.createdAt).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }) : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between items-center w-full">
-              <span className="font-sans text-xs text-[#8A92A0]">Account Role</span>
-              <div className="px-2.5 py-0.5 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30">
-                <span className="font-sans font-bold text-[10px] text-[#FF1E27] tracking-wider uppercase">
+              <span className="font-sans text-xs text-[#B6AA9C]">Account Role</span>
+              <div className="px-2.5 py-0.5 rounded-full bg-[#D4A863]/10 border border-[#D4A863]/30">
+                <span className="font-sans font-bold text-[10px] text-[#D4A863] tracking-wider uppercase">
                   {user?.role === 'ADMIN' ? 'Admin' : user?.role === 'HOST' ? 'Host' : 'Driver / Player'}
                 </span>
               </div>
@@ -244,46 +244,46 @@ export default function UserProfileForm() {
 
       {/* Right Column: Settings Forms */}
       <div className="flex-1 flex flex-col gap-6">
-        <form onSubmit={handleProfileSubmit} className="flex-1 min-w-0 w-full bg-[#12141C] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col gap-6 shadow-2xl backdrop-blur-md">
+        <form onSubmit={handleProfileSubmit} className="flex-1 min-w-0 w-full bg-[#211C18] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col gap-6 shadow-2xl backdrop-blur-md">
           
           {/* Account Information */}
           <section>
             <div className="flex justify-between items-center mb-5 pb-3 border-b border-white/10">
               <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">Personal Details</h3>
               {profileMessage && (
-                <span className={`text-xs font-bold ${profileMessage.includes('Failed') || profileMessage.includes('refused') ? 'text-[#FF1E27]' : 'text-emerald-400'}`}>
+                <span className={`text-xs font-bold ${profileMessage.includes('Failed') || profileMessage.includes('refused') ? 'text-red-400' : 'text-emerald-400'}`}>
                   {profileMessage}
                 </span>
               )}
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">First Name</label>
-                <div className="bg-[#0B0C0E] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
-                  <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" className="bg-transparent outline-none w-full text-sm text-white font-sans font-semibold placeholder:text-[#8A92A0]/40" />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">First Name</label>
+                <div className="bg-[#14110F] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
+                  <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First Name" className="bg-transparent outline-none w-full text-sm text-white font-sans font-semibold placeholder:text-[#B6AA9C]/40" />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">Last Name</label>
-                <div className="bg-[#0B0C0E] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
-                  <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last Name" className="bg-transparent outline-none w-full text-sm text-white font-sans font-semibold placeholder:text-[#8A92A0]/40" />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Last Name</label>
+                <div className="bg-[#14110F] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
+                  <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last Name" className="bg-transparent outline-none w-full text-sm text-white font-sans font-semibold placeholder:text-[#B6AA9C]/40" />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5 md:col-span-2">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">Email Address</label>
-                <div className="bg-[#0B0C0E]/50 border border-white/5 h-10 rounded-xl px-3 flex items-center opacity-75">
-                  <input type="email" name="email" value={formData.email} disabled className="bg-transparent outline-none w-full text-sm text-[#8A92A0] font-sans cursor-not-allowed" />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Email Address</label>
+                <div className="bg-[#14110F]/50 border border-white/5 h-10 rounded-xl px-3 flex items-center opacity-75">
+                  <input type="email" name="email" value={formData.email} disabled className="bg-transparent outline-none w-full text-sm text-[#B6AA9C] font-sans cursor-not-allowed" />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5 md:col-span-2">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">Phone Number</label>
-                <div className="bg-[#0B0C0E] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
-                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+44 7700 900123" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#8A92A0]/40" />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Phone Number</label>
+                <div className="bg-[#14110F] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+44 7700 900123" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#B6AA9C]/40" />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5 md:col-span-2">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">Date of Birth (18+ Only)</label>
-                <div className="bg-[#0B0C0E] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Date of Birth (18+ Only)</label>
+                <div className="bg-[#14110F] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
                   <input
                     type="date"
                     name="dateOfBirth"
@@ -295,9 +295,9 @@ export default function UserProfileForm() {
                 </div>
               </div>
               <div className="flex flex-col gap-1.5 md:col-span-2">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">Delivery / Garage Address</label>
-                <div className="bg-[#0B0C0E] border border-white/10 rounded-xl p-3 flex focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
-                  <textarea name="address" value={formData.address} onChange={handleChange} className="bg-transparent outline-none w-full text-sm text-white font-sans resize-none h-[70px] placeholder:text-[#8A92A0]/40" placeholder="123 Performance Way, London, UK" />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Delivery / Garage Address</label>
+                <div className="bg-[#14110F] border border-white/10 rounded-xl p-3 flex focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
+                  <textarea name="address" value={formData.address} onChange={handleChange} className="bg-transparent outline-none w-full text-sm text-white font-sans resize-none h-[70px] placeholder:text-[#B6AA9C]/40" placeholder="123 Performance Way, London, UK" />
                 </div>
               </div>
             </div>
@@ -315,34 +315,34 @@ export default function UserProfileForm() {
           </div>
         </form>
 
-        <form onSubmit={handlePasswordSubmit} className="bg-[#12141C] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col gap-6 shadow-2xl backdrop-blur-md">
+        <form onSubmit={handlePasswordSubmit} className="bg-[#211C18] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col gap-6 shadow-2xl backdrop-blur-md">
           {/* Change Password */}
           <section>
             <div className="flex justify-between items-center mb-5 pb-3 border-b border-white/10">
               <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">Security &amp; Password</h3>
               {passwordMessage && (
-                <span className={`text-xs font-bold ${passwordMessage.includes('Failed') || passwordMessage.includes('not match') || passwordMessage.includes('least') ? 'text-[#FF1E27]' : 'text-emerald-400'}`}>
+                <span className={`text-xs font-bold ${passwordMessage.includes('Failed') || passwordMessage.includes('not match') || passwordMessage.includes('least') ? 'text-red-400' : 'text-emerald-400'}`}>
                   {passwordMessage}
                 </span>
               )}
             </div>
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-1.5">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">Current Password</label>
-                <div className="bg-[#0B0C0E] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
-                  <input type="password" name="currentPassword" value={passwordData.currentPassword} onChange={handlePasswordChange} placeholder="••••••••" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#8A92A0]/40" required />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Current Password</label>
+                <div className="bg-[#14110F] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
+                  <input type="password" name="currentPassword" value={passwordData.currentPassword} onChange={handlePasswordChange} placeholder="••••••••" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#B6AA9C]/40" required />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">New Password</label>
-                <div className="bg-[#0B0C0E] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
-                  <input type="password" name="newPassword" value={passwordData.newPassword} onChange={handlePasswordChange} placeholder="••••••••" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#8A92A0]/40" required />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">New Password</label>
+                <div className="bg-[#14110F] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
+                  <input type="password" name="newPassword" value={passwordData.newPassword} onChange={handlePasswordChange} placeholder="••••••••" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#B6AA9C]/40" required />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#8A92A0]">Confirm New Password</label>
-                <div className="bg-[#0B0C0E] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#FF1E27] focus-within:ring-1 focus-within:ring-[#FF1E27]/30 transition-all">
-                  <input type="password" name="confirmPassword" value={passwordData.confirmPassword} onChange={handlePasswordChange} placeholder="••••••••" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#8A92A0]/40" required />
+                <label className="font-sans font-bold text-[11px] uppercase tracking-wider text-[#B6AA9C]">Confirm New Password</label>
+                <div className="bg-[#14110F] border border-white/10 h-10 rounded-xl px-3 flex items-center focus-within:border-[#D4A863] focus-within:ring-1 focus-within:ring-[#D4A863]/30 transition-all">
+                  <input type="password" name="confirmPassword" value={passwordData.confirmPassword} onChange={handlePasswordChange} placeholder="••••••••" className="bg-transparent outline-none w-full text-sm text-white font-sans placeholder:text-[#B6AA9C]/40" required />
                 </div>
               </div>
             </div>

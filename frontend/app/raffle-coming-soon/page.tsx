@@ -22,12 +22,12 @@ export default function RaffleComingSoonPage() {
     <>
       <WebsiteNavbar />
 
-      <main className="min-h-screen bg-[#0B0C0E] bg-tachometer-grid pt-24 lg:pt-28 relative overflow-hidden text-white selection:bg-[#FF1E27] selection:text-white">
+      <main className="min-h-screen bg-[#14110F] bg-tachometer-grid pt-24 lg:pt-28 relative overflow-hidden text-white selection:bg-[#94632F] selection:text-white">
 
         {/* Ambient background glows */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div className="absolute -top-[20%] -left-[15%] w-[70%] h-[70%] bg-[#FF1E27]/8 rounded-full blur-[160px]" />
-          <div className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-[#B3000C]/6 rounded-full blur-[130px]" />
+          <div className="absolute -top-[20%] -left-[15%] w-[70%] h-[70%] bg-[#D4A863]/8 rounded-full blur-[160px]" />
+          <div className="absolute -bottom-[10%] -right-[10%] w-[50%] h-[50%] bg-[#9B6A2F]/6 rounded-full blur-[130px]" />
         </div>
 
         {/* HERO */}
@@ -36,19 +36,19 @@ export default function RaffleComingSoonPage() {
         </div>
 
         {/* Divider accent */}
-        <div className="relative z-10 h-px bg-gradient-to-r from-transparent via-[#FF1E27]/40 to-transparent" />
+        <div className="relative z-10 h-px bg-gradient-to-r from-transparent via-[#D4A863]/40 to-transparent" />
 
         {/* FORM SECTION */}
         <div className="relative z-10 py-16">
           <div className="container-custom">
             <div className="text-center mb-10">
-              <span className="text-[11px] font-heading font-black uppercase tracking-[0.2em] text-[#FF1E27]">
+              <span className="text-[11px] font-heading font-black uppercase tracking-[0.2em] text-[#D4A863]">
                 Step 1 of 1
               </span>
               <h2 className="font-heading text-3xl sm:text-4xl font-black text-white uppercase mt-1">
                 Reserve Your Spot
               </h2>
-              <p className="font-sans text-sm text-[#8A92A0] mt-2 max-w-sm mx-auto">
+              <p className="font-sans text-sm text-[#B6AA9C] mt-2 max-w-sm mx-auto">
                 Takes 30 seconds. No payment required.
               </p>
             </div>
@@ -67,10 +67,10 @@ export default function RaffleComingSoonPage() {
         </div>
 
         {/* FOOTER STRIP */}
-        <div className="relative z-10 border-t border-white/10 py-8 bg-[#0B0C0E]/90">
+        <div className="relative z-10 border-t border-white/10 py-8 bg-[#14110F]/90">
           <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-4">
             <TunedDrawsBrandLogo size="sm" href="/" />
-            <p className="font-sans text-xs text-[#8A92A0] text-center sm:text-right">
+            <p className="font-sans text-xs text-[#B6AA9C] text-center sm:text-right">
               © {new Date().getFullYear()} Tuned Draws Ltd · UK Registered · All Rights Reserved
             </p>
           </div>

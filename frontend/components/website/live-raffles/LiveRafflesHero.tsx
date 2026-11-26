@@ -28,21 +28,21 @@ export default function LiveRafflesHero({
   const displayTotalPrizesValue = totalPrizesValue ?? stats?.totalPrizesValue ?? "£0";
 
   return (
-    <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0B0C0E] pt-24 sm:pt-28">
+    <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#14110F] pt-24 sm:pt-28">
       {/* Background competition hero image with high clarity */}
       <Image
-        src="/images/tuned-hero-bg.jpg"
-        alt="Tuned Draws high performance car modifications and parts"
+        src="/images/wedding-hero.png"
+        alt="A couple celebrating their wedding"
         fill
         priority
         className="-z-20 object-cover object-[75%_center] lg:object-center opacity-85 contrast-110 brightness-105"
       />
 
       {/* Atmospheric lighting falloff & speed-line gradients */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/75 to-[#0B0C0E]/30" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B0C0E] via-transparent to-[#0B0C0E]/60" />
-      <div className="absolute -top-32 left-1/3 w-[650px] h-[450px] bg-[#FF1E27]/15 rounded-full blur-[160px] pointer-events-none -z-10" />
-      <div className="absolute bottom-0 right-10 w-[450px] h-[350px] bg-[#B3000C]/12 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#14110F] via-[#14110F]/75 to-[#14110F]/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#14110F] via-transparent to-[#14110F]/60" />
+      <div className="absolute -top-32 left-1/3 w-[650px] h-[450px] bg-[#D4A863]/15 rounded-full blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute bottom-0 right-10 w-[450px] h-[350px] bg-[#9B6A2F]/12 rounded-full blur-[140px] pointer-events-none -z-10" />
 
       {/* Subtle tachometer dot-grid */}
       <div 
@@ -56,13 +56,13 @@ export default function LiveRafflesHero({
       <div className="container-custom py-10 sm:py-14 relative z-10">
         {/* Breadcrumb Navigation */}
         <nav className="mb-6" aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <ol className="flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             <li>
               <Link href="/" className="transition-colors hover:text-white">
                 Home
               </Link>
             </li>
-            <li className="text-[#FF1E27]" aria-hidden="true">/</li>
+            <li className="text-[#D4A863]" aria-hidden="true">/</li>
             <li className="text-white">Live Competitions</li>
           </ol>
         </nav>
@@ -70,36 +70,36 @@ export default function LiveRafflesHero({
         <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           {/* Main Title Block */}
           <div className="max-w-2xl">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#FF1E27]/30 bg-[#12141C]/90 px-4 py-1.5 font-heading text-[11px] font-black tracking-widest text-[#D1D5DB] uppercase shadow-[0_0_15px_rgba(255,30,39,0.2)]">
-              <span className="h-2 w-2 rounded-full bg-[#FF1E27] animate-pulse shadow-[0_0_8px_rgba(255,30,39,0.8)]" />
-              UK CAR MODIFICATIONS &amp; PARTS ARENA
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#D4A863]/30 bg-[#211C18]/90 px-4 py-1.5 font-heading text-[11px] font-black tracking-widest text-[#E5DCCD] uppercase shadow-[0_0_15px_rgba(212,168,99,0.2)]">
+              <span className="h-2 w-2 rounded-full bg-[#94632F] animate-pulse shadow-[0_0_8px_rgba(212,168,99,0.8)]" />
+              DISCOVER OUR COMPETITIONS
             </div>
-            <h1 className="font-heading text-4xl font-black leading-[0.95] tracking-tight text-white uppercase sm:text-5xl md:text-6xl">
-              ENTER THE ARENA.<br />
-              <span className="text-[#FF1E27] drop-shadow-[0_0_25px_rgba(255,30,39,0.55)]">
-                WIN CAR MODS &amp; SERVICES.
+            <h1 className="font-serif text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
+              Find something<br />
+              <span className="text-[#D4A863] drop-shadow-[0_0_25px_rgba(212,168,99,0.55)]">
+                <em className="font-normal">wonderful.</em>
               </span>
             </h1>
-            <p className="mt-4 font-sans text-xs sm:text-sm text-[#8A92A0] max-w-lg leading-relaxed">
-              Guaranteed live draws, transparent UK ticket allocations, and real-time instant wins. Win tuning packages, performance parts, wraps, detailing, and track days.
+            <p className="mt-4 font-sans text-xs sm:text-sm text-[#B6AA9C] max-w-lg leading-relaxed">
+              Explore live competitions and discover memorable prizes from our hosts.
             </p>
           </div>
 
           {/* Quick Metrics Bar */}
-          <div className="grid w-full grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-[#12141C]/85 shadow-[0_12px_36px_rgba(0,0,0,0.7)] backdrop-blur-xl lg:w-auto lg:min-w-[460px]">
+          <div className="grid w-full grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-[#211C18]/85 shadow-[0_12px_36px_rgba(0,0,0,0.7)] backdrop-blur-xl lg:w-auto lg:min-w-[460px]">
             {[
               {
-                icon: <Gauge className="w-4 h-4 text-[#FF1E27]" />,
+                icon: <Gauge className="w-4 h-4 text-[#D4A863]" />,
                 value: isLoading && !stats ? "..." : `${displayLiveCount}`,
                 label: "Live Draws",
               },
               {
-                icon: <Flame className="w-4 h-4 text-[#FF1E27]" />,
+                icon: <Flame className="w-4 h-4 text-[#D4A863]" />,
                 value: isLoading && !stats ? "..." : `${displayClosingTodayCount}`,
                 label: "Closing Today",
               },
               {
-                icon: <Sparkles className="w-4 h-4 text-[#FF1E27]" />,
+                icon: <Sparkles className="w-4 h-4 text-[#D4A863]" />,
                 value: isLoading && !stats ? "..." : displayTotalPrizesValue,
                 label: "In Prizes",
               },
@@ -114,7 +114,7 @@ export default function LiveRafflesHero({
                 <div className="font-heading text-xl font-black tracking-tight text-white sm:text-2xl">
                   {metric.value}
                 </div>
-                <div className="mt-0.5 font-sans text-[9px] font-bold tracking-wider text-[#8A92A0] uppercase sm:text-[10px]">
+                <div className="mt-0.5 font-sans text-[9px] font-bold tracking-wider text-[#B6AA9C] uppercase sm:text-[10px]">
                   {metric.label}
                 </div>
               </div>

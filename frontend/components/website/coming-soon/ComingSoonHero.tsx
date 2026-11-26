@@ -45,8 +45,8 @@ export default function ComingSoonHero() {
 
       {/* TOP BADGE */}
       <div className="flex justify-center mb-10">
-        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#FF1E27]/30 bg-[#12141C] text-[#D1D5DB] text-[11px] font-heading font-black uppercase tracking-[0.18em] shadow-[0_0_15px_rgba(255,30,39,0.2)]">
-          <span className="w-2 h-2 rounded-full bg-[#FF1E27] animate-pulse shadow-[0_0_8px_rgba(255,30,39,0.8)]" />
+        <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#D4A863]/30 bg-[#211C18] text-[#E5DCCD] text-[11px] font-heading font-black uppercase tracking-[0.18em] shadow-[0_0_15px_rgba(212,168,99,0.2)]">
+          <span className="w-2 h-2 rounded-full bg-[#94632F] animate-pulse shadow-[0_0_8px_rgba(212,168,99,0.8)]" />
           VIP Early Access — Founding Members Only
         </span>
       </div>
@@ -62,9 +62,9 @@ export default function ComingSoonHero() {
           </div>
 
           {/* Tagline */}
-          <p className="text-[#8A92A0] text-base sm:text-lg leading-relaxed mb-8 max-w-md font-sans">
+          <p className="text-[#B6AA9C] text-base sm:text-lg leading-relaxed mb-8 max-w-md font-sans">
             Win <strong className="text-white font-semibold">performance tuning packages</strong>, custom car wraps, detailing &amp; exclusive{" "}
-            <strong className="text-[#FF1E27] font-semibold">track day experiences</strong> — for genuine automotive enthusiasts across the UK.
+            <strong className="text-[#D4A863] font-semibold">track day experiences</strong> — for genuine automotive enthusiasts across the UK.
           </p>
 
           {/* Stat Pills */}
@@ -76,17 +76,17 @@ export default function ComingSoonHero() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="flex flex-col items-center px-5 py-3 bg-[#12141C] border border-white/10 rounded-2xl shadow-xl min-w-[100px]"
+                className="flex flex-col items-center px-5 py-3 bg-[#211C18] border border-white/10 rounded-2xl shadow-xl min-w-[100px]"
               >
                 <span className="font-heading text-2xl font-black text-white">{stat.value}</span>
-                <span className="font-sans text-[10px] font-bold text-[#8A92A0] uppercase tracking-wider mt-0.5">{stat.label}</span>
+                <span className="font-sans text-[10px] font-bold text-[#B6AA9C] uppercase tracking-wider mt-0.5">{stat.label}</span>
               </div>
             ))}
           </div>
 
           {/* Trust strip */}
-          <div className="flex items-center gap-2 text-xs text-[#8A92A0] font-medium">
-            <ShieldCheck className="w-4 h-4 text-[#FF1E27]" />
+          <div className="flex items-center gap-2 text-xs text-[#B6AA9C] font-medium">
+            <ShieldCheck className="w-4 h-4 text-[#D4A863]" />
             UK Competition Compliant · Provably Fair RNG · Zero Spam
           </div>
         </div>
@@ -97,34 +97,34 @@ export default function ComingSoonHero() {
           <div className="absolute inset-[-16px] rounded-[36px] border border-white/10 pointer-events-none" />
 
           {/* Outer glow */}
-          <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-[#FF1E27]/15 via-transparent to-transparent blur-2xl pointer-events-none" />
+          <div className="absolute inset-0 rounded-[32px] bg-gradient-to-br from-[#D4A863]/15 via-transparent to-transparent blur-2xl pointer-events-none" />
 
           {/* Card */}
-          <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden border border-white/15 shadow-2xl group bg-[#12141C]">
+          <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-2xl overflow-hidden border border-white/15 shadow-2xl group bg-[#211C18]">
             <Image
-              src="/images/tuned-hero-bg.jpg"
-              alt="Tuned Draws Performance Competitions"
+              src="/images/wedding-hero.png"
+              alt="Wedding Draws Competitions"
               fill
               sizes="(max-width: 768px) 100vw, 480px"
               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 opacity-90"
               priority
             />
             {/* Bottom gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0B0C0E] via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#14110F] via-transparent to-transparent" />
 
             {/* Floating bottom bar */}
             <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between">
               <div>
-                <p className="text-[#FF1E27] text-[10px] font-heading font-black uppercase tracking-widest mb-1">Inaugural Launch Edition</p>
+                <p className="text-[#D4A863] text-[10px] font-heading font-black uppercase tracking-widest mb-1">Inaugural Launch Edition</p>
                 <p className="font-heading text-white text-lg font-black leading-tight uppercase">Custom 700HP Build</p>
               </div>
-              <span className="px-3 py-1.5 bg-[#12141C]/80 backdrop-blur-md border border-white/15 rounded-full text-white text-[10px] font-heading font-bold uppercase tracking-wide">
+              <span className="px-3 py-1.5 bg-[#211C18]/80 backdrop-blur-md border border-white/15 rounded-full text-white text-[10px] font-heading font-bold uppercase tracking-wide">
                 Season 1
               </span>
             </div>
 
             {/* Top-right badge */}
-            <div className="absolute top-4 right-4 px-3 py-1 bg-[#FF1E27] rounded-full text-white text-[10px] font-heading font-black uppercase tracking-wide shadow-lg">
+            <div className="absolute top-4 right-4 px-3 py-1 bg-[#94632F] rounded-full text-white text-[10px] font-heading font-black uppercase tracking-wide shadow-lg">
               Featured
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function ComingSoonHero() {
 
       {/* COUNTDOWN TIMER */}
       <div className="mt-14 flex flex-col items-center">
-        <p className="text-[11px] font-heading font-bold text-[#8A92A0] uppercase tracking-[0.2em] mb-5">
+        <p className="text-[11px] font-heading font-bold text-[#B6AA9C] uppercase tracking-[0.2em] mb-5">
           Official Launch Countdown
         </p>
         <div className="flex items-stretch gap-3 sm:gap-5">
@@ -148,8 +148,8 @@ export default function ComingSoonHero() {
                 <div
                   className={`w-[68px] sm:w-[84px] h-[72px] sm:h-[88px] flex items-center justify-center rounded-2xl border shadow-xl ${
                     unit.accent
-                      ? "bg-[#FF1E27] border-[#FF1E27] shadow-[0_0_20px_rgba(255,30,39,0.5)]"
-                      : "bg-[#12141C] border-white/10"
+                      ? "bg-[#94632F] border-[#D4A863] shadow-[0_0_20px_rgba(212,168,99,0.5)]"
+                      : "bg-[#211C18] border-white/10"
                   }`}
                 >
                   <span
@@ -160,7 +160,7 @@ export default function ComingSoonHero() {
                     {unit.value}
                   </span>
                 </div>
-                <span className="mt-2 text-[10px] sm:text-[11px] font-heading font-bold text-[#8A92A0] uppercase tracking-widest">
+                <span className="mt-2 text-[10px] sm:text-[11px] font-heading font-bold text-[#B6AA9C] uppercase tracking-widest">
                   {unit.label}
                 </span>
               </div>

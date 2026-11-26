@@ -57,13 +57,13 @@ export default function VerifyEmailForm() {
 
   if (verificationStatus === "verifying") {
     return (
-      <div className="carbon-glass border border-[#FF1E27]/25 p-8 sm:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none backdrop-blur-xl relative overflow-hidden text-white">
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent opacity-80" />
+      <div className="carbon-glass border border-[#D4A863]/25 p-8 sm:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none backdrop-blur-xl relative overflow-hidden text-white">
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4A863] to-transparent opacity-80" />
         <h2 className="font-heading font-black text-2xl sm:text-3xl metallic-text uppercase tracking-wide mb-4">
           Verifying Your Email...
         </h2>
-        <div className="w-10 h-10 border-3 border-[#FF1E27] border-t-transparent rounded-full animate-spin my-4" />
-        <p className="font-sans text-xs text-[#8A92A0]">
+        <div className="w-10 h-10 border-3 border-[#D4A863] border-t-transparent rounded-full animate-spin my-4" />
+        <p className="font-sans text-xs text-[#B6AA9C]">
           Please wait while we validate your security token.
         </p>
       </div>
@@ -72,17 +72,17 @@ export default function VerifyEmailForm() {
 
   if (verificationStatus === "success") {
     return (
-      <div className="carbon-glass border border-[#FF1E27]/25 p-8 sm:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none backdrop-blur-xl relative overflow-hidden text-white">
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent opacity-80" />
+      <div className="carbon-glass border border-[#D4A863]/25 p-8 sm:p-12 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none backdrop-blur-xl relative overflow-hidden text-white">
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4A863] to-transparent opacity-80" />
 
         {toastMessage && (
-          <div className="fixed top-5 right-5 z-50 bg-[#12141C]/95 border border-[#FF1E27] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(255,30,39,0.35)] text-xs sm:text-sm flex items-center gap-2.5 backdrop-blur-md">
+          <div className="fixed top-5 right-5 z-50 bg-[#211C18]/95 border border-[#D4A863] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(212,168,99,0.35)] text-xs sm:text-sm flex items-center gap-2.5 backdrop-blur-md">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
             <span className="font-medium">{toastMessage}</span>
           </div>
         )}
 
-        <div className="w-16 h-16 rounded-2xl bg-[#12141C] border border-emerald-500/40 flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(16,185,129,0.25)]">
+        <div className="w-16 h-16 rounded-2xl bg-[#211C18] border border-emerald-500/40 flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(16,185,129,0.25)]">
           <CheckCircle2 className="w-8 h-8 text-emerald-400 animate-scaleIn" />
         </div>
 
@@ -95,7 +95,7 @@ export default function VerifyEmailForm() {
 
         <Link
           href="/login"
-          className="btn-racing-red py-3.5 px-8 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
+          className="btn-racing-red py-3.5 px-8 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
         >
           <span>Continue to Sign In</span>
           <ArrowRight className="w-4 h-4" />
@@ -105,21 +105,21 @@ export default function VerifyEmailForm() {
   }
 
   return (
-    <div className="carbon-glass border border-[#FF1E27]/25 p-6 sm:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none backdrop-blur-xl relative overflow-hidden text-white">
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent opacity-80" />
-      <div className="pointer-events-none absolute -top-24 -right-24 w-60 h-60 bg-[#FF1E27] opacity-[0.06] blur-[90px] rounded-full" />
+    <div className="carbon-glass border border-[#D4A863]/25 p-6 sm:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full max-w-xl mx-auto flex flex-col items-center text-center animate-fadeIn select-none backdrop-blur-xl relative overflow-hidden text-white">
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4A863] to-transparent opacity-80" />
+      <div className="pointer-events-none absolute -top-24 -right-24 w-60 h-60 bg-[#94632F] opacity-[0.06] blur-[90px] rounded-full" />
 
       {/* Toast Alert */}
       {toastMessage && (
-        <div className="fixed top-5 right-5 z-50 bg-[#12141C]/95 border border-[#FF1E27] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(255,30,39,0.35)] text-xs sm:text-sm flex items-center gap-2.5 backdrop-blur-md">
-          <AlertCircle className="w-4 h-4 text-[#FF1E27] shrink-0" />
+        <div className="fixed top-5 right-5 z-50 bg-[#211C18]/95 border border-[#D4A863] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(212,168,99,0.35)] text-xs sm:text-sm flex items-center gap-2.5 backdrop-blur-md">
+          <AlertCircle className="w-4 h-4 text-[#D4A863] shrink-0" />
           <span className="font-medium">{toastMessage}</span>
         </div>
       )}
 
       {/* Envelope Icon */}
-      <div className="w-16 h-16 rounded-2xl bg-[#12141C] border border-[#FF1E27]/40 flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(255,30,39,0.3)]">
-        <Mail className="w-8 h-8 text-[#FF1E27] animate-scaleIn" />
+      <div className="w-16 h-16 rounded-2xl bg-[#211C18] border border-[#D4A863]/40 flex items-center justify-center mb-6 shadow-[0_0_25px_rgba(212,168,99,0.3)]">
+        <Mail className="w-8 h-8 text-[#D4A863] animate-scaleIn" />
       </div>
 
       {/* Header */}
@@ -139,7 +139,7 @@ export default function VerifyEmailForm() {
           type="button"
           onClick={handleResend}
           disabled={resendMutation.isPending}
-          className="w-full btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none active:scale-[0.99]"
+          className="w-full btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs sm:text-sm tracking-widest uppercase shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed select-none active:scale-[0.99]"
         >
           <span>{resendMutation.isPending ? "Resending Link..." : "Resend Verification Email"}</span>
           {!resendMutation.isPending && <ArrowRight className="w-4 h-4" />}
@@ -149,7 +149,7 @@ export default function VerifyEmailForm() {
       {/* Footer link */}
       <Link
         href="/login"
-        className="inline-flex items-center gap-1.5 font-sans font-bold text-xs text-[#8A92A0] hover:text-[#FF1E27] uppercase tracking-wider transition-colors duration-200"
+        className="inline-flex items-center gap-1.5 font-sans font-bold text-xs text-[#B6AA9C] hover:text-[#D4A863] uppercase tracking-wider transition-colors duration-200"
       >
         <ArrowLeft className="w-3.5 h-3.5" />
         <span>Back to Sign In</span>

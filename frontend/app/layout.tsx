@@ -27,14 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}>
-      <body suppressHydrationWarning className="min-h-full flex flex-col bg-[#0B0C0E] text-[#F3F4F6]">
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-[#14110F] text-[#F3F4F6]">
         <Providers>{children}</Providers>
         <Toaster 
           position="bottom-right"
           toastOptions={{
             style: {
-              background: '#12141C',
-              border: '1px solid rgba(255, 30, 39, 0.25)',
+              background: '#211C18',
+              border: '1px solid rgba(212,168,99, 0.25)',
               color: '#F3F4F6',
             },
             className: 'font-sans text-[14px]',

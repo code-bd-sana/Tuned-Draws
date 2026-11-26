@@ -49,10 +49,10 @@ export default function WinnersGrid() {
   };
 
   return (
-    <section id="winners-listing-grid" className="relative flex-grow scroll-mt-20 bg-[#0B0C0E] bg-tachometer-grid py-12 md:py-16 text-white">
+    <section id="winners-listing-grid" className="relative flex-grow scroll-mt-20 bg-[#14110F] bg-tachometer-grid py-12 md:py-16 text-white">
       {/* Ambient glows */}
-      <div className="pointer-events-none absolute top-10 left-10 w-[500px] h-[400px] bg-[#FF1E27]/5 rounded-full blur-[150px] -z-0" />
-      <div className="pointer-events-none absolute bottom-20 right-10 w-[450px] h-[350px] bg-[#B3000C]/5 rounded-full blur-[140px] -z-0" />
+      <div className="pointer-events-none absolute top-10 left-10 w-[500px] h-[400px] bg-[#D4A863]/5 rounded-full blur-[150px] -z-0" />
+      <div className="pointer-events-none absolute bottom-20 right-10 w-[450px] h-[350px] bg-[#9B6A2F]/5 rounded-full blur-[140px] -z-0" />
 
       {/* Dynamic Filters Header bar */}
       <WinnersFilterBar
@@ -76,8 +76,8 @@ export default function WinnersGrid() {
               className={cn(
                 "font-heading text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl border transition-all duration-200 cursor-pointer select-none",
                 winnerTypeFilter === tab.value
-                  ? "bg-[#FF1E27] border-[#FF1E27] font-black text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                  : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#FF1E27]/40"
+                  ? "bg-[#94632F] border-[#D4A863] font-black text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                  : "bg-[#211C18] border-white/10 text-[#B6AA9C] hover:text-white hover:border-[#D4A863]/40"
               )}
             >
               {tab.label}
@@ -87,8 +87,8 @@ export default function WinnersGrid() {
 
         {isLoading ? (
           <div className="flex flex-col justify-center items-center h-[400px] gap-4">
-            <div className="w-10 h-10 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
-            <span className="font-heading text-xs font-bold uppercase tracking-wider text-[#D1D5DB]">
+            <div className="w-10 h-10 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
+            <span className="font-heading text-xs font-bold uppercase tracking-wider text-[#E5DCCD]">
               Loading verified winners...
             </span>
           </div>
@@ -111,8 +111,8 @@ export default function WinnersGrid() {
                   className={cn(
                     "px-4 py-2 border rounded-xl font-heading text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer",
                     activePage === 1
-                      ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
-                      : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C]"
+                      ? "border-white/5 text-[#B6AA9C]/40 bg-[#211C18]/40 cursor-not-allowed"
+                      : "border-white/10 text-[#E5DCCD] hover:text-white hover:border-[#D4A863]/50 bg-[#211C18]"
                   )}
                 >
                   ← Prev
@@ -129,8 +129,8 @@ export default function WinnersGrid() {
                       className={cn(
                         "w-9 h-9 rounded-xl flex items-center justify-center font-heading text-xs font-black transition-all duration-200 cursor-pointer select-none",
                         isActive
-                          ? "bg-[#FF1E27] text-white border border-[#FF1E27] shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                          : "bg-[#12141C] border border-white/10 text-[#8A92A0] hover:bg-white/5 hover:text-white hover:border-[#FF1E27]/40"
+                          ? "bg-[#94632F] text-white border border-[#D4A863] shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                          : "bg-[#211C18] border border-white/10 text-[#B6AA9C] hover:bg-white/5 hover:text-white hover:border-[#D4A863]/40"
                       )}
                     >
                       {pageNumber}
@@ -145,8 +145,8 @@ export default function WinnersGrid() {
                   className={cn(
                     "px-4 py-2 border rounded-xl font-heading text-xs font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer",
                     activePage === totalPages
-                      ? "border-white/5 text-[#8A92A0]/40 bg-[#12141C]/40 cursor-not-allowed"
-                      : "border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#FF1E27]/50 bg-[#12141C]"
+                      ? "border-white/5 text-[#B6AA9C]/40 bg-[#211C18]/40 cursor-not-allowed"
+                      : "border-white/10 text-[#E5DCCD] hover:text-white hover:border-[#D4A863]/50 bg-[#211C18]"
                   )}
                 >
                   Next →
@@ -156,14 +156,14 @@ export default function WinnersGrid() {
           </>
         ) : (
           /* Empty State if filter yields 0 items */
-          <div className="py-20 text-center select-none bg-[#12141C] border border-white/10 border-dashed rounded-2xl max-w-lg mx-auto p-8 shadow-2xl">
-            <div className="w-14 h-14 rounded-2xl bg-[#1A1D27] border border-[#FF1E27]/30 flex items-center justify-center mb-5 text-[#FF1E27] mx-auto shadow-[0_0_15px_rgba(255,30,39,0.2)]">
+          <div className="py-20 text-center select-none bg-[#211C18] border border-white/10 border-dashed rounded-2xl max-w-lg mx-auto p-8 shadow-2xl">
+            <div className="w-14 h-14 rounded-2xl bg-[#302820] border border-[#D4A863]/30 flex items-center justify-center mb-5 text-[#D4A863] mx-auto shadow-[0_0_15px_rgba(212,168,99,0.2)]">
               <Trophy className="w-7 h-7" />
             </div>
             <h3 className="font-heading font-black text-xl text-white uppercase tracking-wide">
               No Winners Found
             </h3>
-            <p className="font-sans text-xs text-[#8A92A0] mt-2 max-w-xs mx-auto leading-relaxed">
+            <p className="font-sans text-xs text-[#B6AA9C] mt-2 max-w-xs mx-auto leading-relaxed">
               We couldn&apos;t find any winner records matching your selected filter parameters.
             </p>
           </div>

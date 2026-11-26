@@ -26,7 +26,7 @@ export default function HostRevenueChart({ totalRevenue }: HostRevenueChartProps
 
   const chartData = perfData?.revenueTrend || [];
 
-  const displayRevenue = totalRevenue !== undefined 
+  const displayRevenue = totalRevenue !== undefined
     ? `£${Number(totalRevenue).toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
     : "£0.00";
 
@@ -36,7 +36,7 @@ export default function HostRevenueChart({ totalRevenue }: HostRevenueChartProps
         <h2 className="font-heading font-black text-lg text-text-primary uppercase tracking-tight">
           Earnings Overview
         </h2>
-        
+
         {/* Time filters */}
         <div className="flex gap-1.5">
           {["7D", "1M", "3M", "1Y"].map((filter) => (
@@ -80,28 +80,28 @@ export default function HostRevenueChart({ totalRevenue }: HostRevenueChartProps
             <AreaChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
                 <linearGradient id="colorHostRevenue" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#FF1E27" stopOpacity={0.3} />
-                  <stop offset="95%" stopColor="#FF1E27" stopOpacity={0.0} />
+                  <stop offset="5%" stopColor="#D4A863" stopOpacity={0.3} />
+                  <stop offset="95%" stopColor="#D4A863" stopOpacity={0.0} />
                 </linearGradient>
               </defs>
-              <XAxis 
-                dataKey="month" 
-                axisLine={false} 
-                tickLine={false} 
-                tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }} 
+              <XAxis
+                dataKey="month"
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                 dy={10}
               />
-              <YAxis 
-                axisLine={false} 
-                tickLine={false} 
-                tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
+              <YAxis
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                 tickFormatter={(val) => `£${val >= 1000 ? `${(val / 1000).toFixed(1)}k` : val}`}
               />
               <Tooltip
                 cursor={{ stroke: "rgba(255,255,255,0.1)", strokeWidth: 1, strokeDasharray: "4 4" }}
-                contentStyle={{ 
-                  backgroundColor: "#1A1D27", 
-                  borderColor: "rgba(255,255,255,0.15)", 
+                contentStyle={{
+                  backgroundColor: "#302820",
+                  borderColor: "rgba(255,255,255,0.15)",
                   borderRadius: "12px",
                   boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
                   color: "#FFFFFF",
@@ -109,17 +109,17 @@ export default function HostRevenueChart({ totalRevenue }: HostRevenueChartProps
                 }}
                 itemStyle={{ color: "#FFFFFF", fontWeight: "bold" }}
                 formatter={(value: any) => [
-                  `£${Number(value || 0).toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 
+                  `£${Number(value || 0).toLocaleString("en-GB", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
                   "Earnings"
                 ]}
               />
-              <Area 
-                type="monotone" 
-                dataKey="revenue" 
-                stroke="#FF1E27" 
+              <Area
+                type="monotone"
+                dataKey="revenue"
+                stroke="#D4A863"
                 strokeWidth={2.5}
-                fillOpacity={1} 
-                fill="url(#colorHostRevenue)" 
+                fillOpacity={1}
+                fill="url(#colorHostRevenue)"
               />
             </AreaChart>
           </ResponsiveContainer>

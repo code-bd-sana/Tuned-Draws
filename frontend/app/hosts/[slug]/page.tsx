@@ -52,12 +52,12 @@ export default async function HostProfilePage({ params }: PageProps) {
     return (
       <>
         <WebsiteNavbar />
-        <main className="flex min-h-screen items-center justify-center bg-[#0B0C0E] bg-tachometer-grid pt-[80px] text-white">
-          <div className="mx-auto flex w-full max-w-[500px] flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-[#12141C]/90 px-8 py-16 text-center shadow-2xl backdrop-blur-md">
+        <main className="flex min-h-screen items-center justify-center bg-[#14110F] bg-tachometer-grid pt-[80px] text-white">
+          <div className="mx-auto flex w-full max-w-[500px] flex-col items-center justify-center gap-4 rounded-2xl border border-white/10 bg-[#211C18]/90 px-8 py-16 text-center shadow-2xl backdrop-blur-md">
             <span className="flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-2xl">🔒</span>
-            <span className="font-heading text-[10px] font-black tracking-[.2em] text-[#FF1E27] uppercase">Host Profile</span>
+            <span className="font-heading text-[10px] font-black tracking-[.2em] text-[#D4A863] uppercase">Host Profile</span>
             <h1 className="font-heading text-2xl font-black text-white uppercase tracking-tight">Host Unavailable</h1>
-            <p className="max-w-[340px] font-sans text-xs leading-relaxed text-[#8A92A0]">
+            <p className="max-w-[340px] font-sans text-xs leading-relaxed text-[#B6AA9C]">
               This host profile is currently unverified, pending admin review, or has been deactivated.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default async function HostProfilePage({ params }: PageProps) {
     <>
       <WebsiteNavbar />
       
-      <main className="min-h-screen bg-[#0B0C0E] bg-tachometer-grid pt-[80px] md:pt-[90px] text-white">
+      <main className="min-h-screen bg-[#14110F] bg-tachometer-grid pt-[80px] md:pt-[90px] text-white">
         <section className="py-8 md:py-12">
           <div className="container-custom">
             

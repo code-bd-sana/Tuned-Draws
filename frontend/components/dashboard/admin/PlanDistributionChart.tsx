@@ -5,7 +5,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 import { useAdminSubscriptionStats } from "../../../hooks/useSubscriptionHooks";
 
 const COLORS = [
-  "#FF1E27", // Racing Red (Pro)
+  "#D4A863", // Racing Red (Pro)
   "#F59E0B", // Amber Gold (Premium)
   "#3B82F6", // Electric Blue (Starter)
   "#10B981", // Emerald
@@ -25,23 +25,23 @@ export default function PlanDistributionChart() {
   }, [stats]);
 
   return (
-    <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col w-full self-start shadow-xl">
+    <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col w-full self-start shadow-xl">
       <div className="flex items-center justify-between mb-6">
         <span className="font-heading font-black text-base text-white uppercase tracking-tight">
           Plan Distribution
         </span>
-        <span className="text-[11px] font-sans text-[#8A92A0]">Active Tiers</span>
+        <span className="text-[11px] font-sans text-[#B6AA9C]">Active Tiers</span>
       </div>
 
       {isLoading ? (
         <div className="flex-1 flex items-center justify-center min-h-[220px]">
-          <span className="font-sans text-xs text-[#8A92A0] animate-pulse">
+          <span className="font-sans text-xs text-[#B6AA9C] animate-pulse">
             Loading distribution analytics...
           </span>
         </div>
       ) : chartData.length === 0 ? (
         <div className="flex-1 flex items-center justify-center min-h-[220px]">
-          <span className="font-sans text-xs text-[#8A92A0]">No active subscriptions found.</span>
+          <span className="font-sans text-xs text-[#B6AA9C]">No active subscriptions found.</span>
         </div>
       ) : (
         <div className="flex-1 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-6">
@@ -65,7 +65,7 @@ export default function PlanDistributionChart() {
                 </Pie>
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: "#1A1D27",
+                    backgroundColor: "#302820",
                     borderColor: "rgba(255,255,255,0.15)",
                     borderRadius: "12px",
                     color: "#FFFFFF",
@@ -99,7 +99,7 @@ export default function PlanDistributionChart() {
                     <span className="font-heading font-black text-xs text-white">
                       {item.value}
                     </span>
-                    <span className="font-sans text-[11px] text-[#8A92A0]">
+                    <span className="font-sans text-[11px] text-[#B6AA9C]">
                       ({item.percentage})
                     </span>
                   </div>

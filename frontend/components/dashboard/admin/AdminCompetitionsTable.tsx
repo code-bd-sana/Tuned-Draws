@@ -190,7 +190,7 @@ export default function AdminCompetitionsTable() {
         );
       case "DRAFT":
         return (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[#8A92A0] font-sans font-bold text-[10px] uppercase tracking-wider">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[#B6AA9C] font-sans font-bold text-[10px] uppercase tracking-wider">
             Draft
           </span>
         );

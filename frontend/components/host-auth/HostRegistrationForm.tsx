@@ -258,8 +258,8 @@ export default function HostRegistrationForm({
     <div className="relative w-full max-w-2xl mx-auto flex flex-col gap-6 animate-fadeIn text-white">
       {/* Action Toast notification */}
       {toastMessage && (
-        <div className="fixed top-5 right-5 z-50 bg-[#12141C]/95 border border-[#FF1E27] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(255,30,39,0.35)] text-xs sm:text-sm flex items-center gap-2.5 animate-fadeIn backdrop-blur-md">
-          <AlertCircle className="w-4 h-4 text-[#FF1E27] shrink-0" />
+        <div className="fixed top-5 right-5 z-50 bg-[#211C18]/95 border border-[#D4A863] text-white px-5 py-3.5 rounded-xl shadow-[0_10px_35px_rgba(212,168,99,0.35)] text-xs sm:text-sm flex items-center gap-2.5 animate-fadeIn backdrop-blur-md">
+          <AlertCircle className="w-4 h-4 text-[#D4A863] shrink-0" />
           <span className="font-medium">{toastMessage}</span>
         </div>
       )}
@@ -268,12 +268,12 @@ export default function HostRegistrationForm({
       <AuthNavigationTabs activeTab="host-register" />
 
       {/* Main Form container card */}
-      <div className="carbon-glass border border-[#FF1E27]/25 p-6 sm:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full backdrop-blur-xl relative overflow-hidden">
+      <div className="carbon-glass border border-[#D4A863]/25 p-6 sm:p-10 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] w-full backdrop-blur-xl relative overflow-hidden">
         {/* Subtle top crimson glow bar */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent opacity-80" />
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4A863] to-transparent opacity-80" />
 
         {/* Subtle Ambient Red Glow */}
-        <div className="pointer-events-none absolute -top-24 -right-24 w-60 h-60 bg-[#FF1E27] opacity-[0.06] blur-[90px] rounded-full" />
+        <div className="pointer-events-none absolute -top-24 -right-24 w-60 h-60 bg-[#94632F] opacity-[0.06] blur-[90px] rounded-full" />
 
         <form onSubmit={handleContinue}>
           {/* STEP 1: Account Credentials */}
@@ -282,10 +282,10 @@ export default function HostRegistrationForm({
               {/* Step Title Header */}
               <div className="flex flex-col gap-2 pb-5 border-b border-white/10">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#8A92A0]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#B6AA9C]">
                     Step 1 of 5
                   </span>
-                  <span className="text-[11px] bg-[#1A1D27] border border-[#FF1E27]/30 px-2.5 py-0.5 rounded-full text-[#FF1E27] font-bold uppercase tracking-wider">
+                  <span className="text-[11px] bg-[#302820] border border-[#D4A863]/30 px-2.5 py-0.5 rounded-full text-[#D4A863] font-bold uppercase tracking-wider">
                     Account Credentials
                   </span>
                 </div>
@@ -301,7 +301,7 @@ export default function HostRegistrationForm({
               <div className="flex flex-col w-full gap-1.5">
                 <label
                   htmlFor="email"
-                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                 >
                   Email Address
                 </label>
@@ -314,12 +314,12 @@ export default function HostRegistrationForm({
                   value={formData.email}
                   onChange={handleInputChange}
                   className={cn(
-                    "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                    errors.email && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                    "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                    errors.email && "border-red-400 ring-1 ring-red-400"
                   )}
                 />
                 {errors.email && (
-                  <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                  <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                     <AlertCircle className="w-3 h-3 shrink-0" />
                     <span>{errors.email}</span>
                   </span>
@@ -330,7 +330,7 @@ export default function HostRegistrationForm({
               <div className="flex flex-col w-full gap-1.5">
                 <label
                   htmlFor="password"
-                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                 >
                   Password
                 </label>
@@ -344,21 +344,21 @@ export default function HostRegistrationForm({
                     value={formData.password}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.password && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.password && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#8A92A0] hover:text-[#FF1E27] p-1 cursor-pointer select-none transition-colors"
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#B6AA9C] hover:text-[#D4A863] p-1 cursor-pointer select-none transition-colors"
                     aria-label={showPassword ? "Hide password" : "Show password"}
                   >
                     {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                   </button>
                 </div>
                 {errors.password && (
-                  <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                  <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                     <AlertCircle className="w-3 h-3 shrink-0" />
                     <span>{errors.password}</span>
                   </span>
@@ -373,7 +373,7 @@ export default function HostRegistrationForm({
                         "h-full flex-1 rounded-full transition-all duration-300",
                         formData.password.length > 0 && barIndex <= passwordStrength
                           ? passwordStrength <= 1
-                            ? "bg-[#FF1E27]"
+                            ? "bg-[#94632F]"
                             : passwordStrength === 2
                             ? "bg-amber-500"
                             : passwordStrength === 3
@@ -385,13 +385,13 @@ export default function HostRegistrationForm({
                   ))}
                 </div>
                 {formData.password.length > 0 && (
-                  <div className="flex justify-between items-center text-[10px] text-[#8A92A0] mt-0.5 font-medium">
+                  <div className="flex justify-between items-center text-[10px] text-[#B6AA9C] mt-0.5 font-medium">
                     <span>Password strength</span>
                     <span
                       className={cn(
                         "font-bold uppercase tracking-wider",
                         passwordStrength <= 1
-                          ? "text-[#FF1E27]"
+                          ? "text-[#D4A863]"
                           : passwordStrength === 2
                           ? "text-amber-500"
                           : passwordStrength === 3
@@ -415,7 +415,7 @@ export default function HostRegistrationForm({
               <div className="flex flex-col w-full gap-1.5">
                 <label
                   htmlFor="confirmPassword"
-                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                 >
                   Confirm Password
                 </label>
@@ -429,21 +429,21 @@ export default function HostRegistrationForm({
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.confirmPassword && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl pl-4 pr-11 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.confirmPassword && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#8A92A0] hover:text-[#FF1E27] p-1 cursor-pointer select-none transition-colors"
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#B6AA9C] hover:text-[#D4A863] p-1 cursor-pointer select-none transition-colors"
                     aria-label={showConfirmPassword ? "Hide password" : "Show password"}
                   >
                     {showConfirmPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                   </button>
                 </div>
                 {errors.confirmPassword && (
-                  <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                  <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                     <AlertCircle className="w-3 h-3 shrink-0" />
                     <span>{errors.confirmPassword}</span>
                   </span>
@@ -451,8 +451,8 @@ export default function HostRegistrationForm({
               </div>
 
               {/* Encryption Banner */}
-              <div className="bg-[#12141C] border border-white/10 p-3.5 rounded-xl flex items-center gap-3 select-none">
-                <ShieldCheck className="w-5 h-5 text-[#FF1E27] shrink-0" />
+              <div className="bg-[#211C18] border border-white/10 p-3.5 rounded-xl flex items-center gap-3 select-none">
+                <ShieldCheck className="w-5 h-5 text-[#D4A863] shrink-0" />
                 <p className="font-sans text-xs text-[#9CA3AF] leading-normal">
                   Your credentials and host data are secured with enterprise-grade encryption.
                 </p>
@@ -460,15 +460,15 @@ export default function HostRegistrationForm({
 
               {/* Bottom Nav Actions */}
               <div className="flex items-center justify-between mt-4 pt-2">
-                <span className="text-xs text-[#8A92A0]">
+                <span className="text-xs text-[#B6AA9C]">
                   Already have a Host account?{" "}
-                  <Link href="/login" className="font-bold text-[#FF1E27] hover:underline">
+                  <Link href="/login" className="font-bold text-[#D4A863] hover:underline">
                     Sign in
                   </Link>
                 </span>
                 <button
                   type="submit"
-                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
+                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
                 >
                   <span>Continue</span>
                   <ArrowRight className="w-4 h-4" />
@@ -483,10 +483,10 @@ export default function HostRegistrationForm({
               {/* Step Title Header */}
               <div className="flex flex-col gap-2 pb-5 border-b border-white/10">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#8A92A0]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#B6AA9C]">
                     Step 2 of 5
                   </span>
-                  <span className="text-[11px] bg-[#1A1D27] border border-[#FF1E27]/30 px-2.5 py-0.5 rounded-full text-[#FF1E27] font-bold uppercase tracking-wider">
+                  <span className="text-[11px] bg-[#302820] border border-[#D4A863]/30 px-2.5 py-0.5 rounded-full text-[#D4A863] font-bold uppercase tracking-wider">
                     Host Profile
                   </span>
                 </div>
@@ -500,7 +500,7 @@ export default function HostRegistrationForm({
 
               {/* Host Type Selection */}
               <div className="flex flex-col gap-2">
-                <label className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]">
+                <label className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]">
                   Host Type
                 </label>
                 <div className="flex gap-3">
@@ -510,8 +510,8 @@ export default function HostRegistrationForm({
                     className={cn(
                       "flex-1 font-sans text-xs sm:text-sm font-bold py-3.5 rounded-xl border text-center transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 uppercase tracking-wider select-none",
                       formData.hostType === "individual"
-                        ? "btn-racing-red border-[#FF1E27] text-white shadow-[0_0_20px_rgba(255,30,39,0.4)]"
-                        : "bg-[#1A1D27] border-white/10 text-[#8A92A0] hover:text-white hover:border-white/20"
+                        ? "btn-racing-red border-[#D4A863] text-white shadow-[0_0_20px_rgba(212,168,99,0.4)]"
+                        : "bg-[#302820] border-white/10 text-[#B6AA9C] hover:text-white hover:border-white/20"
                     )}
                   >
                     <User className="w-4 h-4" />
@@ -523,15 +523,15 @@ export default function HostRegistrationForm({
                     className={cn(
                       "flex-1 font-sans text-xs sm:text-sm font-bold py-3.5 rounded-xl border text-center transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 uppercase tracking-wider select-none",
                       formData.hostType === "business"
-                        ? "btn-racing-red border-[#FF1E27] text-white shadow-[0_0_20px_rgba(255,30,39,0.4)]"
-                        : "bg-[#1A1D27] border-white/10 text-[#8A92A0] hover:text-white hover:border-white/20"
+                        ? "btn-racing-red border-[#D4A863] text-white shadow-[0_0_20px_rgba(212,168,99,0.4)]"
+                        : "bg-[#302820] border-white/10 text-[#B6AA9C] hover:text-white hover:border-white/20"
                     )}
                   >
                     <Building2 className="w-4 h-4" />
                     <span>Business / Workshop</span>
                   </button>
                 </div>
-                <span className="font-sans text-[11px] text-[#8A92A0]">
+                <span className="font-sans text-[11px] text-[#B6AA9C]">
                   {formData.hostType === "individual"
                     ? "You are hosting draws as an individual automotive enthusiast."
                     : "You are hosting draws as a registered tuning workshop or business entity."}
@@ -543,7 +543,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="firstName"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     First Name
                   </label>
@@ -556,12 +556,12 @@ export default function HostRegistrationForm({
                     value={formData.firstName}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.firstName && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.firstName && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   {errors.firstName && (
-                    <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                    <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                       <AlertCircle className="w-3 h-3 shrink-0" />
                       <span>{errors.firstName}</span>
                     </span>
@@ -570,7 +570,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="lastName"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     Last Name
                   </label>
@@ -583,12 +583,12 @@ export default function HostRegistrationForm({
                     value={formData.lastName}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.lastName && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.lastName && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   {errors.lastName && (
-                    <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                    <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                       <AlertCircle className="w-3 h-3 shrink-0" />
                       <span>{errors.lastName}</span>
                     </span>
@@ -600,7 +600,7 @@ export default function HostRegistrationForm({
               <div className="flex flex-col w-full gap-1.5">
                 <label
                   htmlFor="phone"
-                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                 >
                   Phone Number
                 </label>
@@ -613,17 +613,17 @@ export default function HostRegistrationForm({
                   value={formData.phone}
                   onChange={handleInputChange}
                   className={cn(
-                    "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                    errors.phone && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                    "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                    errors.phone && "border-red-400 ring-1 ring-red-400"
                   )}
                 />
                 {errors.phone && (
-                  <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                  <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                     <AlertCircle className="w-3 h-3 shrink-0" />
                     <span>{errors.phone}</span>
                   </span>
                 )}
-                <span className="font-sans text-[11px] text-[#8A92A0]">
+                <span className="font-sans text-[11px] text-[#B6AA9C]">
                   Used for verified draw notifications and host support only.
                 </span>
               </div>
@@ -633,7 +633,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="city"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     City
                   </label>
@@ -646,12 +646,12 @@ export default function HostRegistrationForm({
                     value={formData.city}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.city && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.city && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   {errors.city && (
-                    <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                    <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                       <AlertCircle className="w-3 h-3 shrink-0" />
                       <span>{errors.city}</span>
                     </span>
@@ -660,7 +660,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="country"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     Country
                   </label>
@@ -671,7 +671,7 @@ export default function HostRegistrationForm({
                       autoComplete="country-name"
                       value={formData.country}
                       onChange={handleInputChange}
-                      className="w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30 transition-all duration-200 appearance-none cursor-pointer"
+                      className="w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30 transition-all duration-200 appearance-none cursor-pointer"
                     >
                       <option value="United Kingdom">United Kingdom</option>
                       <option value="Ireland">Ireland</option>
@@ -680,7 +680,7 @@ export default function HostRegistrationForm({
                       <option value="Germany">Germany</option>
                       <option value="France">France</option>
                     </select>
-                    <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#8A92A0]">
+                    <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#B6AA9C]">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                       </svg>
@@ -694,14 +694,14 @@ export default function HostRegistrationForm({
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#8A92A0] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
+                  className="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#B6AA9C] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Back</span>
                 </button>
                 <button
                   type="submit"
-                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
+                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
                 >
                   <span>Save & Continue</span>
                   <ArrowRight className="w-4 h-4" />
@@ -716,10 +716,10 @@ export default function HostRegistrationForm({
               {/* Step Title Header */}
               <div className="flex flex-col gap-2 pb-5 border-b border-white/10">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#8A92A0]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#B6AA9C]">
                     Step 3 of 5
                   </span>
-                  <span className="text-[11px] bg-[#1A1D27] border border-[#FF1E27]/30 px-2.5 py-0.5 rounded-full text-[#FF1E27] font-bold uppercase tracking-wider">
+                  <span className="text-[11px] bg-[#302820] border border-[#D4A863]/30 px-2.5 py-0.5 rounded-full text-[#D4A863] font-bold uppercase tracking-wider">
                     Business Info
                   </span>
                 </div>
@@ -735,7 +735,7 @@ export default function HostRegistrationForm({
               <div className="flex flex-col w-full gap-1.5">
                 <label
                   htmlFor="businessName"
-                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                 >
                   Business / Workshop Name
                 </label>
@@ -748,12 +748,12 @@ export default function HostRegistrationForm({
                   value={formData.businessName}
                   onChange={handleInputChange}
                   className={cn(
-                    "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                    errors.businessName && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                    "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                    errors.businessName && "border-red-400 ring-1 ring-red-400"
                   )}
                 />
                 {errors.businessName && (
-                  <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                  <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                     <AlertCircle className="w-3 h-3 shrink-0" />
                     <span>{errors.businessName}</span>
                   </span>
@@ -765,7 +765,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="contactFullName"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     Contact Full Name
                   </label>
@@ -778,12 +778,12 @@ export default function HostRegistrationForm({
                     value={formData.contactFullName}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.contactFullName && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.contactFullName && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   {errors.contactFullName && (
-                    <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                    <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                       <AlertCircle className="w-3 h-3 shrink-0" />
                       <span>{errors.contactFullName}</span>
                     </span>
@@ -792,7 +792,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="businessRole"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     Job Title / Role
                   </label>
@@ -804,12 +804,12 @@ export default function HostRegistrationForm({
                     value={formData.businessRole}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.businessRole && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.businessRole && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   {errors.businessRole && (
-                    <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                    <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                       <AlertCircle className="w-3 h-3 shrink-0" />
                       <span>{errors.businessRole}</span>
                     </span>
@@ -822,7 +822,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="businessEmail"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     Business Email
                   </label>
@@ -834,12 +834,12 @@ export default function HostRegistrationForm({
                     value={formData.businessEmail}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.businessEmail && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.businessEmail && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   {errors.businessEmail && (
-                    <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                    <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                       <AlertCircle className="w-3 h-3 shrink-0" />
                       <span>{errors.businessEmail}</span>
                     </span>
@@ -848,7 +848,7 @@ export default function HostRegistrationForm({
                 <div className="flex flex-col w-full gap-1.5">
                   <label
                     htmlFor="businessPhone"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     Business Phone Number
                   </label>
@@ -860,12 +860,12 @@ export default function HostRegistrationForm({
                     value={formData.businessPhone}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30",
-                      errors.businessPhone && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30",
+                      errors.businessPhone && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
                   {errors.businessPhone && (
-                    <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                    <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                       <AlertCircle className="w-3 h-3 shrink-0" />
                       <span>{errors.businessPhone}</span>
                     </span>
@@ -878,11 +878,11 @@ export default function HostRegistrationForm({
                 <div className="flex items-center gap-2 select-none">
                   <label
                     htmlFor="vatNumber"
-                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                    className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                   >
                     VAT Number
                   </label>
-                  <span className="text-[10px] md:text-xs bg-[#1A1D27] border border-white/10 px-2.5 py-0.5 rounded-full text-[#8A92A0] uppercase font-semibold">
+                  <span className="text-[10px] md:text-xs bg-[#302820] border border-white/10 px-2.5 py-0.5 rounded-full text-[#B6AA9C] uppercase font-semibold">
                     optional / if VAT registered
                   </span>
                 </div>
@@ -893,9 +893,9 @@ export default function HostRegistrationForm({
                   placeholder="GB123456789"
                   value={formData.vatNumber}
                   onChange={handleInputChange}
-                  className="w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30"
+                  className="w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30"
                 />
-                <span className="font-sans text-[11px] text-[#8A92A0]">
+                <span className="font-sans text-[11px] text-[#B6AA9C]">
                   Leave blank if your business is not VAT registered.
                 </span>
               </div>
@@ -905,14 +905,14 @@ export default function HostRegistrationForm({
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#8A92A0] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
+                  className="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#B6AA9C] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Back</span>
                 </button>
                 <button
                   type="submit"
-                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
+                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
                 >
                   <span>Save & Continue</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -927,10 +927,10 @@ export default function HostRegistrationForm({
               {/* Step Title Header */}
               <div className="flex flex-col gap-2 pb-5 border-b border-white/10">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#8A92A0]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#B6AA9C]">
                     Step 4 of 5
                   </span>
-                  <span className="text-[11px] bg-[#1A1D27] border border-[#FF1E27]/30 px-2.5 py-0.5 rounded-full text-[#FF1E27] font-bold uppercase tracking-wider">
+                  <span className="text-[11px] bg-[#302820] border border-[#D4A863]/30 px-2.5 py-0.5 rounded-full text-[#D4A863] font-bold uppercase tracking-wider">
                     Logo & Workshop Bio
                   </span>
                 </div>
@@ -944,18 +944,18 @@ export default function HostRegistrationForm({
 
               {/* Logo Upload Box */}
               <div className="flex flex-col gap-2">
-                <label className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]">
+                <label className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]">
                   Business Logo
                 </label>
                 <div className="flex flex-col sm:flex-row gap-5 items-start">
                   <div
                     onClick={() => businessLogoInputRef.current?.click()}
-                    className="relative w-36 h-36 bg-[#1A1D27] border-2 border-dashed border-white/15 hover:border-[#FF1E27] rounded-2xl flex flex-col items-center justify-center cursor-pointer overflow-hidden text-center transition-all duration-200 group shrink-0 shadow-lg"
+                    className="relative w-36 h-36 bg-[#302820] border-2 border-dashed border-white/15 hover:border-[#D4A863] rounded-2xl flex flex-col items-center justify-center cursor-pointer overflow-hidden text-center transition-all duration-200 group shrink-0 shadow-lg"
                   >
                     {isUploadingLogo ? (
                       <div className="flex flex-col items-center gap-2 p-2">
-                        <div className="w-7 h-7 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
-                        <span className="text-[10px] text-[#8A92A0]">Uploading...</span>
+                        <div className="w-7 h-7 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
+                        <span className="text-[10px] text-[#B6AA9C]">Uploading...</span>
                       </div>
                     ) : formData.businessLogo ? (
                       <img
@@ -964,9 +964,9 @@ export default function HostRegistrationForm({
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <div className="p-4 flex flex-col items-center gap-2 select-none text-[#8A92A0] group-hover:text-white transition-colors">
-                        <div className="w-10 h-10 rounded-xl bg-[#12141C] border border-white/10 flex items-center justify-center group-hover:border-[#FF1E27]/50 transition-colors">
-                          <Upload className="w-5 h-5 text-[#FF1E27]" />
+                      <div className="p-4 flex flex-col items-center gap-2 select-none text-[#B6AA9C] group-hover:text-white transition-colors">
+                        <div className="w-10 h-10 rounded-xl bg-[#211C18] border border-white/10 flex items-center justify-center group-hover:border-[#D4A863]/50 transition-colors">
+                          <Upload className="w-5 h-5 text-[#D4A863]" />
                         </div>
                         <span className="text-[11px] font-medium">Click to upload</span>
                       </div>
@@ -980,10 +980,10 @@ export default function HostRegistrationForm({
                     className="hidden"
                   />
                   <div className="flex flex-col gap-1.5 pt-1">
-                    <p className="font-sans text-xs md:text-sm text-[#D1D5DB] leading-relaxed">
+                    <p className="font-sans text-xs md:text-sm text-[#E5DCCD] leading-relaxed">
                       Recommended: High resolution PNG or JPG, at least 400×400px.
                     </p>
-                    <p className="font-sans text-xs text-[#8A92A0] leading-relaxed">
+                    <p className="font-sans text-xs text-[#B6AA9C] leading-relaxed">
                       This appears on your verified host cards, live draw listings, and official certificate of winner releases.
                     </p>
                   </div>
@@ -994,7 +994,7 @@ export default function HostRegistrationForm({
               <div className="flex flex-col w-full gap-1.5">
                 <label
                   htmlFor="businessBio"
-                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#D1D5DB]"
+                  className="font-sans font-bold text-xs uppercase tracking-wider text-[#E5DCCD]"
                 >
                   Short Host / Workshop Bio
                 </label>
@@ -1007,16 +1007,16 @@ export default function HostRegistrationForm({
                     value={formData.businessBio}
                     onChange={handleInputChange}
                     className={cn(
-                      "w-full bg-[#1A1D27] border border-white/10 rounded-xl px-4 py-3 h-28 font-sans text-xs sm:text-sm text-white placeholder:text-[#8A92A0]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#FF1E27] focus:ring-2 focus:ring-[#FF1E27]/30 resize-none",
-                      errors.businessBio && "border-[#FF1E27] ring-1 ring-[#FF1E27]"
+                      "w-full bg-[#302820] border border-white/10 rounded-xl px-4 py-3 h-28 font-sans text-xs sm:text-sm text-white placeholder:text-[#B6AA9C]/50 transition-all duration-200 outline-none hover:border-white/20 focus:border-[#D4A863] focus:ring-2 focus:ring-[#D4A863]/30 resize-none",
+                      errors.businessBio && "border-red-400 ring-1 ring-red-400"
                     )}
                   />
-                  <span className="absolute bottom-2.5 right-3 font-sans text-[10px] text-[#8A92A0] select-none">
+                  <span className="absolute bottom-2.5 right-3 font-sans text-[10px] text-[#B6AA9C] select-none">
                     {formData.businessBio.length} / 300
                   </span>
                 </div>
                 {errors.businessBio && (
-                  <span className="font-sans text-[11px] text-[#FF1E27] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
+                  <span className="font-sans text-[11px] text-[#D4A863] font-medium mt-1 self-start flex items-center gap-1.5 animate-fadeIn">
                     <AlertCircle className="w-3 h-3 shrink-0" />
                     <span>{errors.businessBio}</span>
                   </span>
@@ -1028,14 +1028,14 @@ export default function HostRegistrationForm({
                 <button
                   type="button"
                   onClick={handleBack}
-                  className="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#8A92A0] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
+                  className="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#B6AA9C] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   <span>Back</span>
                 </button>
                 <button
                   type="submit"
-                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
+                  className="btn-racing-red py-3.5 px-6 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none"
                 >
                   <span>Review Application</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -1050,10 +1050,10 @@ export default function HostRegistrationForm({
               {/* Step Title Header */}
               <div className="flex flex-col gap-2 pb-5 border-b border-white/10">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#8A92A0]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#B6AA9C]">
                     Step 5 of 5
                   </span>
-                  <span className="text-[11px] bg-[#1A1D27] border border-emerald-500/40 px-2.5 py-0.5 rounded-full text-emerald-400 font-bold uppercase tracking-wider">
+                  <span className="text-[11px] bg-[#302820] border border-emerald-500/40 px-2.5 py-0.5 rounded-full text-emerald-400 font-bold uppercase tracking-wider">
                     Ready For Review
                   </span>
                 </div>
@@ -1066,9 +1066,9 @@ export default function HostRegistrationForm({
               </div>
 
               {/* Onboarding Checklist Summary Box */}
-              <div className="bg-[#12141C] border border-[#FF1E27]/25 p-5 rounded-xl flex flex-col gap-3 select-none">
+              <div className="bg-[#211C18] border border-[#D4A863]/25 p-5 rounded-xl flex flex-col gap-3 select-none">
                 <p className="font-heading font-bold text-xs sm:text-sm text-white flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-[#FF1E27]" />
+                  <Sparkles className="w-4 h-4 text-[#D4A863]" />
                   <span>Onboarding Summary</span>
                 </p>
                 <div className="flex flex-col gap-2.5">
@@ -1076,37 +1076,37 @@ export default function HostRegistrationForm({
                     <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
                       ✓
                     </span>
-                    <span className="text-[#D1D5DB] font-medium">Account created</span>
+                    <span className="text-[#E5DCCD] font-medium">Account created</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs sm:text-sm">
                     <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
                       ✓
                     </span>
-                    <span className="text-[#D1D5DB] font-medium">Host profile set up</span>
+                    <span className="text-[#E5DCCD] font-medium">Host profile set up</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs sm:text-sm">
                     <span className="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
                       ✓
                     </span>
-                    <span className="text-[#D1D5DB] font-medium">Business details submitted</span>
+                    <span className="text-[#E5DCCD] font-medium">Business details submitted</span>
                   </div>
                   <div className="flex items-center gap-2.5 text-xs sm:text-sm">
                     <span className="w-5 h-5 rounded-full bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold text-xs">
                       !
                     </span>
-                    <span className="text-[#D1D5DB] font-medium">Automotive verification pending</span>
+                    <span className="text-[#E5DCCD] font-medium">Automotive verification pending</span>
                   </div>
                 </div>
               </div>
 
               {/* Public Profile Preview Card */}
-              <div className="bg-[#12141C] border border-white/10 p-5 rounded-xl flex flex-col gap-3">
+              <div className="bg-[#211C18] border border-white/10 p-5 rounded-xl flex flex-col gap-3">
                 <p className="font-heading font-bold text-xs sm:text-sm text-white select-none">
                   Your Public Profile Preview
                 </p>
-                <div className="flex items-center gap-4 bg-[#1A1D27] p-4 rounded-xl border border-white/5">
+                <div className="flex items-center gap-4 bg-[#302820] p-4 rounded-xl border border-white/5">
                   {/* Logo Avatar */}
-                  <div className="w-14 h-14 rounded-full bg-[#12141C] border border-[#FF1E27]/30 overflow-hidden flex items-center justify-center select-none shrink-0 shadow-[0_0_12px_rgba(255,30,39,0.2)]">
+                  <div className="w-14 h-14 rounded-full bg-[#211C18] border border-[#D4A863]/30 overflow-hidden flex items-center justify-center select-none shrink-0 shadow-[0_0_12px_rgba(212,168,99,0.2)]">
                     {formData.businessLogo ? (
                       <img
                         src={formData.businessLogo}
@@ -1120,7 +1120,7 @@ export default function HostRegistrationForm({
                         className="w-full h-full object-cover"
                       />
                     ) : (
-                      <User className="w-6 h-6 text-[#8A92A0]" />
+                      <User className="w-6 h-6 text-[#B6AA9C]" />
                     )}
                   </div>
                   {/* Name and Meta */}
@@ -1130,20 +1130,20 @@ export default function HostRegistrationForm({
                         `${formData.firstName} ${formData.lastName}` ||
                         "Your Business Name"}
                     </p>
-                    <div className="flex items-center gap-3 text-[10px] md:text-xs text-[#8A92A0] select-none">
-                      <span className="inline-flex items-center gap-1 text-[#FF1E27] font-semibold">
+                    <div className="flex items-center gap-3 text-[10px] md:text-xs text-[#B6AA9C] select-none">
+                      <span className="inline-flex items-center gap-1 text-[#D4A863] font-semibold">
                         <Star className="w-3.5 h-3.5 fill-current" />
                         <span>New Host</span>
                       </span>
                       <span className="inline-flex items-center gap-1 text-[#9CA3AF]">
-                        <MapPin className="w-3.5 h-3.5 text-[#8A92A0]" />
+                        <MapPin className="w-3.5 h-3.5 text-[#B6AA9C]" />
                         <span>{formData.country}</span>
                       </span>
                     </div>
                   </div>
                   {/* Verified badge */}
-                  <div className="ml-auto select-none bg-[#12141C] border border-[#FF1E27]/40 px-3 py-1 rounded-full shadow-[0_0_10px_rgba(255,30,39,0.2)] shrink-0">
-                    <span className="font-sans font-bold text-[9px] md:text-[10px] text-[#FF1E27] uppercase tracking-wider whitespace-nowrap">
+                  <div className="ml-auto select-none bg-[#211C18] border border-[#D4A863]/40 px-3 py-1 rounded-full shadow-[0_0_10px_rgba(212,168,99,0.2)] shrink-0">
+                    <span className="font-sans font-bold text-[9px] md:text-[10px] text-[#D4A863] uppercase tracking-wider whitespace-nowrap">
                       Verified Host
                     </span>
                   </div>
@@ -1151,7 +1151,7 @@ export default function HostRegistrationForm({
               </div>
 
               {/* Guidelines Agreement Alert */}
-              <div className="bg-[#12141C] border border-white/10 p-4.5 rounded-xl flex gap-3.5 items-start">
+              <div className="bg-[#211C18] border border-white/10 p-4.5 rounded-xl flex gap-3.5 items-start">
                 <div className="pt-0.5 shrink-0">
                   <input
                     type="checkbox"
@@ -1160,18 +1160,18 @@ export default function HostRegistrationForm({
                     checked={formData.acceptedTerms}
                     onChange={handleInputChange}
                     disabled={formState.isSubmitting}
-                    className="w-4.5 h-4.5 rounded border border-white/20 bg-[#1A1D27] text-[#FF1E27] focus:ring-0 focus:ring-offset-0 focus:outline-none accent-[#FF1E27] transition-all duration-200 cursor-pointer"
+                    className="w-4.5 h-4.5 rounded border border-white/20 bg-[#302820] text-[#D4A863] focus:ring-0 focus:ring-offset-0 focus:outline-none accent-[#D4A863] transition-all duration-200 cursor-pointer"
                   />
                 </div>
                 <label
                   htmlFor="acceptedTerms"
-                  className="font-sans text-xs md:text-sm text-[#D1D5DB] leading-relaxed select-none cursor-pointer"
+                  className="font-sans text-xs md:text-sm text-[#E5DCCD] leading-relaxed select-none cursor-pointer"
                 >
                   By going live, you confirm that all information is accurate and agree to our{" "}
                   <button
                     type="button"
                     onClick={() => showToast("Host Guidelines document will open shortly.")}
-                    className="text-[#FF1E27] hover:underline font-bold"
+                    className="text-[#D4A863] hover:underline font-bold"
                   >
                     Host Guidelines
                   </button>{" "}
@@ -1179,7 +1179,7 @@ export default function HostRegistrationForm({
                   <button
                     type="button"
                     onClick={() => showToast("Platform Rules document will open shortly.")}
-                    className="text-[#FF1E27] hover:underline font-bold"
+                    className="text-[#D4A863] hover:underline font-bold"
                   >
                     Platform Rules
                   </button>
@@ -1194,7 +1194,7 @@ export default function HostRegistrationForm({
                   onClick={handleBack}
                   disabled={formState.isSubmitting}
                   className={cn(
-                    "inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#8A92A0] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5",
+                    "inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-[#B6AA9C] hover:text-white cursor-pointer select-none transition-colors px-3 py-2 rounded-lg hover:bg-white/5",
                     formState.isSubmitting && "opacity-50 cursor-not-allowed"
                   )}
                 >
@@ -1204,7 +1204,7 @@ export default function HostRegistrationForm({
                 <button
                   type="submit"
                   disabled={formState.isSubmitting}
-                  className="btn-racing-red py-3.5 px-8 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(255,30,39,0.35)] hover:shadow-[0_0_30px_rgba(255,30,39,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-racing-red py-3.5 px-8 rounded-xl text-white font-heading font-black text-xs uppercase tracking-widest shadow-[0_0_20px_rgba(212,168,99,0.35)] hover:shadow-[0_0_30px_rgba(212,168,99,0.6)] transition-all flex items-center gap-2 cursor-pointer select-none disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span>{formState.isSubmitting ? "Submitting..." : "🚀 Launch Host Profile"}</span>
                 </button>

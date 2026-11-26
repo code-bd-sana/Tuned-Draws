@@ -121,32 +121,32 @@ export default function TicketNumberSelector({
   );
 
   return (
-    <div className="flex flex-col gap-5 bg-[#12141C] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
+    <div className="flex flex-col gap-5 bg-[#211C18] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
       {/* Header and Mode Toggle */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
         <div className="flex items-center gap-2.5">
-          <div className="w-8 h-8 rounded-xl bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27] font-bold text-sm shadow-xs">
+          <div className="w-8 h-8 rounded-xl bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863] font-bold text-sm shadow-xs">
             2
           </div>
           <div>
             <h3 className="font-heading font-black text-base sm:text-lg text-white uppercase tracking-tight">
               Ticket Number Selection
             </h3>
-            <p className="font-sans text-xs text-[#8A92A0]">
+            <p className="font-sans text-xs text-[#B6AA9C]">
               Select exact ticket numbers or request a random available quantity
             </p>
           </div>
         </div>
 
         {/* Mode Selector Tabs */}
-        <div className="flex items-center bg-[#0B0C0E] p-1 rounded-xl border border-white/10">
+        <div className="flex items-center bg-[#14110F] p-1 rounded-xl border border-white/10">
           <button
             type="button"
             onClick={() => onModeChange("specific")}
             className={`px-4 py-1.5 rounded-lg font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
               mode === "specific"
-                ? "bg-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.4)]"
-                : "text-[#8A92A0] hover:text-white"
+                ? "bg-[#94632F] text-white shadow-[0_0_12px_rgba(212,168,99,0.4)]"
+                : "text-[#B6AA9C] hover:text-white"
             }`}
           >
             Mode A: Specific Numbers
@@ -156,8 +156,8 @@ export default function TicketNumberSelector({
             onClick={() => onModeChange("random")}
             className={`px-4 py-1.5 rounded-lg font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
               mode === "random"
-                ? "bg-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.4)]"
-                : "text-[#8A92A0] hover:text-white"
+                ? "bg-[#94632F] text-white shadow-[0_0_12px_rgba(212,168,99,0.4)]"
+                : "text-[#B6AA9C] hover:text-white"
             }`}
           >
             Mode B: Random Quantity
@@ -168,9 +168,9 @@ export default function TicketNumberSelector({
       {mode === "specific" ? (
         <div className="flex flex-col gap-4">
           {/* Direct Comma Input Bar */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 bg-[#0B0C0E] border border-white/10 rounded-xl p-3">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 bg-[#14110F] border border-white/10 rounded-xl p-3">
             <div className="flex-1 flex items-center gap-2">
-              <span className="text-[#8A92A0] text-sm shrink-0">⌨️</span>
+              <span className="text-[#B6AA9C] text-sm shrink-0">⌨️</span>
               <input
                 type="text"
                 value={commaInput}
@@ -182,7 +182,7 @@ export default function TicketNumberSelector({
                   }
                 }}
                 placeholder="Type or paste comma-separated numbers (e.g. 5, 12, 42) & press Enter..."
-                className="w-full bg-transparent text-xs font-sans text-white placeholder-[#8A92A0] focus:outline-none"
+                className="w-full bg-transparent text-xs font-sans text-white placeholder-[#B6AA9C] focus:outline-none"
               />
             </div>
             <button
@@ -198,14 +198,14 @@ export default function TicketNumberSelector({
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-2">
             {/* Filter buttons */}
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="font-sans text-[11px] font-bold text-[#8A92A0] uppercase mr-1">Filter:</span>
+              <span className="font-sans text-[11px] font-bold text-[#B6AA9C] uppercase mr-1">Filter:</span>
               <button
                 type="button"
                 onClick={() => { setGridFilter("all"); setGridPage(1); }}
                 className={`px-2.5 py-1 rounded-lg text-[11px] font-sans font-bold transition-all cursor-pointer ${
                   gridFilter === "all"
                     ? "bg-white/20 text-white border border-white/30"
-                    : "bg-[#0B0C0E] text-[#8A92A0] hover:text-white border border-white/5"
+                    : "bg-[#14110F] text-[#B6AA9C] hover:text-white border border-white/5"
                 }`}
               >
                 Show All ({totalTickets})
@@ -216,7 +216,7 @@ export default function TicketNumberSelector({
                 className={`px-2.5 py-1 rounded-lg text-[11px] font-sans font-bold transition-all cursor-pointer ${
                   gridFilter === "available"
                     ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/40"
-                    : "bg-[#0B0C0E] text-[#8A92A0] hover:text-emerald-400 border border-white/5"
+                    : "bg-[#14110F] text-[#B6AA9C] hover:text-emerald-400 border border-white/5"
                 }`}
               >
                 Available Only ({details.stats.remainingTickets})
@@ -227,7 +227,7 @@ export default function TicketNumberSelector({
                 className={`px-2.5 py-1 rounded-lg text-[11px] font-sans font-bold transition-all cursor-pointer ${
                   gridFilter === "instant"
                     ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                    : "bg-[#0B0C0E] text-[#8A92A0] hover:text-amber-400 border border-white/5"
+                    : "bg-[#14110F] text-[#B6AA9C] hover:text-amber-400 border border-white/5"
                 }`}
               >
                 Instant Wins Only ({details.instantWins.length})
@@ -238,7 +238,7 @@ export default function TicketNumberSelector({
                 className={`px-2.5 py-1 rounded-lg text-[11px] font-sans font-bold transition-all cursor-pointer ${
                   gridFilter === "sold"
                     ? "bg-rose-500/20 text-rose-400 border border-rose-500/40"
-                    : "bg-[#0B0C0E] text-[#8A92A0] hover:text-rose-400 border border-white/5"
+                    : "bg-[#14110F] text-[#B6AA9C] hover:text-rose-400 border border-white/5"
                 }`}
               >
                 Sold Only ({details.stats.ticketsSold})
@@ -257,15 +257,15 @@ export default function TicketNumberSelector({
                   setGridPage(1);
                 }}
                 placeholder="Jump to #..."
-                className="w-28 bg-[#0B0C0E] border border-white/10 rounded-lg px-2.5 py-1 text-xs font-mono text-white placeholder-[#8A92A0] focus:outline-none focus:border-[#FF1E27]"
+                className="w-28 bg-[#14110F] border border-white/10 rounded-lg px-2.5 py-1 text-xs font-mono text-white placeholder-[#B6AA9C] focus:outline-none focus:border-[#D4A863]"
               />
             </div>
           </div>
 
           {/* Grid Container */}
-          <div className="relative border border-white/10 bg-[#0B0C0E]/90 rounded-xl p-4 min-h-[220px]">
+          <div className="relative border border-white/10 bg-[#14110F]/90 rounded-xl p-4 min-h-[220px]">
             {paginatedTiles.length === 0 ? (
-              <div className="py-12 text-center text-[#8A92A0] font-sans text-xs flex flex-col items-center justify-center gap-1">
+              <div className="py-12 text-center text-[#B6AA9C] font-sans text-xs flex flex-col items-center justify-center gap-1">
                 <span>No ticket tiles match the active filter.</span>
               </div>
             ) : (
@@ -299,9 +299,9 @@ export default function TicketNumberSelector({
                       onClick={() => handleToggleNumber(num)}
                       className={`h-11 rounded-lg flex flex-col items-center justify-center relative select-none transition-all cursor-pointer font-mono text-xs font-bold ${
                         isSelected
-                          ? "bg-[#FF1E27] text-white border-2 border-white shadow-[0_0_12px_rgba(255,30,39,0.8)] z-10 scale-105"
+                          ? "bg-[#94632F] text-white border-2 border-white shadow-[0_0_12px_rgba(212,168,99,0.8)] z-10 scale-105"
                           : isSold
-                          ? "bg-white/5 text-[#8A92A0]/40 border border-white/5 line-through cursor-not-allowed opacity-60"
+                          ? "bg-white/5 text-[#B6AA9C]/40 border border-white/5 line-through cursor-not-allowed opacity-60"
                           : isInstant
                           ? "bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border-2 border-amber-400 shadow-[0_0_8px_rgba(245,158,11,0.3)]"
                           : "bg-[#141822] hover:bg-[#1E2333] text-white/90 border border-white/10 hover:border-white/30"
@@ -326,22 +326,22 @@ export default function TicketNumberSelector({
 
             {/* Hover Tooltip for Sold Tile */}
             {hoveredSoldTile && (
-              <div className="absolute bottom-3 left-4 right-4 sm:right-auto sm:w-80 bg-[#181B26] border border-white/20 rounded-xl p-3 shadow-2xl z-20 pointer-events-none animate-fadeIn text-xs font-sans">
+              <div className="absolute bottom-3 left-4 right-4 sm:right-auto sm:w-80 bg-[#302820] border border-white/20 rounded-xl p-3 shadow-2xl z-20 pointer-events-none animate-fadeIn text-xs font-sans">
                 <div className="flex items-center justify-between pb-1.5 border-b border-white/10 mb-1.5">
                   <span className="font-mono font-black text-rose-400">
                     Ticket #{hoveredSoldTile.num} (SOLD)
                   </span>
-                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-white/10 text-[#8A92A0]">
+                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-white/10 text-[#B6AA9C]">
                     {hoveredSoldTile.gateway}
                   </span>
                 </div>
                 <div className="text-white font-semibold truncate">
                   Buyer: {hoveredSoldTile.buyerName}
                 </div>
-                <div className="text-[#8A92A0] text-[11px] truncate">
+                <div className="text-[#B6AA9C] text-[11px] truncate">
                   {hoveredSoldTile.buyerEmail}
                 </div>
-                <div className="text-[#8A92A0] text-[10px] mt-1">
+                <div className="text-[#B6AA9C] text-[10px] mt-1">
                   Purchased on {hoveredSoldTile.date}
                 </div>
               </div>
@@ -350,7 +350,7 @@ export default function TicketNumberSelector({
 
           {/* Pagination controls for grid */}
           {totalGridPages > 1 && (
-            <div className="flex items-center justify-between gap-3 text-xs font-sans text-[#8A92A0] pt-1">
+            <div className="flex items-center justify-between gap-3 text-xs font-sans text-[#B6AA9C] pt-1">
               <span>
                 Showing {((currentPage - 1) * TILES_PER_PAGE) + 1} -{" "}
                 {Math.min(currentPage * TILES_PER_PAGE, allFilteredTiles.length)} of {allFilteredTiles.length} tiles
@@ -360,7 +360,7 @@ export default function TicketNumberSelector({
                   type="button"
                   disabled={currentPage <= 1}
                   onClick={() => setGridPage((p) => Math.max(1, p - 1))}
-                  className="px-2.5 py-1 rounded bg-[#0B0C0E] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
+                  className="px-2.5 py-1 rounded bg-[#14110F] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
                 >
                   ← Prev
                 </button>
@@ -371,7 +371,7 @@ export default function TicketNumberSelector({
                   type="button"
                   disabled={currentPage >= totalGridPages}
                   onClick={() => setGridPage((p) => Math.min(totalGridPages, p + 1))}
-                  className="px-2.5 py-1 rounded bg-[#0B0C0E] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
+                  className="px-2.5 py-1 rounded bg-[#14110F] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
                 >
                   Next →
                 </button>
@@ -382,12 +382,12 @@ export default function TicketNumberSelector({
       ) : (
         /* Mode B: Random Quantity */
         <div className="flex flex-col gap-5 py-4">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#0B0C0E] border border-white/10 rounded-xl p-5">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#14110F] border border-white/10 rounded-xl p-5">
             <div>
               <h4 className="font-heading font-black text-white text-base">
                 Random Ticket Quantity
               </h4>
-              <p className="font-sans text-xs text-[#8A92A0] mt-0.5">
+              <p className="font-sans text-xs text-[#B6AA9C] mt-0.5">
                 System will securely allocate available ticket numbers without collisions
               </p>
             </div>
@@ -414,7 +414,7 @@ export default function TicketNumberSelector({
                     );
                   }
                 }}
-                className="w-20 h-10 rounded-xl bg-[#141822] border border-white/20 text-center font-mono font-bold text-white text-base focus:outline-none focus:border-[#FF1E27]"
+                className="w-20 h-10 rounded-xl bg-[#141822] border border-white/20 text-center font-mono font-bold text-white text-base focus:outline-none focus:border-[#D4A863]"
               />
               <button
                 type="button"
@@ -432,7 +432,7 @@ export default function TicketNumberSelector({
 
           {/* Preset Buttons */}
           <div className="flex flex-wrap items-center gap-2">
-            <span className="font-sans text-xs text-[#8A92A0] mr-2">Quick Presets:</span>
+            <span className="font-sans text-xs text-[#B6AA9C] mr-2">Quick Presets:</span>
             {[1, 5, 10, 25, 50].map((preset) => {
               const disabled = preset > details.stats.remainingTickets;
               return (
@@ -443,10 +443,10 @@ export default function TicketNumberSelector({
                   onClick={() => onRandomQuantityChange(preset)}
                   className={`px-3 py-1.5 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
                     randomQuantity === preset
-                      ? "bg-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.5)] border border-[#FF1E27]"
+                      ? "bg-[#94632F] text-white shadow-[0_0_12px_rgba(212,168,99,0.5)] border border-[#D4A863]"
                       : disabled
-                      ? "bg-white/5 text-[#8A92A0]/40 border border-white/5 cursor-not-allowed"
-                      : "bg-[#0B0C0E] hover:bg-white/10 text-[#8A92A0] hover:text-white border border-white/10"
+                      ? "bg-white/5 text-[#B6AA9C]/40 border border-white/5 cursor-not-allowed"
+                      : "bg-[#14110F] hover:bg-white/10 text-[#B6AA9C] hover:text-white border border-white/10"
                   }`}
                 >
                   +{preset} Tickets
@@ -458,17 +458,17 @@ export default function TicketNumberSelector({
       )}
 
       {/* Selected Numbers Chip Bar */}
-      <div className="bg-[#0B0C0E] border border-white/10 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="bg-[#14110F] border border-white/10 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div className="flex items-center gap-3 flex-wrap">
           <div className="flex items-center gap-1.5">
-            <span className="font-sans text-xs text-[#8A92A0]">Selected:</span>
-            <span className="px-2.5 py-0.5 rounded-full font-mono font-bold text-xs bg-[#FF1E27]/20 border border-[#FF1E27]/40 text-white">
+            <span className="font-sans text-xs text-[#B6AA9C]">Selected:</span>
+            <span className="px-2.5 py-0.5 rounded-full font-mono font-bold text-xs bg-[#D4A863]/20 border border-[#D4A863]/40 text-white">
               {mode === "specific" ? selectedNumbers.length : randomQuantity} Ticket(s)
             </span>
           </div>
 
           <div className="flex items-center gap-1.5">
-            <span className="font-sans text-xs text-[#8A92A0]">Value:</span>
+            <span className="font-sans text-xs text-[#B6AA9C]">Value:</span>
             <span className="font-heading font-black text-sm text-emerald-400">
               £{totalPrice.toFixed(2)}
             </span>
@@ -505,7 +505,7 @@ export default function TicketNumberSelector({
                 className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md font-mono text-xs font-bold ${
                   isInstant
                     ? "bg-amber-500/20 text-amber-300 border border-amber-500/40"
-                    : "bg-[#181B26] text-white border border-white/15"
+                    : "bg-[#302820] text-white border border-white/15"
                 }`}
               >
                 #{num}

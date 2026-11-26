@@ -10,7 +10,7 @@ interface Props {
 
 export default function CategorySalesChart({ data = [] }: Props) {
   // Use Tuned Draws performance tuning color palette
-  const automotiveColors = ["#FF1E27", "#EF4444", "#F59E0B", "#3B82F6", "#8B5CF6"];
+  const automotiveColors = ["#D4A863", "#EF4444", "#F59E0B", "#3B82F6", "#8B5CF6"];
   const updatedData = data.map((d, i) => ({
     ...d,
     color: d.color || automotiveColors[i % automotiveColors.length]
@@ -21,9 +21,9 @@ export default function CategorySalesChart({ data = [] }: Props) {
       <h3 className="font-heading font-black text-lg text-text-primary uppercase tracking-tight mb-6">
         Sales by Category
       </h3>
-      
+
       <div className="flex-1 w-full flex items-center justify-between">
-        
+
         {/* Pie Chart */}
         <div className="relative w-1/2 h-[200px] flex items-center justify-center -ml-[20px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -42,16 +42,16 @@ export default function CategorySalesChart({ data = [] }: Props) {
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>
-              <Tooltip 
-                contentStyle={{ 
-                  backgroundColor: "#12141C", 
-                  borderColor: "rgba(255,255,255,0.1)", 
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "#211C18",
+                  borderColor: "rgba(255,255,255,0.1)",
                   borderRadius: "12px",
                   boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
                   color: "#FFFFFF",
                   fontFamily: "Inter"
                 }}
-                itemStyle={{ color: "#FF1E27", fontWeight: "bold" }}
+                itemStyle={{ color: "#D4A863", fontWeight: "bold" }}
               />
             </PieChart>
           </ResponsiveContainer>
@@ -62,9 +62,9 @@ export default function CategorySalesChart({ data = [] }: Props) {
           {updatedData.map((item, i) => (
             <div key={i} className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div 
-                  className="w-2.5 h-2.5 rounded-full shrink-0 shadow-xs" 
-                  style={{ backgroundColor: item.color }} 
+                <div
+                  className="w-2.5 h-2.5 rounded-full shrink-0 shadow-xs"
+                  style={{ backgroundColor: item.color }}
                 />
                 <span className="font-heading font-bold text-xs text-text-primary">
                   {item.name}

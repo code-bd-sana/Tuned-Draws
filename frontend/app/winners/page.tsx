@@ -22,7 +22,7 @@ export default function WinnersPage() {
       {/* Sticky top navbar */}
       <WebsiteNavbar />
 
-      <main className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
+      <main className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white selection:bg-[#94632F] selection:text-white">
         {/* Page Hero with stats counters */}
         <WinnersHero />
 

@@ -72,7 +72,7 @@ export default function InstantWinsSection() {
       });
 
   return (
-    <section id="instant-wins" className="wedding-light py-20 bg-[#0B0C0E] border-t border-white/10 relative">
+    <section id="instant-wins" className="wedding-light py-20 bg-[#14110F] border-t border-white/10 relative">
       <div className="container-custom">
 
         {/* Section Header */}
@@ -90,7 +90,7 @@ export default function InstantWinsSection() {
               "font-heading font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl border transition-all duration-200 cursor-pointer select-none",
               activeCategory === "all"
                 ? "btn-racing-red text-white shadow-[0_0_15px_rgba(212,168,99,0.35)]"
-                : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#D4A863]/40"
+                : "bg-[#211C18] border-white/10 text-[#B6AA9C] hover:text-white hover:border-[#D4A863]/40"
             )}
           >
             All Draws
@@ -103,7 +103,7 @@ export default function InstantWinsSection() {
                 "font-heading font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl border transition-all duration-200 cursor-pointer select-none",
                 activeCategory === category.slug
                   ? "btn-racing-red text-white shadow-[0_0_15px_rgba(212,168,99,0.35)]"
-                  : "bg-[#12141C] border-white/10 text-[#8A92A0] hover:text-white hover:border-[#D4A863]/40"
+                  : "bg-[#211C18] border-white/10 text-[#B6AA9C] hover:text-white hover:border-[#D4A863]/40"
               )}
             >
               {category.name}
@@ -113,7 +113,7 @@ export default function InstantWinsSection() {
 
         {/* Draws Grid */}
         {loading ? (
-          <div className="flex flex-col items-center justify-center py-20 gap-4 text-[#8A92A0]">
+          <div className="flex flex-col items-center justify-center py-20 gap-4 text-[#B6AA9C]">
             <div className="animate-spin h-10 w-10 border-4 border-[#D4A863] border-t-transparent rounded-full shadow-[0_0_15px_rgba(212,168,99,0.5)]" />
             <p className="font-heading text-xs tracking-wider uppercase">Loading instant win draws…</p>
           </div>
@@ -124,10 +124,10 @@ export default function InstantWinsSection() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 bg-[#12141C] border border-dashed border-white/10 rounded-2xl max-w-md mx-auto">
+          <div className="text-center py-16 bg-[#211C18] border border-dashed border-white/10 rounded-2xl max-w-md mx-auto">
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="font-heading font-black text-lg text-white mb-2 uppercase">No Instant Wins in This Category</h3>
-            <p className="font-sans text-xs text-[#8A92A0]">Check back soon for new instant-win prizes.</p>
+            <p className="font-sans text-xs text-[#B6AA9C]">Check back soon for new instant-win prizes.</p>
           </div>
         )}
 

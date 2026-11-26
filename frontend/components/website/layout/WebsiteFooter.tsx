@@ -40,7 +40,7 @@ export default function WebsiteFooter() {
   };
 
   return (
-    <footer className="wedding-footer bg-[#0B0C0E] border-t border-white/10 pt-16 pb-12 mt-auto relative overflow-hidden">
+    <footer className="wedding-footer bg-[#14110F] border-t border-white/10 pt-16 pb-12 mt-auto relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#D4A863]/5 rounded-full blur-[140px] pointer-events-none" />
 
@@ -50,12 +50,12 @@ export default function WebsiteFooter() {
           <div className="lg:col-span-2 flex flex-col gap-5">
             <TunedDrawsBrandLogo size="lg" />
 
-            <p className="font-sans text-xs text-[#8A92A0] leading-relaxed max-w-sm">
+            <p className="font-sans text-xs text-[#B6AA9C] leading-relaxed max-w-sm">
               Discover beautiful prizes and memorable experiences for your special day, from wedding suppliers and hosts.
             </p>
 
             {/* Trust badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-2 bg-[#12141C] border border-white/10 rounded-xl text-[11px] font-bold text-[#D1D5DB] self-start shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 bg-[#211C18] border border-white/10 rounded-xl text-[11px] font-bold text-[#E5DCCD] self-start shadow-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -81,7 +81,7 @@ export default function WebsiteFooter() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-[#D4A863] hover:border-[#D4A863]/40 hover:shadow-[0_0_12px_rgba(212,168,99,0.3)] transition-all duration-200"
+                  className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#211C18] border border-white/10 text-[#B6AA9C] hover:text-[#D4A863] hover:border-[#D4A863]/40 hover:shadow-[0_0_12px_rgba(212,168,99,0.3)] transition-all duration-200"
                   aria-label={`${link.platform} Profile`}
                 >
                   {renderSocialIcon(link.platform)}
@@ -93,7 +93,7 @@ export default function WebsiteFooter() {
           {/* Link Columns */}
           {FOOTER_SECTIONS.map((section) => (
             <div key={section.title} className="flex flex-col gap-4">
-              <h4 className="font-heading font-black text-xs text-[#D1D5DB] uppercase tracking-wider flex items-center gap-2">
+              <h4 className="font-heading font-black text-xs text-[#E5DCCD] uppercase tracking-wider flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#D4A863]" />
                 {section.title}
               </h4>
@@ -102,7 +102,7 @@ export default function WebsiteFooter() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="font-sans text-xs text-[#8A92A0] hover:text-white hover:translate-x-0.5 transition-all duration-200 inline-block"
+                      className="font-sans text-xs text-[#B6AA9C] hover:text-white hover:translate-x-0.5 transition-all duration-200 inline-block"
                     >
                       {link.label}
                     </Link>
@@ -114,16 +114,16 @@ export default function WebsiteFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-[11px] text-[#8A92A0] leading-relaxed">
+        <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 text-[11px] text-[#B6AA9C] leading-relaxed">
           <div className="max-w-3xl">
-            <p className="mb-1.5 font-semibold text-[#D1D5DB]">
+            <p className="mb-1.5 font-semibold text-[#E5DCCD]">
               © {new Date().getFullYear()} {BRAND_NAME} Ltd. All rights reserved. Registered in England &amp; Wales.
             </p>
             <p>
               Prize competitions are operated in accordance with the UK Gambling Act 2005. Participation is restricted to individuals aged 18 or older. Ticket purchases are subject to competition terms and free postal entry is always available.
             </p>
           </div>
-          <div className="flex items-center gap-2 bg-[#12141C] border border-white/10 px-4 py-2.5 rounded-xl text-[10px] text-[#D1D5DB] font-bold whitespace-nowrap shadow-sm shrink-0">
+          <div className="flex items-center gap-2 bg-[#211C18] border border-white/10 px-4 py-2.5 rounded-xl text-[10px] text-[#E5DCCD] font-bold whitespace-nowrap shadow-sm shrink-0">
             <span className="w-2 h-2 rounded-full bg-[#16A34A] animate-pulse shadow-[0_0_8px_rgba(22,163,74,0.8)]" />
             256-Bit SSL Encrypted
           </div>

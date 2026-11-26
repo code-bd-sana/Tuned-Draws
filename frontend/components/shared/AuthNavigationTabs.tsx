@@ -41,7 +41,7 @@ export default function AuthNavigationTabs({
   return (
     <div
       className={cn(
-        "w-full bg-[#12141C] border border-white/10 p-1.5 rounded-2xl flex items-center shadow-[0_12px_36px_rgba(0,0,0,0.6)] backdrop-blur-xl relative overflow-hidden",
+        "w-full bg-[#211C18] border border-white/10 p-1.5 rounded-2xl flex items-center shadow-[0_12px_36px_rgba(0,0,0,0.6)] backdrop-blur-xl relative overflow-hidden",
         className
       )}
     >
@@ -54,8 +54,8 @@ export default function AuthNavigationTabs({
             className={cn(
               "flex-1 py-3 text-center rounded-xl font-heading font-black text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 flex items-center justify-center gap-2 select-none",
               isActive
-                ? "btn-racing-red text-white shadow-[0_0_20px_rgba(255,30,39,0.4)]"
-                : "text-[#8A92A0] hover:text-white hover:bg-white/5"
+                ? "btn-racing-red text-white shadow-[0_0_20px_rgba(212,168,99,0.4)]"
+                : "text-[#B6AA9C] hover:text-white hover:bg-white/5"
             )}
           >
             {tab.icon}

@@ -246,10 +246,10 @@ export default function CheckoutPage() {
 
   if (!isInitialized || (isUserLoading && !user)) {
     return (
-      <div className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
+      <div className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white selection:bg-[#94632F] selection:text-white">
         <WebsiteNavbar />
         <div className="flex-1 flex items-center justify-center pt-24">
-          <div className="w-8 h-8 border-3 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
+          <div className="w-8 h-8 border-3 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
         </div>
         <WebsiteFooter />
       </div>
@@ -257,36 +257,36 @@ export default function CheckoutPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white selection:bg-[#94632F] selection:text-white">
       <WebsiteNavbar />
 
       <main className="flex-1 pt-28 pb-20">
         <div className="container-custom max-w-5xl mx-auto px-4 sm:px-6">
           {/* Header Title */}
           <div className="mb-8 pb-6 border-b border-white/10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#12141C] border border-[#FF1E27]/30 text-[10px] font-heading font-black uppercase tracking-widest text-[#FF1E27] mb-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FF1E27] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#211C18] border border-[#D4A863]/30 text-[10px] font-heading font-black uppercase tracking-widest text-[#D4A863] mb-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#94632F] animate-pulse" />
               OFFICIAL ENTRY ALLOCATION
             </div>
             <h1 className="font-heading font-black text-2xl sm:text-3xl text-white uppercase tracking-tight">
               Checkout &amp; Delivery Details
             </h1>
-            <p className="font-sans text-xs text-[#8A92A0] mt-1">
+            <p className="font-sans text-xs text-[#B6AA9C] mt-1">
               Provide your delivery address so we know where to ship your prizes when you win.
             </p>
           </div>
 
           {/* Unauthenticated User Notice */}
           {!user && (
-            <div className="mb-6 p-4 rounded-2xl bg-[#12141C] border border-[#FF1E27]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-sans shadow-xl">
-              <div className="flex items-center gap-2.5 text-[#D1D5DB]">
+            <div className="mb-6 p-4 rounded-2xl bg-[#211C18] border border-[#D4A863]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-sans shadow-xl">
+              <div className="flex items-center gap-2.5 text-[#E5DCCD]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
                   stroke="currentColor"
-                  className="w-5 h-5 shrink-0 text-[#FF1E27]"
+                  className="w-5 h-5 shrink-0 text-[#D4A863]"
                 >
                   <path
                     strokeLinecap="round"
@@ -300,7 +300,7 @@ export default function CheckoutPage() {
               </div>
               <Link
                 href="/login?redirect=/checkout"
-                className="btn-racing-red px-5 py-2 rounded-xl text-white font-heading font-black uppercase text-xs tracking-wider self-start sm:self-auto shrink-0 shadow-[0_0_15px_rgba(255,30,39,0.35)]"
+                className="btn-racing-red px-5 py-2 rounded-xl text-white font-heading font-black uppercase text-xs tracking-wider self-start sm:self-auto shrink-0 shadow-[0_0_15px_rgba(212,168,99,0.35)]"
               >
                 Log In
               </Link>
@@ -317,9 +317,9 @@ export default function CheckoutPage() {
             {/* Left Form: Contact & Shipping */}
             <form onSubmit={handleSubmit} className="lg:col-span-7 flex flex-col gap-6">
               {/* Contact Information */}
-              <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 shadow-xl flex flex-col gap-4">
+              <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 shadow-xl flex flex-col gap-4">
                 <h2 className="font-heading font-black text-sm uppercase tracking-wider text-white pb-2 border-b border-white/10 flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#FF1E27] text-white flex items-center justify-center text-[10px] font-black shadow-xs">
+                  <span className="w-5 h-5 rounded-full bg-[#94632F] text-white flex items-center justify-center text-[10px] font-black shadow-xs">
                     1
                   </span>
                   Contact Information
@@ -411,7 +411,7 @@ export default function CheckoutPage() {
                         <span
                           className={`text-[10px] font-sans font-bold ${
                             calculateAge(formData.dateOfBirth) < 18
-                              ? "text-[#FF1E27]"
+                              ? "text-[#D4A863]"
                               : "text-emerald-400"
                           }`}
                         >
@@ -447,9 +447,9 @@ export default function CheckoutPage() {
               </div>
 
               {/* Shipping Address */}
-              <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 shadow-xl flex flex-col gap-4">
+              <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 shadow-xl flex flex-col gap-4">
                 <h2 className="font-heading font-black text-sm uppercase tracking-wider text-white pb-2 border-b border-white/10 flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#FF1E27] text-white flex items-center justify-center text-[10px] font-black shadow-xs">
+                  <span className="w-5 h-5 rounded-full bg-[#94632F] text-white flex items-center justify-center text-[10px] font-black shadow-xs">
                     2
                   </span>
                   Prize Shipping Address
@@ -548,7 +548,7 @@ export default function CheckoutPage() {
                         name="saveToProfile"
                         checked={formData.saveToProfile}
                         onChange={handleChange}
-                        className="w-4 h-4 rounded text-primary focus:ring-primary accent-[#FF1E27] cursor-pointer"
+                        className="w-4 h-4 rounded text-primary focus:ring-primary accent-[#D4A863] cursor-pointer"
                       />
                       <label htmlFor="saveToProfile" className="text-xs font-sans text-white cursor-pointer select-none">
                         Save this shipping address to my profile for future competitions
@@ -567,7 +567,7 @@ export default function CheckoutPage() {
                     items.length === 0 ||
                     (!!formData.dateOfBirth && calculateAge(formData.dateOfBirth) < 18)
                   }
-                  className="btn-racing-red w-full h-14 rounded-xl font-heading font-black text-sm uppercase tracking-wider text-white shadow-[0_0_20px_rgba(255,30,39,0.35)] active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="btn-racing-red w-full h-14 rounded-xl font-heading font-black text-sm uppercase tracking-wider text-white shadow-[0_0_20px_rgba(212,168,99,0.35)] active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center gap-2">
@@ -587,14 +587,14 @@ export default function CheckoutPage() {
 
             {/* Right Column: Order Summary */}
             <div className="lg:col-span-5 flex flex-col gap-6 sticky top-24">
-              <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col gap-4">
+              <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 shadow-2xl flex flex-col gap-4">
                 <div className="flex items-center justify-between pb-3 border-b border-white/10">
                   <h3 className="font-heading font-black text-sm uppercase tracking-wider text-white">
                     Order Summary
                   </h3>
                   <Link
                     href="/basket"
-                    className="font-sans text-xs text-[#FF1E27] hover:underline font-bold"
+                    className="font-sans text-xs text-[#D4A863] hover:underline font-bold"
                   >
                     Edit Basket
                   </Link>
@@ -605,7 +605,7 @@ export default function CheckoutPage() {
                   {items.map((item) => (
                     <div key={item.raffleId} className="py-3 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-3 min-w-0">
-                        <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-[#1A1D27] shrink-0 border border-white/10">
+                        <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-[#302820] shrink-0 border border-white/10">
                           <Image
                             src={
                               item.image ||
@@ -621,7 +621,7 @@ export default function CheckoutPage() {
                           <span className="font-heading font-black text-xs text-white truncate">
                             {item.title}
                           </span>
-                          <span className="font-sans text-[11px] text-[#8A92A0]">
+                          <span className="font-sans text-[11px] text-[#B6AA9C]">
                             {item.quantity} × £{item.pricePerTicket.toFixed(2)}
                           </span>
                         </div>
@@ -636,20 +636,20 @@ export default function CheckoutPage() {
                 {/* Pricing summary */}
                 <div className="pt-3 border-t border-white/10 flex flex-col gap-2">
                   <div className="flex items-center justify-between text-xs font-sans">
-                    <span className="text-[#8A92A0]">Subtotal</span>
+                    <span className="text-[#B6AA9C]">Subtotal</span>
                     <span className="font-semibold text-white">
                       £{totalPrice.toFixed(2)}
                     </span>
                   </div>
                   <div className="flex items-center justify-between text-xs font-sans">
-                    <span className="text-[#8A92A0]">Transaction Fee</span>
+                    <span className="text-[#B6AA9C]">Transaction Fee</span>
                     <span className="font-bold text-emerald-400">FREE</span>
                   </div>
                   <div className="pt-3 border-t border-white/10 flex items-center justify-between">
                     <span className="font-heading font-bold text-sm text-white uppercase">
                       Total Due
                     </span>
-                    <span className="font-heading font-black text-2xl text-[#FF1E27] drop-shadow-[0_0_12px_rgba(255,30,39,0.5)]">
+                    <span className="font-heading font-black text-2xl text-[#D4A863] drop-shadow-[0_0_12px_rgba(212,168,99,0.5)]">
                       £{totalPrice.toFixed(2)}
                     </span>
                   </div>
@@ -665,7 +665,7 @@ export default function CheckoutPage() {
                       items.length === 0 ||
                       (!!formData.dateOfBirth && calculateAge(formData.dateOfBirth) < 18)
                     }
-                    className="btn-racing-red w-full h-12 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-white shadow-[0_0_20px_rgba(255,30,39,0.35)] active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="btn-racing-red w-full h-12 rounded-xl font-heading font-black text-xs uppercase tracking-wider text-white shadow-[0_0_20px_rgba(212,168,99,0.35)] active:scale-98 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                   >
                     {isSubmitting
                       ? "Processing..."
@@ -677,7 +677,7 @@ export default function CheckoutPage() {
                   </button>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 text-[10px] text-[#8A92A0] flex flex-col gap-1.5">
+                <div className="pt-4 border-t border-white/10 text-[10px] text-[#B6AA9C] flex flex-col gap-1.5">
                   <div className="flex items-center gap-1.5">
                     <span className="text-emerald-400 font-bold">🔒</span>
                     <span>

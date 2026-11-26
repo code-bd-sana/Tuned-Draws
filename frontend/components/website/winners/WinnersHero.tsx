@@ -40,61 +40,61 @@ export default function WinnersHero() {
 
   const metrics = [
     {
-      icon: <Trophy className="w-5 h-5 text-[#FF1E27]" />,
+      icon: <Trophy className="w-5 h-5 text-[#D4A863]" />,
       value: stats.prizesAwarded,
       label: "Prizes Awarded",
     },
     {
-      icon: <Users className="w-5 h-5 text-[#FF1E27]" />,
+      icon: <Users className="w-5 h-5 text-[#D4A863]" />,
       value: `${stats.totalWinners.toLocaleString()}`,
       label: "Total Winners",
     },
     {
-      icon: <Ticket className="w-5 h-5 text-[#FF1E27]" />,
+      icon: <Ticket className="w-5 h-5 text-[#D4A863]" />,
       value: `${stats.mainDrawWinners.toLocaleString()}`,
       label: "Main Draw Winners",
     },
     {
-      icon: <Zap className="w-5 h-5 text-[#FF1E27]" />,
+      icon: <Zap className="w-5 h-5 text-[#D4A863]" />,
       value: `${stats.instantWinners.toLocaleString()}`,
       label: "Instant Winners",
     },
   ];
 
   return (
-    <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#0B0C0E] pt-28 pb-14 sm:pt-36 md:pb-16 text-white">
+    <section className="relative isolate overflow-hidden border-b border-white/10 bg-[#14110F] pt-28 pb-14 sm:pt-36 md:pb-16 text-white">
       {/* Background tuned performance vehicle image for Winners page (2nd image - Rear View) */}
       <Image
-        src="/images/car-winner.jpg"
-        alt="Tuned Draws performance competition winner"
+        src="/images/wedding-reception.png"
+        alt="A candlelit wedding celebration"
         fill
         priority
         className="-z-20 object-cover object-[75%_center] lg:object-center opacity-85 contrast-110 brightness-105"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/75 to-[#0B0C0E]/30" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#0B0C0E] via-transparent to-[#0B0C0E]/60" />
-      <div className="absolute -top-32 left-1/3 w-[650px] h-[450px] bg-[#FF1E27]/12 rounded-full blur-[160px] pointer-events-none -z-10" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#14110F] via-[#14110F]/75 to-[#14110F]/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#14110F] via-transparent to-[#14110F]/60" />
+      <div className="absolute -top-32 left-1/3 w-[650px] h-[450px] bg-[#D4A863]/12 rounded-full blur-[160px] pointer-events-none -z-10" />
 
       <div className="container-custom relative flex flex-col items-center text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#FF1E27]/30 bg-[#12141C]/90 px-4 py-2 font-heading text-[10px] font-black tracking-[.18em] text-[#D1D5DB] uppercase shadow-[0_0_15px_rgba(255,30,39,0.2)] backdrop-blur-md">
-          <span className="h-2 w-2 rounded-full bg-[#FF1E27] animate-pulse shadow-[0_0_8px_rgba(255,30,39,0.8)]" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-[#D4A863]/30 bg-[#211C18]/90 px-4 py-2 font-heading text-[10px] font-black tracking-[.18em] text-[#E5DCCD] uppercase shadow-[0_0_15px_rgba(212,168,99,0.2)] backdrop-blur-md">
+          <span className="h-2 w-2 rounded-full bg-[#94632F] animate-pulse shadow-[0_0_8px_rgba(212,168,99,0.8)]" />
           Hall of Fame · Verified Winners
         </span>
-        <h1 className="mt-5 font-heading text-4xl font-black leading-[.92] tracking-tight text-white uppercase sm:text-5xl md:text-6xl">
-          CELEBRATING EVERY<br />
-          <span className="text-[#FF1E27] drop-shadow-[0_0_25px_rgba(255,30,39,0.55)]">
-            WINNING MOMENT
+        <h1 className="mt-5 font-serif text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl md:text-6xl">
+          Celebrating every<br />
+          <span className="text-[#D4A863] drop-shadow-[0_0_25px_rgba(212,168,99,0.55)]">
+            <em className="font-normal">winning moment.</em>
           </span>
         </h1>
-        <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-[#12141C]/80 p-4 font-sans text-sm font-medium leading-relaxed text-[#8A92A0] shadow-2xl backdrop-blur-md sm:text-base">
-          Real enthusiasts, premium car modifications, and independently verifiable UK competitions. Meet the Tuned Draws winners&apos; circle.
+        <p className="mt-5 max-w-2xl rounded-2xl border border-white/10 bg-[#211C18]/80 p-4 font-sans text-sm font-medium leading-relaxed text-[#B6AA9C] shadow-2xl backdrop-blur-md sm:text-base">
+          Real people and memorable prizes. Meet some of our competition winners.
         </p>
-        <div className="mt-8 grid w-full max-w-4xl grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 divide-x sm:divide-x divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-[#12141C]/85 shadow-[0_12px_36px_rgba(0,0,0,0.7)] backdrop-blur-xl">
+        <div className="mt-8 grid w-full max-w-4xl grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 divide-x sm:divide-x divide-white/10 overflow-hidden rounded-2xl border border-white/10 bg-[#211C18]/85 shadow-[0_12px_36px_rgba(0,0,0,0.7)] backdrop-blur-xl">
           {metrics.map((m) => (
             <div key={m.label} className="flex flex-col items-center justify-center px-3 py-4 text-center sm:px-5 md:px-6">
               <div className="mb-1.5 flex justify-center">{m.icon}</div>
               <div className="font-heading text-lg font-black tracking-tight text-white sm:text-2xl">{m.value}</div>
-              <div className="mt-0.5 font-sans text-[9px] font-bold tracking-wider text-[#8A92A0] uppercase sm:text-[10px]">{m.label}</div>
+              <div className="mt-0.5 font-sans text-[9px] font-bold tracking-wider text-[#B6AA9C] uppercase sm:text-[10px]">{m.label}</div>
             </div>
           ))}
         </div>

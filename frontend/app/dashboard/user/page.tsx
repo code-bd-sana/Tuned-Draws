@@ -197,14 +197,14 @@ export default function UserDashboardPage() {
           <h1 className="font-heading font-black text-2xl lg:text-3xl text-white uppercase tracking-tight">
             Player Dashboard
           </h1>
-          <p className="font-sans text-xs text-[#8A92A0]">
+          <p className="font-sans text-xs text-[#B6AA9C]">
             Welcome back, {firstName}! Track your active competition entries, ticket spend, and recent prize wins.
           </p>
         </div>
         <div className="flex items-center gap-3">
           <Link
             href="/dashboard/user/winners"
-            className="px-4 py-2 rounded-xl bg-[#12141C] border border-white/10 hover:bg-white/5 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
+            className="px-4 py-2 rounded-xl bg-[#211C18] border border-white/10 hover:bg-white/5 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-sm"
           >
             <span>🏆</span> My Winnings ({totalWins})
           </Link>
@@ -220,8 +220,8 @@ export default function UserDashboardPage() {
       {/* KPI Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 w-full">
         {/* Total Tickets */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Total Tickets Purchased
           </p>
           <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
@@ -235,23 +235,23 @@ export default function UserDashboardPage() {
         </div>
 
         {/* Active Entries */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Active Entries
           </p>
           <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
             {isTicketsLoading ? "..." : activeTickets.length}
           </p>
-          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30 w-fit">
-            <span className="font-sans text-[10px] font-bold text-[#FF1E27]">
+          <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#D4A863]/10 border border-[#D4A863]/30 w-fit">
+            <span className="font-sans text-[10px] font-bold text-[#D4A863]">
               {activeCompetitions.length} live draw{activeCompetitions.length === 1 ? "" : "s"}
             </span>
           </div>
         </div>
 
         {/* Won Competitions / Prizes */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Won Prizes
           </p>
           <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
@@ -265,8 +265,8 @@ export default function UserDashboardPage() {
         </div>
 
         {/* Total Lifetime Spent */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
-          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md">
+          <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Total Lifetime Spent
           </p>
           <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
@@ -275,7 +275,7 @@ export default function UserDashboardPage() {
               : `£${totalLifetimeSpent.toFixed(2)}`}
           </p>
           <div className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 w-fit">
-            <span className="font-sans text-[10px] font-bold text-[#8A92A0]">
+            <span className="font-sans text-[10px] font-bold text-[#B6AA9C]">
               Lifetime purchases
             </span>
           </div>
@@ -284,7 +284,7 @@ export default function UserDashboardPage() {
 
       {/* Row 2: Ticket Spend Overview Chart */}
       <div className="w-full">
-        <div className="w-full bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col min-h-[320px] shadow-2xl backdrop-blur-md">
+        <div className="w-full bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col min-h-[320px] shadow-2xl backdrop-blur-md">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full gap-4 sm:gap-0">
             <div className="flex flex-col">
               <div className="flex items-center gap-3">
@@ -297,20 +297,20 @@ export default function UserDashboardPage() {
                   </span>
                 </div>
               </div>
-              <span className="font-sans text-xs text-[#8A92A0] mt-1">
+              <span className="font-sans text-xs text-[#B6AA9C] mt-1">
                 Ticket Spend ({timeframe}) • Lifetime: £{totalLifetimeSpent.toFixed(2)}
               </span>
             </div>
 
-            <div className="flex items-center gap-1.5 bg-[#0B0C0E] p-1 rounded-xl border border-white/10">
+            <div className="flex items-center gap-1.5 bg-[#14110F] p-1 rounded-xl border border-white/10">
               {(["7D", "1M", "3M", "1Y"] as const).map((period) => (
                 <button
                   key={period}
                   onClick={() => setTimeframe(period)}
                   className={`px-3 py-1 rounded-lg font-heading font-bold text-xs uppercase transition-all cursor-pointer ${
                     timeframe === period
-                      ? "border border-[#FF1E27] bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.5)]"
-                      : "border border-transparent text-[#8A92A0] hover:text-white"
+                      ? "border border-[#D4A863] bg-[#94632F] text-white shadow-[0_0_10px_rgba(212,168,99,0.5)]"
+                      : "border border-transparent text-[#B6AA9C] hover:text-white"
                   }`}
                 >
                   {period}
@@ -321,7 +321,7 @@ export default function UserDashboardPage() {
 
           <div className="mt-6 flex-1 w-full relative min-h-[220px]">
             {isTransactionsLoading ? (
-              <div className="w-full h-full min-h-[200px] flex items-center justify-center text-[#8A92A0] font-sans text-xs animate-pulse">
+              <div className="w-full h-full min-h-[200px] flex items-center justify-center text-[#B6AA9C] font-sans text-xs animate-pulse">
                 Loading spend overview...
               </div>
             ) : (
@@ -329,45 +329,45 @@ export default function UserDashboardPage() {
                 <AreaChart data={spendChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <defs>
                     <linearGradient id="colorUserSpend" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#FF1E27" stopOpacity={0.35} />
-                      <stop offset="95%" stopColor="#FF1E27" stopOpacity={0} />
+                      <stop offset="5%" stopColor="#D4A863" stopOpacity={0.35} />
+                      <stop offset="95%" stopColor="#D4A863" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <XAxis 
-                    dataKey="name" 
-                    axisLine={false} 
-                    tickLine={false} 
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "sans-serif" }} 
+                  <XAxis
+                    dataKey="name"
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "sans-serif" }}
                     dy={10}
                   />
-                  <YAxis 
-                    axisLine={false} 
-                    tickLine={false} 
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "sans-serif" }}
+                  <YAxis
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "sans-serif" }}
                     tickFormatter={(val) => `£${val >= 1000 ? `${(val / 1000).toFixed(1)}k` : val}`}
                   />
                   <RechartsTooltip
-                    cursor={{ stroke: "rgba(255, 30, 39, 0.3)", strokeWidth: 1, strokeDasharray: "4 4" }}
-                    contentStyle={{ 
-                      backgroundColor: "#12141C", 
-                      borderColor: "rgba(255, 255, 255, 0.15)", 
+                    cursor={{ stroke: "rgba(212,168,99, 0.3)", strokeWidth: 1, strokeDasharray: "4 4" }}
+                    contentStyle={{
+                      backgroundColor: "#211C18",
+                      borderColor: "rgba(255, 255, 255, 0.15)",
                       borderRadius: "12px",
                       boxShadow: "0 10px 30px rgba(0,0,0,0.8)",
                       fontFamily: "sans-serif"
                     }}
-                    itemStyle={{ color: "#FF1E27", fontWeight: "bold" }}
+                    itemStyle={{ color: "#D4A863", fontWeight: "bold" }}
                     formatter={(val: any) => [
-                      `£${Number(val || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`, 
+                      `£${Number(val || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`,
                       "Ticket Spend"
                     ]}
                   />
-                  <Area 
-                    type="monotone" 
-                    dataKey="spend" 
-                    stroke="#FF1E27" 
+                  <Area
+                    type="monotone"
+                    dataKey="spend"
+                    stroke="#D4A863"
                     strokeWidth={2.5}
-                    fillOpacity={1} 
-                    fill="url(#colorUserSpend)" 
+                    fillOpacity={1}
+                    fill="url(#colorUserSpend)"
                   />
                 </AreaChart>
               </ResponsiveContainer>
@@ -379,19 +379,19 @@ export default function UserDashboardPage() {
       {/* Row 3: Active Entries & Recent Wins */}
       <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 w-full items-start">
         {/* My Active Entries */}
-        <div className="xl:col-span-6 bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col shadow-2xl backdrop-blur-md">
+        <div className="xl:col-span-6 bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col shadow-2xl backdrop-blur-md">
           <div className="flex justify-between items-center mb-4 pb-3 border-b border-white/10">
             <div>
               <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                 My Active Entries
               </h3>
-              <p className="font-sans text-[11px] text-[#8A92A0]">
+              <p className="font-sans text-[11px] text-[#B6AA9C]">
                 Competitions you are currently participating in
               </p>
             </div>
             <Link
               href="/dashboard/user/tickets"
-              className="flex items-center gap-1 font-sans font-bold text-xs text-[#FF1E27] hover:underline transition-all cursor-pointer"
+              className="flex items-center gap-1 font-sans font-bold text-xs text-[#D4A863] hover:underline transition-all cursor-pointer"
             >
               View All
               <svg
@@ -408,8 +408,8 @@ export default function UserDashboardPage() {
 
           {isTicketsLoading ? (
             <div className="py-12 flex flex-col items-center justify-center">
-              <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin mb-2" />
-              <span className="font-sans text-xs text-[#8A92A0]">Loading active entries...</span>
+              <div className="w-8 h-8 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin mb-2" />
+              <span className="font-sans text-xs text-[#B6AA9C]">Loading active entries...</span>
             </div>
           ) : activeCompetitions.length === 0 ? (
             <div className="flex flex-col items-center justify-center text-center py-12 px-4">
@@ -419,7 +419,7 @@ export default function UserDashboardPage() {
               <h4 className="font-heading font-bold text-sm text-white mb-1">
                 No active entries found
               </h4>
-              <p className="font-sans text-xs text-[#8A92A0] max-w-[280px] mb-4">
+              <p className="font-sans text-xs text-[#B6AA9C] max-w-[280px] mb-4">
                 You do not have any tickets in active draws. Browse live competitions to participate!
               </p>
               <Link
@@ -453,14 +453,14 @@ export default function UserDashboardPage() {
                     <div className="flex flex-col min-w-0">
                       <Link
                         href={`/live-raffles/${item.raffle.slug || item.raffle.id}`}
-                        className="font-heading font-bold text-xs text-white truncate hover:text-[#FF1E27]"
+                        className="font-heading font-bold text-xs text-white truncate hover:text-[#D4A863]"
                       >
                         {item.raffle.title}
                       </Link>
-                      <span className="font-sans text-[11px] text-[#8A92A0] truncate">
+                      <span className="font-sans text-[11px] text-[#B6AA9C] truncate">
                         Hosted by {item.raffle.host?.businessName || "Tuned Draws Official"}
                       </span>
-                      <span className="font-sans text-[10px] text-[#8A92A0]/80 mt-0.5">
+                      <span className="font-sans text-[10px] text-[#B6AA9C]/80 mt-0.5">
                         Draw Date:{" "}
                         {item.raffle.endDate
                           ? format(new Date(item.raffle.endDate), "dd MMM yyyy")
@@ -470,8 +470,8 @@ export default function UserDashboardPage() {
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0">
-                    <div className="px-3 py-1 bg-[#0B0C0E] border border-white/10 rounded-lg text-center">
-                      <span className="font-sans font-bold text-xs text-[#FF1E27]">
+                    <div className="px-3 py-1 bg-[#14110F] border border-white/10 rounded-lg text-center">
+                      <span className="font-sans font-bold text-xs text-[#D4A863]">
                         {item.ticketCount} {item.ticketCount === 1 ? "ticket" : "tickets"}
                       </span>
                     </div>
@@ -483,7 +483,7 @@ export default function UserDashboardPage() {
         </div>
 
         {/* Recent Wins (Instant Wins & Main Draw Wins) */}
-        <div className="xl:col-span-6 bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col shadow-2xl backdrop-blur-md">
+        <div className="xl:col-span-6 bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col shadow-2xl backdrop-blur-md">
           <div className="flex justify-between items-center mb-4 pb-3 border-b border-white/10">
             <div>
               <div className="flex items-center gap-2">
@@ -496,13 +496,13 @@ export default function UserDashboardPage() {
                   </span>
                 )}
               </div>
-              <p className="font-sans text-[11px] text-[#8A92A0]">
+              <p className="font-sans text-[11px] text-[#B6AA9C]">
                 Your recent Instant Win prizes and Competition victories
               </p>
             </div>
             <Link
               href="/dashboard/user/winners"
-              className="flex items-center gap-1 font-sans font-bold text-xs text-[#FF1E27] hover:underline transition-all cursor-pointer"
+              className="flex items-center gap-1 font-sans font-bold text-xs text-[#D4A863] hover:underline transition-all cursor-pointer"
             >
               View All ({totalWins})
               <svg
@@ -519,8 +519,8 @@ export default function UserDashboardPage() {
 
           {isWinnersLoading ? (
             <div className="py-12 flex flex-col items-center justify-center">
-              <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin mb-2" />
-              <span className="font-sans text-xs text-[#8A92A0]">Loading your winning records...</span>
+              <div className="w-8 h-8 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin mb-2" />
+              <span className="font-sans text-xs text-[#B6AA9C]">Loading your winning records...</span>
             </div>
           ) : recentWins.length === 0 ? (
             <div className="flex flex-col items-center justify-center text-center py-12 px-4">
@@ -530,7 +530,7 @@ export default function UserDashboardPage() {
               <h4 className="font-heading font-bold text-sm text-white mb-1">
                 No wins recorded yet
               </h4>
-              <p className="font-sans text-xs text-[#8A92A0] max-w-[280px] mb-4">
+              <p className="font-sans text-xs text-[#B6AA9C] max-w-[280px] mb-4">
                 Enter active competitions for your chance to win instant prizes, performance parts, and tuning services.
               </p>
               <Link
@@ -577,11 +577,11 @@ export default function UserDashboardPage() {
                         )}
                       </div>
 
-                      <p className="font-sans text-[11px] text-[#8A92A0] truncate">
+                      <p className="font-sans text-[11px] text-[#B6AA9C] truncate">
                         {win.raffle?.title || "Tuned Draws Competition"}
                       </p>
 
-                      <div className="flex items-center gap-2 mt-0.5 text-[10px] font-sans text-[#8A92A0]">
+                      <div className="flex items-center gap-2 mt-0.5 text-[10px] font-sans text-[#B6AA9C]">
                         <span className="font-mono font-semibold text-white">
                           Ticket #{win.ticketNumber}
                         </span>
@@ -598,7 +598,7 @@ export default function UserDashboardPage() {
                   </div>
 
                   <div className="flex flex-col items-end shrink-0 gap-1.5">
-                    <span className="font-sans text-[10px] text-[#8A92A0]">
+                    <span className="font-sans text-[10px] text-[#B6AA9C]">
                       {win.createdAt ? format(new Date(win.createdAt), "dd MMM yyyy") : ""}
                     </span>
                     <span

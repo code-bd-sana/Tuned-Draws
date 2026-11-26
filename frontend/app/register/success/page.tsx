@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RegisterSuccessPage() {
   return (
     <UserAuthLayout mode="register">
-      <div className="flex flex-col items-center justify-center space-y-6 rounded-2xl border border-white/10 bg-[#12141C] p-8 sm:p-12 text-center shadow-2xl text-white max-w-md mx-auto">
+      <div className="flex flex-col items-center justify-center space-y-6 rounded-2xl border border-white/10 bg-[#211C18] p-8 sm:p-12 text-center shadow-2xl text-white max-w-md mx-auto">
         <div className="w-16 h-16 bg-emerald-500/10 border border-emerald-500/25 rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.25)]">
           <CheckCircle2 className="w-8 h-8 text-emerald-400" />
         </div>
@@ -21,7 +21,7 @@ export default function RegisterSuccessPage() {
           <h2 className="font-heading text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
             Account Created!
           </h2>
-          <p className="text-xs sm:text-sm text-[#8A92A0] leading-relaxed max-w-sm">
+          <p className="text-xs sm:text-sm text-[#B6AA9C] leading-relaxed max-w-sm">
             Welcome to <strong className="text-white">Tuned Draws</strong>. Your player session is configured and ready. You can now enter live competitions and unlock instant-win allocations.
           </p>
         </div>
@@ -29,14 +29,14 @@ export default function RegisterSuccessPage() {
         <div className="w-full flex flex-col gap-3 pt-2">
           <Link
             href="/login"
-            className="btn-racing-red w-full py-3.5 rounded-xl text-white font-heading font-black text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,30,39,0.35)]"
+            className="btn-racing-red w-full py-3.5 rounded-xl text-white font-heading font-black text-xs uppercase tracking-wider inline-flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(212,168,99,0.35)]"
           >
             <span>Proceed to Login</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="/live-raffles"
-            className="w-full py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-[#D1D5DB] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all"
+            className="w-full py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-[#E5DCCD] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all"
           >
             Explore Competitions
           </Link>

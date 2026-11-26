@@ -40,27 +40,27 @@ export default function SalesChart({ data }: Props) {
           <AreaChart data={data} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
             <defs>
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#FF1E27" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#FF1E27" stopOpacity={0.0} />
+                <stop offset="5%" stopColor="#D4A863" stopOpacity={0.3} />
+                <stop offset="95%" stopColor="#D4A863" stopOpacity={0.0} />
               </linearGradient>
             </defs>
             <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(255,255,255,0.05)" />
-            <XAxis 
-              dataKey="date" 
+            <XAxis
+              dataKey="date"
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit", fontWeight: 500 }}
+              tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit", fontWeight: 500 }}
               dy={10}
             />
-            <YAxis 
+            <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit", fontWeight: 500 }}
+              tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit", fontWeight: 500 }}
               tickFormatter={(val) => `£${val}`}
             />
-            <Tooltip 
-              contentStyle={{ 
-                backgroundColor: "#1A1D27", 
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "#302820",
                 border: "1px solid rgba(255,255,255,0.15)",
                 borderRadius: "12px",
                 boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
@@ -68,16 +68,16 @@ export default function SalesChart({ data }: Props) {
                 fontFamily: "inherit"
               }}
               itemStyle={{ color: "#FFFFFF", fontWeight: "bold" }}
-              labelStyle={{ color: "#FF1E27", fontWeight: "bold", marginBottom: "4px" }}
+              labelStyle={{ color: "#D4A863", fontWeight: "bold", marginBottom: "4px" }}
               formatter={(value: any) => [`£${value}`, "Revenue"]}
             />
-            <Area 
-              type="monotone" 
-              dataKey="revenue" 
-              stroke="#FF1E27" 
+            <Area
+              type="monotone"
+              dataKey="revenue"
+              stroke="#D4A863"
               strokeWidth={3}
-              fillOpacity={1} 
-              fill="url(#colorRevenue)" 
+              fillOpacity={1}
+              fill="url(#colorRevenue)"
             />
           </AreaChart>
         </ResponsiveContainer>

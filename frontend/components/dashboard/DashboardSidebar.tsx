@@ -33,10 +33,10 @@ export default function DashboardSidebar({ account }: DashboardSidebarProps) {
   };
 
   return (
-    <aside className="hidden lg:flex flex-col w-[260px] h-screen bg-[#12141C] border-r border-white/10 fixed left-0 top-0 z-40 shadow-2xl backdrop-blur-md">
+    <aside className="hidden lg:flex flex-col w-[260px] h-screen bg-[#211C18] border-r border-white/10 fixed left-0 top-0 z-40 shadow-2xl backdrop-blur-md">
 
       {/* Brand / Logo Area */}
-      <div className="h-[88px] flex items-center justify-center border-b border-white/10 shrink-0 w-full px-5 bg-[#0B0C0E]/50">
+      <div className="h-[88px] flex items-center justify-center border-b border-white/10 shrink-0 w-full px-5 bg-[#14110F]/50">
         <FairwayDrawsLogo variant="light" size="md" href="/dashboard" priority />
       </div>
 
@@ -60,25 +60,25 @@ export default function DashboardSidebar({ account }: DashboardSidebarProps) {
               className={cn(
                 "flex items-center gap-[12px] h-[42px] pl-[16px] pr-[16px] rounded-xl transition-all duration-200 group font-sans w-full",
                 isActive
-                  ? "bg-[#FF1E27]/15 border-l-4 border-[#FF1E27] text-white font-bold shadow-[0_0_15px_rgba(255,30,39,0.2)]"
-                  : "bg-transparent border-l-4 border-transparent text-[#8A92A0] hover:text-white hover:bg-white/5"
+                  ? "bg-[#D4A863]/15 border-l-4 border-[#D4A863] text-white font-bold shadow-[0_0_15px_rgba(212,168,99,0.2)]"
+                  : "bg-transparent border-l-4 border-transparent text-[#B6AA9C] hover:text-white hover:bg-white/5"
               )}
             >
-              <item.icon className={cn("w-5 h-5 shrink-0 transition-colors", isActive ? "text-[#FF1E27]" : "text-[#8A92A0] group-hover:text-white")} />
+              <item.icon className={cn("w-5 h-5 shrink-0 transition-colors", isActive ? "text-[#D4A863]" : "text-[#B6AA9C] group-hover:text-white")} />
               <span className={cn(
                 "text-[14px] font-medium leading-[normal] truncate",
-                isActive ? "text-white font-bold" : "text-[#8A92A0] group-hover:text-white"
+                isActive ? "text-white font-bold" : "text-[#B6AA9C] group-hover:text-white"
               )}>
                 {item.label}
               </span>
 
               {displayBadge !== undefined && (
                 displayBadge === true ? (
-                  <span className="ml-auto w-2 h-2 rounded-full bg-[#FF1E27] shadow-[0_0_8px_rgba(255,30,39,0.8)]" />
+                  <span className="ml-auto w-2 h-2 rounded-full bg-[#94632F] shadow-[0_0_8px_rgba(212,168,99,0.8)]" />
                 ) : (
                   <span className={cn(
                     "ml-auto text-[10px] font-bold px-2 py-0.5 rounded-full min-w-[20px] text-center",
-                    isActive ? "bg-[#FF1E27] text-white" : "bg-white/10 text-white border border-white/10"
+                    isActive ? "bg-[#94632F] text-white" : "bg-white/10 text-white border border-white/10"
                   )}>
                     {displayBadge}
                   </span>
@@ -105,9 +105,9 @@ export default function DashboardSidebar({ account }: DashboardSidebarProps) {
       </nav>
 
       {/* Profile Section (Bottom) */}
-      <div className="border-t border-white/10 w-full shrink-0 bg-[#0B0C0E]/70">
+      <div className="border-t border-white/10 w-full shrink-0 bg-[#14110F]/70">
         <div className="flex items-center gap-[12px] pb-[17px] pt-[16px] px-[20px] w-full cursor-pointer hover:bg-white/5 transition-colors">
-          <div className="w-[42px] h-[42px] shrink-0 rounded-full border border-white/15 bg-[#181B26] flex items-center justify-center relative overflow-hidden shadow-md">
+          <div className="w-[42px] h-[42px] shrink-0 rounded-full border border-white/15 bg-[#302820] flex items-center justify-center relative overflow-hidden shadow-md">
              {/* eslint-disable-next-line @next/next/no-img-element */}
              <img
                src={account.avatar}
@@ -123,12 +123,12 @@ export default function DashboardSidebar({ account }: DashboardSidebarProps) {
               {account.name}
             </span>
             <div className="mt-1">
-              <span className="inline-flex items-center justify-center px-[8px] h-[18px] rounded-full border border-[#FF1E27]/40 bg-[#FF1E27]/10 text-[#FF1E27] text-[10px] font-black font-heading uppercase tracking-wide">
+              <span className="inline-flex items-center justify-center px-[8px] h-[18px] rounded-full border border-[#D4A863]/40 bg-[#D4A863]/10 text-[#D4A863] text-[10px] font-black font-heading uppercase tracking-wide">
                 {account.role === "host" ? "Verified Host" : `${account.role} Account`}
               </span>
             </div>
           </div>
-          <svg className="w-4 h-4 shrink-0 text-[#8A92A0]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+          <svg className="w-4 h-4 shrink-0 text-[#B6AA9C]" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>
         </div>

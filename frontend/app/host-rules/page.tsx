@@ -15,20 +15,20 @@ export default function HostRulesPage() {
   return (
     <>
       <WebsiteNavbar />
-      <main className="flex-grow bg-[#0B0C0E] bg-tachometer-grid pt-28 pb-24 text-white selection:bg-[#FF1E27] selection:text-white">
+      <main className="flex-grow bg-[#14110F] bg-tachometer-grid pt-28 pb-24 text-white selection:bg-[#94632F] selection:text-white">
         <div className="container-custom max-w-4xl mx-auto px-4">
           <Link
             href="/"
-            className="text-xs font-semibold text-[#8A92A0] hover:text-white transition-colors inline-flex items-center gap-1.5 mb-8"
+            className="text-xs font-semibold text-[#B6AA9C] hover:text-white transition-colors inline-flex items-center gap-1.5 mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Home
           </Link>
 
-          <div className="rounded-2xl border border-white/10 bg-[#12141C] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="rounded-2xl border border-white/10 bg-[#211C18] p-6 sm:p-10 shadow-2xl relative overflow-hidden">
             {/* Header accent */}
             <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27]">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#D4A863]/10 border border-[#D4A863]/30 text-[#D4A863]">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 Verified Merchant Standard
               </span>
@@ -38,16 +38,16 @@ export default function HostRulesPage() {
               Host Rules &amp; Operational Standards
             </h1>
 
-            <p className="font-sans text-sm text-[#8A92A0] leading-relaxed mb-8">
+            <p className="font-sans text-sm text-[#B6AA9C] leading-relaxed mb-8">
               As a Verified Host on <strong className="text-white">Tuned Draws</strong>, you are expected to maintain the highest standards of integrity, transparency, and timely customer service. Please review our mandatory guidelines below.
             </p>
 
             {/* Operational Standards Grid */}
-            <div className="space-y-6 text-sm text-[#8A92A0] leading-relaxed font-sans">
+            <div className="space-y-6 text-sm text-[#B6AA9C] leading-relaxed font-sans">
               {/* Rule 1 */}
               <div className="p-5 rounded-xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
                 <div className="flex items-center gap-3 mb-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27] shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863] shrink-0">
                     <Award className="w-4 h-4" />
                   </div>
                   <h3 className="font-heading font-black text-base text-white uppercase tracking-wide">
@@ -105,12 +105,12 @@ export default function HostRulesPage() {
               </div>
 
               <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <p className="text-xs text-[#8A92A0]">
+                <p className="text-xs text-[#B6AA9C]">
                   Need guidance on host compliance or draw scheduling?
                 </p>
                 <Link
                   href="/contact"
-                  className="px-5 py-2.5 rounded-xl bg-[#FF1E27] hover:bg-[#B3000C] text-white font-heading font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(255,30,39,0.35)] shrink-0"
+                  className="px-5 py-2.5 rounded-xl bg-[#94632F] hover:bg-[#9B6A2F] text-white font-heading font-bold text-xs uppercase tracking-wider transition-all shadow-[0_0_15px_rgba(212,168,99,0.35)] shrink-0"
                 >
                   Contact Support Crew
                 </Link>

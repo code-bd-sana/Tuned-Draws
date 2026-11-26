@@ -23,8 +23,8 @@ const steps = [
     id: 2,
     title: "Admin Moderation & Quality Approval",
     role: "Admin",
-    badgeColor: "bg-[#FF1E27]/10 text-[#FF1E27] border-[#FF1E27]/30",
-    icon: <ShieldCheck className="w-5 h-5 text-[#FF1E27]" />,
+    badgeColor: "bg-[#D4A863]/10 text-[#D4A863] border-[#D4A863]/30",
+    icon: <ShieldCheck className="w-5 h-5 text-[#D4A863]" />,
     description: "Platform administrators review newly submitted competitions to audit prize documentation, rules, and regulatory compliance before publication.",
     details: [
       "Admin reviews pending submissions in the Moderation Queue.",
@@ -79,20 +79,20 @@ const steps = [
 
 export default function OverviewPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid font-sans text-white selection:bg-[#FF1E27] selection:text-white">
+    <div className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid font-sans text-white selection:bg-[#94632F] selection:text-white">
       <WebsiteNavbar />
 
       <main className="flex-grow pt-28 pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 sm:mb-20">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#D4A863]/10 border border-[#D4A863]/30 text-[#D4A863] mb-3">
               Platform Architecture
             </span>
             <h1 className="text-4xl md:text-5xl font-heading font-black text-white uppercase tracking-tight mb-4">
               Lifecycle &amp; System Flow
             </h1>
-            <p className="text-sm md:text-base text-[#8A92A0] max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-[#B6AA9C] max-w-2xl mx-auto leading-relaxed">
               Interactive high-level overview of the Tuned Draws platform. Understand how Hosts, Admins, and Entrants interact securely from launch to prize delivery.
             </p>
           </div>
@@ -105,19 +105,19 @@ export default function OverviewPage() {
                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group"
               >
                 {/* Timeline Icon */}
-                <div className="flex items-center justify-center w-11 h-11 rounded-2xl border border-white/15 bg-[#12141C] shadow-2xl shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-transform duration-300 group-hover:scale-110">
+                <div className="flex items-center justify-center w-11 h-11 rounded-2xl border border-white/15 bg-[#211C18] shadow-2xl shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 transition-transform duration-300 group-hover:scale-110">
                   {step.icon}
                 </div>
 
                 {/* Timeline Card */}
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 sm:p-7 rounded-2xl bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 shadow-xl transition-all duration-300 relative overflow-hidden">
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 sm:p-7 rounded-2xl bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 shadow-xl transition-all duration-300 relative overflow-hidden">
                   <div className="flex items-center justify-between mb-3.5">
                     <span
                       className={`text-[10px] font-heading font-black uppercase tracking-wider px-2.5 py-1 rounded-full border ${step.badgeColor}`}
                     >
                       {step.role}
                     </span>
-                    <span className="font-heading font-black text-xs text-[#8A92A0]">
+                    <span className="font-heading font-black text-xs text-[#B6AA9C]">
                       Step 0{step.id}
                     </span>
                   </div>
@@ -126,14 +126,14 @@ export default function OverviewPage() {
                     {step.title}
                   </h3>
 
-                  <p className="text-xs text-[#8A92A0] leading-relaxed mb-4">
+                  <p className="text-xs text-[#B6AA9C] leading-relaxed mb-4">
                     {step.description}
                   </p>
 
                   <ul className="space-y-1.5 pt-3 border-t border-white/5">
                     {step.details.map((detail, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-[11px] text-[#D1D5DB]">
-                        <span className="text-[#FF1E27] font-bold mt-0.5">•</span>
+                      <li key={idx} className="flex items-start gap-2 text-[11px] text-[#E5DCCD]">
+                        <span className="text-[#D4A863] font-bold mt-0.5">•</span>
                         <span>{detail}</span>
                       </li>
                     ))}
@@ -144,11 +144,11 @@ export default function OverviewPage() {
           </div>
 
           {/* Bottom Callout */}
-          <div className="mt-20 p-8 rounded-2xl bg-[#12141C] border border-white/10 text-center max-w-2xl mx-auto shadow-2xl">
+          <div className="mt-20 p-8 rounded-2xl bg-[#211C18] border border-white/10 text-center max-w-2xl mx-auto shadow-2xl">
             <h3 className="font-heading font-black text-2xl text-white uppercase tracking-tight mb-2">
               Ready to Experience Tuned Draws?
             </h3>
-            <p className="text-xs text-[#8A92A0] mb-6">
+            <p className="text-xs text-[#B6AA9C] mb-6">
               Browse live competitions or apply to become an authorized hosting merchant.
             </p>
             <div className="flex items-center justify-center gap-3 flex-wrap">

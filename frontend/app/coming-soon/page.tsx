@@ -24,9 +24,9 @@ function ComingSoonContent() {
     : 'EXPERIENCE';
 
   return (
-    <div className="min-h-screen bg-[#07080A] text-[#F3F4F6] relative overflow-hidden flex flex-col justify-between selection:bg-[#FF1E27] selection:text-white">
+    <div className="min-h-screen bg-[#07080A] text-[#F3F4F6] relative overflow-hidden flex flex-col justify-between selection:bg-[#94632F] selection:text-white">
       {/* Cinematic studio overhead lighting falloff */}
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#FF1E27]/12 via-[#B3000C]/5 to-transparent blur-[140px] -z-0" />
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#D4A863]/12 via-[#9B6A2F]/5 to-transparent blur-[140px] -z-0" />
       <div className="pointer-events-none absolute -bottom-40 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-gradient-to-t from-white/[0.03] to-transparent blur-[120px] -z-0" />
       
       {/* Ambient micro-grid backdrop */}
@@ -65,12 +65,12 @@ function ComingSoonContent() {
           {/* Main Smoked 3D Card */}
           <div className="card-3d-cinema p-8 sm:p-12 md:p-14 relative overflow-hidden text-center">
             {/* Top red specular line accent */}
-            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#FF1E27] to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#D4A863] to-transparent" />
 
             {/* Status Pill Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.08] shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] mb-6">
-              <Gauge className="w-4 h-4 text-[#FF1E27] animate-spin" style={{ animationDuration: '6s' }} />
-              <span className="text-[11px] font-heading font-bold uppercase tracking-widest text-[#D1D5DB]">
+              <Gauge className="w-4 h-4 text-[#D4A863] animate-spin" style={{ animationDuration: '6s' }} />
+              <span className="text-[11px] font-heading font-bold uppercase tracking-widest text-[#E5DCCD]">
                 CALIBRATING {formattedTarget} ARENA
               </span>
             </div>
@@ -89,7 +89,7 @@ function ComingSoonContent() {
             <div className="pt-8 border-t border-white/[0.08] flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <Link
                 href="/"
-                className="btn-cinema-red px-6 py-3 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(255,30,39,0.35)]"
+                className="btn-cinema-red px-6 py-3 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(212,168,99,0.35)]"
               >
                 <ArrowLeft className="w-4 h-4" />
                 Return to Live Draws
@@ -99,7 +99,7 @@ function ComingSoonContent() {
                 href="/login"
                 className="btn-cinema-dark px-6 py-3 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider inline-flex items-center gap-2"
               >
-                <Lock className="w-4 h-4 text-[#FF1E27]" />
+                <Lock className="w-4 h-4 text-[#D4A863]" />
                 Sign In
               </Link>
 
@@ -107,7 +107,7 @@ function ComingSoonContent() {
                 href="/host/register"
                 className="btn-cinema-dark px-6 py-3 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider inline-flex items-center gap-2"
               >
-                <Flame className="w-4 h-4 text-[#FF1E27]" />
+                <Flame className="w-4 h-4 text-[#D4A863]" />
                 Host a Draw
               </Link>
             </div>
@@ -115,33 +115,33 @@ function ComingSoonContent() {
 
           {/* Three Feature Highlight Badges Below Card */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 mt-6">
-            <div className="rounded-xl bg-[#0B0C0E]/70 border border-white/[0.06] p-4 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#FF1E27] shrink-0">
+            <div className="rounded-xl bg-[#14110F]/70 border border-white/[0.06] p-4 flex items-center gap-3">
+              <div className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#D4A863] shrink-0">
                 <Car className="w-4 h-4" />
               </div>
               <div>
                 <p className="text-xs font-heading font-bold uppercase text-white">Performance Parts</p>
-                <p className="text-[11px] text-[#8A92A0]">Tuning & styling mods</p>
+                <p className="text-[11px] text-[#B6AA9C]">Tuning & styling mods</p>
               </div>
             </div>
 
-            <div className="rounded-xl bg-[#0B0C0E]/70 border border-white/[0.06] p-4 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#FF1E27] shrink-0">
+            <div className="rounded-xl bg-[#14110F]/70 border border-white/[0.06] p-4 flex items-center gap-3">
+              <div className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#D4A863] shrink-0">
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <div>
                 <p className="text-xs font-heading font-bold uppercase text-white">Certified Fair</p>
-                <p className="text-[11px] text-[#8A92A0]">RNG verified draws</p>
+                <p className="text-[11px] text-[#B6AA9C]">RNG verified draws</p>
               </div>
             </div>
 
-            <div className="rounded-xl bg-[#0B0C0E]/70 border border-white/[0.06] p-4 flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#FF1E27] shrink-0">
+            <div className="rounded-xl bg-[#14110F]/70 border border-white/[0.06] p-4 flex items-center gap-3">
+              <div className="w-9 h-9 rounded-lg bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-[#D4A863] shrink-0">
                 <Sparkles className="w-4 h-4" />
               </div>
               <div>
                 <p className="text-xs font-heading font-bold uppercase text-white">Instant Wins</p>
-                <p className="text-[11px] text-[#8A92A0]">Real-time key claims</p>
+                <p className="text-[11px] text-[#B6AA9C]">Real-time key claims</p>
               </div>
             </div>
           </div>
@@ -154,7 +154,7 @@ function ComingSoonContent() {
           <p className="text-xs text-[#6B7280]">
             © {new Date().getFullYear()} Tuned Draws. Certified Automotive Competitions Platform.
           </p>
-          <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-wider text-[#8A92A0]">
+          <div className="flex items-center gap-4 text-xs font-mono uppercase tracking-wider text-[#B6AA9C]">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <span className="text-white/20">·</span>
             <Link href="/login" className="hover:text-white transition-colors">Sign In</Link>

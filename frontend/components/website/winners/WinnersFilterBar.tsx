@@ -20,7 +20,7 @@ export default function WinnersFilterBar({
   setSortBy,
 }: WinnersFilterBarProps) {
   return (
-    <div className="sticky top-[60px] md:top-[68px] z-30 select-none border-y border-white/10 bg-[#0B0C0E]/90 py-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.7)] backdrop-blur-xl">
+    <div className="sticky top-[60px] md:top-[68px] z-30 select-none border-y border-white/10 bg-[#14110F]/90 py-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.7)] backdrop-blur-xl">
       <div className="container-custom flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
         
         {/* Timeline Toggles */}
@@ -30,8 +30,8 @@ export default function WinnersFilterBar({
             className={cn(
               "px-4 py-2 rounded-xl border font-heading text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer shrink-0 select-none",
               activeTab === "all"
-                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                : "border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-[#FF1E27]/40 hover:text-white"
+                ? "bg-[#94632F] border-[#D4A863] text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                : "border-white/10 bg-[#211C18] text-[#B6AA9C] hover:border-[#D4A863]/40 hover:text-white"
             )}
           >
             All Time
@@ -41,8 +41,8 @@ export default function WinnersFilterBar({
             className={cn(
               "px-4 py-2 rounded-xl border font-heading text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer shrink-0 select-none",
               activeTab === "month"
-                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                : "border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-[#FF1E27]/40 hover:text-white"
+                ? "bg-[#94632F] border-[#D4A863] text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                : "border-white/10 bg-[#211C18] text-[#B6AA9C] hover:border-[#D4A863]/40 hover:text-white"
             )}
           >
             This Month
@@ -52,8 +52,8 @@ export default function WinnersFilterBar({
             className={cn(
               "px-4 py-2 rounded-xl border font-heading text-xs font-black uppercase tracking-wider transition-all duration-200 cursor-pointer shrink-0 select-none",
               activeTab === "week"
-                ? "bg-[#FF1E27] border-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                : "border-white/10 bg-[#12141C] text-[#8A92A0] hover:border-[#FF1E27]/40 hover:text-white"
+                ? "bg-[#94632F] border-[#D4A863] text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                : "border-white/10 bg-[#211C18] text-[#B6AA9C] hover:border-[#D4A863]/40 hover:text-white"
             )}
           >
             This Week
@@ -65,15 +65,15 @@ export default function WinnersFilterBar({
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as "newest" | "oldest")}
-            className="w-full appearance-none rounded-xl border border-white/10 bg-[#12141C] px-4 py-2.5 font-heading text-xs font-bold uppercase tracking-wider text-[#D1D5DB] transition-colors duration-200 hover:border-[#FF1E27]/40 cursor-pointer outline-none focus:border-[#FF1E27]"
+            className="w-full appearance-none rounded-xl border border-white/10 bg-[#211C18] px-4 py-2.5 font-heading text-xs font-bold uppercase tracking-wider text-[#E5DCCD] transition-colors duration-200 hover:border-[#D4A863]/40 cursor-pointer outline-none focus:border-[#D4A863]"
             aria-label="Sort Winner Records"
           >
-            <option value="newest" className="bg-[#12141C] text-white">Newest First</option>
-            <option value="oldest" className="bg-[#12141C] text-white">Oldest First</option>
+            <option value="newest" className="bg-[#211C18] text-white">Newest First</option>
+            <option value="oldest" className="bg-[#211C18] text-white">Oldest First</option>
           </select>
           
           {/* Custom Select Chevron Icon */}
-          <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-[#FF1E27]">
+          <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-[#D4A863]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

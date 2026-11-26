@@ -55,7 +55,7 @@ export default function FeaturedCompetitionsSection() {
             <h2 className="text-4xl sm:text-5xl">
               Win Incredible <span className="italic text-[#ad824a]">Wedding Prizes</span>
             </h2>
-            <p className="font-sans text-sm text-[#8A92A0] mt-2 max-w-md">
+            <p className="font-sans text-sm text-[#B6AA9C] mt-2 max-w-md">
               Discover competitions and special prizes from wedding suppliers and hosts.
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function FeaturedCompetitionsSection() {
 
         {/* Carousel */}
         {loading ? (
-          <div className="flex flex-col items-center justify-center py-20 gap-4 text-[#8A92A0]">
+          <div className="flex flex-col items-center justify-center py-20 gap-4 text-[#B6AA9C]">
             <div className="animate-spin h-10 w-10 border-4 border-[#D4A863] border-t-transparent rounded-full shadow-[0_0_15px_rgba(212,168,99,0.5)]" />
             <p className="font-heading text-xs tracking-wider uppercase">Loading competitions…</p>
           </div>
@@ -78,7 +78,7 @@ export default function FeaturedCompetitionsSection() {
             {/* Left arrow */}
             <button
               onClick={() => scroll('left')}
-              className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-[#12141C] border border-white/10 shadow-2xl text-[#D1D5DB] hover:text-[#D4A863] hover:border-[#D4A863] hover:scale-105 transition-all opacity-0 group-hover:opacity-100 focus:outline-none cursor-pointer"
+              className="absolute -left-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-[#211C18] border border-white/10 shadow-2xl text-[#E5DCCD] hover:text-[#D4A863] hover:border-[#D4A863] hover:scale-105 transition-all opacity-0 group-hover:opacity-100 focus:outline-none cursor-pointer"
               aria-label="Scroll left"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
@@ -110,7 +110,7 @@ export default function FeaturedCompetitionsSection() {
             {/* Right arrow */}
             <button
               onClick={() => scroll('right')}
-              className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-[#12141C] border border-white/10 shadow-2xl text-[#D1D5DB] hover:text-[#D4A863] hover:border-[#D4A863] hover:scale-105 transition-all opacity-0 group-hover:opacity-100 focus:outline-none cursor-pointer"
+              className="absolute -right-5 top-1/2 -translate-y-1/2 z-10 hidden md:flex items-center justify-center w-12 h-12 rounded-xl bg-[#211C18] border border-white/10 shadow-2xl text-[#E5DCCD] hover:text-[#D4A863] hover:border-[#D4A863] hover:scale-105 transition-all opacity-0 group-hover:opacity-100 focus:outline-none cursor-pointer"
               aria-label="Scroll right"
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">

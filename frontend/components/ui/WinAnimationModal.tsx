@@ -34,9 +34,9 @@ function FastRollingNumbers() {
   }, []);
 
   return (
-    <div className="flex gap-2 items-center justify-center font-heading text-[40px] text-[#FF1E27] blur-[0.5px] opacity-90">
+    <div className="flex gap-2 items-center justify-center font-heading text-[40px] text-[#D4A863] blur-[0.5px] opacity-90">
       {numbers.map((num, i) => (
-        <div key={i} className="w-[50px] text-center bg-[#12141C] text-[#FF1E27] rounded-lg py-2 border border-[#FF1E27]/40 shadow-inner">
+        <div key={i} className="w-[50px] text-center bg-[#211C18] text-[#D4A863] rounded-lg py-2 border border-[#D4A863]/40 shadow-inner">
           {num}
         </div>
       ))}
@@ -83,19 +83,19 @@ export default function WinAnimationModal({ isOpen, onClose, onClaim, prizes }: 
 
   const modalContent = (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/85 backdrop-blur-md animate-in fade-in duration-300 p-4">
-      <div className="relative bg-[#12141C] border border-[#FF1E27]/40 p-1 rounded-[24px] shadow-[0_0_50px_rgba(255,30,39,0.3)] max-w-md w-full overflow-hidden animate-in zoom-in-95 duration-500 z-[10000]">
+      <div className="relative bg-[#211C18] border border-[#D4A863]/40 p-1 rounded-[24px] shadow-[0_0_50px_rgba(212,168,99,0.3)] max-w-md w-full overflow-hidden animate-in zoom-in-95 duration-500 z-[10000]">
         
         {/* Animated Glowing Border Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FF1E27] via-amber-400 to-[#B3000C] opacity-25 animate-[spin_4s_linear_infinite]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#D4A863] via-amber-400 to-[#9B6A2F] opacity-25 animate-[spin_4s_linear_infinite]" />
         
-        <div className="relative bg-[#12141C] p-6 sm:p-8 rounded-[22px] flex flex-col items-center text-center z-10 h-full w-full">
+        <div className="relative bg-[#211C18] p-6 sm:p-8 rounded-[22px] flex flex-col items-center text-center z-10 h-full w-full">
           
           {/* Subtle Dismiss X Button */}
           <button
             onClick={onClose}
             disabled={isClaiming}
             aria-label="Close"
-            className="absolute top-4 right-4 text-[#8A92A0] hover:text-white transition-colors p-1.5 rounded-full hover:bg-white/5 cursor-pointer z-20"
+            className="absolute top-4 right-4 text-[#B6AA9C] hover:text-white transition-colors p-1.5 rounded-full hover:bg-white/5 cursor-pointer z-20"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -103,8 +103,8 @@ export default function WinAnimationModal({ isOpen, onClose, onClaim, prizes }: 
           </button>
 
           {/* Header Icon */}
-          <div className="w-16 h-16 rounded-full bg-[#1A1D27] border border-[#FF1E27]/40 flex items-center justify-center mb-5 shadow-[0_0_20px_rgba(255,30,39,0.3)]">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8 text-[#FF1E27]">
+          <div className="w-16 h-16 rounded-full bg-[#302820] border border-[#D4A863]/40 flex items-center justify-center mb-5 shadow-[0_0_20px_rgba(212,168,99,0.3)]">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8 text-[#D4A863]">
               <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
             </svg>
           </div>
@@ -113,12 +113,12 @@ export default function WinAnimationModal({ isOpen, onClose, onClaim, prizes }: 
             {stage === "rolling" ? "Checking Tickets..." : "Congratulations!"}
           </h2>
           
-          <p className="font-sans text-[12px] sm:text-[13px] text-[#FF1E27] mb-6 uppercase tracking-[1.5px] font-bold">
+          <p className="font-sans text-[12px] sm:text-[13px] text-[#D4A863] mb-6 uppercase tracking-[1.5px] font-bold">
             {stage === "rolling" ? "Locating Instant Wins" : `You won ${prizes.length} Instant Prize${prizes.length > 1 ? 's' : ''}!`}
           </p>
 
           {/* Roller / Prize Display */}
-          <div className="w-full bg-[#1A1D27] border border-white/10 rounded-xl p-4 sm:p-5 mb-6 relative overflow-hidden min-h-[120px] max-h-[160px] flex items-center justify-center">
+          <div className="w-full bg-[#302820] border border-white/10 rounded-xl p-4 sm:p-5 mb-6 relative overflow-hidden min-h-[120px] max-h-[160px] flex items-center justify-center">
             
             {/* The Slot Machine "Spinning" Effect */}
             {stage === "rolling" ? (
@@ -128,18 +128,18 @@ export default function WinAnimationModal({ isOpen, onClose, onClaim, prizes }: 
             ) : (
               <div className="w-full flex flex-col gap-2.5 max-h-[140px] overflow-y-auto custom-scrollbar animate-in slide-in-from-bottom-4 duration-500 fade-in py-1">
                 {prizes.map((prize, idx) => (
-                  <div key={idx} className="flex justify-between items-center bg-[#12141C] border border-[#FF1E27]/30 p-3 rounded-lg shadow-sm">
+                  <div key={idx} className="flex justify-between items-center bg-[#211C18] border border-[#D4A863]/30 p-3 rounded-lg shadow-sm">
                     <div className="flex flex-col text-left">
                       <span className="font-heading font-bold text-white text-sm sm:text-base leading-snug">
                         {prize.title}
                       </span>
                       {prize.rrpValue ? (
-                        <span className="font-sans text-[#8A92A0] text-[11px] font-medium">
+                        <span className="font-sans text-[#B6AA9C] text-[11px] font-medium">
                           Value: £{prize.rrpValue.toLocaleString()}
                         </span>
                       ) : null}
                     </div>
-                    <span className="font-sans text-white bg-[#FF1E27] px-2.5 py-1 rounded-md text-[11px] uppercase font-bold tracking-wider shrink-0 ml-2 shadow-xs">
+                    <span className="font-sans text-white bg-[#94632F] px-2.5 py-1 rounded-md text-[11px] uppercase font-bold tracking-wider shrink-0 ml-2 shadow-xs">
                       Ticket #{prize.ticketNumber}
                     </span>
                   </div>
@@ -156,8 +156,8 @@ export default function WinAnimationModal({ isOpen, onClose, onClaim, prizes }: 
             disabled={stage === "rolling" || isClaiming}
             className={`w-full h-12 rounded-[10px] font-heading font-bold text-[15px] uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer ${
               stage === "rolling" || isClaiming
-                ? "bg-[#1A1D27] text-[#8A92A0] cursor-not-allowed border border-white/10"
-                : "bg-[#FF1E27] hover:bg-[#B3000C] text-white shadow-[0_0_20px_rgba(255,30,39,0.3)] hover:shadow-[0_0_30px_rgba(255,30,39,0.5)] transform hover:-translate-y-0.5"
+                ? "bg-[#302820] text-[#B6AA9C] cursor-not-allowed border border-white/10"
+                : "bg-[#94632F] hover:bg-[#9B6A2F] text-white shadow-[0_0_20px_rgba(212,168,99,0.3)] hover:shadow-[0_0_30px_rgba(212,168,99,0.5)] transform hover:-translate-y-0.5"
             }`}
           >
             {isClaiming ? (

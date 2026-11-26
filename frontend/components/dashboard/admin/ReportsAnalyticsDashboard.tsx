@@ -21,8 +21,8 @@ import {
 const CustomTooltip = ({ active, payload, label, prefix = "", suffix = "" }: any) => {
   if (active && payload && payload.length) {
     return (
-      <div className="bg-[#1A1D27] border border-white/15 rounded-xl p-3 shadow-2xl font-sans">
-        <p className="text-xs font-bold text-[#8A92A0] mb-0.5">{label}</p>
+      <div className="bg-[#302820] border border-white/15 rounded-xl p-3 shadow-2xl font-sans">
+        <p className="text-xs font-bold text-[#B6AA9C] mb-0.5">{label}</p>
         <p className="font-heading font-black text-sm text-white">
           {prefix}{payload[0].value.toLocaleString()}{suffix}
         </p>
@@ -33,7 +33,7 @@ const CustomTooltip = ({ active, payload, label, prefix = "", suffix = "" }: any
 };
 
 const DEFAULT_CATEGORY_COLORS = [
-  "#FF1E27",
+  "#D4A863",
   "#F59E0B",
   "#3B82F6",
   "#10B981",
@@ -70,19 +70,19 @@ export default function ReportsAnalyticsDashboard() {
           <h2 className="font-heading font-black text-xl text-white uppercase tracking-tight">
             Platform Analytics & Insights
           </h2>
-          <p className="font-sans text-xs text-[#8A92A0]">
+          <p className="font-sans text-xs text-[#B6AA9C]">
             Performance breakdown across sales, demographics, and operations
           </p>
         </div>
-        <div className="flex items-center gap-1.5 bg-[#12141C] border border-white/10 rounded-xl p-1">
+        <div className="flex items-center gap-1.5 bg-[#211C18] border border-white/10 rounded-xl p-1">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setTimeFilter(filter)}
               className={`px-3.5 py-1.5 rounded-lg font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
                 timeFilter === filter
-                  ? "bg-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.35)]"
-                  : "text-[#8A92A0] hover:text-white hover:bg-white/5"
+                  ? "bg-[#94632F] text-white shadow-[0_0_12px_rgba(212,168,99,0.35)]"
+                  : "text-[#B6AA9C] hover:text-white hover:bg-white/5"
               }`}
             >
               {filter}
@@ -94,12 +94,12 @@ export default function ReportsAnalyticsDashboard() {
       {/* Charts Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mb-4">
         {/* Revenue Trend */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
           <div className="flex items-center justify-between mb-4">
             <h3 className="font-heading font-black text-base text-white uppercase tracking-tight">
               Revenue Trend
             </h3>
-            <span className="px-2 py-0.5 rounded-md bg-[#FF1E27]/10 text-[#FF1E27] text-[10px] font-bold uppercase">
+            <span className="px-2 py-0.5 rounded-md bg-[#D4A863]/10 text-[#D4A863] text-[10px] font-bold uppercase">
               Sales Volume
             </span>
           </div>
@@ -111,8 +111,8 @@ export default function ReportsAnalyticsDashboard() {
                 <LineChart data={revenueData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <defs>
                     <linearGradient id="redLineGradient" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#FF1E27" />
-                      <stop offset="100%" stopColor="#B3000C" />
+                      <stop offset="0%" stopColor="#D4A863" />
+                      <stop offset="100%" stopColor="#9B6A2F" />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
@@ -120,7 +120,7 @@ export default function ReportsAnalyticsDashboard() {
                     dataKey="name"
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                     dy={10}
                   />
                   <YAxis hide />
@@ -131,7 +131,7 @@ export default function ReportsAnalyticsDashboard() {
                     stroke="url(#redLineGradient)"
                     strokeWidth={2.5}
                     dot={false}
-                    activeDot={{ r: 6, fill: "#FF1E27", stroke: "#FFFFFF", strokeWidth: 2 }}
+                    activeDot={{ r: 6, fill: "#D4A863", stroke: "#FFFFFF", strokeWidth: 2 }}
                   />
                 </LineChart>
               </ResponsiveContainer>
@@ -140,12 +140,12 @@ export default function ReportsAnalyticsDashboard() {
         </div>
 
         {/* Sales by Category */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
           <div className="flex items-center justify-between mb-2">
             <h3 className="font-heading font-black text-base text-white uppercase tracking-tight">
               Sales by Category
             </h3>
-            <span className="text-[11px] text-[#8A92A0]">Share %</span>
+            <span className="text-[11px] text-[#B6AA9C]">Share %</span>
           </div>
           <div className="flex-1 w-full flex items-center justify-center relative min-h-0">
             {isLoading ? (
@@ -180,7 +180,7 @@ export default function ReportsAnalyticsDashboard() {
                         className="w-2.5 h-2.5 rounded-full shrink-0 shadow-sm"
                         style={{ backgroundColor: cat.color }}
                       />
-                      <span className="font-sans font-semibold text-xs text-[#8A92A0] w-[80px] truncate">
+                      <span className="font-sans font-semibold text-xs text-[#B6AA9C] w-[80px] truncate">
                         {cat.name}
                       </span>
                       <span className="font-heading font-bold text-xs text-white">
@@ -195,7 +195,7 @@ export default function ReportsAnalyticsDashboard() {
         </div>
 
         {/* Most Popular Competitions */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
           <h3 className="font-heading font-black text-base text-white uppercase tracking-tight mb-4">
             Most Popular Raffles
           </h3>
@@ -203,14 +203,14 @@ export default function ReportsAnalyticsDashboard() {
             {isLoading ? (
               <div className="w-full h-full animate-pulse bg-white/5 rounded-xl" />
             ) : popularCompetitions.length === 0 ? (
-              <span className="text-xs text-[#8A92A0] text-center">No competition data recorded.</span>
+              <span className="text-xs text-[#B6AA9C] text-center">No competition data recorded.</span>
             ) : (
               popularCompetitions.map((comp, i) => {
                 const width = Math.max((comp.value / maxPopularValue) * 100, 5);
                 return (
                   <div key={i} className="flex flex-col gap-1 w-full">
                     <div className="flex items-center justify-between w-full">
-                      <span className="font-sans font-semibold text-xs text-[#8A92A0] truncate max-w-[200px]">
+                      <span className="font-sans font-semibold text-xs text-[#B6AA9C] truncate max-w-[200px]">
                         {comp.name}
                       </span>
                       <span className="font-heading font-bold text-xs text-white">
@@ -219,7 +219,7 @@ export default function ReportsAnalyticsDashboard() {
                     </div>
                     <div className="w-full bg-white/5 h-2 rounded-full overflow-hidden border border-white/5">
                       <div
-                        className="h-full bg-[#FF1E27] rounded-full shadow-[0_0_8px_rgba(255,30,39,0.5)]"
+                        className="h-full bg-[#94632F] rounded-full shadow-[0_0_8px_rgba(212,168,99,0.5)]"
                         style={{ width: `${width}%` }}
                       />
                     </div>
@@ -231,7 +231,7 @@ export default function ReportsAnalyticsDashboard() {
         </div>
 
         {/* User Growth Over Time */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
           <h3 className="font-heading font-black text-base text-white uppercase tracking-tight mb-4">
             User Growth Over Time
           </h3>
@@ -246,8 +246,8 @@ export default function ReportsAnalyticsDashboard() {
                 >
                   <defs>
                     <linearGradient id="userGrowthRed" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#FF1E27" stopOpacity={0.35} />
-                      <stop offset="95%" stopColor="#FF1E27" stopOpacity={0.0} />
+                      <stop offset="5%" stopColor="#D4A863" stopOpacity={0.35} />
+                      <stop offset="95%" stopColor="#D4A863" stopOpacity={0.0} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
@@ -255,7 +255,7 @@ export default function ReportsAnalyticsDashboard() {
                     dataKey="name"
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                     dy={10}
                   />
                   <YAxis hide />
@@ -263,11 +263,11 @@ export default function ReportsAnalyticsDashboard() {
                   <Area
                     type="monotone"
                     dataKey="users"
-                    stroke="#FF1E27"
+                    stroke="#D4A863"
                     strokeWidth={2.5}
                     fillOpacity={1}
                     fill="url(#userGrowthRed)"
-                    activeDot={{ r: 6, fill: "#FF1E27", stroke: "#FFFFFF", strokeWidth: 2 }}
+                    activeDot={{ r: 6, fill: "#D4A863", stroke: "#FFFFFF", strokeWidth: 2 }}
                   />
                 </AreaChart>
               </ResponsiveContainer>
@@ -276,7 +276,7 @@ export default function ReportsAnalyticsDashboard() {
         </div>
 
         {/* Host Performance */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
           <h3 className="font-heading font-black text-base text-white uppercase tracking-tight mb-4">
             Host Merchant Performance
           </h3>
@@ -284,16 +284,16 @@ export default function ReportsAnalyticsDashboard() {
             {isLoading ? (
               <div className="w-full h-full animate-pulse bg-white/5 rounded-xl" />
             ) : hostPerformance.length === 0 ? (
-              <span className="text-xs text-[#8A92A0] text-center">No host performance metrics.</span>
+              <span className="text-xs text-[#B6AA9C] text-center">No host performance metrics.</span>
             ) : (
               hostPerformance.map((host, i) => (
                 <div key={i} className="flex items-center gap-3 w-full">
-                  <span className="font-sans font-semibold text-xs text-[#8A92A0] w-[90px] text-right truncate shrink-0">
+                  <span className="font-sans font-semibold text-xs text-[#B6AA9C] w-[90px] text-right truncate shrink-0">
                     {host.name}
                   </span>
                   <div className="flex-1 h-5 bg-white/5 border border-white/10 rounded-lg overflow-hidden flex items-center group">
                     <div
-                      className="h-full bg-gradient-to-r from-[#FF1E27] to-[#B3000C] rounded-r-lg transition-all duration-500 ease-out flex items-center justify-end pr-2"
+                      className="h-full bg-gradient-to-r from-[#D4A863] to-[#9B6A2F] rounded-r-lg transition-all duration-500 ease-out flex items-center justify-end pr-2"
                       style={{ width: `${host.percent}%` }}
                     />
                   </div>
@@ -307,7 +307,7 @@ export default function ReportsAnalyticsDashboard() {
         </div>
 
         {/* Geographic Entry Distribution */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col h-[330px] shadow-xl">
           <h3 className="font-heading font-black text-base text-white uppercase tracking-tight mb-4">
             Geographic Entry Distribution
           </h3>
@@ -315,14 +315,14 @@ export default function ReportsAnalyticsDashboard() {
             {isLoading ? (
               <div className="w-full h-full animate-pulse bg-white/5 rounded-xl" />
             ) : geographicData.length === 0 ? (
-              <span className="text-xs text-[#8A92A0] text-center">No geographic distribution recorded.</span>
+              <span className="text-xs text-[#B6AA9C] text-center">No geographic distribution recorded.</span>
             ) : (
               geographicData.map((geo, i) => {
                 const width = Math.max(geo.value, 2);
                 return (
                   <div key={i} className="flex flex-col gap-1 w-full">
                     <div className="flex items-center justify-between w-full">
-                      <span className="font-sans font-semibold text-xs text-[#8A92A0]">
+                      <span className="font-sans font-semibold text-xs text-[#B6AA9C]">
                         {geo.name}
                       </span>
                       <span className="font-heading font-bold text-xs text-white">

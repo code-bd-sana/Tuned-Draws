@@ -22,7 +22,7 @@ export default function MobileBottomDock() {
   const dashboardHome = getDashboardHome();
 
   return (
-    <div className={cn("fixed bottom-0 left-0 right-0 z-40 block lg:hidden bg-[#0B0C0E]/95 backdrop-blur-xl border-t border-white/10 shadow-[0_-5px_25px_rgba(0,0,0,0.7)]", pathname === '/' && 'wedding-home-dock')}>
+    <div className={cn("fixed bottom-0 left-0 right-0 z-40 block lg:hidden bg-[#14110F]/95 backdrop-blur-xl border-t border-white/10 shadow-[0_-5px_25px_rgba(0,0,0,0.7)]", pathname === '/' && 'wedding-home-dock')}>
       <div className="flex items-center justify-around h-16 px-2 max-w-md mx-auto">
         {/* Tab 1: Home */}
         <Link
@@ -30,8 +30,8 @@ export default function MobileBottomDock() {
           className={cn(
             'flex flex-col items-center justify-center flex-1 h-full py-1 text-center transition-all duration-200',
             pathname === '/'
-              ? 'text-[#FF1E27] font-bold scale-105'
-              : 'text-[#8A92A0] hover:text-white'
+              ? 'text-[#D4A863] font-bold scale-105'
+              : 'text-[#B6AA9C] hover:text-white'
           )}
         >
           <svg
@@ -56,8 +56,8 @@ export default function MobileBottomDock() {
           className={cn(
             'flex flex-col items-center justify-center flex-1 h-full py-1 text-center transition-all duration-200',
             pathname === '/live-raffles' || pathname.startsWith('/live-raffles')
-              ? 'text-[#FF1E27] font-bold scale-105'
-              : 'text-[#8A92A0] hover:text-white'
+              ? 'text-[#D4A863] font-bold scale-105'
+              : 'text-[#B6AA9C] hover:text-white'
           )}
         >
           <svg
@@ -85,8 +85,8 @@ export default function MobileBottomDock() {
             className={cn(
               'w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform group-active:scale-95 border shadow-lg',
               isDashboardRoute
-                ? 'bg-[#12141C] border-[#FF1E27]/50 text-[#FF1E27]'
-                : 'btn-racing-red text-white border-white/20 shadow-[0_6px_20px_rgba(255,30,39,0.5)]'
+                ? 'bg-[#211C18] border-[#D4A863]/50 text-[#D4A863]'
+                : 'btn-racing-red text-white border-white/20 shadow-[0_6px_20px_rgba(212,168,99,0.5)]'
             )}
           >
             <svg
@@ -99,7 +99,7 @@ export default function MobileBottomDock() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 5.25v2.25m7.5-2.25v2.25M6 9.75h12M7.5 19.5h9M8.25 15.75h7.5M12 3.75c-1.036 0-1.875.84-1.875 1.875v.75h3.75v-.75C13.875 4.59 13.036 3.75 12 3.75ZM6 9.75h12l-1.125 8.25a1.5 1.5 0 0 1-1.486 1.298H8.611A1.5 1.5 0 0 1 7.125 18L6 9.75Z" />
             </svg>
           </div>
-          <span className="text-[9px] font-heading font-black uppercase tracking-wider text-[#FF1E27] mt-0.5">
+          <span className="text-[9px] font-heading font-black uppercase tracking-wider text-[#D4A863] mt-0.5">
             {isDashboardRoute ? 'Public Site' : 'DASHBOARD'}
           </span>
         </Link>
@@ -110,8 +110,8 @@ export default function MobileBottomDock() {
           className={cn(
             'flex flex-col items-center justify-center flex-1 h-full py-1 text-center transition-all duration-200',
             pathname === '/winners'
-              ? 'text-[#FF1E27] font-bold scale-105'
-              : 'text-[#8A92A0] hover:text-white'
+              ? 'text-[#D4A863] font-bold scale-105'
+              : 'text-[#B6AA9C] hover:text-white'
           )}
         >
           <svg
@@ -136,8 +136,8 @@ export default function MobileBottomDock() {
           className={cn(
             'flex flex-col items-center justify-center flex-1 h-full py-1 text-center transition-all duration-200',
             pathname === '/dashboard/user/tickets' || pathname === '/login'
-              ? 'text-[#FF1E27] font-bold scale-105'
-              : 'text-[#8A92A0] hover:text-white'
+              ? 'text-[#D4A863] font-bold scale-105'
+              : 'text-[#B6AA9C] hover:text-white'
           )}
         >
           <svg

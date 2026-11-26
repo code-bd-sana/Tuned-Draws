@@ -94,14 +94,14 @@ export default function UserTicketsPage() {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-white/10">
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27] font-bold shadow-xs">
+            <div className="w-8 h-8 rounded-xl bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863] font-bold shadow-xs">
               🎟️
             </div>
             <h1 className="font-heading font-black text-2xl lg:text-3xl text-white uppercase tracking-tight">
               My Tickets &amp; Orders
             </h1>
           </div>
-          <p className="font-sans text-xs text-[#8A92A0]">
+          <p className="font-sans text-xs text-[#B6AA9C]">
             View all your confirmed ticket numbers, pending checkout orders, and competition outcomes.
           </p>
         </div>
@@ -118,8 +118,8 @@ export default function UserTicketsPage() {
               <span className="font-heading font-black text-sm text-amber-300 uppercase tracking-tight">
                 Attention Required ({unpaidOrdersCount} Unpaid {unpaidOrdersCount === 1 ? 'Order' : 'Orders'})
               </span>
-              <span className="font-sans text-xs text-[#8A92A0]">
-                You have <strong className="font-bold text-white underline decoration-[#FF1E27]">{unpaidOrdersCount} pending order(s)</strong> waiting for checkout. Complete payment before tickets sell out!
+              <span className="font-sans text-xs text-[#B6AA9C]">
+                You have <strong className="font-bold text-white underline decoration-[#D4A863]">{unpaidOrdersCount} pending order(s)</strong> waiting for checkout. Complete payment before tickets sell out!
               </span>
             </div>
           </div>
@@ -137,9 +137,9 @@ export default function UserTicketsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full">
         
         {/* Total Tickets Owned */}
-        <div className="bg-[#12141C] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all">
+        <div className="bg-[#211C18] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all">
           <div className="flex items-center justify-between">
-            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Confirmed Tickets
             </p>
             <div className="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 text-sm">
@@ -150,19 +150,19 @@ export default function UserTicketsPage() {
             <p className="font-heading font-black text-3xl lg:text-4xl leading-none text-white">
               {totalOwned}
             </p>
-            <span className="font-sans font-semibold text-xs text-[#8A92A0] bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full">
+            <span className="font-sans font-semibold text-xs text-[#B6AA9C] bg-white/5 border border-white/10 px-2.5 py-0.5 rounded-full">
               Lifetime entries
             </span>
           </div>
         </div>
 
         {/* Active Tickets */}
-        <div className="bg-[#12141C] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all">
+        <div className="bg-[#211C18] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all">
           <div className="flex items-center justify-between">
-            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Live Draw Tickets
             </p>
-            <div className="w-8 h-8 rounded-xl bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27] text-sm">
+            <div className="w-8 h-8 rounded-xl bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863] text-sm">
               🎯
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function UserTicketsPage() {
             <p className="font-heading font-black text-3xl lg:text-4xl leading-none text-white">
               {activeTickets}
             </p>
-            <span className="font-sans font-bold text-xs text-[#FF1E27] bg-[#FF1E27]/10 border border-[#FF1E27]/20 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
+            <span className="font-sans font-bold text-xs text-[#D4A863] bg-[#D4A863]/10 border border-[#D4A863]/20 px-2.5 py-0.5 rounded-full flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               Awaiting draw
             </span>
@@ -178,9 +178,9 @@ export default function UserTicketsPage() {
         </div>
 
         {/* Tickets in Won Competitions */}
-        <div className="bg-[#12141C] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all">
+        <div className="bg-[#211C18] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all">
           <div className="flex items-center justify-between">
-            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Won Prizes
             </p>
             <div className="w-8 h-8 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 text-sm">
@@ -198,11 +198,11 @@ export default function UserTicketsPage() {
         </div>
 
         {/* Pending Orders */}
-        <div className={`bg-[#12141C] border rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all ${
+        <div className={`bg-[#211C18] border rounded-2xl p-5 sm:p-6 flex flex-col gap-3 shadow-2xl backdrop-blur-md transition-all ${
           unpaidOrdersCount > 0 ? 'border-amber-500/40 bg-amber-500/5' : 'border-white/10 hover:border-white/20'
         }`}>
           <div className="flex items-center justify-between">
-            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <p className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Unpaid Orders
             </p>
             <div className="w-8 h-8 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 text-sm">
@@ -218,7 +218,7 @@ export default function UserTicketsPage() {
             <span className={`font-sans font-bold text-xs px-2.5 py-0.5 rounded-full ${
               unpaidOrdersCount > 0 
                 ? 'bg-amber-500/20 border border-amber-500/40 text-amber-300 font-black animate-pulse'
-                : 'bg-white/5 border border-white/10 text-[#8A92A0]'
+                : 'bg-white/5 border border-white/10 text-[#B6AA9C]'
             }`}>
               {unpaidOrdersCount > 0 ? "⚠️ Payment Pending" : "✓ All Paid"}
             </span>
@@ -232,15 +232,15 @@ export default function UserTicketsPage() {
           onClick={() => setActiveTab("tickets")}
           className={`py-3.5 px-5 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider border-b-2 transition-all cursor-pointer flex items-center gap-2.5 focus:outline-none focus-visible:outline-none ${
             activeTab === "tickets"
-              ? "border-[#FF1E27] text-white bg-[#FF1E27]/10 rounded-t-xl"
-              : "border-transparent text-[#8A92A0] hover:text-white hover:bg-white/5 rounded-t-xl"
+              ? "border-[#D4A863] text-white bg-[#D4A863]/10 rounded-t-xl"
+              : "border-transparent text-[#B6AA9C] hover:text-white hover:bg-white/5 rounded-t-xl"
           }`}
         >
           <span>🎟️ Confirmed Tickets</span>
           <span className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
             activeTab === "tickets"
-              ? "bg-[#FF1E27] text-white"
-              : "bg-white/5 border border-white/10 text-[#8A92A0]"
+              ? "bg-[#94632F] text-white"
+              : "bg-white/5 border border-white/10 text-[#B6AA9C]"
           }`}>
             {totalOwned}
           </span>
@@ -251,7 +251,7 @@ export default function UserTicketsPage() {
           className={`py-3.5 px-5 text-xs sm:text-sm font-heading font-bold uppercase tracking-wider border-b-2 transition-all cursor-pointer flex items-center gap-2.5 focus:outline-none focus-visible:outline-none ${
             activeTab === "pending"
               ? "border-amber-500 text-amber-300 bg-amber-500/10 rounded-t-xl"
-              : "border-transparent text-[#8A92A0] hover:text-white hover:bg-white/5 rounded-t-xl"
+              : "border-transparent text-[#B6AA9C] hover:text-white hover:bg-white/5 rounded-t-xl"
           }`}
         >
           <span className="flex items-center gap-1.5">
@@ -264,7 +264,7 @@ export default function UserTicketsPage() {
             className={`px-2.5 py-0.5 rounded-full text-[11px] font-bold ${
               unpaidOrdersCount > 0
                 ? "bg-amber-600 text-white shadow-xs"
-                : "bg-white/5 border border-white/10 text-[#8A92A0]"
+                : "bg-white/5 border border-white/10 text-[#B6AA9C]"
             }`}
           >
             {unpaidOrdersCount}
@@ -279,14 +279,14 @@ export default function UserTicketsPage() {
         /* PENDING ORDERS TAB */
         <div className="flex flex-col gap-5">
           {pendingOrders.length === 0 ? (
-            <div className="w-full bg-[#12141C] border border-white/10 rounded-2xl p-12 lg:p-16 text-center flex flex-col items-center justify-center gap-3 shadow-2xl backdrop-blur-md">
+            <div className="w-full bg-[#211C18] border border-white/10 rounded-2xl p-12 lg:p-16 text-center flex flex-col items-center justify-center gap-3 shadow-2xl backdrop-blur-md">
               <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-3xl mb-1 shadow-2xs">
                 🎉
               </div>
               <p className="font-heading font-bold text-lg text-white">
                 No Pending Orders
               </p>
-              <p className="font-sans text-xs text-[#8A92A0] max-w-md leading-relaxed">
+              <p className="font-sans text-xs text-[#B6AA9C] max-w-md leading-relaxed">
                 You do not have any pending checkout orders. When you select tickets for a competition, any unpaid orders will safely be saved here.
               </p>
               <Link
@@ -305,15 +305,15 @@ export default function UserTicketsPage() {
               return (
                 <div
                   key={order.id}
-                  className="bg-[#12141C] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-7 shadow-2xl backdrop-blur-md flex flex-col gap-5 transition-all"
+                  className="bg-[#211C18] border border-white/10 hover:border-white/20 rounded-2xl p-5 sm:p-7 shadow-2xl backdrop-blur-md flex flex-col gap-5 transition-all"
                 >
                   {/* Order Top Bar */}
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-white/10">
                     <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-                      <span className="font-mono font-bold text-xs text-[#FF1E27] bg-[#FF1E27]/10 border border-[#FF1E27]/30 px-3 py-1.5 rounded-xl shadow-xs">
+                      <span className="font-mono font-bold text-xs text-[#D4A863] bg-[#D4A863]/10 border border-[#D4A863]/30 px-3 py-1.5 rounded-xl shadow-xs">
                         #{order.orderNumber ? order.orderNumber.slice(0, 16) : order.id.slice(0, 8)}
                       </span>
-                      <span className="font-sans text-xs text-[#8A92A0] flex items-center gap-1">
+                      <span className="font-sans text-xs text-[#B6AA9C] flex items-center gap-1">
                         📅 Initiated {format(new Date(order.createdAt), "dd MMM yyyy, HH:mm")}
                       </span>
                       <span className="px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 font-sans font-black text-[10px] uppercase tracking-wider shadow-xs flex items-center gap-1.5">
@@ -324,7 +324,7 @@ export default function UserTicketsPage() {
 
                     <div className="flex items-center justify-between md:justify-end gap-5 pt-2 md:pt-0 border-t md:border-t-0 border-white/10">
                       <div className="text-left md:text-right">
-                        <span className="font-sans text-[10px] font-bold text-[#8A92A0] uppercase tracking-wider block">Total Due</span>
+                        <span className="font-sans text-[10px] font-bold text-[#B6AA9C] uppercase tracking-wider block">Total Due</span>
                         <span className="font-heading font-black text-2xl text-white">
                           £{Number(order.amount).toFixed(2)}
                         </span>
@@ -336,7 +336,7 @@ export default function UserTicketsPage() {
                         className={`h-[44px] px-6 rounded-xl font-heading font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer focus:outline-none ${
                           canPay
                             ? "btn-glossy-red text-white hover:scale-102 active:scale-98 shadow-lg"
-                            : "bg-white/5 border border-white/10 text-[#8A92A0] cursor-not-allowed opacity-60"
+                            : "bg-white/5 border border-white/10 text-[#B6AA9C] cursor-not-allowed opacity-60"
                         }`}
                       >
                         {payingOrderId === order.id ? (
@@ -362,12 +362,12 @@ export default function UserTicketsPage() {
                     {order.items.map((item: any) => (
                       <div
                         key={item.raffleId}
-                        className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-[#0B0C0E]/70 border border-white/5 hover:bg-[#0B0C0E] transition-colors"
+                        className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-xl bg-[#14110F]/70 border border-white/5 hover:bg-[#14110F] transition-colors"
                       >
                         <div className="flex items-center gap-4 min-w-0">
                           <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-black/60 shrink-0 border border-white/10 shadow-xs">
                             <Image
-                              src={item.raffleImage || "/images/tuned-hero-bg.jpg"}
+                              src={item.raffleImage || "/images/wedding-hero.png"}
                               alt={item.raffleTitle}
                               fill
                               unoptimized
@@ -379,7 +379,7 @@ export default function UserTicketsPage() {
                             <h4 className="font-heading font-bold text-sm sm:text-base text-white truncate" title={item.raffleTitle}>
                               {item.raffleTitle}
                             </h4>
-                            <span className="font-sans font-semibold text-xs text-[#8A92A0]">
+                            <span className="font-sans font-semibold text-xs text-[#B6AA9C]">
                               {item.quantity} {item.quantity === 1 ? "ticket" : "tickets"} × £{Number(item.pricePerTicket).toFixed(2)}
                             </span>
                           </div>

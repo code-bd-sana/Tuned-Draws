@@ -40,21 +40,21 @@ export default function UserTransactionsPage() {
         <h1 className="font-heading font-black text-2xl lg:text-3xl text-white uppercase tracking-tight">
           Transaction History
         </h1>
-        <p className="font-sans text-xs text-[#8A92A0]">
+        <p className="font-sans text-xs text-[#B6AA9C]">
           Review all ticket purchases, invoice receipts, and pending checkout logs.
         </p>
       </div>
 
       {/* Top Summary Card */}
-      <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-2xl backdrop-blur-md">
+      <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 lg:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 shadow-2xl backdrop-blur-md">
         <div className="flex flex-col gap-2">
-          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+          <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
             Total Completed Purchases
           </span>
           <p className="font-heading font-black text-3xl lg:text-4xl leading-tight text-white">
             £{totalSpent.toFixed(2)}
           </p>
-          <span className="font-sans text-xs text-[#8A92A0]">
+          <span className="font-sans text-xs text-[#B6AA9C]">
             {completedCount} successful transactions
           </span>
         </div>
@@ -64,7 +64,7 @@ export default function UserTransactionsPage() {
             <span className="text-xl">⏳</span>
             <div>
               <strong className="font-bold text-white">{pendingCount} order(s) awaiting payment.</strong>
-              <div className="text-[11px] text-[#8A92A0] mt-0.5">
+              <div className="text-[11px] text-[#B6AA9C] mt-0.5">
                 Visit My Tickets to complete checkout before competitions sell out.
               </div>
             </div>
@@ -78,8 +78,8 @@ export default function UserTransactionsPage() {
           onClick={() => setFilter("all")}
           className={`px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
             filter === "all"
-              ? "bg-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.5)] border border-[#FF1E27]"
-              : "bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-white"
+              ? "bg-[#94632F] text-white shadow-[0_0_12px_rgba(212,168,99,0.5)] border border-[#D4A863]"
+              : "bg-[#211C18] border border-white/10 text-[#B6AA9C] hover:text-white"
           }`}
         >
           All ({transactions.length})
@@ -88,8 +88,8 @@ export default function UserTransactionsPage() {
           onClick={() => setFilter("completed")}
           className={`px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
             filter === "completed"
-              ? "bg-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.5)] border border-[#FF1E27]"
-              : "bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-white"
+              ? "bg-[#94632F] text-white shadow-[0_0_12px_rgba(212,168,99,0.5)] border border-[#D4A863]"
+              : "bg-[#211C18] border border-white/10 text-[#B6AA9C] hover:text-white"
           }`}
         >
           Completed ({completedCount})
@@ -99,7 +99,7 @@ export default function UserTransactionsPage() {
           className={`px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
             filter === "pending"
               ? "bg-amber-500/20 border border-amber-500/40 text-amber-300 shadow-xs"
-              : "bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-amber-400"
+              : "bg-[#211C18] border border-white/10 text-[#B6AA9C] hover:text-amber-400"
           }`}
         >
           Pending Payment ({pendingCount})
@@ -109,7 +109,7 @@ export default function UserTransactionsPage() {
           className={`px-4 py-1.5 rounded-full font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
             filter === "failed"
               ? "bg-red-500/20 border border-red-500/40 text-red-400 shadow-xs"
-              : "bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-red-400"
+              : "bg-[#211C18] border border-white/10 text-[#B6AA9C] hover:text-red-400"
           }`}
         >
           Failed
@@ -117,26 +117,26 @@ export default function UserTransactionsPage() {
       </div>
 
       {/* Transactions Data Table */}
-      <div className="w-full bg-[#12141C] border border-white/10 rounded-2xl p-6 overflow-x-auto shadow-2xl backdrop-blur-md">
+      <div className="w-full bg-[#211C18] border border-white/10 rounded-2xl p-6 overflow-x-auto shadow-2xl backdrop-blur-md">
         {isLoading ? (
           <div className="flex flex-col items-center justify-center py-16 gap-3">
-            <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
-            <p className="font-sans text-xs text-[#8A92A0]">Loading transaction records...</p>
+            <div className="w-8 h-8 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
+            <p className="font-sans text-xs text-[#B6AA9C]">Loading transaction records...</p>
           </div>
         ) : isError ? (
-          <div className="p-8 text-center text-[#FF1E27] font-sans text-sm">
+          <div className="p-8 text-center text-[#D4A863] font-sans text-sm">
             Failed to load transactions.
           </div>
         ) : filteredTransactions.length === 0 ? (
-          <div className="p-12 text-center text-[#8A92A0] font-sans text-xs flex flex-col items-center justify-center gap-2">
+          <div className="p-12 text-center text-[#B6AA9C] font-sans text-xs flex flex-col items-center justify-center gap-2">
             <span className="text-3xl">🧾</span>
             <p className="font-heading font-bold text-sm text-white">No transactions found</p>
-            <p className="text-[#8A92A0]">When you enter competitions, your payment records will be listed here.</p>
+            <p className="text-[#B6AA9C]">When you enter competitions, your payment records will be listed here.</p>
           </div>
         ) : (
           <div className="min-w-[900px] flex flex-col">
             {/* Table Header Row */}
-            <div className="grid grid-cols-12 gap-4 pb-3 border-b border-white/10 font-sans text-[11px] font-bold text-[#8A92A0] uppercase tracking-wider">
+            <div className="grid grid-cols-12 gap-4 pb-3 border-b border-white/10 font-sans text-[11px] font-bold text-[#B6AA9C] uppercase tracking-wider">
               <div className="col-span-2 pl-4">Transaction ID</div>
               <div className="col-span-2">Date</div>
               <div className="col-span-4">Description</div>
@@ -153,12 +153,12 @@ export default function UserTransactionsPage() {
                   className="grid grid-cols-12 gap-4 py-4 items-center font-sans hover:bg-white/5 transition-colors rounded-xl"
                 >
                   {/* Transaction ID */}
-                  <div className="col-span-2 pl-4 font-mono font-bold text-xs text-[#FF1E27] truncate" title={transaction.transactionId}>
+                  <div className="col-span-2 pl-4 font-mono font-bold text-xs text-[#D4A863] truncate" title={transaction.transactionId}>
                     {transaction.transactionId}
                   </div>
 
                   {/* Date */}
-                  <div className="col-span-2 font-sans font-semibold text-xs text-[#8A92A0]">
+                  <div className="col-span-2 font-sans font-semibold text-xs text-[#B6AA9C]">
                     {transaction.date}
                   </div>
 
@@ -173,7 +173,7 @@ export default function UserTransactionsPage() {
                   </div>
 
                   {/* Payment Method */}
-                  <div className="col-span-2 text-center font-sans font-semibold text-xs text-[#8A92A0] uppercase flex justify-center items-center">
+                  <div className="col-span-2 text-center font-sans font-semibold text-xs text-[#B6AA9C] uppercase flex justify-center items-center">
                     {transaction.paymentMethod === "ADMIN_MANUAL" ? (
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 font-bold text-[11px] shadow-[0_0_10px_rgba(168,85,247,0.15)]">
                         <span>🛡️</span>
@@ -203,7 +203,7 @@ export default function UserTransactionsPage() {
                     )}
                     {transaction.status !== "completed" && transaction.status !== "pending" && transaction.status !== "failed" && (
                       <div className="px-3 py-1 rounded-full border border-white/10 bg-white/5 shadow-xs">
-                        <span className="text-[10px] font-bold text-[#8A92A0] uppercase tracking-wider">{transaction.status}</span>
+                        <span className="text-[10px] font-bold text-[#B6AA9C] uppercase tracking-wider">{transaction.status}</span>
                       </div>
                     )}
                   </div>

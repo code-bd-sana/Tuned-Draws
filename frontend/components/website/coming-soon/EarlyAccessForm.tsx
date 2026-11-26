@@ -53,19 +53,19 @@ export default function EarlyAccessForm() {
   if (isSuccess) {
     return (
       <div className="w-full max-w-lg mx-auto">
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-10 shadow-2xl text-center">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-10 shadow-2xl text-center">
           <div className="w-16 h-16 rounded-2xl bg-[#16A34A]/20 border border-[#16A34A]/40 flex items-center justify-center mx-auto mb-6 text-[#22C55E]">
             <CheckCircle2 className="w-8 h-8" />
           </div>
           <h3 className="font-heading font-black text-2xl text-white uppercase mb-2">You&apos;re on the VIP Grid!</h3>
-          <p className="font-sans text-sm text-[#8A92A0] leading-relaxed max-w-sm mx-auto mb-6">
+          <p className="font-sans text-sm text-[#B6AA9C] leading-relaxed max-w-sm mx-auto mb-6">
             Your early-access pass is locked. Check your inbox for exclusive launch day ticket drops and founding member perks.
           </p>
           <div className="h-px bg-white/10 mb-6" />
           <button
             type="button"
             onClick={() => setIsSuccess(false)}
-            className="text-xs font-heading font-bold text-[#8A92A0] hover:text-[#FF1E27] transition-colors uppercase tracking-wider cursor-pointer"
+            className="text-xs font-heading font-bold text-[#B6AA9C] hover:text-[#D4A863] transition-colors uppercase tracking-wider cursor-pointer"
           >
             ← Register Another Email
           </button>
@@ -76,17 +76,17 @@ export default function EarlyAccessForm() {
 
   return (
     <div className="w-full max-w-lg mx-auto">
-      <div className="bg-[#12141C] border border-white/10 rounded-2xl p-8 sm:p-10 shadow-2xl">
+      <div className="bg-[#211C18] border border-white/10 rounded-2xl p-8 sm:p-10 shadow-2xl">
 
         {/* Header */}
         <div className="text-center mb-7">
-          <div className="inline-block px-3 py-1 rounded-full bg-[#FF1E27]/10 border border-[#FF1E27]/30 text-[#FF1E27] text-[10px] font-heading font-black uppercase tracking-widest mb-3">
+          <div className="inline-block px-3 py-1 rounded-full bg-[#D4A863]/10 border border-[#D4A863]/30 text-[#D4A863] text-[10px] font-heading font-black uppercase tracking-widest mb-3">
             Founding Members Only
           </div>
           <h3 className="font-heading text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
             Secure Early Access
           </h3>
-          <p className="font-sans text-sm text-[#8A92A0] mt-2">
+          <p className="font-sans text-sm text-[#B6AA9C] mt-2">
             Join <strong className="text-white">1,200+ car enthusiasts</strong> on the official roster.
           </p>
         </div>
@@ -127,10 +127,10 @@ export default function EarlyAccessForm() {
 
           {/* Role Selector */}
           <div className="flex flex-col gap-2">
-            <label className="font-heading text-xs font-bold text-[#8A92A0] uppercase tracking-wider">
+            <label className="font-heading text-xs font-bold text-[#B6AA9C] uppercase tracking-wider">
               I want to:
             </label>
-            <div className="grid grid-cols-2 gap-2.5 p-1.5 bg-[#1A1D27] rounded-xl border border-white/5">
+            <div className="grid grid-cols-2 gap-2.5 p-1.5 bg-[#302820] rounded-xl border border-white/5">
               {(["CUSTOMER", "HOST"] as const).map((r) => (
                 <button
                   key={r}
@@ -140,8 +140,8 @@ export default function EarlyAccessForm() {
                   className={cn(
                     "py-3 px-3 rounded-lg text-xs font-heading font-black tracking-wider uppercase transition-all duration-200 cursor-pointer disabled:opacity-50 flex items-center justify-center gap-2",
                     role === r
-                      ? "bg-[#FF1E27] text-white shadow-[0_0_15px_rgba(255,30,39,0.4)]"
-                      : "text-[#8A92A0] hover:text-white"
+                      ? "bg-[#94632F] text-white shadow-[0_0_15px_rgba(212,168,99,0.4)]"
+                      : "text-[#B6AA9C] hover:text-white"
                   )}
                 >
                   {r === "CUSTOMER" ? (
@@ -164,7 +164,7 @@ export default function EarlyAccessForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="btn-racing-red w-full py-4 mt-2 text-white font-heading text-xs font-black tracking-[0.14em] uppercase rounded-xl transition-all duration-200 shadow-[0_4px_20px_rgba(255,30,39,0.35)] flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
+            className="btn-racing-red w-full py-4 mt-2 text-white font-heading text-xs font-black tracking-[0.14em] uppercase rounded-xl transition-all duration-200 shadow-[0_4px_20px_rgba(212,168,99,0.35)] flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60"
           >
             {isSubmitting ? (
               <>
@@ -186,10 +186,10 @@ export default function EarlyAccessForm() {
           <div className="flex items-center justify-center gap-4 pt-1">
             {[
               { icon: <ShieldCheck className="w-3 h-3 text-[#16A34A]" />, text: "100% Secure" },
-              { icon: <Zap className="w-3 h-3 text-[#FF1E27]" />, text: "Zero Spam" },
+              { icon: <Zap className="w-3 h-3 text-[#D4A863]" />, text: "Zero Spam" },
               { icon: <CheckCircle2 className="w-3 h-3 text-[#16A34A]" />, text: "Instant Entry" },
             ].map((item, idx) => (
-              <span key={idx} className="inline-flex items-center gap-1 text-[11px] font-sans font-medium text-[#8A92A0]">
+              <span key={idx} className="inline-flex items-center gap-1 text-[11px] font-sans font-medium text-[#B6AA9C]">
                 {item.icon}
                 {item.text}
               </span>

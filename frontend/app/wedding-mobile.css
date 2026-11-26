@@ -40,12 +40,12 @@
 @media (max-width: 767px) {
   .wedding-nav.wedding-home-nav {
     background: rgba(18, 15, 13, .97);
-    border-color: rgba(212, 168, 99, .2);
+    border-color: rgba(212,168,99, .2);
     box-shadow: 0 4px 18px rgba(0, 0, 0, .25);
   }
   .wedding-home-nav a[aria-label^="Shopping Basket"],
   .wedding-home-nav button[aria-label="Toggle Navigation Menu"] {
-    border-color: rgba(212, 168, 99, .35);
+    border-color: rgba(212,168,99, .35);
     color: #e4c28c;
   }
   .home-wedding .wedding-hero {
@@ -71,7 +71,7 @@
     width: calc(100% - 32px);
     margin: -40px auto 0;
     padding: 24px 18px 26px;
-    border: 1px solid rgba(212, 168, 99, .3);
+    border: 1px solid rgba(212,168,99, .3);
     border-radius: 12px;
     background: #211b16;
     box-shadow: 0 14px 35px rgba(0, 0, 0, .3);
@@ -92,7 +92,7 @@
   .home-wedding .wedding-hero-actions { margin-top: 18px; gap: 10px; }
   .home-wedding .wedding-hero-actions a { min-height: 44px; padding: 12px 18px; font-size: 10px; }
   .home-wedding .wedding-hero-actions a:not(.btn-racing-red) { border-color: rgba(212, 173, 111, .65); background: transparent; color: #fffaf1; }
-  .wedding-home-dock { background: rgba(18, 15, 13, .97); border-color: rgba(212, 168, 99, .2); box-shadow: 0 -5px 20px rgba(0, 0, 0, .3); }
+  .wedding-home-dock { background: rgba(18, 15, 13, .97); border-color: rgba(212,168,99, .2); box-shadow: 0 -5px 20px rgba(0, 0, 0, .3); }
   .wedding-home-dock a { color: #b5a99a; }
   .wedding-home-dock a[href="/"] { color: #e6bd7c; }
   .wedding-home-dock a > span { color: inherit; }

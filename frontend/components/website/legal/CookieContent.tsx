@@ -45,21 +45,21 @@ export default function CookieContent() {
   };
 
   return (
-    <div className="cookie-policy w-full overflow-hidden bg-[#0B0C0E] bg-tachometer-grid pt-20 pb-20 text-white">
+    <div className="cookie-policy w-full overflow-hidden bg-[#14110F] bg-tachometer-grid pt-20 pb-20 text-white">
       
       {/* Top Banner */}
-      <div className="relative isolate overflow-hidden border-b border-white/10 py-16 sm:py-20 mb-12 bg-[#0B0C0E]">
-        <Image src="/images/tuned-hero-bg.jpg" alt="Tuned Draws Performance Competitions" fill priority className="z-0 object-cover object-center opacity-65" />
-        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#0B0C0E] via-[#0B0C0E]/85 to-[#0B0C0E]/50" />
+      <div className="relative isolate overflow-hidden border-b border-white/10 py-16 sm:py-20 mb-12 bg-[#14110F]">
+        <Image src="/images/wedding-hero.png" alt="Wedding Draws Competitions" fill priority className="z-0 object-cover object-center opacity-65" />
+        <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[#14110F] via-[#14110F]/85 to-[#14110F]/50" />
         <div className="container-custom relative z-10 max-w-6xl mx-auto px-4">
           <div className="flex max-w-2xl flex-col gap-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#FF1E27]/30 bg-[#12141C]/90 px-4 py-2 text-xs font-semibold tracking-[0.12em] text-[#D1D5DB] w-fit">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D4A863]/30 bg-[#211C18]/90 px-4 py-2 text-xs font-semibold tracking-[0.12em] text-[#E5DCCD] w-fit">
               <span>🍪 Cookie Transparency</span>
             </div>
             <h1 className="font-heading font-extrabold text-4xl sm:text-6xl text-white tracking-tight">
               Cookie Policy
             </h1>
-            <p className="rounded-2xl border border-white/10 bg-[#12141C]/80 p-4 font-sans text-sm sm:text-base leading-relaxed text-[#8A92A0] max-w-2xl backdrop-blur-sm">
+            <p className="rounded-2xl border border-white/10 bg-[#211C18]/80 p-4 font-sans text-sm sm:text-base leading-relaxed text-[#B6AA9C] max-w-2xl backdrop-blur-sm">
               This policy details what cookies are, how Tuned Draws uses them, the categories of cookies deployed, and how to manage your cookie preferences.
             </p>
             <div className="flex items-center gap-4 text-xs font-sans font-medium text-white/75 pt-1">
@@ -77,7 +77,7 @@ export default function CookieContent() {
           
           {/* Left Table of Contents */}
           <aside className="lg:col-span-4 hidden lg:block">
-            <div className="sticky top-28 bg-[#12141C] border border-white/10 rounded-2xl p-5 space-y-2 shadow-xl">
+            <div className="sticky top-28 bg-[#211C18] border border-white/10 rounded-2xl p-5 space-y-2 shadow-xl">
               <h3 className="font-heading font-bold text-xs text-white uppercase tracking-wider mb-3 px-2">
                 Table of Contents
               </h3>
@@ -89,8 +89,8 @@ export default function CookieContent() {
                     className={cn(
                       "text-left px-3 py-2 rounded-xl text-xs font-sans transition-all duration-200 truncate cursor-pointer",
                       activeSection === sec.id
-                        ? "bg-[#FF1E27] text-white font-semibold border-l-2 border-white pl-3 shadow-md"
-                        : "text-[#8A92A0] hover:bg-[#1A1D27] hover:text-white"
+                        ? "bg-[#94632F] text-white font-semibold border-l-2 border-white pl-3 shadow-md"
+                        : "text-[#B6AA9C] hover:bg-[#302820] hover:text-white"
                     )}
                   >
                     {sec.title}
@@ -101,7 +101,7 @@ export default function CookieContent() {
               <div className="pt-4 border-t border-white/10 mt-4">
                 <Link
                   href="/privacy"
-                  className="w-full py-2.5 px-4 rounded-xl bg-[#FF1E27] hover:bg-[#B3000C] border border-[#FF1E27] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-md"
+                  className="w-full py-2.5 px-4 rounded-xl bg-[#94632F] hover:bg-[#9B6A2F] border border-[#D4A863] text-white text-xs font-semibold flex items-center justify-center gap-2 transition-colors shadow-md"
                 >
                   🔒 View Privacy Policy
                 </Link>
@@ -110,10 +110,10 @@ export default function CookieContent() {
           </aside>
 
           {/* Right Main Text Content */}
-          <main className="lg:col-span-8 space-y-12 text-sm leading-relaxed text-[#D1D5DB]">
+          <main className="lg:col-span-8 space-y-12 text-sm leading-relaxed text-[#E5DCCD]">
             
             {/* 1. Introduction & Scope */}
-            <section id="introduction" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="introduction" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 1. Introduction & Consent
               </h2>
@@ -122,21 +122,21 @@ export default function CookieContent() {
               </p>
               <p>
                 For further information on how we use, store, and keep your personal data secure, please refer to our{" "}
-                <Link href="/privacy" className="text-[#FF1E27] font-semibold underline">
+                <Link href="/privacy" className="text-[#D4A863] font-semibold underline">
                   Privacy Policy
                 </Link>.
               </p>
               <p>
                 You can at any time change or withdraw your consent from the Cookie Declaration on our website. You can also learn more about who we are, how you can contact us, and how we process personal data in our Privacy Policy.
               </p>
-              <div className="bg-[#1A1D27] border border-white/10 rounded-xl p-4 mt-2">
+              <div className="bg-[#302820] border border-white/10 rounded-xl p-4 mt-2">
                 <span className="font-sans text-xs text-white font-semibold block">Consent Domain Scope:</span>
-                <span className="font-sans text-xs text-[#8A92A0]">Your cookie consent applies to the following domain: <strong>tuneddraws.com</strong></span>
+                <span className="font-sans text-xs text-[#B6AA9C]">Your cookie consent applies to the following domain: <strong>tuneddraws.com</strong></span>
               </div>
             </section>
 
             {/* 2. What Are Cookies */}
-            <section id="what-are-cookies" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="what-are-cookies" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 2. What Are Cookies?
               </h2>
@@ -149,7 +149,7 @@ export default function CookieContent() {
             </section>
 
             {/* 3. How Do We Use Cookies */}
-            <section id="how-we-use-cookies" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="how-we-use-cookies" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 3. How Do We Use Cookies?
               </h2>
@@ -157,15 +157,15 @@ export default function CookieContent() {
                 Similar to most online services, our website uses first-party and third-party cookies for several purposes.
               </p>
               <div className="space-y-3 pt-1">
-                <div className="bg-[#1A1D27] p-4 rounded-xl border border-white/10">
+                <div className="bg-[#302820] p-4 rounded-xl border border-white/10">
                   <h4 className="font-heading font-bold text-xs text-white">First-Party Cookies</h4>
-                  <p className="text-xs text-[#8A92A0] mt-1">
+                  <p className="text-xs text-[#B6AA9C] mt-1">
                     First-party cookies are mostly necessary for the website to function the right way, and they do not collect any of your personally identifiable data.
                   </p>
                 </div>
-                <div className="bg-[#1A1D27] p-4 rounded-xl border border-white/10">
+                <div className="bg-[#302820] p-4 rounded-xl border border-white/10">
                   <h4 className="font-heading font-bold text-xs text-white">Third-Party Cookies</h4>
-                  <p className="text-xs text-[#8A92A0] mt-1">
+                  <p className="text-xs text-[#B6AA9C] mt-1">
                     The third-party cookies used on our website are mainly for understanding how the website performs, how you interact with our website, keeping our services secure, providing relevant announcements/promotions, providing a better user experience, and speeding up your future interactions with our site.
                   </p>
                 </div>
@@ -173,7 +173,7 @@ export default function CookieContent() {
             </section>
 
             {/* 4. What Types of Cookies Do We Use */}
-            <section id="types-of-cookies" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="types-of-cookies" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 4. What Types of Cookies Do We Use?
               </h2>
@@ -181,36 +181,36 @@ export default function CookieContent() {
               <div className="space-y-4 pt-2">
                 
                 {/* Essential */}
-                <div className="bg-[#1A1D27] p-5 rounded-xl border border-white/10 space-y-1.5">
+                <div className="bg-[#302820] p-5 rounded-xl border border-white/10 space-y-1.5">
                   <div className="flex items-center justify-between">
                     <h4 className="font-heading font-bold text-sm text-white">Essential Cookies</h4>
-                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#12141C] text-[#FF1E27] border border-[#FF1E27]/30">Strictly Necessary</span>
+                    <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#211C18] text-[#D4A863] border border-[#D4A863]/30">Strictly Necessary</span>
                   </div>
-                  <p className="text-xs text-[#8A92A0]">
+                  <p className="text-xs text-[#B6AA9C]">
                     Some cookies are essential for you to experience the full functionality of our site. They allow us to maintain user sessions and prevent security threats. They do not collect or store personal information. For example, these cookies allow you to log in to your Tuned Draws account, add tickets to your cart, and check out securely.
                   </p>
                 </div>
 
                 {/* Functional */}
-                <div className="bg-[#1A1D27] p-5 rounded-xl border border-white/10 space-y-1.5">
+                <div className="bg-[#302820] p-5 rounded-xl border border-white/10 space-y-1.5">
                   <h4 className="font-heading font-bold text-sm text-white">Functional Cookies</h4>
-                  <p className="text-xs text-[#8A92A0]">
+                  <p className="text-xs text-[#B6AA9C]">
                     These cookies support non-essential functionalities on our website, such as remembering your preferences or embedding interactive content.
                   </p>
                 </div>
 
                 {/* Statistics */}
-                <div className="bg-[#1A1D27] p-5 rounded-xl border border-white/10 space-y-1.5">
+                <div className="bg-[#302820] p-5 rounded-xl border border-white/10 space-y-1.5">
                   <h4 className="font-heading font-bold text-sm text-white">Statistics Cookies</h4>
-                  <p className="text-xs text-[#8A92A0]">
+                  <p className="text-xs text-[#B6AA9C]">
                     These cookies store information like visitor counts, unique visitors, pages visited, referral sources, etc. This data helps us understand and analyze how well the website performs and where improvements are needed.
                   </p>
                 </div>
 
                 {/* Preferences */}
-                <div className="bg-[#1A1D27] p-5 rounded-xl border border-white/10 space-y-1.5">
+                <div className="bg-[#302820] p-5 rounded-xl border border-white/10 space-y-1.5">
                   <h4 className="font-heading font-bold text-sm text-white">Preferences Cookies</h4>
-                  <p className="text-xs text-[#8A92A0]">
+                  <p className="text-xs text-[#B6AA9C]">
                     These cookies help us store your settings and browsing preferences (such as theme or regional settings) so you enjoy an efficient experience on future visits.
                   </p>
                 </div>
@@ -219,7 +219,7 @@ export default function CookieContent() {
             </section>
 
             {/* 5. How Can I Control Cookie Preferences */}
-            <section id="control-preferences" className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
+            <section id="control-preferences" className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-4 shadow-xl">
               <h2 className="font-heading font-bold text-xl text-white border-b border-white/10 pb-3">
                 5. How Can I Control Cookie Preferences?
               </h2>
@@ -231,26 +231,26 @@ export default function CookieContent() {
               </p>
               
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-                <div className="bg-[#1A1D27] p-3 rounded-xl border border-white/10 text-center">
+                <div className="bg-[#302820] p-3 rounded-xl border border-white/10 text-center">
                   <span className="font-sans font-bold text-xs text-white block">Google Chrome</span>
-                  <span className="text-[10px] text-[#8A92A0]">Settings &gt; Privacy</span>
+                  <span className="text-[10px] text-[#B6AA9C]">Settings &gt; Privacy</span>
                 </div>
-                <div className="bg-[#1A1D27] p-3 rounded-xl border border-white/10 text-center">
+                <div className="bg-[#302820] p-3 rounded-xl border border-white/10 text-center">
                   <span className="font-sans font-bold text-xs text-white block">Apple Safari</span>
-                  <span className="text-[10px] text-[#8A92A0]">Preferences &gt; Privacy</span>
+                  <span className="text-[10px] text-[#B6AA9C]">Preferences &gt; Privacy</span>
                 </div>
-                <div className="bg-[#1A1D27] p-3 rounded-xl border border-white/10 text-center">
+                <div className="bg-[#302820] p-3 rounded-xl border border-white/10 text-center">
                   <span className="font-sans font-bold text-xs text-white block">Mozilla Firefox</span>
-                  <span className="text-[10px] text-[#8A92A0]">Options &gt; Privacy</span>
+                  <span className="text-[10px] text-[#B6AA9C]">Options &gt; Privacy</span>
                 </div>
-                <div className="bg-[#1A1D27] p-3 rounded-xl border border-white/10 text-center">
+                <div className="bg-[#302820] p-3 rounded-xl border border-white/10 text-center">
                   <span className="font-sans font-bold text-xs text-white block">Microsoft Edge</span>
-                  <span className="text-[10px] text-[#8A92A0]">Settings &gt; Cookies</span>
+                  <span className="text-[10px] text-[#B6AA9C]">Settings &gt; Cookies</span>
                 </div>
               </div>
 
-              <p className="text-xs text-[#8A92A0] pt-3">
-                For further information on managing your data, please contact our team at <a href="mailto:info@tuneddraws.com" className="text-[#FF1E27] underline">info@tuneddraws.com</a>.
+              <p className="text-xs text-[#B6AA9C] pt-3">
+                For further information on managing your data, please contact our team at <a href="mailto:info@tuneddraws.com" className="text-[#D4A863] underline">info@tuneddraws.com</a>.
               </p>
             </section>
 

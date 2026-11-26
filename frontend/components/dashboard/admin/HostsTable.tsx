@@ -144,7 +144,7 @@ export default function HostsTable() {
       );
     }
     return (
-      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#FF1E27]/30 bg-[#FF1E27]/10 text-[#FF1E27] font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(255,30,39,0.15)]">
+      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#D4A863]/30 bg-[#D4A863]/10 text-[#D4A863] font-sans font-bold text-[10px] uppercase tracking-wider shadow-[0_0_10px_rgba(212,168,99,0.15)]">
         {plan || 'Free'}
       </span>
     );

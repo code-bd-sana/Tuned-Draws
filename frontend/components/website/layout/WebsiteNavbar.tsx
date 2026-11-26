@@ -25,7 +25,7 @@ export default function WebsiteNavbar() {
 
   return (
     <>
-      <header className={cn("wedding-nav fixed top-0 left-0 z-45 w-full border-b border-white/10 bg-[#0B0C0E]/85 py-3 backdrop-blur-xl transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.5)]", pathname === '/' && 'wedding-home-nav')}>
+      <header className={cn("wedding-nav fixed top-0 left-0 z-45 w-full border-b border-white/10 bg-[#14110F]/85 py-3 backdrop-blur-xl transition-all duration-300 shadow-[0_4px_24px_rgba(0,0,0,0.5)]", pathname === '/' && 'wedding-home-nav')}>
         <div className="container-custom flex items-center justify-between">
           {/* Automotive Brand Logo */}
           <TunedDrawsBrandLogo size="md" href="/" />
@@ -44,7 +44,7 @@ export default function WebsiteNavbar() {
                     'font-heading text-xs font-bold uppercase tracking-wider transition-all duration-200 relative py-1',
                     isActive
                       ? 'text-[#D4A863] drop-shadow-[0_0_8px_rgba(212,168,99,0.5)]'
-                      : 'text-[#8A92A0] hover:text-[#D1D5DB]'
+                      : 'text-[#B6AA9C] hover:text-[#E5DCCD]'
                   )}
                 >
                   {link.label}
@@ -61,7 +61,7 @@ export default function WebsiteNavbar() {
             {/* Basket Button */}
             <Link
               href="/basket"
-              className="relative flex items-center justify-center p-2.5 rounded-xl bg-[#12141C] border border-white/10 text-[#D1D5DB] hover:text-white hover:border-[#D4A863]/50 hover:shadow-[0_0_15px_rgba(212,168,99,0.2)] transition-all duration-200 cursor-pointer"
+              className="relative flex items-center justify-center p-2.5 rounded-xl bg-[#211C18] border border-white/10 text-[#E5DCCD] hover:text-white hover:border-[#D4A863]/50 hover:shadow-[0_0_15px_rgba(212,168,99,0.2)] transition-all duration-200 cursor-pointer"
               aria-label={`Shopping Basket (${itemCount} items)`}
             >
               <svg
@@ -96,7 +96,7 @@ export default function WebsiteNavbar() {
               <>
                 <Link
                   href="/login"
-                  className="font-heading text-xs font-bold text-[#D1D5DB] hover:text-[#D4A863] uppercase tracking-wider transition-colors duration-200 px-3 py-2"
+                  className="font-heading text-xs font-bold text-[#E5DCCD] hover:text-[#D4A863] uppercase tracking-wider transition-colors duration-200 px-3 py-2"
                 >
                   Log In
                 </Link>
@@ -114,7 +114,7 @@ export default function WebsiteNavbar() {
           <div className="xl:hidden flex items-center gap-2.5">
             <Link
               href="/basket"
-              className="relative flex items-center justify-center p-2 rounded-xl text-[#D1D5DB] hover:text-white bg-[#12141C] border border-white/10 transition-all duration-200 cursor-pointer"
+              className="relative flex items-center justify-center p-2 rounded-xl text-[#E5DCCD] hover:text-white bg-[#211C18] border border-white/10 transition-all duration-200 cursor-pointer"
               aria-label={`Shopping Basket (${itemCount} items)`}
             >
               <svg
@@ -140,7 +140,7 @@ export default function WebsiteNavbar() {
 
             <button
               onClick={toggleMobileMenu}
-              className="flex items-center justify-center p-2.5 rounded-xl bg-[#12141C] border border-[#D4A863]/30 text-white hover:border-[#D4A863] shadow-[0_0_15px_rgba(212,168,99,0.25)] transition-all duration-200 cursor-pointer active:scale-95"
+              className="flex items-center justify-center p-2.5 rounded-xl bg-[#211C18] border border-[#D4A863]/30 text-white hover:border-[#D4A863] shadow-[0_0_15px_rgba(212,168,99,0.25)] transition-all duration-200 cursor-pointer active:scale-95"
               aria-label="Toggle Navigation Menu"
             >
               <svg
@@ -173,7 +173,7 @@ export default function WebsiteNavbar() {
       {/* Mobile Sidebar Slide-out Drawer Panel */}
       <div
         className={cn(
-          'fixed top-0 right-0 h-full w-[300px] max-w-[85vw] bg-[#0B0C0E] z-50 xl:hidden shadow-[0_0_40px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-in-out border-l border-white/10 flex flex-col justify-between p-6',
+          'fixed top-0 right-0 h-full w-[300px] max-w-[85vw] bg-[#14110F] z-50 xl:hidden shadow-[0_0_40px_rgba(0,0,0,0.8)] transition-transform duration-300 ease-in-out border-l border-white/10 flex flex-col justify-between p-6',
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         )}
       >
@@ -183,7 +183,7 @@ export default function WebsiteNavbar() {
             <TunedDrawsBrandLogo size="sm" href="/" />
             <button
               onClick={() => setMobileMenuOpen(false)}
-              className="p-2 text-[#8A92A0] hover:text-white hover:bg-white/5 rounded-xl transition-all duration-200 cursor-pointer"
+              className="p-2 text-[#B6AA9C] hover:text-white hover:bg-white/5 rounded-xl transition-all duration-200 cursor-pointer"
               aria-label="Close Menu"
             >
               <svg
@@ -213,8 +213,8 @@ export default function WebsiteNavbar() {
                   className={cn(
                     'font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 py-3 px-3 rounded-lg border-b border-white/5 flex items-center justify-between',
                     isActive
-                      ? 'bg-[#12141C] text-[#D4A863] border-l-2 border-l-[#D4A863]'
-                      : 'text-[#8A92A0] hover:text-[#D1D5DB] hover:bg-white/5'
+                      ? 'bg-[#211C18] text-[#D4A863] border-l-2 border-l-[#D4A863]'
+                      : 'text-[#B6AA9C] hover:text-[#E5DCCD] hover:bg-white/5'
                   )}
                 >
                   <span>{link.label}</span>
@@ -240,7 +240,7 @@ export default function WebsiteNavbar() {
               <Link
                 href="/login"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-center font-heading font-bold text-xs text-[#D1D5DB] hover:text-white uppercase tracking-wider py-3 bg-[#12141C] border border-white/10 rounded-xl transition-all duration-200"
+                className="flex items-center justify-center font-heading font-bold text-xs text-[#E5DCCD] hover:text-white uppercase tracking-wider py-3 bg-[#211C18] border border-white/10 rounded-xl transition-all duration-200"
               >
                 Log In
               </Link>
@@ -262,7 +262,7 @@ export default function WebsiteNavbar() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#12141C] border border-white/10 text-[#8A92A0] hover:text-[#D4A863] hover:border-[#D4A863]/40 transition-all shadow-sm"
+                className="flex items-center justify-center w-9 h-9 rounded-xl bg-[#211C18] border border-white/10 text-[#B6AA9C] hover:text-[#D4A863] hover:border-[#D4A863]/40 transition-all shadow-sm"
                 aria-label={`${link.platform} Profile`}
               >
                 {link.platform.toLowerCase() === 'facebook' ? (

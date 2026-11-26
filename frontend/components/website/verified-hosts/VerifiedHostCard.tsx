@@ -30,14 +30,14 @@ export default function VerifiedHostCard({ host }: VerifiedHostCardProps) {
 
   return (
     <Link href={`/hosts/${host.slug}`} className="block h-full">
-      <div className="group relative flex min-h-[220px] w-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#12141C]/80 p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#FF1E27]/40 hover:shadow-[0_10px_30px_rgba(255,30,39,0.2)]">
+      <div className="group relative flex min-h-[220px] w-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-[#211C18]/80 p-6 shadow-xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#D4A863]/40 hover:shadow-[0_10px_30px_rgba(212,168,99,0.2)]">
         
         {/* Subtle hover gradient */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#FF1E27]/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#D4A863]/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
         <div className="flex flex-col gap-4 relative z-10">
           <div className="flex items-center justify-between">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-[#181B26] shadow-md group-hover:border-[#FF1E27]/40 transition-colors duration-300">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-[#302820] shadow-md group-hover:border-[#D4A863]/40 transition-colors duration-300">
               {isImage ? (
                 <img
                   src={host.logo}
@@ -50,35 +50,35 @@ export default function VerifiedHostCard({ host }: VerifiedHostCardProps) {
               )}
             </div>
             {host.isVerified && (
-              <span className="flex items-center gap-1.5 rounded-full border border-[#FF1E27]/30 bg-[#FF1E27]/10 px-2.5 py-1 text-[10px] font-heading font-black tracking-wide text-[#FF1E27] uppercase shadow-[0_0_10px_rgba(255,30,39,0.2)]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#FF1E27] animate-pulse" /> Verified
+              <span className="flex items-center gap-1.5 rounded-full border border-[#D4A863]/30 bg-[#D4A863]/10 px-2.5 py-1 text-[10px] font-heading font-black tracking-wide text-[#D4A863] uppercase shadow-[0_0_10px_rgba(212,168,99,0.2)]">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#94632F] animate-pulse" /> Verified
               </span>
             )}
           </div>
           
           <div className="flex flex-col gap-1.5">
-            <h3 className="font-heading text-lg font-black text-white uppercase tracking-wide transition-colors group-hover:text-[#FF1E27]">
+            <h3 className="font-heading text-lg font-black text-white uppercase tracking-wide transition-colors group-hover:text-[#D4A863]">
               {host.name}
             </h3>
-            <span className="line-clamp-2 font-sans text-xs sm:text-[13px] leading-relaxed text-[#8A92A0]">
+            <span className="line-clamp-2 font-sans text-xs sm:text-[13px] leading-relaxed text-[#B6AA9C]">
               {host.description || "Verified Tuned Draws partner hosting auditable performance automotive competitions."}
             </span>
           </div>
         </div>
         
         <div className="relative z-10 mt-6 flex items-center justify-between border-t border-white/10 pt-4">
-          <div className="flex items-center gap-3 font-heading text-xs font-bold text-[#8A92A0]">
+          <div className="flex items-center gap-3 font-heading text-xs font-bold text-[#B6AA9C]">
             <span className="text-white">{host.competitionCount} Draws</span>
             {host.averageRating && host.totalReviews && host.totalReviews > 0 ? (
-              <span className="flex items-center gap-1 text-[#D1D5DB]">
-                <span className="text-[#FF1E27]">★</span> {Number(host.averageRating).toFixed(1)}
-                <span className="text-[#8A92A0] text-[10px]">({host.totalReviews})</span>
+              <span className="flex items-center gap-1 text-[#E5DCCD]">
+                <span className="text-[#D4A863]">★</span> {Number(host.averageRating).toFixed(1)}
+                <span className="text-[#B6AA9C] text-[10px]">({host.totalReviews})</span>
               </span>
             ) : (
-              <span className="text-[#8A92A0] text-[11px] font-sans font-medium">★ New Host</span>
+              <span className="text-[#B6AA9C] text-[11px] font-sans font-medium">★ New Host</span>
             )}
           </div>
-          <span className="flex -translate-x-2 items-center gap-1 font-heading text-xs font-black uppercase text-[#FF1E27] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+          <span className="flex -translate-x-2 items-center gap-1 font-heading text-xs font-black uppercase text-[#D4A863] opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
             View Garage 
             <svg className="w-3 h-3 translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />

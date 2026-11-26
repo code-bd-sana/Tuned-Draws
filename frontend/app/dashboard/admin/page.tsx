@@ -58,7 +58,7 @@ export default function AdminDashboardPage() {
               Live Operational
             </div>
           </div>
-          <p className="font-sans text-xs text-[#8A92A0]">
+          <p className="font-sans text-xs text-[#B6AA9C]">
             Real-time platform metrics, merchant verification queue, revenue breakdown, and growth analytics.
           </p>
         </div>
@@ -67,33 +67,33 @@ export default function AdminDashboardPage() {
         <div className="flex items-center flex-wrap gap-2.5">
           <Link
             href="/dashboard/admin/approvals"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-[#FF1E27]/40 hover:bg-[#FF1E27]/10 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 group"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-[#D4A863]/40 hover:bg-[#D4A863]/10 text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200 group"
           >
-            <FileCheck2 className="w-4 h-4 text-[#FF1E27]" />
+            <FileCheck2 className="w-4 h-4 text-[#D4A863]" />
             <span>Approvals</span>
             {overview?.awaitingReview.count ? (
-              <span className="px-1.5 py-0.5 rounded-md bg-[#FF1E27] text-white text-[10px] font-black">
+              <span className="px-1.5 py-0.5 rounded-md bg-[#94632F] text-white text-[10px] font-black">
                 {overview.awaitingReview.count}
               </span>
             ) : null}
           </Link>
           <Link
             href="/dashboard/admin/raffles"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-[#D1D5DB] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-[#E5DCCD] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200"
           >
-            <Ticket className="w-4 h-4 text-[#FF1E27]" />
+            <Ticket className="w-4 h-4 text-[#D4A863]" />
             <span>Raffles</span>
           </Link>
           <Link
             href="/dashboard/admin/withdrawals"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-[#D1D5DB] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 text-[#E5DCCD] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all duration-200"
           >
             <DollarSign className="w-4 h-4 text-emerald-400" />
             <span>Payouts</span>
           </Link>
           <Link
             href="/dashboard/admin/reports"
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#FF1E27] hover:bg-[#B3000C] text-white font-heading font-black text-xs uppercase tracking-wider transition-all duration-200 shadow-[0_0_15px_rgba(255,30,39,0.35)]"
+            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#94632F] hover:bg-[#9B6A2F] text-white font-heading font-black text-xs uppercase tracking-wider transition-all duration-200 shadow-[0_0_15px_rgba(212,168,99,0.35)]"
           >
             <TrendingUp className="w-4 h-4" />
             <span>Full Analytics</span>
@@ -104,13 +104,13 @@ export default function AdminDashboardPage() {
       {/* Top 4 KPI Metrics Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
         {/* Total Users */}
-        <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF1E27]/5 rounded-full blur-3xl pointer-events-none group-hover:bg-[#FF1E27]/10 transition-colors" />
+        <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4A863]/5 rounded-full blur-3xl pointer-events-none group-hover:bg-[#D4A863]/10 transition-colors" />
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Total Users
             </span>
-            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#FF1E27] group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#D4A863] group-hover:scale-105 transition-transform">
               <Users className="w-5 h-5" />
             </div>
           </div>
@@ -123,16 +123,16 @@ export default function AdminDashboardPage() {
                 <ArrowUpRight className="w-3 h-3" />
                 Active
               </span>
-              <span className="font-sans font-medium text-xs text-[#8A92A0]">Registered entrants</span>
+              <span className="font-sans font-medium text-xs text-[#B6AA9C]">Registered entrants</span>
             </div>
           </div>
         </div>
 
         {/* Active Hosts */}
-        <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+        <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#3B82F6]/5 rounded-full blur-3xl pointer-events-none group-hover:bg-[#3B82F6]/10 transition-colors" />
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Active Hosts
             </span>
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#3B82F6] group-hover:scale-105 transition-transform">
@@ -148,16 +148,16 @@ export default function AdminDashboardPage() {
                 <CheckCircle2 className="w-3 h-3" />
                 Verified
               </span>
-              <span className="font-sans font-medium text-xs text-[#8A92A0]">Merchant operators</span>
+              <span className="font-sans font-medium text-xs text-[#B6AA9C]">Merchant operators</span>
             </div>
           </div>
         </div>
 
         {/* Live Raffles */}
-        <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+        <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-[#F59E0B]/5 rounded-full blur-3xl pointer-events-none group-hover:bg-[#F59E0B]/10 transition-colors" />
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Live Raffles
             </span>
             <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#F59E0B] group-hover:scale-105 transition-transform">
@@ -173,19 +173,19 @@ export default function AdminDashboardPage() {
                 <Activity className="w-3 h-3" />
                 In Progress
               </span>
-              <span className="font-sans font-medium text-xs text-[#8A92A0]">Open for entries</span>
+              <span className="font-sans font-medium text-xs text-[#B6AA9C]">Open for entries</span>
             </div>
           </div>
         </div>
 
         {/* Total Platform Revenue */}
-        <div className="relative group bg-[#12141C] border border-white/10 hover:border-[#FF1E27]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF1E27]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#FF1E27]/15 transition-colors" />
+        <div className="relative group bg-[#211C18] border border-white/10 hover:border-[#D4A863]/40 rounded-2xl p-6 transition-all duration-300 shadow-xl overflow-hidden">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4A863]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#D4A863]/15 transition-colors" />
           <div className="flex items-center justify-between">
-            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#8A92A0]">
+            <span className="font-sans text-[11px] font-bold uppercase tracking-wider text-[#B6AA9C]">
               Total Revenue
             </span>
-            <div className="w-10 h-10 rounded-xl bg-[#FF1E27]/15 border border-[#FF1E27]/30 flex items-center justify-center text-[#FF1E27] group-hover:scale-105 transition-transform">
+            <div className="w-10 h-10 rounded-xl bg-[#D4A863]/15 border border-[#D4A863]/30 flex items-center justify-center text-[#D4A863] group-hover:scale-105 transition-transform">
               <DollarSign className="w-5 h-5" />
             </div>
           </div>
@@ -203,7 +203,7 @@ export default function AdminDashboardPage() {
                 <TrendingUp className="w-3 h-3" />
                 Gross
               </span>
-              <span className="font-sans font-medium text-xs text-[#8A92A0]">Ticket volume sales</span>
+              <span className="font-sans font-medium text-xs text-[#B6AA9C]">Ticket volume sales</span>
             </div>
           </div>
         </div>
@@ -212,7 +212,7 @@ export default function AdminDashboardPage() {
       {/* Middle Grid: Revenue Trend & Awaiting Review */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Platform Revenue Chart */}
-        <div className="lg:col-span-2 bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col shadow-xl">
+        <div className="lg:col-span-2 bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col shadow-xl">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2">
@@ -234,15 +234,15 @@ export default function AdminDashboardPage() {
             </div>
 
             {/* Time Filter Pills */}
-            <div className="flex items-center gap-1 bg-[#1A1D27] border border-white/10 rounded-xl p-1">
+            <div className="flex items-center gap-1 bg-[#302820] border border-white/10 rounded-xl p-1">
               {["7D", "1M", "6M", "1Y"].map((filter) => (
                 <button
                   key={filter}
                   onClick={() => setTimeFilter(filter)}
                   className={`px-3 py-1.5 rounded-lg font-heading font-bold text-xs uppercase tracking-wider transition-all cursor-pointer ${
                     timeFilter === filter
-                      ? "bg-[#FF1E27] text-white shadow-[0_0_12px_rgba(255,30,39,0.35)]"
-                      : "text-[#8A92A0] hover:text-white hover:bg-white/5"
+                      ? "bg-[#94632F] text-white shadow-[0_0_12px_rgba(212,168,99,0.35)]"
+                      : "text-[#B6AA9C] hover:text-white hover:bg-white/5"
                   }`}
                 >
                   {filter}
@@ -253,11 +253,11 @@ export default function AdminDashboardPage() {
 
           <div className="w-full h-[260px]">
             {isReportsLoading ? (
-              <div className="w-full h-full flex items-center justify-center text-[#8A92A0] font-sans text-xs animate-pulse">
+              <div className="w-full h-full flex items-center justify-center text-[#B6AA9C] font-sans text-xs animate-pulse">
                 Loading revenue analytics...
               </div>
             ) : revenueData.length === 0 ? (
-              <div className="w-full h-full flex items-center justify-center text-[#8A92A0] font-sans text-xs">
+              <div className="w-full h-full flex items-center justify-center text-[#B6AA9C] font-sans text-xs">
                 No revenue recorded for this period.
               </div>
             ) : (
@@ -268,8 +268,8 @@ export default function AdminDashboardPage() {
                 >
                   <defs>
                     <linearGradient id="revenueGlow" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#FF1E27" stopOpacity={0.35} />
-                      <stop offset="95%" stopColor="#FF1E27" stopOpacity={0.0} />
+                      <stop offset="5%" stopColor="#D4A863" stopOpacity={0.35} />
+                      <stop offset="95%" stopColor="#D4A863" stopOpacity={0.0} />
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" vertical={false} />
@@ -277,20 +277,20 @@ export default function AdminDashboardPage() {
                     dataKey="name"
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                     dy={10}
                   />
                   <YAxis
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                     tickFormatter={(val) =>
                       `£${val >= 1000 ? `${(val / 1000).toFixed(1)}k` : val}`
                     }
                   />
                   <RechartsTooltip
                     contentStyle={{
-                      backgroundColor: "#1A1D27",
+                      backgroundColor: "#302820",
                       borderColor: "rgba(255,255,255,0.15)",
                       borderRadius: "12px",
                       boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
@@ -308,7 +308,7 @@ export default function AdminDashboardPage() {
                   <Area
                     type="monotone"
                     dataKey="value"
-                    stroke="#FF1E27"
+                    stroke="#D4A863"
                     strokeWidth={3}
                     fillOpacity={1}
                     fill="url(#revenueGlow)"
@@ -320,31 +320,31 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Awaiting Review Queue */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
           <div>
             <div className="flex items-center justify-between mb-5">
               <div className="flex items-center gap-2">
-                <AlertCircle className="w-5 h-5 text-[#FF1E27]" />
+                <AlertCircle className="w-5 h-5 text-[#D4A863]" />
                 <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                   Awaiting Review
                 </h3>
               </div>
-              <span className="px-2.5 py-0.5 rounded-full bg-[#FF1E27] text-white font-heading font-black text-xs shadow-[0_0_10px_rgba(255,30,39,0.5)]">
+              <span className="px-2.5 py-0.5 rounded-full bg-[#94632F] text-white font-heading font-black text-xs shadow-[0_0_10px_rgba(212,168,99,0.5)]">
                 {isLoading ? "..." : overview?.awaitingReview.count ?? 0}
               </span>
             </div>
 
-            <p className="font-sans text-xs text-[#8A92A0] mb-4">
+            <p className="font-sans text-xs text-[#B6AA9C] mb-4">
               Items pending administrative approval or operator validation:
             </p>
 
             <div className="flex flex-col gap-3">
               {isLoading ? (
-                <div className="py-8 text-center text-[#8A92A0] font-sans text-xs animate-pulse">
+                <div className="py-8 text-center text-[#B6AA9C] font-sans text-xs animate-pulse">
                   Loading review queue...
                 </div>
               ) : overview?.awaitingReview.list.length === 0 ? (
-                <div className="py-8 text-center text-[#8A92A0] font-sans text-xs flex flex-col items-center gap-2">
+                <div className="py-8 text-center text-[#B6AA9C] font-sans text-xs flex flex-col items-center gap-2">
                   <CheckCircle2 className="w-8 h-8 text-emerald-400" />
                   <span>All queues clear. No items pending review.</span>
                 </div>
@@ -352,17 +352,17 @@ export default function AdminDashboardPage() {
                 overview?.awaitingReview.list.map((item) => (
                   <div
                     key={item.id}
-                    className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:border-[#FF1E27]/30 transition-colors"
+                    className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:border-[#D4A863]/30 transition-colors"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-[#FF1E27]/10 border border-[#FF1E27]/30 flex items-center justify-center shrink-0 text-[#FF1E27] font-bold text-xs">
+                      <div className="w-9 h-9 rounded-xl bg-[#D4A863]/10 border border-[#D4A863]/30 flex items-center justify-center shrink-0 text-[#D4A863] font-bold text-xs">
                         {item.icon}
                       </div>
                       <div className="flex flex-col min-w-0">
                         <span className="font-heading font-bold text-xs text-white truncate max-w-[170px]">
                           {item.title}
                         </span>
-                        <span className="font-sans text-[11px] text-[#8A92A0] truncate">
+                        <span className="font-sans text-[11px] text-[#B6AA9C] truncate">
                           {item.sub}
                         </span>
                       </div>
@@ -378,7 +378,7 @@ export default function AdminDashboardPage() {
 
           <Link
             href="/dashboard/admin/approvals"
-            className="w-full mt-5 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#FF1E27] hover:border-[#FF1E27] text-white font-heading font-black text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md group"
+            className="w-full mt-5 h-11 rounded-xl bg-white/5 border border-white/10 hover:bg-[#94632F] hover:border-[#D4A863] text-white font-heading font-black text-xs uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer shadow-md group"
           >
             <span>Review All Approvals</span>
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -389,33 +389,33 @@ export default function AdminDashboardPage() {
       {/* Lower Grid: User & Host Growth & Top Hosts Ranking */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* User & Host Growth Chart */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col shadow-xl">
           <div className="flex items-center justify-between mb-6">
             <div>
               <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                 User &amp; Host Growth
               </h3>
-              <p className="font-sans text-xs text-[#8A92A0]">Monthly signup registrations</p>
+              <p className="font-sans text-xs text-[#B6AA9C]">Monthly signup registrations</p>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1.5">
-                <div className="w-2.5 h-2.5 rounded-full bg-[#FF1E27]" />
-                <span className="font-sans font-semibold text-xs text-[#8A92A0]">Users</span>
+                <div className="w-2.5 h-2.5 rounded-full bg-[#94632F]" />
+                <span className="font-sans font-semibold text-xs text-[#B6AA9C]">Users</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <div className="w-2.5 h-2.5 rounded-full bg-[#3B82F6]" />
-                <span className="font-sans font-semibold text-xs text-[#8A92A0]">Hosts</span>
+                <span className="font-sans font-semibold text-xs text-[#B6AA9C]">Hosts</span>
               </div>
             </div>
           </div>
 
           <div className="w-full h-[240px]">
             {isReportsLoading ? (
-              <div className="w-full h-full flex items-center justify-center text-[#8A92A0] font-sans text-xs animate-pulse">
+              <div className="w-full h-full flex items-center justify-center text-[#B6AA9C] font-sans text-xs animate-pulse">
                 Loading growth statistics...
               </div>
             ) : growthData.length === 0 ? (
-              <div className="w-full h-full flex items-center justify-center text-[#8A92A0] font-sans text-xs">
+              <div className="w-full h-full flex items-center justify-center text-[#B6AA9C] font-sans text-xs">
                 No growth data recorded for this period.
               </div>
             ) : (
@@ -429,17 +429,17 @@ export default function AdminDashboardPage() {
                     dataKey="name"
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                     dy={10}
                   />
                   <YAxis
                     axisLine={false}
                     tickLine={false}
-                    tick={{ fill: "#8A92A0", fontSize: 11, fontFamily: "inherit" }}
+                    tick={{ fill: "#B6AA9C", fontSize: 11, fontFamily: "inherit" }}
                   />
                   <RechartsTooltip
                     contentStyle={{
-                      backgroundColor: "#1A1D27",
+                      backgroundColor: "#302820",
                       borderColor: "rgba(255,255,255,0.15)",
                       borderRadius: "12px",
                       boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
@@ -447,7 +447,7 @@ export default function AdminDashboardPage() {
                     }}
                     cursor={{ fill: "rgba(255,255,255,0.04)" }}
                   />
-                  <Bar dataKey="Users" fill="#FF1E27" radius={[6, 6, 0, 0]} barSize={14} />
+                  <Bar dataKey="Users" fill="#D4A863" radius={[6, 6, 0, 0]} barSize={14} />
                   <Bar dataKey="Hosts" fill="#3B82F6" radius={[6, 6, 0, 0]} barSize={14} />
                 </BarChart>
               </ResponsiveContainer>
@@ -456,17 +456,17 @@ export default function AdminDashboardPage() {
         </div>
 
         {/* Top Hosts Leaderboard */}
-        <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col shadow-xl">
+        <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col shadow-xl">
           <div className="flex items-center justify-between mb-6">
             <div>
               <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
                 Top Performing Hosts
               </h3>
-              <p className="font-sans text-xs text-[#8A92A0]">Ranked by total ticket sales volume</p>
+              <p className="font-sans text-xs text-[#B6AA9C]">Ranked by total ticket sales volume</p>
             </div>
             <Link
               href="/dashboard/admin/hosts"
-              className="font-sans font-bold text-xs text-[#FF1E27] hover:underline transition-all flex items-center gap-1"
+              className="font-sans font-bold text-xs text-[#D4A863] hover:underline transition-all flex items-center gap-1"
             >
               <span>View Directory</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -475,11 +475,11 @@ export default function AdminDashboardPage() {
 
           <div className="flex flex-col gap-3">
             {isLoading ? (
-              <div className="py-8 text-center text-[#8A92A0] font-sans text-xs animate-pulse">
+              <div className="py-8 text-center text-[#B6AA9C] font-sans text-xs animate-pulse">
                 Loading top hosts...
               </div>
             ) : topHosts.length === 0 ? (
-              <div className="py-8 text-center text-[#8A92A0] font-sans text-xs">
+              <div className="py-8 text-center text-[#B6AA9C] font-sans text-xs">
                 No host sales recorded yet.
               </div>
             ) : (
@@ -502,8 +502,8 @@ export default function AdminDashboardPage() {
                     >
                       {host.rank}
                     </span>
-                    <div className="w-9 h-9 rounded-xl bg-[#FF1E27]/10 border border-[#FF1E27]/25 flex items-center justify-center shrink-0">
-                      <span className="font-heading font-bold text-xs text-[#FF1E27]">
+                    <div className="w-9 h-9 rounded-xl bg-[#D4A863]/10 border border-[#D4A863]/25 flex items-center justify-center shrink-0">
+                      <span className="font-heading font-bold text-xs text-[#D4A863]">
                         {host.initials}
                       </span>
                     </div>
@@ -511,7 +511,7 @@ export default function AdminDashboardPage() {
                       <span className="font-heading font-bold text-xs text-white truncate max-w-[200px]">
                         {host.name}
                       </span>
-                      <span className="font-sans text-[11px] text-[#8A92A0]">Verified Merchant</span>
+                      <span className="font-sans text-[11px] text-[#B6AA9C]">Verified Merchant</span>
                     </div>
                   </div>
                   <div className="flex flex-col items-end">
@@ -530,17 +530,17 @@ export default function AdminDashboardPage() {
       </div>
 
       {/* Real-Time Activity Log Stream */}
-      <div className="w-full bg-[#12141C] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-xl">
+      <div className="w-full bg-[#211C18] border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <Activity className="w-5 h-5 text-[#FF1E27]" />
+            <Activity className="w-5 h-5 text-[#D4A863]" />
             <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
               Real-Time Platform Activity
             </h3>
           </div>
           <Link
             href="/dashboard/admin/logs"
-            className="font-sans font-bold text-xs text-[#8A92A0] hover:text-white transition-colors"
+            className="font-sans font-bold text-xs text-[#B6AA9C] hover:text-white transition-colors"
           >
             Audit Log History →
           </Link>
@@ -548,11 +548,11 @@ export default function AdminDashboardPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3.5">
           {isLoading ? (
-            <div className="py-6 text-center text-[#8A92A0] font-sans text-xs animate-pulse col-span-full">
+            <div className="py-6 text-center text-[#B6AA9C] font-sans text-xs animate-pulse col-span-full">
               Loading recent activity...
             </div>
           ) : overview?.recentActivity.length === 0 ? (
-            <div className="py-6 text-center text-[#8A92A0] font-sans text-xs col-span-full">
+            <div className="py-6 text-center text-[#B6AA9C] font-sans text-xs col-span-full">
               No recent activity recorded.
             </div>
           ) : (
@@ -576,7 +576,7 @@ export default function AdminDashboardPage() {
                   <span className="font-sans font-semibold text-xs text-white truncate">
                     {activity.text}
                   </span>
-                  <span className="font-sans text-[11px] text-[#8A92A0] mt-0.5">
+                  <span className="font-sans text-[11px] text-[#B6AA9C] mt-0.5">
                     {activity.time}
                   </span>
                 </div>

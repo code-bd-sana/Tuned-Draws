@@ -30,7 +30,7 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
   return (
     <div className="flex flex-col gap-8 w-full animate-fadeIn text-white">
       {/* 1. Rating Summary & Star Breakdown */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 sm:p-8 rounded-2xl bg-[#12141C] border border-white/10 shadow-xl backdrop-blur-md">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8 p-6 sm:p-8 rounded-2xl bg-[#211C18] border border-white/10 shadow-xl backdrop-blur-md">
         {/* Left: Overall Rating Score */}
         <div className="flex flex-col items-center justify-center text-center md:border-r md:border-white/10 md:pr-10 shrink-0 min-w-[200px]">
           <span className="font-heading font-black text-5xl sm:text-6xl text-white tracking-tight">
@@ -59,7 +59,7 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
               ? `${totalReviews} Verified ${totalReviews === 1 ? "Review" : "Reviews"}`
               : "No reviews yet"}
           </span>
-          <span className="font-sans text-[11px] text-[#8A92A0] mt-1">
+          <span className="font-sans text-[11px] text-[#B6AA9C] mt-1">
             Based on genuine winners
           </span>
         </div>
@@ -88,14 +88,14 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
                   <span className="text-[#EAB308]">★</span>
                 </div>
 
-                <div className="flex-1 h-2 bg-[#0B0C0E] border border-white/10 rounded-full overflow-hidden">
+                <div className="flex-1 h-2 bg-[#14110F] border border-white/10 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-[#FF1E27] rounded-full transition-all duration-500"
+                    className="h-full bg-[#94632F] rounded-full transition-all duration-500"
                     style={{ width: `${percent}%` }}
                   />
                 </div>
 
-                <div className="w-16 text-right font-sans text-xs text-[#8A92A0] shrink-0">
+                <div className="w-16 text-right font-sans text-xs text-[#B6AA9C] shrink-0">
                   {count} ({percent}%)
                 </div>
               </button>
@@ -114,8 +114,8 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
           className={cn(
             "h-8 px-4 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-colors cursor-pointer",
             selectedRating === undefined
-              ? "bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.3)]"
-              : "bg-white/5 border border-white/10 text-[#8A92A0] hover:text-white"
+              ? "bg-[#94632F] text-white shadow-[0_0_10px_rgba(212,168,99,0.3)]"
+              : "bg-white/5 border border-white/10 text-[#B6AA9C] hover:text-white"
           )}
         >
           All Reviews ({totalReviews})
@@ -132,8 +132,8 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
               className={cn(
                 "h-8 px-4 rounded-full text-xs font-heading font-bold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1",
                 selectedRating === star
-                  ? "bg-[#FF1E27] text-white shadow-[0_0_10px_rgba(255,30,39,0.3)]"
-                  : "bg-white/5 border border-white/10 text-[#8A92A0] hover:text-white"
+                  ? "bg-[#94632F] text-white shadow-[0_0_10px_rgba(212,168,99,0.3)]"
+                  : "bg-white/5 border border-white/10 text-[#B6AA9C] hover:text-white"
               )}
             >
               <span>{star} ★</span>
@@ -149,25 +149,25 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
           {[1, 2, 3].map((i) => (
             <div
               key={i}
-              className="bg-[#12141C] border border-white/10 rounded-2xl p-5 h-40 animate-pulse"
+              className="bg-[#211C18] border border-white/10 rounded-2xl p-5 h-40 animate-pulse"
             />
           ))}
         </div>
       ) : isError ? (
-        <div className="text-center py-12 bg-[#12141C] border border-red-500/20 rounded-2xl">
+        <div className="text-center py-12 bg-[#211C18] border border-red-500/20 rounded-2xl">
           <p className="font-sans text-sm text-red-400">
             Failed to load reviews. Please refresh the page.
           </p>
         </div>
       ) : reviews.length === 0 ? (
-        <div className="flex flex-col items-center justify-center py-20 text-center gap-3 bg-[#12141C] border border-white/10 rounded-2xl max-w-[600px] mx-auto w-full">
+        <div className="flex flex-col items-center justify-center py-20 text-center gap-3 bg-[#211C18] border border-white/10 rounded-2xl max-w-[600px] mx-auto w-full">
           <span className="text-[36px]">⭐</span>
           <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
             {selectedRating
               ? `No ${selectedRating}-Star Reviews`
               : "No Host Reviews Yet"}
           </h3>
-          <p className="font-sans text-xs sm:text-sm text-[#8A92A0] max-w-[360px] leading-relaxed">
+          <p className="font-sans text-xs sm:text-sm text-[#B6AA9C] max-w-[360px] leading-relaxed">
             {selectedRating
               ? `This host has no reviews matching the ${selectedRating}-star filter. Try selecting "All Reviews".`
               : "Reviews are left by verified winners after winning a main draw or instant prize from this host."}
@@ -187,17 +187,17 @@ export default function HostReviewList({ hostId }: HostReviewListProps) {
           <button
             onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
-            className="px-4 py-2 rounded-xl border border-white/10 text-[#8A92A0] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
+            className="px-4 py-2 rounded-xl border border-white/10 text-[#B6AA9C] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
           >
             Previous
           </button>
-          <span className="text-xs font-sans text-[#8A92A0] px-2">
+          <span className="text-xs font-sans text-[#B6AA9C] px-2">
             Page {page} of {meta.totalPages}
           </span>
           <button
             onClick={() => setPage((p) => Math.min(meta.totalPages, p + 1))}
             disabled={page === meta.totalPages}
-            className="px-4 py-2 rounded-xl border border-white/10 text-[#8A92A0] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
+            className="px-4 py-2 rounded-xl border border-white/10 text-[#B6AA9C] hover:text-white disabled:opacity-30 disabled:cursor-not-allowed text-xs font-heading font-bold uppercase transition-colors"
           >
             Next
           </button>

@@ -40,7 +40,7 @@ export default function TunedDrawsBrandLogo({
         <span className="mt-1 text-[8px] font-semibold uppercase tracking-[0.45em]">Draws</span>
       </div>
       {isCustomSubtitle && (
-        <span className="font-heading text-[9px] md:text-[10px] uppercase font-bold tracking-[0.25em] text-[#FF1E27] mt-1 pl-1">
+        <span className="font-heading text-[9px] md:text-[10px] uppercase font-bold tracking-[0.25em] text-[#D4A863] mt-1 pl-1">
           {subtitle}
         </span>
       )}

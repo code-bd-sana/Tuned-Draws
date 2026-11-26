@@ -22,10 +22,10 @@ function ErrorContent() {
 
   return (
     <div className="container-custom max-w-2xl mx-auto px-4 sm:px-6">
-      <div className="bg-[#12141C] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-xl flex flex-col items-center text-center animate-fadeIn">
+      <div className="bg-[#211C18] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-xl flex flex-col items-center text-center animate-fadeIn">
         
         {/* Decline / Alert Icon */}
-        <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/30 text-[#FF1E27] flex items-center justify-center mb-4 shadow-sm">
+        <div className="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/30 text-[#D4A863] flex items-center justify-center mb-4 shadow-sm">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -53,13 +53,13 @@ function ErrorContent() {
         </h1>
 
         {/* Subtitle */}
-        <p className="font-sans text-xs sm:text-sm text-[#8A92A0] max-w-md mb-6 leading-relaxed">
+        <p className="font-sans text-xs sm:text-sm text-[#B6AA9C] max-w-md mb-6 leading-relaxed">
           {errorMessage}
         </p>
 
         {/* Order Reference (if available) */}
         {orderNumber && (
-          <div className="mb-6 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-sans text-[#8A92A0]">
+          <div className="mb-6 px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-sans text-[#B6AA9C]">
             Order Reference: <strong className="text-white font-mono">{orderNumber}</strong>
           </div>
         )}
@@ -70,21 +70,21 @@ function ErrorContent() {
             Common Reasons For Declined Transactions
           </span>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans text-[#8A92A0]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans text-[#B6AA9C]">
             <div className="flex items-start gap-2">
-              <span className="text-[#FF1E27] font-bold">•</span>
+              <span className="text-[#D4A863] font-bold">•</span>
               <span><strong className="text-white">3D Secure / OTP:</strong> Verification was cancelled, timed out, or not approved in your banking app.</span>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-[#FF1E27] font-bold">•</span>
+              <span className="text-[#D4A863] font-bold">•</span>
               <span><strong className="text-white">Bank Security:</strong> Your card issuer may have blocked the transaction for routine fraud protection.</span>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-[#FF1E27] font-bold">•</span>
+              <span className="text-[#D4A863] font-bold">•</span>
               <span><strong className="text-white">Card Details:</strong> Ensure your card number, expiration date, and CVV code were entered accurately.</span>
             </div>
             <div className="flex items-start gap-2">
-              <span className="text-[#FF1E27] font-bold">•</span>
+              <span className="text-[#D4A863] font-bold">•</span>
               <span><strong className="text-white">Available Balance:</strong> Insufficient funds or exceeding daily card spending limits.</span>
             </div>
           </div>
@@ -109,14 +109,14 @@ function ErrorContent() {
 
           <Link
             href="/contact"
-            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-[#8A92A0] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all text-center"
+            className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 text-[#B6AA9C] hover:text-white font-heading font-bold text-xs uppercase tracking-wider transition-all text-center"
           >
             Contact Support
           </Link>
         </div>
 
         {/* Security Reassurance */}
-        <p className="mt-8 text-[11px] font-sans text-[#8A92A0] max-w-sm">
+        <p className="mt-8 text-[11px] font-sans text-[#B6AA9C] max-w-sm">
           No funds have been charged from your account and no tickets were allocated. Your items remain safely in your basket.
         </p>
 
@@ -127,14 +127,14 @@ function ErrorContent() {
 
 export default function ErrorPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white">
+    <div className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white">
       <WebsiteNavbar />
 
       <main className="flex-1 pt-28 pb-20">
         <Suspense
           fallback={
             <div className="flex items-center justify-center py-20">
-              <div className="w-8 h-8 border-3 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
+              <div className="w-8 h-8 border-3 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
             </div>
           }
         >

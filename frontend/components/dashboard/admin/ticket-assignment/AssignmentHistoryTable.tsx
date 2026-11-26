@@ -19,14 +19,14 @@ export default function AssignmentHistoryTable() {
   const totalPages = response?.totalPages || 1;
 
   return (
-    <div className="flex flex-col gap-5 bg-[#12141C] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
+    <div className="flex flex-col gap-5 bg-[#211C18] border border-white/10 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
       {/* Top Filter and Search Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/10">
         <div>
           <h3 className="font-heading font-black text-lg text-white uppercase tracking-tight">
             Manual Allocation History &amp; Audit Trail
           </h3>
-          <p className="font-sans text-xs text-[#8A92A0]">
+          <p className="font-sans text-xs text-[#B6AA9C]">
             Complete record of all ADMIN_MANUAL ticket distributions, timestamps, and accounting values
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function AssignmentHistoryTable() {
         {/* Search */}
         <div className="relative w-full sm:w-72">
           <svg
-            className="w-4 h-4 text-[#8A92A0] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
+            className="w-4 h-4 text-[#B6AA9C] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -54,7 +54,7 @@ export default function AssignmentHistoryTable() {
               setPage(1);
             }}
             placeholder="Search by order ID, user, or notes..."
-            className="w-full bg-[#0B0C0E] border border-white/10 rounded-xl pl-9 pr-3 py-2 text-xs font-sans text-white placeholder-[#8A92A0] focus:outline-none focus:border-[#FF1E27]"
+            className="w-full bg-[#14110F] border border-white/10 rounded-xl pl-9 pr-3 py-2 text-xs font-sans text-white placeholder-[#B6AA9C] focus:outline-none focus:border-[#D4A863]"
           />
         </div>
       </div>
@@ -63,7 +63,7 @@ export default function AssignmentHistoryTable() {
       <div className="w-full overflow-x-auto">
         <table className="w-full min-w-[950px] text-left border-collapse">
           <thead>
-            <tr className="border-b border-white/10 bg-white/5 font-sans text-[10px] font-bold text-[#8A92A0] uppercase tracking-wider">
+            <tr className="border-b border-white/10 bg-white/5 font-sans text-[10px] font-bold text-[#B6AA9C] uppercase tracking-wider">
               <th className="py-3 px-4 w-[14%]">ORDER / REF ID</th>
               <th className="py-3 px-4 w-[14%]">DATE</th>
               <th className="py-3 px-4 w-[18%]">RECIPIENT</th>
@@ -76,9 +76,9 @@ export default function AssignmentHistoryTable() {
           <tbody className="divide-y divide-white/5 font-sans text-xs">
             {isLoading ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-[#8A92A0]">
+                <td colSpan={7} className="py-12 text-center text-[#B6AA9C]">
                   <div className="flex items-center justify-center gap-2">
-                    <div className="w-5 h-5 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
+                    <div className="w-5 h-5 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
                     <span>Loading assignment records...</span>
                   </div>
                 </td>
@@ -91,7 +91,7 @@ export default function AssignmentHistoryTable() {
               </tr>
             ) : history.length === 0 ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-[#8A92A0]">
+                <td colSpan={7} className="py-12 text-center text-[#B6AA9C]">
                   No manual ticket assignments found.
                 </td>
               </tr>
@@ -100,25 +100,25 @@ export default function AssignmentHistoryTable() {
                 <tr key={item.id} className="hover:bg-white/5 transition-colors">
                   {/* Order / Ref ID */}
                   <td className="py-3.5 px-4">
-                    <span className="font-mono font-bold text-xs text-[#FF1E27] truncate block max-w-[130px]" title={item.gatewayTransactionId}>
+                    <span className="font-mono font-bold text-xs text-[#D4A863] truncate block max-w-[130px]" title={item.gatewayTransactionId}>
                       {item.gatewayTransactionId}
                     </span>
                     {item.adminNotes && (
-                      <span className="text-[10px] text-[#8A92A0] italic truncate block max-w-[140px]" title={item.adminNotes}>
+                      <span className="text-[10px] text-[#B6AA9C] italic truncate block max-w-[140px]" title={item.adminNotes}>
                         &quot;{item.adminNotes}&quot;
                       </span>
                     )}
                   </td>
 
                   {/* Date */}
-                  <td className="py-3.5 px-4 text-[#8A92A0] font-semibold">
+                  <td className="py-3.5 px-4 text-[#B6AA9C] font-semibold">
                     {format(new Date(item.date), "dd MMM yyyy, HH:mm")}
                   </td>
 
                   {/* Recipient */}
                   <td className="py-3.5 px-4">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-7 h-7 rounded-full bg-[#0B0C0E] border border-white/15 overflow-hidden flex items-center justify-center text-[10px] font-bold text-white shrink-0">
+                      <div className="w-7 h-7 rounded-full bg-[#14110F] border border-white/15 overflow-hidden flex items-center justify-center text-[10px] font-bold text-white shrink-0">
                         {item.recipient.avatarUrl ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
@@ -134,7 +134,7 @@ export default function AssignmentHistoryTable() {
                         <span className="font-heading font-bold text-white block truncate">
                           {item.recipient.name}
                         </span>
-                        <span className="text-[11px] text-[#8A92A0] block truncate">
+                        <span className="text-[11px] text-[#B6AA9C] block truncate">
                           {item.recipient.email}
                         </span>
                       </div>
@@ -173,7 +173,7 @@ export default function AssignmentHistoryTable() {
                           </span>
                         )}
                       </div>
-                      <span className="font-mono text-[10px] text-[#8A92A0] truncate max-w-[150px]">
+                      <span className="font-mono text-[10px] text-[#B6AA9C] truncate max-w-[150px]">
                         {item.assignedNumbers.map((n) => `#${n}`).join(", ")}
                       </span>
                     </div>
@@ -202,7 +202,7 @@ export default function AssignmentHistoryTable() {
 
       {/* Pagination Controls */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between pt-3 border-t border-white/10 text-xs font-sans text-[#8A92A0]">
+        <div className="flex items-center justify-between pt-3 border-t border-white/10 text-xs font-sans text-[#B6AA9C]">
           <span>
             Page <strong className="text-white">{page}</strong> of <strong className="text-white">{totalPages}</strong>
           </span>
@@ -211,14 +211,14 @@ export default function AssignmentHistoryTable() {
             <button
               disabled={page <= 1}
               onClick={() => setPage((p) => Math.max(1, p - 1))}
-              className="px-3 py-1.5 rounded-lg bg-[#0B0C0E] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
+              className="px-3 py-1.5 rounded-lg bg-[#14110F] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
             >
               ← Previous
             </button>
             <button
               disabled={page >= totalPages}
               onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-              className="px-3 py-1.5 rounded-lg bg-[#0B0C0E] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
+              className="px-3 py-1.5 rounded-lg bg-[#14110F] border border-white/10 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-white/10 cursor-pointer"
             >
               Next →
             </button>

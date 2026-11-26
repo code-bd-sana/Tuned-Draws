@@ -23,7 +23,7 @@ export default function HowItWorksPage() {
       {/* Sticky top navbar */}
       <WebsiteNavbar />
 
-      <main className='min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white'>
+      <main className='min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white'>
         {/* Hero Section */}
         <HowItWorksHero />
 

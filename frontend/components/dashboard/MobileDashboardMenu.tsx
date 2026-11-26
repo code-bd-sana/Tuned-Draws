@@ -37,16 +37,16 @@ export default function MobileDashboardMenu({ account, isOpen, onClose }: Mobile
       />
 
       <div className={cn(
-        "fixed inset-y-0 left-0 w-[280px] bg-[#12141C] border-r border-white/10 z-50 flex flex-col transform transition-transform duration-300 ease-in-out lg:hidden shadow-2xl backdrop-blur-md",
+        "fixed inset-y-0 left-0 w-[280px] bg-[#211C18] border-r border-white/10 z-50 flex flex-col transform transition-transform duration-300 ease-in-out lg:hidden shadow-2xl backdrop-blur-md",
         isOpen ? "translate-x-0" : "-translate-x-full"
       )}>
-        <div className="h-[88px] flex items-center justify-between px-6 border-b border-white/10 shrink-0 bg-[#0B0C0E]/50">
+        <div className="h-[88px] flex items-center justify-between px-6 border-b border-white/10 shrink-0 bg-[#14110F]/50">
           <div onClick={onClose}>
             <FairwayDrawsLogo variant="light" size="sm" href="/dashboard" priority />
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-[#8A92A0] hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
+            className="p-1.5 text-[#B6AA9C] hover:text-white rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
@@ -59,7 +59,7 @@ export default function MobileDashboardMenu({ account, isOpen, onClose }: Mobile
           <Link
             href="/live-raffles"
             onClick={onClose}
-            className="btn-racing-red w-full py-3 px-4 rounded-xl text-white text-xs font-heading font-black uppercase flex items-center justify-center gap-2 mb-3 shadow-[0_0_15px_rgba(255,30,39,0.35)] active:scale-95 transition-all"
+            className="btn-racing-red w-full py-3 px-4 rounded-xl text-white text-xs font-heading font-black uppercase flex items-center justify-center gap-2 mb-3 shadow-[0_0_15px_rgba(212,168,99,0.35)] active:scale-95 transition-all"
           >
             <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m-17.432-6A8.959 8.959 0 0 0 3 12c0 .778.099 1.533.284 2.253" />
@@ -77,14 +77,14 @@ export default function MobileDashboardMenu({ account, isOpen, onClose }: Mobile
                 className={cn(
                   "flex items-center gap-[12px] h-[42px] pl-[16px] pr-[16px] rounded-xl transition-all duration-200 group font-sans w-full",
                   isActive
-                    ? "bg-[#FF1E27]/15 border-l-4 border-[#FF1E27] text-white font-bold shadow-[0_0_15px_rgba(255,30,39,0.2)]"
-                    : "bg-transparent border-l-4 border-transparent text-[#8A92A0] hover:text-white hover:bg-white/5"
+                    ? "bg-[#D4A863]/15 border-l-4 border-[#D4A863] text-white font-bold shadow-[0_0_15px_rgba(212,168,99,0.2)]"
+                    : "bg-transparent border-l-4 border-transparent text-[#B6AA9C] hover:text-white hover:bg-white/5"
                 )}
               >
-                <item.icon className={cn("w-5 h-5 shrink-0 transition-colors", isActive ? "text-[#FF1E27]" : "text-[#8A92A0] group-hover:text-white")} />
+                <item.icon className={cn("w-5 h-5 shrink-0 transition-colors", isActive ? "text-[#D4A863]" : "text-[#B6AA9C] group-hover:text-white")} />
                 <span className={cn(
                   "text-[14px] font-medium leading-[normal] truncate",
-                  isActive ? "text-white font-bold" : "text-[#8A92A0] group-hover:text-white"
+                  isActive ? "text-white font-bold" : "text-[#B6AA9C] group-hover:text-white"
                 )}>
                   {item.label}
                 </span>
@@ -92,7 +92,7 @@ export default function MobileDashboardMenu({ account, isOpen, onClose }: Mobile
                 {item.badge && (
                   <span className={cn(
                     "ml-auto text-[10px] font-bold px-2 py-0.5 rounded-full min-w-[20px] text-center",
-                    isActive ? "bg-[#FF1E27] text-white" : "bg-white/10 text-white border border-white/10"
+                    isActive ? "bg-[#94632F] text-white" : "bg-white/10 text-white border border-white/10"
                   )}>
                     {item.badge}
                   </span>
@@ -116,9 +116,9 @@ export default function MobileDashboardMenu({ account, isOpen, onClose }: Mobile
           </button>
         </nav>
 
-        <div className="border-t border-white/10 w-full shrink-0 bg-[#0B0C0E]/70">
+        <div className="border-t border-white/10 w-full shrink-0 bg-[#14110F]/70">
           <div className="flex items-center gap-[12px] pb-[17px] pt-[16px] px-[20px] w-full">
-            <div className="w-[42px] h-[42px] shrink-0 rounded-full border border-white/20 bg-[#181B26] flex items-center justify-center overflow-hidden shadow-sm">
+            <div className="w-[42px] h-[42px] shrink-0 rounded-full border border-white/20 bg-[#302820] flex items-center justify-center overflow-hidden shadow-sm">
                {/* eslint-disable-next-line @next/next/no-img-element */}
                <img
                  src={account.avatar}
@@ -134,7 +134,7 @@ export default function MobileDashboardMenu({ account, isOpen, onClose }: Mobile
                 {account.name}
               </span>
               <div className="mt-1">
-                <span className="inline-flex items-center justify-center px-[8px] h-[18px] rounded-full border border-[#FF1E27]/40 bg-[#FF1E27]/10 text-[#FF1E27] text-[10px] font-black font-heading uppercase tracking-wide">
+                <span className="inline-flex items-center justify-center px-[8px] h-[18px] rounded-full border border-[#D4A863]/40 bg-[#D4A863]/10 text-[#D4A863] text-[10px] font-black font-heading uppercase tracking-wide">
                   {account.role === "host" ? "Verified Host" : `${account.role} Account`}
                 </span>
               </div>

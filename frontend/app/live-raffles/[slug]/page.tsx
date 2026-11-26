@@ -164,16 +164,16 @@ export default async function LiveRaffleDetailPage({ params }: PageProps) {
   const getBadgeStyle = (text: string) => {
     switch (text.toUpperCase()) {
       case "ALMOST GONE":
-        return "bg-[#FF1E27]/15 border-[#FF1E27]/40 text-[#FF1E27]";
+        return "bg-[#D4A863]/15 border-[#D4A863]/40 text-[#D4A863]";
       case "HOT":
-        return "bg-[#FF1E27]/15 border-[#FF1E27]/40 text-[#FF1E27]";
+        return "bg-[#D4A863]/15 border-[#D4A863]/40 text-[#D4A863]";
       default:
-        return "bg-[#1A1D27] border-white/10 text-[#8A92A0]";
+        return "bg-[#302820] border-white/10 text-[#B6AA9C]";
     }
   };
 
   const fireIcon = (
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#FF1E27]">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-3.5 h-3.5 text-[#D4A863]">
       <path d="M19.43 12.98c.04-.32.07-.64.07-.98 0-3.66-2.61-6.72-6.07-7.39.37.76.57 1.62.57 2.53 0 1.95-1.07 3.65-2.67 4.54l-.06.03c.53-2.14-.17-4.47-1.78-6.1l-.32-.33c-.09.33-.14.67-.14 1.02 0 2.27 1.34 4.22 3.28 5.11l.08.04c-1.61-.31-3.23.36-4.13 1.73A7.514 7.514 0 0 0 7 17.5c0 4.14 3.36 7.5 7.5 7.5s7.5-3.36 7.5-7.5c0-1.65-.54-3.18-1.57-4.52z" />
     </svg>
   );
@@ -183,7 +183,7 @@ export default async function LiveRaffleDetailPage({ params }: PageProps) {
       {/* Sticky top navbar */}
       <WebsiteNavbar />
 
-      <main className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white pt-20 md:pt-[68px] selection:bg-[#FF1E27] selection:text-white">
+      <main className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white pt-20 md:pt-[68px] selection:bg-[#94632F] selection:text-white">
         {/* Main Details Section */}
         <section className="py-10 md:py-14 flex-grow">
           <div className="container-custom">
@@ -219,7 +219,7 @@ export default async function LiveRaffleDetailPage({ params }: PageProps) {
                         LIVE
                       </span>
                     ) : (
-                      <span className="bg-[#FF1E27]/15 border border-[#FF1E27]/40 text-[#FF1E27] px-3 py-1 rounded-full text-xs font-heading font-black uppercase tracking-wider shadow-xs">
+                      <span className="bg-[#D4A863]/15 border border-[#D4A863]/40 text-[#D4A863] px-3 py-1 rounded-full text-xs font-heading font-black uppercase tracking-wider shadow-xs">
                         ENDING SOON
                       </span>
                     )}
@@ -232,13 +232,13 @@ export default async function LiveRaffleDetailPage({ params }: PageProps) {
                     )}
                     
                     {raffle.isAutoDraw && (
-                      <span className="bg-[#1A1D27] border border-white/10 text-[#D1D5DB] px-3 py-1 rounded-full text-xs font-heading font-bold uppercase tracking-wider shadow-xs">
+                      <span className="bg-[#302820] border border-white/10 text-[#E5DCCD] px-3 py-1 rounded-full text-xs font-heading font-bold uppercase tracking-wider shadow-xs">
                         AUTO DRAW
                       </span>
                     )}
 
                     {raffle.instantWinPrizes.length > 0 && (
-                      <span className="text-xs font-sans text-[#8A92A0] select-none font-medium">
+                      <span className="text-xs font-sans text-[#B6AA9C] select-none font-medium">
                         • {raffle.instantWinPrizes.length} instant wins
                       </span>
                     )}

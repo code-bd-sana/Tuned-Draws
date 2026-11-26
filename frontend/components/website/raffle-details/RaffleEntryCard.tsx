@@ -618,7 +618,7 @@ export default function RaffleEntryCard({ raffle }: RaffleEntryCardProps) {
               type="button"
               onClick={handleAddToBasket}
               disabled={isEnded || isPersonalLimitReached || isPurchasing}
-              className="w-full h-12 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-white/5 border border-white/20 text-white hover:border-[#FF1E27] hover:text-[#FF1E27] hover:bg-[#FF1E27]/10 shadow-xs active:scale-98 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full h-12 rounded-xl font-heading font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 bg-white/5 border border-white/20 text-white hover:border-[#D4A863] hover:text-[#D4A863] hover:bg-[#D4A863]/10 shadow-xs active:scale-98 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'

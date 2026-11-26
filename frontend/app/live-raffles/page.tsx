@@ -21,16 +21,16 @@ export default function LiveRafflesPage() {
       {/* Global Header Navigation */}
       <WebsiteNavbar />
 
-      <main className="min-h-screen flex flex-col bg-[#0B0C0E] bg-tachometer-grid text-white selection:bg-[#FF1E27] selection:text-white">
+      <main className="min-h-screen flex flex-col bg-[#14110F] bg-tachometer-grid text-white selection:bg-[#94632F] selection:text-white">
         {/* Page Hero Section */}
         <LiveRafflesHero />
 
         {/* Suspense Boundary for Client Search Params Filtering Grid */}
         <Suspense
           fallback={
-            <div className="container-custom py-24 text-center text-[#8A92A0] font-sans flex flex-col items-center justify-center gap-4">
-              <div className="w-8 h-8 border-2 border-[#FF1E27] border-t-transparent rounded-full animate-spin" />
-              <p className="font-heading text-xs font-bold uppercase tracking-wider text-[#D1D5DB]">
+            <div className="container-custom py-24 text-center text-[#B6AA9C] font-sans flex flex-col items-center justify-center gap-4">
+              <div className="w-8 h-8 border-2 border-[#D4A863] border-t-transparent rounded-full animate-spin" />
+              <p className="font-heading text-xs font-bold uppercase tracking-wider text-[#E5DCCD]">
                 Loading live competitions...
               </p>
             </div>
