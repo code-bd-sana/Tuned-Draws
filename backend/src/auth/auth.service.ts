@@ -182,7 +182,7 @@ export class AuthService {
         this.notificationsService.notifyUser(
           user.id,
           'SYSTEM',
-          'Welcome to Turned Draws Host Portal!',
+          'Welcome to Wedding Draws Host Portal!',
           'Your host account is ready. Start by creating your first competition.',
           '/dashboard/host/competitions',
           { role: 'HOST' },
@@ -198,7 +198,7 @@ export class AuthService {
         this.notificationsService.notifyUser(
           user.id,
           'SYSTEM',
-          'Welcome to Turned Draws!',
+          'Welcome to Wedding Draws!',
           'Your account is ready! Explore our live competitions and win luxury prizes.',
           '/live-raffles',
           { role: 'CLIENT' },

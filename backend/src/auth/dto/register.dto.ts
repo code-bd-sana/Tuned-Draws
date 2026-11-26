@@ -45,7 +45,7 @@ export class RegisterDto {
   @IsIn(['CLIENT', 'HOST'], { message: 'Role must be either CLIENT or HOST' })
   role?: string;
 
-  @ApiPropertyOptional({ example: 'Turned Crafts & Draws', description: 'Required if role is HOST' })
+  @ApiPropertyOptional({ example: 'Wedding Draws Events', description: 'Required if role is HOST' })
   @IsOptional()
   @IsString()
   @MaxLength(255)

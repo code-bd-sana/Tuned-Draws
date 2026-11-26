@@ -22,7 +22,7 @@ export class AdminHostsQueryDto {
   limit?: number;
 
   @ApiPropertyOptional({
-    example: 'Turned Crafts Ltd',
+    example: 'Wedding Draws Ltd',
     description: 'Search query for business name or user name',
   })
   @IsOptional()

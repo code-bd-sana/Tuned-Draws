@@ -1,6 +1,6 @@
 /**
  * Utilities for UK Timezone (Europe/London: GMT / BST) operations.
- * Turned Draws operates primarily in the UK market.
+ * Wedding Draws operates primarily in the UK market.
  */
 
 export const UK_TIMEZONE = 'Europe/London';

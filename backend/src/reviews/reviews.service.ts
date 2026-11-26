@@ -391,7 +391,7 @@ export class ReviewsService {
       rating: r.rating,
       message: r.comment || '',
       comment: r.comment || '',
-      competitionTitle: r.raffle?.title || 'Tuned Draws Competition',
+      competitionTitle: r.raffle?.title || 'Wedding Draws Competition',
       competitionSlug: r.raffle?.slug || r.raffle?.id,
       prizeName: r.winner?.prizeName || r.raffle?.title,
       winType: r.winner?.winType || 'MAIN_DRAW',

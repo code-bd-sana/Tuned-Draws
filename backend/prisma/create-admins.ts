@@ -81,7 +81,7 @@ const adminAccounts: AdminAccountConfig[] = [
 ];
 
 async function main() {
-  console.log('🚀 Creating / Updating Turned Draws Admin Accounts...\n');
+  console.log('🚀 Creating / Updating Wedding Draws Admin Accounts...\n');
 
   const salt = await bcrypt.genSalt(10);
 

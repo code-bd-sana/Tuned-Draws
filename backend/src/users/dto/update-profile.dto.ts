@@ -30,7 +30,7 @@ export class UpdateProfileDto {
   location?: string;
 
   @ApiProperty({
-    example: 'Turned Events Ltd',
+    example: 'Wedding Draws Ltd',
     description: 'Business name (Hosts only)',
     required: false,
   })
